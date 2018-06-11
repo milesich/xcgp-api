@@ -15,6 +15,10 @@
 @media only screen and (min-width: 1500px) {
 }
 
+.logo {
+  opacity: .4;
+}
+
 .post a {
   color: #54839b;
 }

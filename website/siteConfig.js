@@ -24,8 +24,8 @@ const siteConfig = {
   ],
 
   /* path to images for header/footer */
-  headerIcon: 'img/xcaliber.png',
-  footerIcon: 'img/xcaliber.png',
+  headerIcon: 'img/xcaliber.svg',
+  footerIcon: 'img/xcaliber.svg',
   favicon: 'img/favicon.png',
 
   /* colors for website */
@@ -59,10 +59,6 @@ const siteConfig = {
 
   /* On page navigation for the current documentation page */
   onPageNav: 'separate',
-
-  /* Open Graph and Twitter card images */
-  ogImage: 'img/docusaurus.png',
-  twitterImage: 'img/docusaurus.png',
 
   // You may provide arbitrary config keys to be used as needed by your
   // template. For example, if you need your repo's URL...
