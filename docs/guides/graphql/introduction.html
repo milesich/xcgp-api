@@ -1,0 +1,95 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Introduction to GraphQL · XCaliber Gaming Platform API</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="## GraphQL terminology"/><meta property="og:title" content="Introduction to GraphQL · XCaliber Gaming Platform API"/><meta property="og:type" content="website"/><meta property="og:url" content="https://xcaliber.com/xcgp-api/index.html"/><meta property="og:description" content="## GraphQL terminology"/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/xcgp-api/img/favicon.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/xcgp-api/css/main.css"/></head><body class="sideNavVisible doc separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/xcgp-api/"><img class="logo" src="/xcgp-api/img/xcaliber.svg" alt="XCaliber Gaming Platform API"/><h2 class="headerTitleWithLogo">XCaliber Gaming Platform API</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/xcgp-api/docs/usage.html" target="_self">Reference</a></li><li class="siteNavGroupActive"><a href="/xcgp-api/docs/guides/graphql/overview.html" target="_self">Guides</a></li><li class=""><a href="/xcgp-api/explorer.html" target="_self">Explorer</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>GraphQL</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup navGroupActive"><h3>GraphQL</h3><ul><li class="navListItem"><a class="navItem" href="/xcgp-api/docs/guides/graphql/overview.html">Overview</a></li><li class="navListItem navListItemActive"><a class="navItem navItemActive" href="/xcgp-api/docs/guides/graphql/introduction.html">Introduction</a></li><li class="navListItem"><a class="navItem" href="/xcgp-api/docs/guides/graphql/using.html">Using GraphQL</a></li><li class="navListItem"><a class="navItem" href="/xcgp-api/docs/guides/graphql/from-rest.html">REST to GraphQL</a></li></ul></div></div></section></div><script>
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              const headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                if (event.target.tagName === 'A') {
+                  document.body.classList.remove('tocActive');
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1>Introduction to GraphQL</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="graphql-terminology"></a><a href="#graphql-terminology" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>GraphQL terminology</h2>
+<p>You will likely encounter some new terminology in the <a href="/xcgp-api/docs/graphql-overview.html">reference docs</a>.</p>
+<h3><a class="anchor" aria-hidden="true" id="schema"></a><a href="#schema" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Schema</h3>
+<p>A schema defines a GraphQL API's type system. It describes the complete set of possible data (objects, fields, relationships, everything) that a client can access. Calls from the client are <a href="https://graphql.org/learn/validation/">validated</a> and <a href="https://graphql.org/learn/execution/">executed</a> against the schema. A client can find information about the schema via <a href="#discovering-the-graphql-api">introspection</a>. A schema resides on the GraphQL API server.</p>
+<h3><a class="anchor" aria-hidden="true" id="field"></a><a href="#field" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Field</h3>
+<p>A field is a unit of data you can retrieve from an object. As the <a href="https://graphql.org/learn/schema/">official GraphQL docs</a> say: &quot;The GraphQL query language is basically about selecting fields on objects.&quot;</p>
+<p>The <a href="http://facebook.github.io/graphql/draft/#sec-Language.Fields">official spec</a> also says about fields:</p>
+<blockquote>
+<p>All GraphQL operations must specify their selections down to fields which return scalar values to ensure an unambiguously shaped response.</p>
+</blockquote>
+<p>This means that if you try to return a field that is not a scalar, schema validation will throw an error. You must add nested subfields until all fields return scalars.</p>
+<h3><a class="anchor" aria-hidden="true" id="argument"></a><a href="#argument" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Argument</h3>
+<p>An argument is a set of key-value pairs attached to a specific field. Some fields require an argument. <a href="TODO">Mutations</a> require an input object as an argument.</p>
+<h3><a class="anchor" aria-hidden="true" id="implementation"></a><a href="#implementation" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Implementation</h3>
+<p>A GraphQL schema may use the term <em>implements</em> to define how an object inherits from an <a href="TODO">interface</a>.</p>
+<p>Here's a contrived example of a schema that defines interface <code>X</code> and object <code>Y</code>:</p>
+<pre><code class="hljs css languages- ts"><span class="hljs-keyword">interface</span> X {
+  some_field: <span class="hljs-built_in">String</span>!
+  other_field: <span class="hljs-built_in">String</span>!
+}
+
+<span class="hljs-keyword">type</span> Y <span class="hljs-keyword">implements</span> X {
+  some_field: <span class="hljs-built_in">String</span>!
+  other_field: <span class="hljs-built_in">String</span>!
+  new_field: <span class="hljs-built_in">String</span>!
+}
+</code></pre>
+<p>This means object <code>Y</code> requires the same fields/arguments/return types that interface <code>X</code> does, while adding new fields specific to object <code>Y</code>. (The <code>!</code> means the field is required.)</p>
+<p>In the reference docs, you'll find that:</p>
+<ul>
+<li>Each <a href="TODO">object</a> lists the interface(s) <em>from which it inherits</em> under <strong>Implements</strong>.</li>
+<li>Each <a href="TODO">interface</a> lists the objects <em>that inherit from it</em> under <strong>Implementations</strong>.</li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="connection"></a><a href="#connection" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Connection</h3>
+<p>Connections let you query related objects as part of the same call. With connections, you can use a single GraphQL call where you would have to use multiple calls to a REST API. For more information, see &quot;<a href="/xcgp-api/docs/guides/graphql/from-rest.html">From REST to GraphQL</a>&quot;.</p>
+<p>It's helpful to picture a graph: dots connected by lines. The dots are nodes, the lines are edges. A connection defines a relationship between nodes.</p>
+<h3><a class="anchor" aria-hidden="true" id="edge"></a><a href="#edge" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Edge</h3>
+<p>Edges represent connections between nodes. When you query a connection, you traverse its edges to get to its nodes. Every <code>edges</code> field has a <code>node</code> field and a <code>cursor</code> field. Cursors are used for <a href="https://graphql.org/learn/pagination/">pagination</a>.</p>
+<h3><a class="anchor" aria-hidden="true" id="node"></a><a href="#node" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Node</h3>
+<p><em>Node</em> is a generic term for an object. You can look up a node directly, or you can access related nodes via a connection. If you specify a <code>node</code> that does not return a <a href="TODO">scalar</a>, you must include subfields until all fields return scalars.</p>
+<h2><a class="anchor" aria-hidden="true" id="discovering-the-graphql-api"></a><a href="#discovering-the-graphql-api" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Discovering the GraphQL API</h2>
+<p>GraphQL is <a href="https://graphql.org/learn/introspection/">introspective</a>. This means you can query a GraphQL schema for details about itself.</p>
+<ul>
+<li><p>Query <code>__schema</code> to list all types defined in the schema and get details about each:</p>
+<pre><code class="hljs css languages- ts">query {
+  __schema {
+    types {
+      name
+      kind
+      description
+      fields {
+        name
+      }
+    }
+  }
+}
+</code></pre></li>
+<li><p>Query <code>__type</code> to get details about any type:</p>
+<pre><code class="hljs css languages- ts">query {
+  __type(name: <span class="hljs-string">"Game"</span>) {
+    name
+    kind
+    description
+    fields {
+      name
+    }
+  }
+}
+</code></pre></li>
+</ul>
+<p>For more information about performing queries, see &quot;<a href="TODO">Forming calls with GraphQL</a>&quot;.</p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="overview.html">← GraphQL Guides</a><a class="docs-next button" href="using.html">Using GraphQL →</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#graphql-terminology">GraphQL terminology</a><ul class="toc-headings"><li><a href="#schema">Schema</a></li><li><a href="#field">Field</a></li><li><a href="#argument">Argument</a></li><li><a href="#implementation">Implementation</a></li><li><a href="#connection">Connection</a></li><li><a href="#edge">Edge</a></li><li><a href="#node">Node</a></li></ul></li><li><a href="#discovering-the-graphql-api">Discovering the GraphQL API</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2014 - 2018 XCaliber</section></footer></div></body></html>

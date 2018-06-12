@@ -1,0 +1,95 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>XCaliber Gaming Platform API · XCaliber Gaming Platform API documentation.</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="XCaliber Gaming Platform API documentation."/><meta property="og:title" content="XCaliber Gaming Platform API · XCaliber Gaming Platform API documentation."/><meta property="og:type" content="website"/><meta property="og:url" content="https://xcaliber.com/xcgp-api/index.html"/><meta property="og:description" content="XCaliber Gaming Platform API documentation."/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/xcgp-api/img/favicon.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/xcgp-api/css/main.css"/></head><body class="separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/xcgp-api/"><img class="logo" src="/xcgp-api/img/xcaliber.svg" alt="XCaliber Gaming Platform API"/><h2 class="headerTitleWithLogo">XCaliber Gaming Platform API</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/xcgp-api/docs/usage.html" target="_self">Reference</a></li><li class=""><a href="/xcgp-api/docs/guides/graphql/overview.html" target="_self">Guides</a></li><li class="siteNavItemActive"><a href="/xcgp-api/explorer.html" target="_self">Explorer</a></li></ul></nav></div></header></div></div><div class="navPusher"><div><div id="graphiql">Loading...</div>
+
+<script src="//cdn.jsdelivr.net/react/15.4.2/react.min.js"></script>
+<script src="//cdn.jsdelivr.net/react/15.4.2/react-dom.min.js"></script>
+
+<link rel="stylesheet" href="/xcgp-api/css/graphiql.css">
+<script src="/xcgp-api/js/graphiql.min.js"></script>
+
+<script>
+  // Parse the search string to get url parameters.
+  var search = window.location.search;
+  var parameters = {};
+  search.substr(1).split('&').forEach(function (entry) {
+    var eq = entry.indexOf('=');
+    if (eq >= 0) {
+      parameters[decodeURIComponent(entry.slice(0, eq))] =
+        decodeURIComponent(entry.slice(eq + 1));
+    }
+  });
+  // if variables was provided, try to format it.
+  if (parameters.variables) {
+    try {
+      parameters.variables =
+        JSON.stringify(JSON.parse(parameters.variables), null, 2);
+    } catch (e) {
+      // Do nothing, we want to display the invalid JSON as a string, rather
+      // than present an error.
+    }
+  }
+  // When the query and variables string is edited, update the URL bar so
+  // that it can be easily shared
+  function onEditQuery(newQuery) {
+    parameters.query = newQuery;
+    updateURL();
+  }
+  function onEditVariables(newVariables) {
+    parameters.variables = newVariables;
+    updateURL();
+  }
+  function onEditOperationName(newOperationName) {
+    parameters.operationName = newOperationName;
+    updateURL();
+  }
+  function updateURL() {
+    var newSearch = '?' + Object.keys(parameters).filter(function (key) {
+      return Boolean(parameters[key]);
+    }).map(function (key) {
+      return encodeURIComponent(key) + '=' +
+        encodeURIComponent(parameters[key]);
+    }).join('&');
+    history.replaceState(null, null, newSearch);
+  }
+  // Defines a GraphQL fetcher using the fetch API. You're not required to
+  // use fetch, and could instead implement graphQLFetcher however you like,
+  // as long as it returns a Promise or Observable.
+  function graphQLFetcher(graphQLParams) {
+    // This example expects a GraphQL server at the path /graphql.
+    // Change this to point wherever you host your GraphQL server.
+    var host = 'https://frontapi.cherrytech.com';
+    var brand = 'cherrycasino';
+    return fetch(host + '/graphql?brand=' + brand, {
+      method: 'post',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(graphQLParams),
+    }).then(function (response) {
+      return response.text();
+    }).then(function (responseBody) {
+      try {
+        return JSON.parse(responseBody);
+      } catch (error) {
+        return responseBody;
+      }
+    });
+  }
+  // Render <GraphiQL /> into the body.
+  // See the README in the top level of this module to learn more about
+  // how you can customize GraphiQL by providing different values or
+  // additional child elements.
+  ReactDOM.render(
+    React.createElement(GraphiQL, {
+      fetcher: graphQLFetcher,
+      query: parameters.query,
+      variables: parameters.variables,
+      operationName: parameters.operationName,
+      onEditQuery: onEditQuery,
+      onEditVariables: onEditVariables,
+      onEditOperationName: onEditOperationName
+    }),
+    document.getElementById('graphiql')
+  );
+</script>
+</div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2014 - 2018 XCaliber</section></footer></div></body></html>
