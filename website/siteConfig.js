@@ -21,6 +21,7 @@ const siteConfig = {
   headerLinks: [
     { doc: 'usage', label: 'Reference' },
     { doc: 'guides/graphql/overview', label: 'Guides' },
+    { page: 'explorer', label: 'Explorer' },
   ],
 
   /* path to images for header/footer */
@@ -59,6 +60,8 @@ const siteConfig = {
 
   /* On page navigation for the current documentation page */
   onPageNav: 'separate',
+
+  wrapPagesHTML: true,
 
   // You may provide arbitrary config keys to be used as needed by your
   // template. For example, if you need your repo's URL...

@@ -9,6 +9,8 @@
     "rename-version": "docusaurus-rename-version"
   },
   "devDependencies": {
-    "docusaurus": "^1.2.0"
+    "docusaurus": "^1.2.0",
+    "graphiql": "^0.11.11",
+    "graphql": "^0.13.2"
   }
 }

@@ -26,3 +26,12 @@
 table td code {
 	white-space: nowrap;
 }
+
+/* Hack to make #graphiql 100% height. (Selector is too broad.) */
+.navPusher > div {
+  display: flex;
+}
+
+#graphiql {
+  flex: 1;
+}
