@@ -22,3 +22,7 @@
 .post a {
   color: #54839b;
 }
+
+table td code {
+	white-space: nowrap;
+}

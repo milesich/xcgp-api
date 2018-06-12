@@ -6,7 +6,7 @@ sidebar_label: Authentication
 
 XCaliber Gaming Platform API uses the OAuth2 standard for authentication and it implements some extensions to it to accomodate some advanced scenarios.
 
-# Request and response fields
+## Request and response fields
 Refer to this section for an explanation of the request and response fields used in the following sections.
 
 Field           | Description | Example
@@ -16,9 +16,9 @@ Field           | Description | Example
 `access_token`  | The access token to be used for authenticated requests. | `e86a62a701be498455d09a792ff673949cfd160b`
 `refresh_token` | The refresh token to be used for refreshing the current session. | `b098eaf9d4d081222f28ca7eb674f1b26714b06f`
 `expires_in`    | The expiration time in seconds for the access token. A refresh grant needs to be requested using this token to keep the session alive.<br>It's the responsibility of the application to make sure the session is refreshed before it expires. | `1800`
-`identity`      | This is an extension to the OAuth2 specification to save one round-trip to fetch the user information. |
+`identity`      | This is an extension to the OAuth2 specification to save one round-trip to fetch the user information. | `{ ... }`
 
-# Start a session
+## Start a session
 To start a session the application needs to request a password grant to the OAuth endpoint like such:
 
 ```
@@ -96,7 +96,7 @@ OAuth2 Password Grant Response:
 }
 ```
 
-# Start a session (by activating the user)
+## Start a session (by activating the user)
 Another way to start a session is to activate a user using the activation code grant. This is used to 'auto-login' a user during activation.
 
 ```
@@ -173,7 +173,7 @@ OAuth2 Activation Code Grant Response:
 }
 ```
 
-# Refresh a session
+## Refresh a session
 A session needs to be refreshed before it expires and the refresh token grant is used for that purpose.
 
 ```
