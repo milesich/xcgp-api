@@ -1,0 +1,123 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Using the Explorer · XCaliber Gaming Platform API</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="## About the Explorer"/><meta property="og:title" content="Using the Explorer · XCaliber Gaming Platform API"/><meta property="og:type" content="website"/><meta property="og:url" content="https://xcaliber.com/xcgp-api/index.html"/><meta property="og:description" content="## About the Explorer"/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/xcgp-api/img/favicon.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/xcgp-api/css/main.css"/></head><body class="sideNavVisible doc separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/xcgp-api/"><img class="logo" src="/xcgp-api/img/xcaliber.svg" alt="XCaliber Gaming Platform API"/><h2 class="headerTitleWithLogo">XCaliber Gaming Platform API</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/xcgp-api/docs/usage.html" target="_self">Reference</a></li><li class="siteNavGroupActive"><a href="/xcgp-api/docs/guides/graphql/overview.html" target="_self">Guides</a></li><li class=""><a href="/xcgp-api/explorer.html" target="_self">Explorer</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>GraphQL</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup navGroupActive"><h3>GraphQL</h3><ul><li class="navListItem"><a class="navItem" href="/xcgp-api/docs/guides/graphql/overview.html">Overview</a></li><li class="navListItem"><a class="navItem" href="/xcgp-api/docs/guides/graphql/introduction.html">Introduction</a></li><li class="navListItem"><a class="navItem" href="/xcgp-api/docs/guides/graphql/using.html">Using GraphQL</a></li><li class="navListItem"><a class="navItem" href="/xcgp-api/docs/guides/graphql/from-rest.html">REST to GraphQL</a></li><li class="navListItem navListItemActive"><a class="navItem navItemActive" href="/xcgp-api/docs/guides/graphql/explorer.html">Using the Explorer</a></li></ul></div></div></section></div><script>
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              const headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                if (event.target.tagName === 'A') {
+                  document.body.classList.remove('tocActive');
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1>Using the Explorer</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="about-the-explorer"></a><a href="#about-the-explorer" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>About the Explorer</h2>
+<p><a href="../../../explorer.html">GraphQL Explorer</a> is an instance of <a href="https://github.com/graphql/graphiql">GraphiQL</a>, which is a &quot;graphical interactive in-browser GraphQL IDE.&quot;</p>
+<h3><a class="anchor" aria-hidden="true" id="run-in-explorer"></a><a href="#run-in-explorer" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Run in Explorer</h3>
+<p>Above some GraphQL query samples, you may see a link that says &quot;Run in Explorer&quot;. Click the link and you'll go to the Explorer window with the query sample already filled in.</p>
+<p><sub><a href="../../../explorer.html?query=query%20%7B%0A%20%20jackpots(first%3A%201)%20%7B%0A%20%20%20%20edges%20%7B%0A%20%20%20%20%20%20node%20%7B%0A%20%20%20%20%20%20%20%20amount%0A%20%20%20%20%20%20%20%20currency%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D">Run in Explorer</a></sub></p>
+<pre><code class="hljs css languages- ts">query {
+  jackpots(first: <span class="hljs-number">1</span>) {
+    edges {
+      node {
+        amount
+        currency
+      }
+    }
+  }
+}
+</code></pre>
+<p>You should see a response like the following:</p>
+<pre><code class="hljs css languages- json">{
+  <span class="hljs-attr">"data"</span>: {
+    <span class="hljs-attr">"jackpots"</span>: {
+      <span class="hljs-attr">"edges"</span>: [
+        {
+          <span class="hljs-attr">"node"</span>: {
+            <span class="hljs-attr">"amount"</span>: <span class="hljs-number">9001.00</span>,
+            <span class="hljs-attr">"currency"</span>: <span class="hljs-string">"EUR"</span>
+          }
+        }
+      ]
+    }
+  }
+}
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="using-graphiql"></a><a href="#using-graphiql" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Using GraphiQL</h2>
+<p>To use the GraphiQL app, download and install it from <a href="https://github.com/skevy/graphiql-app">https://github.com/skevy/graphiql-app</a>.</p>
+<h2><a class="anchor" aria-hidden="true" id="configuring-graphiql"></a><a href="#configuring-graphiql" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Configuring GraphiQL</h2>
+<ol>
+<li>Launch GraphiQL.</li>
+<li>In the <strong>GraphQL Endpoint</strong> field, enter <code>https://frontapi.cherrytech.com?brand=eurolotto</code>.</li>
+<li>In the <strong>Method</strong> dropdown menu, select <code>POST</code>.</li>
+</ol>
+<blockquote>
+<p>Note: For more information about why <code>POST</code> is the method, see &quot;<a href="/xcgp-api/docs/guides/graphql/using.html#communicating-with-graphql">Communicating with GraphQL</a>&quot;.</p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="accessing-the-sidebar-docs"></a><a href="#accessing-the-sidebar-docs" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Accessing the sidebar docs</h2>
+<p>All types in a GraphQL schema include a <code>description</code> field compiled into documentation. The collapsible <strong>Docs</strong> pane on the right side of the Explorer page allows you to browse documentation about the type system. The docs are automatically updated and will drop deprecated fields.</p>
+<blockquote>
+<p>The <strong>Docs</strong> sidebar contains the same content that is automatically generated from the schema under &quot;<a href="../../..">Reference</a>&quot;, though it is formatted differently in places.</p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="using-the-variable-pane"></a><a href="#using-the-variable-pane" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Using the variable pane</h2>
+<p>Some example calls include <a href="/xcgp-api/docs/guides/graphql/using.html#working-with-variables">variables</a> written like this:</p>
+<p><sub><a href="../../../explorer.html?query=query(%24total%3A%20Int!)%20%7B%0A%20%20jackpots(first%3A%20%24total)%20%7B%0A%20%20%20%20edges%20%7B%0A%20%20%20%20%20%20node%20%7B%0A%20%20%20%20%20%20%20%20amount%0A%20%20%20%20%20%20%20%20currency%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A&amp;variables=%7B%0A%20%22total%22%3A%205%0A%7D">Run in Explorer</a></sub></p>
+<pre><code class="hljs css languages- ts">query($total: Int!) {
+  jackpots(first: $total) {
+    edges {
+      node {
+        amount
+        currency
+      }
+    }
+  }
+}
+
+variables {
+  <span class="hljs-string">"total"</span>: <span class="hljs-number">5</span>
+}
+</code></pre>
+<p>This is the correct format to submit the call via a cURL <code>POST</code> (as long as you <a href="/xcgp-api/docs/guides/graphql/using.html#communicating-with-graphql">escape newlines</a>).</p>
+<p>If you want to run the call in the Explorer, enter the <code>query</code> segment in the main pane and the variables in the <strong>Query Variables</strong> pane below it. Omit the word <code>variables</code> from the Explorer:</p>
+<pre><code class="hljs css languages- json">{
+  <span class="hljs-attr">"total"</span>: <span class="hljs-number">5</span>
+}
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="troubleshooting-errors"></a><a href="#troubleshooting-errors" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Troubleshooting errors</h2>
+<p>Because GraphQL is <a href="/xcgp-api/docs/guides/graphql/introduction.html#discovering-the-graphql-api">introspective</a>, the Explorer supports:</p>
+<ul>
+<li>Intelligent typeaheads aware of the current schema</li>
+<li>Validation error previews as you type</li>
+</ul>
+<p>If you enter a query that is not well-formed or does not pass <a href="/xcgp-api/docs/guides/graphql/introduction.html#schema">schema validation</a>, a popup warns you of an error. If you run the query, the error returns in the response pane.</p>
+<p>A GraphQL response contains several keys: an optional <code>data</code> object and an <code>errors</code> array.</p>
+<pre><code class="hljs css languages- json">{
+  <span class="hljs-attr">"errors"</span>: [
+    {
+      <span class="hljs-attr">"message"</span>: <span class="hljs-string">"Argument \"input\" has invalid value {mobileCode: \"356\"}.\nIn field \"mobileCode\": Expected type \"Int\", found \"356\"."</span>,
+      <span class="hljs-attr">"category"</span>: <span class="hljs-string">"graphql"</span>,
+      <span class="hljs-attr">"locations"</span>: [
+        {
+          <span class="hljs-attr">"line"</span>: <span class="hljs-number">2</span>,
+          <span class="hljs-attr">"column"</span>: <span class="hljs-number">20</span>
+        }
+      ]
+    }
+  ]
+}
+</code></pre>
+<p>It's possible you might run into an unexpected error that is not related to the schema. If this happens, use the <a href="https://support.xcaliber.com/">XCaliber Support Portal</a> to report an issue.</p>
+<blockquote>
+<p><strong>Note:</strong> XCaliber recommends checking for errors before using data in a production environment. In GraphQL, failure is not total: portions of GraphQL queries may succeed while others fail.</p>
+</blockquote>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="from-rest.html">← From REST to GraphQL</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#about-the-explorer">About the Explorer</a><ul class="toc-headings"><li><a href="#run-in-explorer">Run in Explorer</a></li></ul></li><li><a href="#using-graphiql">Using GraphiQL</a></li><li><a href="#configuring-graphiql">Configuring GraphiQL</a></li><li><a href="#accessing-the-sidebar-docs">Accessing the sidebar docs</a></li><li><a href="#using-the-variable-pane">Using the variable pane</a></li><li><a href="#troubleshooting-errors">Troubleshooting errors</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2014 - 2018 XCaliber</section></footer></div></body></html>
