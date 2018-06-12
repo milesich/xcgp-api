@@ -1,0 +1,51 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>GraphQL Overview · XCaliber Gaming Platform API</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="Here are some quick links to get you up and running with the GraphQL API:"/><meta property="og:title" content="GraphQL Overview · XCaliber Gaming Platform API"/><meta property="og:type" content="website"/><meta property="og:url" content="https://xcaliber.com/xcgp-api/index.html"/><meta property="og:description" content="Here are some quick links to get you up and running with the GraphQL API:"/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/xcgp-api/img/favicon.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/xcgp-api/css/main.css"/></head><body class="sideNavVisible doc separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/xcgp-api/"><img class="logo" src="/xcgp-api/img/xcaliber.svg" alt="XCaliber Gaming Platform API"/><h2 class="headerTitleWithLogo">XCaliber Gaming Platform API</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/xcgp-api/docs/usage.html" target="_self">Reference</a></li><li class=""><a href="/xcgp-api/docs/guides/graphql/overview.html" target="_self">Guides</a></li><li class=""><a href="/xcgp-api/explorer.html" target="_self">Explorer</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>GraphQL</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup navGroupActive"><h3>API Integration</h3><ul><li class="navListItem"><a class="navItem" href="/xcgp-api/docs/usage.html">Usage</a></li><li class="navListItem"><a class="navItem" href="/xcgp-api/docs/authentication.html">Authentication</a></li><li class="navListItem"><a class="navItem" href="/xcgp-api/docs/graphql-schema.html">GraphQL Schema</a></li><li class="navListItem"><a class="navItem" href="/xcgp-api/docs/rest-resources.html">REST Resources</a></li></ul></div><div class="navGroup navGroupActive"><h3>GraphQL</h3><ul><li class="navListItem navListItemActive"><a class="navItem navItemActive" href="/xcgp-api/docs/graphql/overview.html">Overview</a></li><li class="navListItem"><a class="navItem" href="/xcgp-api/docs/graphql/mutations.html">Mutations</a></li></ul></div></div></section></div><script>
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              const headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                if (event.target.tagName === 'A') {
+                  document.body.classList.remove('tocActive');
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1>GraphQL Overview</h1></header><article><div><span><p>Here are some quick links to get you up and running with the GraphQL API:</p>
+<ul>
+<li><a href="/xcgp-api/docs/authentication.html">Authentication</a></li>
+<li><a href="/xcgp-api/docs/guides/graphql/using.html#the-graphql-endpoint">Root endpoint</a></li>
+<li><a href="/xcgp-api/docs/guides/graphql/introduction.html#discovering-the-graphql-api">Schema introspection</a></li>
+<li><a href="/xcgp-api/docs/guides/graphql/from-rest.html">From REST to GraphQL</a></li>
+</ul>
+<p>For support requests, bug reports, and discussions, use the <a href="https://support.xcaliber.com/">XCaliber Support Portal</a>. This portal allows you to collaborate with other integrators as well as engineers and product managers from XCaliber. If you need to discuss a private concern, please contact your account manager directly.</p>
+<h2><a class="anchor" aria-hidden="true" id="what-is-graphql"></a><a href="#what-is-graphql" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>What is GraphQL?</h2>
+<p>The <a href="https://graphql.org/">GraphQL</a> data query language is:</p>
+<ul>
+<li><strong>A <a href="http://facebook.github.io/graphql/">specification</a>.</strong> The spec determines the validity of the schema on the API server. The schema determines the validity of the client calls.</li>
+<li><strong><a href="#about-the-graphql-schema-reference">Strongly typed</a>.</strong> The schema defines an API's type system and all object relationships.</li>
+<li><strong><a href="/xcgp-api/docs/guides/graphql/introduction.html#discovering-the-graphql-api">Introspective</a>.</strong> A client can query the schema for details about the schema.</li>
+<li><strong><a href="/xcgp-api/docs/guides/graphql/using.html">Hierarchical</a>.</strong> The shape of a GraphQL call mirrors the shape of the JSON data it returns. Nested fields let you query for and receive only the data you specify in a single round trip.</li>
+<li><strong>An application layer.</strong> GraphQL is not a storage model or a database query language. The <em>graph</em> refers to graph structures defined in the schema, where <a href="TODO">nodes</a> define objects and <a href="TODO">edges</a> define relationships between objects. The API traverses and returns application data based on the schema definitions, independent of how the data is stored.</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="why-is-xcaliber-using-graphql"></a><a href="#why-is-xcaliber-using-graphql" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Why is XCaliber using GraphQL?</h2>
+<p>XCaliber chose GraphQL because it offers significantly more flexibility for our integrators. The ability to define precisely the data you want - and <em>only</em> the data you want - is a powerful advantage over the REST API endpoints. GraphQL lets you replace multiple REST requests with <em>a single call</em> to fetch the data you specify.</p>
+<h2><a class="anchor" aria-hidden="true" id="about-the-graphql-schema-reference"></a><a href="#about-the-graphql-schema-reference" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>About the GraphQL schema reference</h2>
+<p>The docs in the menu are generated from the XCaliber Gaming Platform GraphQL <a href="/xcgp-api/docs/guides/graphql/introduction.html#discovering-the-graphql-api">schema</a>. All calls are validated and executed against the schema. Use these docs to find out what data you can call:</p>
+<ul>
+<li>Allowed operators: <a href="TODO">queries</a> and <a href="TODO">mutations</a>.</li>
+<li>Schema-defined types: <a href="/xcgp-api/docs/graphql/scalars.html">scalars</a>, <a href="TODO">objects</a>, <a href="TODO">enums</a>, <a href="TODO">interfaces</a>, <a href="TODO">unions</a>, and <a href="TODO">input objects</a>.</li>
+</ul>
+<p>You can access this same content via the <a href="/xcgp-api/docs/guides/graphql/explorer.html">Explorer</a>. Note that you may need to rely on both the docs and the schema validation to successfully call the GraphQL API.</p>
+<p>For other information, such as authentication, check out the <a href="/xcgp-api/docs/guides/graphql/overview.html">guides</a>.</p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="../rest-resources.html">← REST Resources</a><a class="docs-next button" href="mutations.html">Mutations →</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#what-is-graphql">What is GraphQL?</a></li><li><a href="#why-is-xcaliber-using-graphql">Why is XCaliber using GraphQL?</a></li><li><a href="#about-the-graphql-schema-reference">About the GraphQL schema reference</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2014 - 2018 XCaliber</section></footer></div></body></html>
