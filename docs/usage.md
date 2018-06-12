@@ -4,9 +4,9 @@ title: Usage
 sidebar_label: Usage
 ---
 
-XCaliber Gaming API needs to be used in a certain way either to actually work, or to take advantage of certain features like caching.
+XCaliber Gaming Platform API needs to be used in a certain way either to actually work, or to take advantage of certain features like caching.
 
-# Query Parameters
+# Query parameters
 Every API call requires having the following query parameters:
 
 Parameter | Description | Example
