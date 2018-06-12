@@ -1,5 +1,5 @@
 ---
-id: graphql-overview
+id: overview
 title: GraphQL Overview
 sidebar_label: Overview
 ---

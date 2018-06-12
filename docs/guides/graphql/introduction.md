@@ -5,7 +5,7 @@ sidebar_label: Introduction
 ---
 
 ## GraphQL terminology
-You will likely encounter some new terminology in the [reference docs](graphql-overview.md).
+You will likely encounter some new terminology in the [reference docs](graphql/overview.md).
 
 ### Schema
 A schema defines a GraphQL API's type system. It describes the complete set of possible data (objects, fields, relationships, everything) that a client can access. Calls from the client are [validated](https://graphql.org/learn/validation/) and [executed](https://graphql.org/learn/execution/) against the schema. A client can find information about the schema via [introspection](#discovering-the-graphql-api). A schema resides on the GraphQL API server.
