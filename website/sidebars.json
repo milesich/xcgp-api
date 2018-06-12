@@ -1,10 +1,13 @@
 {
   "reference": {
-    "API Integration": [
+    "API Reference": [
       "usage",
-      "authentication",
       "graphql-schema",
       "rest-resources"
+    ],
+    "Authentication": [
+      "authentication/oauth2",
+      "authentication/grant-types"
     ],
     "GraphQL": [
       "graphql/overview",
