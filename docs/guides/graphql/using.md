@@ -31,12 +31,12 @@ curl -H "Content-Type: application/json" -X POST -d " \
 > **Note:** The string value of "query" must escape newline characters or the schema will not parse it correctly. For the POST body, use outer double quotes and escaped inner double quotes.
 
 ## About query and mutation operations
-The two types of allowed operations in GraphQL API are *queries* and *mutations*. Comparing GraphQL to REST, queries operate like `GET` requests, while mutations operate like `POST`/`PATCH`/`DELETE`. The [mutation name](TODO) determines which modification is executed.
+The two types of allowed operations in GraphQL API are *queries* and *mutations*. Comparing GraphQL to REST, queries operate like `GET` requests, while mutations operate like `POST`/`PATCH`/`DELETE`. The [mutation name](graphql/mutations.md) determines which modification is executed.
 
 Queries and mutations share similar forms, with some important differences.
 
 ### About queries
-GraphQL queries return only the data you specify. To form a query, you must specify [fields within fields](guides/graphql/introduction.md#field) (also known as *nested subfields*) until you return only [scalars](TODO).
+GraphQL queries return only the data you specify. To form a query, you must specify [fields within fields](guides/graphql/introduction.md#field) (also known as *nested subfields*) until you return only [scalars](graphql/scalars.md).
 
 Queries are structured like this:
 ```ts
@@ -64,14 +64,14 @@ mutation {
 
 The input object in this example is `MutationNameInput`, and the payload object is `MutationNamePayload`.
 
-In the [mutations](TODO) reference, the listed *input fields* are what you pass as the input object. The listed *return fields* are what you pass as the payload object.
+In the [mutations](graphql/mutations.md) reference, the listed *input fields* are what you pass as the input object. The listed *return fields* are what you pass as the payload object.
 
 For a real-world example, see "[Example mutation](#example-mutation)".
 
 ## Working with variables
 [Variables](https://graphql.org/learn/queries/#variables) can make queries more dynamic and powerful, and they can reduce complexity when passing mutation input objects.
 
-> **Note:** If you're using the Explorer, make sure to enter variables in the separate [Query Variables pane](TODO), and do not include the word `variables` before the JSON object.
+> **Note:** If you're using the Explorer, make sure to enter variables in the separate [Query Variables pane](guides/graphql/explorer.md#using-the-variable-pane), and do not include the word `variables` before the JSON object.
 
 Here's an example query with a single variable:
 

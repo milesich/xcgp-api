@@ -20,7 +20,7 @@ The [official spec](http://facebook.github.io/graphql/draft/#sec-Language.Fields
 This means that if you try to return a field that is not a scalar, schema validation will throw an error. You must add nested subfields until all fields return scalars.
 
 ### Argument
-An argument is a set of key-value pairs attached to a specific field. Some fields require an argument. [Mutations](TODO) require an input object as an argument.
+An argument is a set of key-value pairs attached to a specific field. Some fields require an argument. [Mutations](guides/graphql/using.md#about-mutations) require an input object as an argument.
 
 ### Implementation
 A GraphQL schema may use the term *implements* to define how an object inherits from an [interface](TODO).
@@ -55,7 +55,7 @@ It's helpful to picture a graph: dots connected by lines. The dots are nodes, th
 Edges represent connections between nodes. When you query a connection, you traverse its edges to get to its nodes. Every `edges` field has a `node` field and a `cursor` field. Cursors are used for [pagination](https://graphql.org/learn/pagination/).
 
 ### Node
-*Node* is a generic term for an object. You can look up a node directly, or you can access related nodes via a connection. If you specify a `node` that does not return a [scalar](TODO), you must include subfields until all fields return scalars.
+*Node* is a generic term for an object. You can look up a node directly, or you can access related nodes via a connection. If you specify a `node` that does not return a [scalar](graphql/scalar.md), you must include subfields until all fields return scalars.
 
 ## Discovering the GraphQL API
 GraphQL is [introspective](https://graphql.org/learn/introspection/). This means you can query a GraphQL schema for details about itself.
@@ -92,4 +92,4 @@ GraphQL is [introspective](https://graphql.org/learn/introspection/). This means
   }
   ```
 
-For more information about performing queries, see "[Using GraphQL](guides/graphql/using.html)".
+For more information about performing queries, see "[Using GraphQL](guides/graphql/using.md)".

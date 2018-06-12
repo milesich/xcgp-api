@@ -8,7 +8,8 @@
     ],
     "GraphQL": [
       "graphql/overview",
-      "graphql/mutations"
+      "graphql/mutations",
+      "graphql/scalars"
     ]
   },
   "guides": {
