@@ -27,7 +27,7 @@ A GraphQL schema may use the term *implements* to define how an object inherits 
 
 Here's a contrived example of a schema that defines interface `X` and object `Y`:
 
-```ts
+```graphql
 interface X {
   some_field: String!
   other_field: String!
@@ -62,7 +62,7 @@ GraphQL is [introspective](https://graphql.org/learn/introspection/). This means
 
 * Query `__schema` to list all types defined in the schema and get details about each:
 	<sub>[Run in Explorer](../../../explorer.html?query=query%20%7B%0A%20%20__schema%20%7B%0A%20%20%20%20types%20%7B%0A%20%20%20%20%20%20name%0A%20%20%20%20%20%20kind%0A%20%20%20%20%20%20description%0A%20%20%20%20%20%20fields%20%7B%0A%20%20%20%20%20%20%20%20name%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D)</sub>
-  ```ts
+  ```graphql
   query {
     __schema {
       types {
@@ -79,7 +79,7 @@ GraphQL is [introspective](https://graphql.org/learn/introspection/). This means
 
 * Query `__type` to get details about any type:
 	<sub>[Run in Explorer](../../../explorer.html?query=query%20%7B%0A%20%20__type(name%3A%20"Game")%20%7B%0A%20%20%20%20name%0A%20%20%20%20kind%0A%20%20%20%20description%0A%20%20%20%20fields%20%7B%0A%20%20%20%20%20%20name%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D)</sub>
-  ```ts
+  ```graphql
   query {
     __type(name: "Game") {
       name

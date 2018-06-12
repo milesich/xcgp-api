@@ -11,7 +11,7 @@ sidebar_label: Using the Explorer
 Above some GraphQL query samples, you may see a link that says "Run in Explorer". Click the link and you'll go to the Explorer window with the query sample already filled in.
 
 <sub>[Run in Explorer](../../../explorer.html?query=query%20%7B%0A%20%20jackpots(first%3A%201)%20%7B%0A%20%20%20%20edges%20%7B%0A%20%20%20%20%20%20node%20%7B%0A%20%20%20%20%20%20%20%20amount%0A%20%20%20%20%20%20%20%20currency%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D)</sub>
-```ts
+```graphql
 query {
   jackpots(first: 1) {
     edges {
@@ -61,7 +61,7 @@ All types in a GraphQL schema include a `description` field compiled into docume
 Some example calls include [variables](guides/graphql/using.md#working-with-variables) written like this:
 
 <sub>[Run in Explorer](../../../explorer.html?query=query(%24total%3A%20Int!)%20%7B%0A%20%20jackpots(first%3A%20%24total)%20%7B%0A%20%20%20%20edges%20%7B%0A%20%20%20%20%20%20node%20%7B%0A%20%20%20%20%20%20%20%20amount%0A%20%20%20%20%20%20%20%20currency%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A&variables=%7B%0A%20%22total%22%3A%205%0A%7D)</sub>
-```ts
+```graphql
 query($total: Int!) {
   jackpots(first: $total) {
     edges {

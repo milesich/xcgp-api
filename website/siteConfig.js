@@ -11,7 +11,8 @@
 const siteConfig = {
   title: 'XCaliber Gaming Platform API',
   tagline: 'XCaliber Gaming Platform API documentation.',
-  url: 'https://xcaliber.com',
+  disableTitleTagline: true,
+  url: 'https://xcaliber-tech.github.io/',
   baseUrl: '/xcgp-api/',
 
   // Used for publishing and more
@@ -32,7 +33,7 @@ const siteConfig = {
   /* colors for website */
   colors: {
     primaryColor: '#343c43',
-    secondaryColor: '#205C3B',
+    secondaryColor: '#54839b',
   },
 
   /* custom fonts for website */
@@ -50,10 +51,16 @@ const siteConfig = {
   // This copyright info is used in /core/Footer.js and blog rss/atom feeds.
   copyright: `Copyright © 2014 - ${new Date().getFullYear()} XCaliber`,
 
+  // Syntax highlight
   highlight: {
     // Highlight.js theme to use for syntax highlighting in code blocks
-    theme: 'default',
+    theme: 'github',
   },
+  usePrism: [
+    'graphql',
+  ],
+
+  editUrl: 'https://github.com/xcaliber-tech/xcgp-api/edit/master/docs/',
 
   // Add custom scripts here that would be placed in <script> tags
   scripts: ['https://buttons.github.io/buttons.js'],

@@ -20,7 +20,7 @@
 }
 
 .post a {
-  color: #54839b;
+  color: $secondaryColor;
 }
 
 table td code {

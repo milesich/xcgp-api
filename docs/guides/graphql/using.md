@@ -7,7 +7,7 @@ sidebar_label: Using GraphQL
 ## The GraphQL endpoint
 The REST API has numerous endpoints; the GraphQL API has a single endpoint:
 
-```
+```shell
 https://frontapi.cherrytech.com/graphql
 ```
 
@@ -39,9 +39,9 @@ Queries and mutations share similar forms, with some important differences.
 GraphQL queries return only the data you specify. To form a query, you must specify [fields within fields](guides/graphql/introduction.md#field) (also known as *nested subfields*) until you return only [scalars](graphql/scalars.md).
 
 Queries are structured like this:
-```ts
+```graphql
 query {
-  // JSON objects to return
+  # JSON objects to return
 }
 ```
 
@@ -54,7 +54,7 @@ To form a mutation, you must specify three things:
 3. *Payload object*. The data you want to return from the server, composed of *return fields*. Pass it as the body of the mutation name.
 
 Mutations are structured like this:
-```ts
+```graphql
 mutation {
   mutationName(input: { MutationNameInput! }) {
     MutationNamePayload
@@ -76,7 +76,7 @@ For a real-world example, see "[Example mutation](#example-mutation)".
 Here's an example query with a single variable:
 
 <sub>[Run in Explorer](../../../explorer.html?query=query(%24total%3A%20Int!)%20%7B%0A%20%20jackpots(first%3A%20%24total)%20%7B%0A%20%20%20%20edges%20%7B%0A%20%20%20%20%20%20node%20%7B%0A%20%20%20%20%20%20%20%20amount%0A%20%20%20%20%20%20%20%20currency%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A&variables=%7B%0A%20%22total%22%3A%205%0A%7D)</sub>
-```ts
+```graphql
 query($total: Int!) {
   jackpots(first: $total) {
     edges {
@@ -96,7 +96,7 @@ variables {
 There are three steps to using variables:
 
 1. Define the variable outside the operation in a `variables` object:
-    ```json
+    ```graphql
     variables {
       "total": 5
     }
@@ -104,13 +104,13 @@ There are three steps to using variables:
 	  The object must be valid JSON. This example shows a simple `Int` variable type, but it's possible to define more complex variable types, such as input objects. You can also define multiple variables here.
 
 2. Pass the variable to the operation as an argument:
-    ```ts
+    ```graphql
 	  query($total: Int!) { ... }
 	  ```
 	  The argument is a key-value pair, where the key is the *name* starting with `$` (e.g. `$total`), and the value is the *type* (e.g. `Int`). Add a `!` to indicate whether the type is required. If you've defined multiple variables, include them here as multiple arguments.
 
 3. Use the variables within the operation:
-    ```ts
+    ```graphql
 	  jackpots(first: $total) { ... }
 	  ```
 	  In this example, we substitute the variable for the number of jackpots to retrieve. We specify a type in step 2 because GraphQL enforces strong typing.
