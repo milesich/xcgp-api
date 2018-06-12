@@ -15,7 +15,8 @@
       "guides/graphql/overview",
       "guides/graphql/introduction",
       "guides/graphql/using",
-      "guides/graphql/from-rest"
+      "guides/graphql/from-rest",
+      "guides/graphql/explorer"
     ]
   }
 }

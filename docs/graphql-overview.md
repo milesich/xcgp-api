@@ -31,6 +31,6 @@ The docs in the menu are generated from the XCaliber Gaming Platform GraphQL [sc
 * Allowed operators: [queries](TODO) and [mutations](TODO).
 * Schema-defined types: [scalars](TODO), [objects](TODO), [enums](TODO), [interfaces](TODO), [unions](TODO), and [input objects](TODO).
 
-You can access this same content via the [Explorer Docs sidebar](TODO). Note that you may need to rely on both the docs and the schema validation to successfully call the GraphQL API.
+You can access this same content via the [Explorer](guides/graphql/explorer.md). Note that you may need to rely on both the docs and the schema validation to successfully call the GraphQL API.
 
 For other information, such as authentication, check out the [guides](TODO).

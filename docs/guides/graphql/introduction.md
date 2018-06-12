@@ -61,6 +61,7 @@ Edges represent connections between nodes. When you query a connection, you trav
 GraphQL is [introspective](https://graphql.org/learn/introspection/). This means you can query a GraphQL schema for details about itself.
 
 * Query `__schema` to list all types defined in the schema and get details about each:
+	<sub>[Run in Explorer](../../../explorer.html?query=query%20%7B%0A%20%20__schema%20%7B%0A%20%20%20%20types%20%7B%0A%20%20%20%20%20%20name%0A%20%20%20%20%20%20kind%0A%20%20%20%20%20%20description%0A%20%20%20%20%20%20fields%20%7B%0A%20%20%20%20%20%20%20%20name%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D)</sub>
   ```ts
   query {
     __schema {
@@ -77,6 +78,7 @@ GraphQL is [introspective](https://graphql.org/learn/introspection/). This means
   ```
 
 * Query `__type` to get details about any type:
+	<sub>[Run in Explorer](../../../explorer.html?query=query%20%7B%0A%20%20__type(name%3A%20"Game")%20%7B%0A%20%20%20%20name%0A%20%20%20%20kind%0A%20%20%20%20description%0A%20%20%20%20fields%20%7B%0A%20%20%20%20%20%20name%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D)</sub>
   ```ts
   query {
     __type(name: "Game") {
@@ -90,4 +92,4 @@ GraphQL is [introspective](https://graphql.org/learn/introspection/). This means
   }
   ```
 
-For more information about performing queries, see "[Forming calls with GraphQL](TODO)".
+For more information about performing queries, see "[Using GraphQL](guides/graphql/using.html)".

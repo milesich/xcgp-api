@@ -14,7 +14,7 @@ https://frontapi.cherrytech.com/graphql
 The endpoint remains constant no matter what operation you perform.
 
 ## Communicating with GraphQL
-Because GraphQL operations consist of multiline JSON, XCaliber recommends using the [Explorer](TODO) to make GraphQL calls. You can also use cURL or any other HTTP-speaking library.
+Because GraphQL operations consist of multiline JSON, XCaliber recommends using the [Explorer](guides/graphql/explorer.md) to make GraphQL calls. You can also use cURL or any other HTTP-speaking library.
 
 In REST, [HTTP verbs](TODO) determine the operation performed. In GraphQL, you'll provide a JSON-encoded body whether you're performing a query or a mutation, so the HTTP verb is `POST`. For more information on GraphQL versus REST, see "[From REST to GraphQL](guides/graphql/from-rest.md)".
 
@@ -25,7 +25,7 @@ curl -H "Content-Type: application/json" -X POST -d " \
  { \
    \"query\": \"query { jackpots { edges { node { amount } } } }\" \
  } \
-" https://frontapi.cherrytech.com/graphql?brand=cherrycasino
+" https://frontapi.cherrytech.com/graphql?brand=eurolotto
 ```
 
 > **Note:** The string value of "query" must escape newline characters or the schema will not parse it correctly. For the POST body, use outer double quotes and escaped inner double quotes.
@@ -74,6 +74,8 @@ For a real-world example, see "[Example mutation](#example-mutation)".
 > **Note:** If you're using the Explorer, make sure to enter variables in the separate [Query Variables pane](TODO), and do not include the word `variables` before the JSON object.
 
 Here's an example query with a single variable:
+
+<sub>[Run in Explorer](../../../explorer.html?query=query(%24total%3A%20Int!)%20%7B%0A%20%20jackpots(first%3A%20%24total)%20%7B%0A%20%20%20%20edges%20%7B%0A%20%20%20%20%20%20node%20%7B%0A%20%20%20%20%20%20%20%20amount%0A%20%20%20%20%20%20%20%20currency%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A&variables=%7B%0A%20%22total%22%3A%205%0A%7D)</sub>
 ```ts
 query($total: Int!) {
   jackpots(first: $total) {
@@ -99,19 +101,19 @@ There are three steps to using variables:
       "total": 5
     }
     ```
-	The object must be valid JSON. This example shows a simple `Int` variable type, but it's possible to define more complex variable types, such as input objects. You can also define multiple variables here.
+	  The object must be valid JSON. This example shows a simple `Int` variable type, but it's possible to define more complex variable types, such as input objects. You can also define multiple variables here.
 
 2. Pass the variable to the operation as an argument:
     ```ts
-	query($total: Int!) { ... }
-	```
-	The argument is a key-value pair, where the key is the *name* starting with `$` (e.g. `$total`), and the value is the *type* (e.g. `Int`). Add a `!` to indicate whether the type is required. If you've defined multiple variables, include them here as multiple arguments.
+	  query($total: Int!) { ... }
+	  ```
+	  The argument is a key-value pair, where the key is the *name* starting with `$` (e.g. `$total`), and the value is the *type* (e.g. `Int`). Add a `!` to indicate whether the type is required. If you've defined multiple variables, include them here as multiple arguments.
 
 3. Use the variables within the operation:
     ```ts
-	jackpots(first: $total) { ... }
-	```
-	In this example, we substitute the variable for the number of jackpots to retrieve. We specify a type in step 2 because GraphQL enforces strong typing.
+	  jackpots(first: $total) { ... }
+	  ```
+	  In this example, we substitute the variable for the number of jackpots to retrieve. We specify a type in step 2 because GraphQL enforces strong typing.
 
 This process makes the query argument dynamic. We can now simply change the value in the `variables` object and keep the rest of the query the same.
 

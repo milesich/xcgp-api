@@ -12,9 +12,9 @@ Refer to this section for an explanation of the request and response fields used
 Field           | Description | Example
 --------------- | ----------- | -------
 `client_id`     | The client id for this request. This is the brand code given during the brand setup. | `xcasino`
-`username`      | The username of the user.<br>Currently, email, nickname and mobile_number are allowed usernames depending on the brand configuration. | `api@xcaliber.io`
-`access_token`  | The access token to be used for authenticated requests. | `e86a62a701be498455d09a792ff673949cfd160b`
-`refresh_token` | The refresh token to be used for refreshing the current session. | `b098eaf9d4d081222f28ca7eb674f1b26714b06f`
+`username`      | The username of the user.<br>Currently, email, nickname and mobile_number are allowed usernames depending on the brand configuration. | `xcgp@xcaliber.io`
+`access_token`  | The access token to be used for authenticated requests. | `e86a6...`
+`refresh_token` | The refresh token to be used for refreshing the current session. | `b098e...`
 `expires_in`    | The expiration time in seconds for the access token. A refresh grant needs to be requested using this token to keep the session alive.<br>It's the responsibility of the application to make sure the session is refreshed before it expires. | `1800`
 `identity`      | This is an extension to the OAuth2 specification to save one round-trip to fetch the user information. | `{ ... }`
 
@@ -54,7 +54,7 @@ OAuth2 Password Grant Response:
     },
     "currency": "EUR",
     "deposited": true,
-    "email": "api@xcaliber.io",
+    "email": "xcgp@xcaliber.io",
     "external_tracking_tag": null,
     "first_name": "XCaliber",
     "gender": "male",
@@ -131,7 +131,7 @@ OAuth2 Activation Code Grant Response:
     },
     "currency": "EUR",
     "deposited": true,
-    "email": "api@xcaliber.io",
+    "email": "xcgp@xcaliber.io",
     "external_tracking_tag": null,
     "first_name": "XCaliber",
     "gender": "male",
@@ -208,7 +208,7 @@ OAuth2 Refresh Token Grant Response:
     },
     "currency": "EUR",
     "deposited": true,
-    "email": "api@xcaliber.io",
+    "email": "xcgp@xcaliber.io",
     "external_tracking_tag": null,
     "first_name": "XCaliber",
     "gender": "male",
