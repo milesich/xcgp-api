@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Authentication · XCaliber Gaming Platform API</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="TODO"/><meta property="og:title" content="Authentication · XCaliber Gaming Platform API"/><meta property="og:type" content="website"/><meta property="og:url" content="https://xcaliber.com/xcgp-api/index.html"/><meta property="og:description" content="TODO"/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/xcgp-api/img/favicon.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/xcgp-api/css/main.css"/></head><body class="sideNavVisible doc separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/xcgp-api/"><img class="logo" src="/xcgp-api/img/xcaliber.svg" alt="XCaliber Gaming Platform API"/><h2 class="headerTitleWithLogo">XCaliber Gaming Platform API</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/xcgp-api/docs/usage.html" target="_self">Docs</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>API Integration</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup navGroupActive"><h3>API Integration</h3><ul><li class="navListItem"><a class="navItem" href="/xcgp-api/docs/usage.html">Usage</a></li><li class="navListItem navListItemActive"><a class="navItem navItemActive" href="/xcgp-api/docs/authentication.html">Authentication</a></li><li class="navListItem"><a class="navItem" href="/xcgp-api/docs/graphql-schema.html">GraphQL Schema</a></li><li class="navListItem"><a class="navItem" href="/xcgp-api/docs/rest-resources.html">REST Resources</a></li></ul></div><div class="navGroup navGroupActive"><h3>GraphQL</h3><ul><li class="navListItem"><a class="navItem" href="/xcgp-api/docs/graphql-overview.html">Overview</a></li></ul></div></div></section></div><script>
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Authentication · XCaliber Gaming Platform API</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="XCaliber Gaming Platform API uses the OAuth2 standard for authentication and it implements some extensions to it to accomodate some advanced scenarios."/><meta property="og:title" content="Authentication · XCaliber Gaming Platform API"/><meta property="og:type" content="website"/><meta property="og:url" content="https://xcaliber.com/xcgp-api/index.html"/><meta property="og:description" content="XCaliber Gaming Platform API uses the OAuth2 standard for authentication and it implements some extensions to it to accomodate some advanced scenarios."/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/xcgp-api/img/favicon.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/xcgp-api/css/main.css"/></head><body class="sideNavVisible doc separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/xcgp-api/"><img class="logo" src="/xcgp-api/img/xcaliber.svg" alt="XCaliber Gaming Platform API"/><h2 class="headerTitleWithLogo">XCaliber Gaming Platform API</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/xcgp-api/docs/usage.html" target="_self">Docs</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>API Integration</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup navGroupActive"><h3>API Integration</h3><ul><li class="navListItem"><a class="navItem" href="/xcgp-api/docs/usage.html">Usage</a></li><li class="navListItem navListItemActive"><a class="navItem navItemActive" href="/xcgp-api/docs/authentication.html">Authentication</a></li><li class="navListItem"><a class="navItem" href="/xcgp-api/docs/graphql-schema.html">GraphQL Schema</a></li><li class="navListItem"><a class="navItem" href="/xcgp-api/docs/rest-resources.html">REST Resources</a></li></ul></div><div class="navGroup navGroupActive"><h3>GraphQL</h3><ul><li class="navListItem"><a class="navItem" href="/xcgp-api/docs/graphql-overview.html">Overview</a></li></ul></div></div></section></div><script>
             document.addEventListener('DOMContentLoaded', function() {
               createToggler('#navToggler', '#docsNav', 'docsSliderActive');
               createToggler('#tocToggler', 'body', 'tocActive');
@@ -21,5 +21,231 @@
                 };
               }
             });
-        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1>Authentication</h1></header><article><div><span><p>TODO</p>
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1>Authentication</h1></header><article><div><span><p>XCaliber Gaming Platform API uses the OAuth2 standard for authentication and it implements some extensions to it to accomodate some advanced scenarios.</p>
+<h1><a class="anchor" aria-hidden="true" id="request-and-response-fields"></a><a href="#request-and-response-fields" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Request and response fields</h1>
+<p>Refer to this section for an explanation of the request and response fields used in the following sections.</p>
+<table>
+<thead>
+<tr><th>Field</th><th>Description</th><th>Example</th></tr>
+</thead>
+<tbody>
+<tr><td><code>client_id</code></td><td>The client id for this request. This is the brand code given during the brand setup.</td><td><code>xcasino</code></td></tr>
+<tr><td><code>username</code></td><td>The username of the user.<br>Currently, email, nickname and mobile_number are allowed usernames depending on the brand configuration.</td><td><code>api@xcaliber.io</code></td></tr>
+<tr><td><code>access_token</code></td><td>The access token to be used for authenticated requests.</td><td><code>e86a62a701be498455d09a792ff673949cfd160b</code></td></tr>
+<tr><td><code>refresh_token</code></td><td>The refresh token to be used for refreshing the current session.</td><td><code>b098eaf9d4d081222f28ca7eb674f1b26714b06f</code></td></tr>
+<tr><td><code>expires_in</code></td><td>The expiration time in seconds for the access token. A refresh grant needs to be requested using this token to keep the session alive.<br>It's the responsibility of the application to make sure the session is refreshed before it expires.</td><td><code>1800</code></td></tr>
+<tr><td><code>identity</code></td><td>This is an extension to the OAuth2 specification to save one round-trip to fetch the user information.</td></tr>
+</tbody>
+</table>
+<h1><a class="anchor" aria-hidden="true" id="start-a-session"></a><a href="#start-a-session" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Start a session</h1>
+<p>To start a session the application needs to request a password grant to the OAuth endpoint like such:</p>
+<pre><code class="hljs">POST <span class="hljs-string">/oauth</span>
+</code></pre>
+<p>OAuth2 Password Grant Request:</p>
+<pre><code class="hljs css languages- json">{
+  <span class="hljs-attr">"grant_type"</span>: <span class="hljs-string">"password"</span>,
+  <span class="hljs-attr">"client_id"</span>: <span class="hljs-string">"&lt;brand&gt;"</span>,
+  <span class="hljs-attr">"username"</span>: <span class="hljs-string">"&lt;username&gt;"</span>,
+  <span class="hljs-attr">"password"</span>: <span class="hljs-string">"&lt;password&gt;"</span>
+}
+</code></pre>
+<p>OAuth2 Password Grant Response:</p>
+<pre><code class="hljs css languages- json">{
+  <span class="hljs-attr">"access_token"</span>: <span class="hljs-string">"e86a62a701be498455d09a792ff673949cfd160b"</span>,
+  <span class="hljs-attr">"expires_in"</span>: <span class="hljs-number">1800</span>,
+  <span class="hljs-attr">"token_type"</span>: <span class="hljs-string">"Bearer"</span>,
+  <span class="hljs-attr">"scope"</span>: <span class="hljs-literal">null</span>,
+  <span class="hljs-attr">"refresh_token"</span>: <span class="hljs-string">"b098eaf9d4d081222f28ca7eb674f1b26714b06f"</span>,
+  <span class="hljs-attr">"identity"</span>: {
+    <span class="hljs-attr">"accepted_terms"</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">"affiliate_code"</span>: <span class="hljs-string">""</span>,
+    <span class="hljs-attr">"backend_session"</span>: <span class="hljs-string">"4cb67ab027404ff7ec58ab3d42ac22798b4620afe90ac2a5897e2cf9bc083d4a"</span>,
+    <span class="hljs-attr">"birthday"</span>: {
+      <span class="hljs-attr">"date"</span>: <span class="hljs-string">"1978-06-01 00:00:00.000000"</span>,
+      <span class="hljs-attr">"timezone_type"</span>: <span class="hljs-number">3</span>,
+      <span class="hljs-attr">"timezone"</span>: <span class="hljs-string">"Europe\/Warsaw"</span>
+    },
+    <span class="hljs-attr">"currency"</span>: <span class="hljs-string">"EUR"</span>,
+    <span class="hljs-attr">"deposited"</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">"email"</span>: <span class="hljs-string">"api@xcaliber.io"</span>,
+    <span class="hljs-attr">"external_tracking_tag"</span>: <span class="hljs-literal">null</span>,
+    <span class="hljs-attr">"first_name"</span>: <span class="hljs-string">"XCaliber"</span>,
+    <span class="hljs-attr">"gender"</span>: <span class="hljs-string">"male"</span>,
+    <span class="hljs-attr">"id"</span>: <span class="hljs-string">"1337"</span>,
+    <span class="hljs-attr">"jurisdiction"</span>: <span class="hljs-string">"mga"</span>,
+    <span class="hljs-attr">"language"</span>: <span class="hljs-string">"en"</span>,
+    <span class="hljs-attr">"last_name"</span>: <span class="hljs-string">"API"</span>,
+    <span class="hljs-attr">"mobile_code"</span>: <span class="hljs-literal">null</span>,
+    <span class="hljs-attr">"mobile_number"</span>: <span class="hljs-literal">null</span>,
+    <span class="hljs-attr">"nickname"</span>: <span class="hljs-string">"xcgp"</span>,
+    <span class="hljs-attr">"receive_news"</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">"receive_sms"</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">"receive_snail"</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">"receive_phone"</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">"verification_url"</span>: <span class="hljs-literal">null</span>,
+    <span class="hljs-attr">"reference"</span>: <span class="hljs-literal">null</span>,
+    <span class="hljs-attr">"last_login"</span>: {
+      <span class="hljs-attr">"date"</span>: <span class="hljs-string">"2018-06-04 13:18:04.000000"</span>,
+      <span class="hljs-attr">"timezone_type"</span>: <span class="hljs-number">3</span>,
+      <span class="hljs-attr">"timezone"</span>: <span class="hljs-string">"Europe\/Warsaw"</span>
+    },
+    <span class="hljs-attr">"birth_name"</span>: <span class="hljs-literal">null</span>,
+    <span class="hljs-attr">"birth_place"</span>: <span class="hljs-literal">null</span>,
+    <span class="hljs-attr">"citizenship"</span>: <span class="hljs-literal">null</span>,
+    <span class="hljs-attr">"address"</span>: <span class="hljs-string">"address"</span>,
+    <span class="hljs-attr">"postcode"</span>: <span class="hljs-string">"postcode"</span>,
+    <span class="hljs-attr">"city"</span>: <span class="hljs-string">"city"</span>,
+    <span class="hljs-attr">"state"</span>: <span class="hljs-literal">null</span>,
+    <span class="hljs-attr">"country"</span>: <span class="hljs-string">"MT"</span>,
+    <span class="hljs-attr">"latin_first_name"</span>: <span class="hljs-literal">null</span>,
+    <span class="hljs-attr">"latin_last_name"</span>: <span class="hljs-literal">null</span>,
+    <span class="hljs-attr">"latin_address"</span>: <span class="hljs-literal">null</span>,
+    <span class="hljs-attr">"latin_zip_code"</span>: <span class="hljs-literal">null</span>,
+    <span class="hljs-attr">"latin_city"</span>: <span class="hljs-literal">null</span>,
+    <span class="hljs-attr">"latin_state"</span>: <span class="hljs-literal">null</span>,
+    <span class="hljs-attr">"reality_check"</span>: <span class="hljs-number">3600</span>,
+    <span class="hljs-attr">"phone"</span>: <span class="hljs-literal">null</span>
+  }
+}
+</code></pre>
+<h1><a class="anchor" aria-hidden="true" id="start-a-session-by-activating-the-user"></a><a href="#start-a-session-by-activating-the-user" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Start a session (by activating the user)</h1>
+<p>Another way to start a session is to activate a user using the activation code grant. This is used to 'auto-login' a user during activation.</p>
+<pre><code class="hljs">POST <span class="hljs-string">/oauth</span>
+</code></pre>
+<p>OAuth2 Activation Code Grant Request:</p>
+<pre><code class="hljs css languages- json">{
+  <span class="hljs-attr">"grant_type"</span>: <span class="hljs-string">"activation_code"</span>,
+  <span class="hljs-attr">"client_id"</span>: <span class="hljs-string">"&lt;brand&gt;"</span>,
+  <span class="hljs-attr">"code"</span>: <span class="hljs-string">"&lt;code&gt;"</span>
+}
+</code></pre>
+<p>OAuth2 Activation Code Grant Response:</p>
+<pre><code class="hljs css languages- json">{
+  <span class="hljs-attr">"access_token"</span>: <span class="hljs-string">"e86a62a701be498455d09a792ff673949cfd160b"</span>,
+  <span class="hljs-attr">"expires_in"</span>: <span class="hljs-number">1800</span>,
+  <span class="hljs-attr">"token_type"</span>: <span class="hljs-string">"Bearer"</span>,
+  <span class="hljs-attr">"scope"</span>: <span class="hljs-literal">null</span>,
+  <span class="hljs-attr">"refresh_token"</span>: <span class="hljs-string">"b098eaf9d4d081222f28ca7eb674f1b26714b06f"</span>,
+  <span class="hljs-attr">"identity"</span>: {
+    <span class="hljs-attr">"accepted_terms"</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">"affiliate_code"</span>: <span class="hljs-string">""</span>,
+    <span class="hljs-attr">"backend_session"</span>: <span class="hljs-string">"4cb67ab027404ff7ec58ab3d42ac22798b4620afe90ac2a5897e2cf9bc083d4a"</span>,
+    <span class="hljs-attr">"birthday"</span>: {
+      <span class="hljs-attr">"date"</span>: <span class="hljs-string">"1978-06-01 00:00:00.000000"</span>,
+      <span class="hljs-attr">"timezone_type"</span>: <span class="hljs-number">3</span>,
+      <span class="hljs-attr">"timezone"</span>: <span class="hljs-string">"Europe\/Warsaw"</span>
+    },
+    <span class="hljs-attr">"currency"</span>: <span class="hljs-string">"EUR"</span>,
+    <span class="hljs-attr">"deposited"</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">"email"</span>: <span class="hljs-string">"api@xcaliber.io"</span>,
+    <span class="hljs-attr">"external_tracking_tag"</span>: <span class="hljs-literal">null</span>,
+    <span class="hljs-attr">"first_name"</span>: <span class="hljs-string">"XCaliber"</span>,
+    <span class="hljs-attr">"gender"</span>: <span class="hljs-string">"male"</span>,
+    <span class="hljs-attr">"id"</span>: <span class="hljs-string">"1337"</span>,
+    <span class="hljs-attr">"jurisdiction"</span>: <span class="hljs-string">"mga"</span>,
+    <span class="hljs-attr">"language"</span>: <span class="hljs-string">"en"</span>,
+    <span class="hljs-attr">"last_name"</span>: <span class="hljs-string">"API"</span>,
+    <span class="hljs-attr">"mobile_code"</span>: <span class="hljs-literal">null</span>,
+    <span class="hljs-attr">"mobile_number"</span>: <span class="hljs-literal">null</span>,
+    <span class="hljs-attr">"nickname"</span>: <span class="hljs-string">"xcgp"</span>,
+    <span class="hljs-attr">"receive_news"</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">"receive_sms"</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">"receive_snail"</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">"receive_phone"</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">"verification_url"</span>: <span class="hljs-literal">null</span>,
+    <span class="hljs-attr">"reference"</span>: <span class="hljs-literal">null</span>,
+    <span class="hljs-attr">"last_login"</span>: {
+      <span class="hljs-attr">"date"</span>: <span class="hljs-string">"2018-06-04 13:18:04.000000"</span>,
+      <span class="hljs-attr">"timezone_type"</span>: <span class="hljs-number">3</span>,
+      <span class="hljs-attr">"timezone"</span>: <span class="hljs-string">"Europe\/Warsaw"</span>
+    },
+    <span class="hljs-attr">"birth_name"</span>: <span class="hljs-literal">null</span>,
+    <span class="hljs-attr">"birth_place"</span>: <span class="hljs-literal">null</span>,
+    <span class="hljs-attr">"citizenship"</span>: <span class="hljs-literal">null</span>,
+    <span class="hljs-attr">"address"</span>: <span class="hljs-string">"address"</span>,
+    <span class="hljs-attr">"postcode"</span>: <span class="hljs-string">"postcode"</span>,
+    <span class="hljs-attr">"city"</span>: <span class="hljs-string">"city"</span>,
+    <span class="hljs-attr">"state"</span>: <span class="hljs-literal">null</span>,
+    <span class="hljs-attr">"country"</span>: <span class="hljs-string">"MT"</span>,
+    <span class="hljs-attr">"latin_first_name"</span>: <span class="hljs-literal">null</span>,
+    <span class="hljs-attr">"latin_last_name"</span>: <span class="hljs-literal">null</span>,
+    <span class="hljs-attr">"latin_address"</span>: <span class="hljs-literal">null</span>,
+    <span class="hljs-attr">"latin_zip_code"</span>: <span class="hljs-literal">null</span>,
+    <span class="hljs-attr">"latin_city"</span>: <span class="hljs-literal">null</span>,
+    <span class="hljs-attr">"latin_state"</span>: <span class="hljs-literal">null</span>,
+    <span class="hljs-attr">"reality_check"</span>: <span class="hljs-number">3600</span>,
+    <span class="hljs-attr">"phone"</span>: <span class="hljs-literal">null</span>
+  }
+}
+</code></pre>
+<h1><a class="anchor" aria-hidden="true" id="refresh-a-session"></a><a href="#refresh-a-session" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Refresh a session</h1>
+<p>A session needs to be refreshed before it expires and the refresh token grant is used for that purpose.</p>
+<pre><code class="hljs">POST <span class="hljs-string">/oauth</span>
+</code></pre>
+<p>OAuth2 Refresh Token Grant Request:</p>
+<pre><code class="hljs css languages- json">{
+  <span class="hljs-attr">"grant_type"</span>: <span class="hljs-string">"refresh_token"</span>,
+  <span class="hljs-attr">"client_id"</span>: <span class="hljs-string">"&lt;brand&gt;"</span>,
+  <span class="hljs-attr">"refresh_token"</span>: <span class="hljs-string">"&lt;token&gt;"</span>
+}
+</code></pre>
+<p>OAuth2 Refresh Token Grant Response:</p>
+<pre><code class="hljs css languages- json">{
+  <span class="hljs-attr">"access_token"</span>: <span class="hljs-string">"e86a62a701be498455d09a792ff673949cfd160b"</span>,
+  <span class="hljs-attr">"expires_in"</span>: <span class="hljs-number">1800</span>,
+  <span class="hljs-attr">"token_type"</span>: <span class="hljs-string">"Bearer"</span>,
+  <span class="hljs-attr">"scope"</span>: <span class="hljs-literal">null</span>,
+  <span class="hljs-attr">"refresh_token"</span>: <span class="hljs-string">"b098eaf9d4d081222f28ca7eb674f1b26714b06f"</span>,
+  <span class="hljs-attr">"identity"</span>: {
+    <span class="hljs-attr">"accepted_terms"</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">"affiliate_code"</span>: <span class="hljs-string">""</span>,
+    <span class="hljs-attr">"backend_session"</span>: <span class="hljs-string">"4cb67ab027404ff7ec58ab3d42ac22798b4620afe90ac2a5897e2cf9bc083d4a"</span>,
+    <span class="hljs-attr">"birthday"</span>: {
+      <span class="hljs-attr">"date"</span>: <span class="hljs-string">"1978-06-01 00:00:00.000000"</span>,
+      <span class="hljs-attr">"timezone_type"</span>: <span class="hljs-number">3</span>,
+      <span class="hljs-attr">"timezone"</span>: <span class="hljs-string">"Europe\/Warsaw"</span>
+    },
+    <span class="hljs-attr">"currency"</span>: <span class="hljs-string">"EUR"</span>,
+    <span class="hljs-attr">"deposited"</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">"email"</span>: <span class="hljs-string">"api@xcaliber.io"</span>,
+    <span class="hljs-attr">"external_tracking_tag"</span>: <span class="hljs-literal">null</span>,
+    <span class="hljs-attr">"first_name"</span>: <span class="hljs-string">"XCaliber"</span>,
+    <span class="hljs-attr">"gender"</span>: <span class="hljs-string">"male"</span>,
+    <span class="hljs-attr">"id"</span>: <span class="hljs-string">"1337"</span>,
+    <span class="hljs-attr">"jurisdiction"</span>: <span class="hljs-string">"mga"</span>,
+    <span class="hljs-attr">"language"</span>: <span class="hljs-string">"en"</span>,
+    <span class="hljs-attr">"last_name"</span>: <span class="hljs-string">"API"</span>,
+    <span class="hljs-attr">"mobile_code"</span>: <span class="hljs-literal">null</span>,
+    <span class="hljs-attr">"mobile_number"</span>: <span class="hljs-literal">null</span>,
+    <span class="hljs-attr">"nickname"</span>: <span class="hljs-string">"xcgp"</span>,
+    <span class="hljs-attr">"receive_news"</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">"receive_sms"</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">"receive_snail"</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">"receive_phone"</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">"verification_url"</span>: <span class="hljs-literal">null</span>,
+    <span class="hljs-attr">"reference"</span>: <span class="hljs-literal">null</span>,
+    <span class="hljs-attr">"last_login"</span>: {
+      <span class="hljs-attr">"date"</span>: <span class="hljs-string">"2018-06-04 13:18:04.000000"</span>,
+      <span class="hljs-attr">"timezone_type"</span>: <span class="hljs-number">3</span>,
+      <span class="hljs-attr">"timezone"</span>: <span class="hljs-string">"Europe\/Warsaw"</span>
+    },
+    <span class="hljs-attr">"birth_name"</span>: <span class="hljs-literal">null</span>,
+    <span class="hljs-attr">"birth_place"</span>: <span class="hljs-literal">null</span>,
+    <span class="hljs-attr">"citizenship"</span>: <span class="hljs-literal">null</span>,
+    <span class="hljs-attr">"address"</span>: <span class="hljs-string">"address"</span>,
+    <span class="hljs-attr">"postcode"</span>: <span class="hljs-string">"postcode"</span>,
+    <span class="hljs-attr">"city"</span>: <span class="hljs-string">"city"</span>,
+    <span class="hljs-attr">"state"</span>: <span class="hljs-literal">null</span>,
+    <span class="hljs-attr">"country"</span>: <span class="hljs-string">"MT"</span>,
+    <span class="hljs-attr">"latin_first_name"</span>: <span class="hljs-literal">null</span>,
+    <span class="hljs-attr">"latin_last_name"</span>: <span class="hljs-literal">null</span>,
+    <span class="hljs-attr">"latin_address"</span>: <span class="hljs-literal">null</span>,
+    <span class="hljs-attr">"latin_zip_code"</span>: <span class="hljs-literal">null</span>,
+    <span class="hljs-attr">"latin_city"</span>: <span class="hljs-literal">null</span>,
+    <span class="hljs-attr">"latin_state"</span>: <span class="hljs-literal">null</span>,
+    <span class="hljs-attr">"reality_check"</span>: <span class="hljs-number">3600</span>,
+    <span class="hljs-attr">"phone"</span>: <span class="hljs-literal">null</span>
+  }
+}
+</code></pre>
 </span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="usage.html">← Usage</a><a class="docs-next button" href="graphql-schema.html">GraphQL Schema →</a></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2014 - 2018 XCaliber</section></footer></div></body></html>
