@@ -9,7 +9,7 @@ Here are some quick links to get you up and running with the GraphQL API:
 * [Authentication](authentication.md)
 * [Root endpoint](TODO)
 * [Schema introspection](TODO)
-* [Migrating from REST](TODO)
+* [From REST to GraphQL](guides/graphql/from-rest.md)
 
 For support requests, bug reports, and discussions, use the [XCaliber Support Portal](https://support.xcaliber.com/). This portal allows you to collaborate with other integrators as well as engineers and product managers from XCaliber. If you need to discuss a private concern, please contact your account manager directly.
 

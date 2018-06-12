@@ -1,8 +1,21 @@
 {
-  "docs": {
-		"API Integration": ["usage", "authentication", "graphql-schema", "rest-resources"],
-		"GraphQL": [
-			"graphql-overview"
-		]
+  "reference": {
+    "API Integration": [
+      "usage",
+      "authentication",
+      "graphql-schema",
+      "rest-resources"
+    ],
+    "GraphQL": [
+      "graphql-overview"
+    ]
+  },
+  "guides": {
+    "GraphQL": [
+      "guides/graphql/overview",
+      "guides/graphql/introduction",
+      "guides/graphql/using",
+      "guides/graphql/from-rest"
+    ]
   }
 }

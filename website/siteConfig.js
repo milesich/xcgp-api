@@ -18,9 +18,9 @@ const siteConfig = {
   projectName: 'xcgp-api',
   organizationName: 'xcaliber-tech',
 
-  // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
-    {doc: 'usage', label: 'Docs'},
+    { doc: 'usage', label: 'Reference' },
+    { doc: 'guides/graphql/overview', label: 'Guides' },
   ],
 
   /* path to images for header/footer */
