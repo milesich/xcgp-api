@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Using GraphQL · XCaliber Gaming Platform API</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="## The GraphQL endpoint"/><meta property="og:title" content="Using GraphQL · XCaliber Gaming Platform API"/><meta property="og:type" content="website"/><meta property="og:url" content="https://xcaliber.com/xcgp-api/index.html"/><meta property="og:description" content="## The GraphQL endpoint"/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/xcgp-api/img/favicon.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/xcgp-api/css/main.css"/></head><body class="sideNavVisible doc separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/xcgp-api/"><img class="logo" src="/xcgp-api/img/xcaliber.svg" alt="XCaliber Gaming Platform API"/><h2 class="headerTitleWithLogo">XCaliber Gaming Platform API</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/xcgp-api/docs/usage.html" target="_self">Reference</a></li><li class="siteNavGroupActive"><a href="/xcgp-api/docs/guides/graphql/overview.html" target="_self">Guides</a></li><li class=""><a href="/xcgp-api/explorer.html" target="_self">Explorer</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>GraphQL</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup navGroupActive"><h3>GraphQL</h3><ul><li class="navListItem"><a class="navItem" href="/xcgp-api/docs/guides/graphql/overview.html">Overview</a></li><li class="navListItem"><a class="navItem" href="/xcgp-api/docs/guides/graphql/introduction.html">Introduction</a></li><li class="navListItem navListItemActive"><a class="navItem navItemActive" href="/xcgp-api/docs/guides/graphql/using.html">Using GraphQL</a></li><li class="navListItem"><a class="navItem" href="/xcgp-api/docs/guides/graphql/from-rest.html">REST to GraphQL</a></li><li class="navListItem"><a class="navItem" href="/xcgp-api/docs/guides/graphql/explorer.html">Using the Explorer</a></li></ul></div></div></section></div><script>
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Using GraphQL · XCaliber Gaming Platform API</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="## The GraphQL endpoint"/><meta property="og:title" content="Using GraphQL · XCaliber Gaming Platform API"/><meta property="og:type" content="website"/><meta property="og:url" content="https://xcaliber-tech.github.io//xcgp-api/index.html"/><meta property="og:description" content="## The GraphQL endpoint"/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/xcgp-api/img/favicon.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/xcgp-api/css/prism.css"/><link rel="stylesheet" href="/xcgp-api/css/main.css"/></head><body class="sideNavVisible doc separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/xcgp-api/"><img class="logo" src="/xcgp-api/img/xcaliber.svg" alt="XCaliber Gaming Platform API"/><h2 class="headerTitleWithLogo">XCaliber Gaming Platform API</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/xcgp-api/docs/usage.html" target="_self">Reference</a></li><li class="siteNavGroupActive"><a href="/xcgp-api/docs/guides/graphql/overview.html" target="_self">Guides</a></li><li class=""><a href="/xcgp-api/explorer.html" target="_self">Explorer</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>GraphQL</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup navGroupActive"><h3>GraphQL</h3><ul><li class="navListItem"><a class="navItem" href="/xcgp-api/docs/guides/graphql/overview.html">Overview</a></li><li class="navListItem"><a class="navItem" href="/xcgp-api/docs/guides/graphql/introduction.html">Introduction</a></li><li class="navListItem navListItemActive"><a class="navItem navItemActive" href="/xcgp-api/docs/guides/graphql/using.html">Using GraphQL</a></li><li class="navListItem"><a class="navItem" href="/xcgp-api/docs/guides/graphql/from-rest.html">REST to GraphQL</a></li><li class="navListItem"><a class="navItem" href="/xcgp-api/docs/guides/graphql/explorer.html">Using the Explorer</a></li></ul></div></div></section></div><script>
             document.addEventListener('DOMContentLoaded', function() {
               createToggler('#navToggler', '#docsNav', 'docsSliderActive');
               createToggler('#tocToggler', 'body', 'tocActive');
@@ -21,9 +21,9 @@
                 };
               }
             });
-        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1>Using GraphQL</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="the-graphql-endpoint"></a><a href="#the-graphql-endpoint" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>The GraphQL endpoint</h2>
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/xcaliber-tech/xcgp-api/edit/master/docs/guides/graphql/using.md" target="_blank" rel="noreferrer noopener">Edit</a><h1>Using GraphQL</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="the-graphql-endpoint"></a><a href="#the-graphql-endpoint" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>The GraphQL endpoint</h2>
 <p>The REST API has numerous endpoints; the GraphQL API has a single endpoint:</p>
-<pre><code class="hljs"><span class="hljs-symbol">https:</span><span class="hljs-comment">//frontapi.cherrytech.com/graphql</span>
+<pre><code class="hljs css languages- shell">https://frontapi.cherrytech.com/graphql
 </code></pre>
 <p>The endpoint remains constant no matter what operation you perform.</p>
 <h2><a class="anchor" aria-hidden="true" id="communicating-with-graphql"></a><a href="#communicating-with-graphql" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Communicating with GraphQL</h2>
@@ -45,9 +45,9 @@
 <h3><a class="anchor" aria-hidden="true" id="about-queries"></a><a href="#about-queries" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>About queries</h3>
 <p>GraphQL queries return only the data you specify. To form a query, you must specify <a href="/xcgp-api/docs/guides/graphql/introduction.html#field">fields within fields</a> (also known as <em>nested subfields</em>) until you return only <a href="/xcgp-api/docs/graphql/scalars.html">scalars</a>.</p>
 <p>Queries are structured like this:</p>
-<pre><code class="hljs css languages- ts">query {
-  <span class="hljs-comment">// JSON objects to return</span>
-}
+<pre><code class="hljs css languages- graphql"><span class="token keyword">query</span> <span class="token punctuation">{</span>
+  <span class="token comment"># JSON objects to return</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <p>For a real-world example, see &quot;<a href="#example-query">Example query</a>&quot;.</p>
 <h3><a class="anchor" aria-hidden="true" id="about-mutations"></a><a href="#about-mutations" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>About mutations</h3>
@@ -58,11 +58,11 @@
 <li><em>Payload object</em>. The data you want to return from the server, composed of <em>return fields</em>. Pass it as the body of the mutation name.</li>
 </ol>
 <p>Mutations are structured like this:</p>
-<pre><code class="hljs css languages- ts">mutation {
-  mutationName(input: { MutationNameInput! }) {
+<pre><code class="hljs css languages- graphql"><span class="token keyword">mutation</span> <span class="token punctuation">{</span>
+  mutationName<span class="token punctuation">(</span><span class="token attr-name">input</span><span class="token punctuation">:</span> <span class="token punctuation">{</span> MutationNameInput<span class="token operator">!</span> <span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     MutationNamePayload
-  }
-}
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <p>The input object in this example is <code>MutationNameInput</code>, and the payload object is <code>MutationNamePayload</code>.</p>
 <p>In the <a href="/xcgp-api/docs/graphql/mutations.html">mutations</a> reference, the listed <em>input fields</em> are what you pass as the input object. The listed <em>return fields</em> are what you pass as the payload object.</p>
@@ -74,35 +74,35 @@
 </blockquote>
 <p>Here's an example query with a single variable:</p>
 <p><sub><a href="../../../explorer.html?query=query(%24total%3A%20Int!)%20%7B%0A%20%20jackpots(first%3A%20%24total)%20%7B%0A%20%20%20%20edges%20%7B%0A%20%20%20%20%20%20node%20%7B%0A%20%20%20%20%20%20%20%20amount%0A%20%20%20%20%20%20%20%20currency%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A&amp;variables=%7B%0A%20%22total%22%3A%205%0A%7D">Run in Explorer</a></sub></p>
-<pre><code class="hljs css languages- ts">query($total: Int!) {
-  jackpots(first: $total) {
-    edges {
-      node {
+<pre><code class="hljs css languages- graphql"><span class="token keyword">query</span><span class="token punctuation">(</span><span class="token variable">$total</span><span class="token punctuation">:</span> Int<span class="token operator">!</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  jackpots<span class="token punctuation">(</span><span class="token attr-name">first</span><span class="token punctuation">:</span> <span class="token variable">$total</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    edges <span class="token punctuation">{</span>
+      node <span class="token punctuation">{</span>
         amount
         currency
-      }
-    }
-  }
-}
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 
-variables {
-  <span class="hljs-string">"total"</span>: <span class="hljs-number">5</span>
-}
+variables <span class="token punctuation">{</span>
+  <span class="token string">"total"</span><span class="token punctuation">:</span> <span class="token number">5</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <p>There are three steps to using variables:</p>
 <ol>
 <li><p>Define the variable outside the operation in a <code>variables</code> object:</p>
-<pre><code class="hljs css languages- json">variables {
-  "total": 5
-}
+<pre><code class="hljs css languages- graphql">variables <span class="token punctuation">{</span>
+  <span class="token string">"total"</span><span class="token punctuation">:</span> <span class="token number">5</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <p>The object must be valid JSON. This example shows a simple <code>Int</code> variable type, but it's possible to define more complex variable types, such as input objects. You can also define multiple variables here.</p></li>
 <li><p>Pass the variable to the operation as an argument:</p>
-<pre><code class="hljs css languages- ts">  query($total: Int!) { ... }
+<pre><code class="hljs css languages- graphql">  <span class="token keyword">query</span><span class="token punctuation">(</span><span class="token variable">$total</span><span class="token punctuation">:</span> Int<span class="token operator">!</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token operator">...</span> <span class="token punctuation">}</span>
 </code></pre>
 <p>The argument is a key-value pair, where the key is the <em>name</em> starting with <code>$</code> (e.g. <code>$total</code>), and the value is the <em>type</em> (e.g. <code>Int</code>). Add a <code>!</code> to indicate whether the type is required. If you've defined multiple variables, include them here as multiple arguments.</p></li>
 <li><p>Use the variables within the operation:</p>
-<pre><code class="hljs css languages- ts">  jackpots(first: $total) { ... }
+<pre><code class="hljs css languages- graphql">  jackpots<span class="token punctuation">(</span><span class="token attr-name">first</span><span class="token punctuation">:</span> <span class="token variable">$total</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token operator">...</span> <span class="token punctuation">}</span>
 </code></pre>
 <p>In this example, we substitute the variable for the number of jackpots to retrieve. We specify a type in step 2 because GraphQL enforces strong typing.</p></li>
 </ol>
