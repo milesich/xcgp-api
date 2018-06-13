@@ -1,10 +1,8 @@
 ---
-id: graphql-schema
-title: GraphQL Schema
-sidebar_label: GraphQL Schema
+title: Schema
 ---
 
-The API exposes a number of resources that can be queried and/or manipulated. These resources can be categorised as content like banners or SEO metadata and transactional like bonuses or payment transactions.
+The API exposes a number of resources that can be queried and/or manipulated. These resources can be categorized as content like banners or SEO metadata and transactional like bonuses or payment transactions.
 
 ## CMS Schema
 All the CMS resources can be managed in the back-office under the Content menu.

@@ -1,16 +1,18 @@
 {
   "reference": {
     "API Reference": [
-      "usage",
-      "graphql-schema",
-      "rest-resources"
+      "usage"
     ],
     "Authentication": [
       "authentication/overview",
       "authentication/grants"
     ],
+    "REST": [
+      "rest/resources"
+    ],
     "GraphQL": [
       "graphql/overview",
+      "graphql/schema",
       "graphql/mutations",
       "graphql/scalars"
     ]

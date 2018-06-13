@@ -10,7 +10,7 @@ REST to GraphQL represents a significant shift in API logic. The differences bet
 To better understand the difference between a REST API and a GraphQL API:
 
 * Review the [GraphQL spec](https://facebook.github.io/graphql/)
-* Review our [GraphQL schema](graphql-schema.md)
+* Review our [GraphQL schema](graphql/schema.md)
 
 Significant advantages of GraphQL include:
 
