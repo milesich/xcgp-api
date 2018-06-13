@@ -24,7 +24,12 @@
 }
 
 table td code {
+  color: $primaryColor;
 	white-space: nowrap;
+}
+
+.container .wrapper h3 {
+  margin-top: 20px;
 }
 
 sub {

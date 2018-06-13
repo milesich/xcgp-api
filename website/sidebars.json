@@ -6,8 +6,8 @@
       "rest-resources"
     ],
     "Authentication": [
-      "authentication/oauth2",
-      "authentication/grant-types"
+      "authentication/overview",
+      "authentication/grants"
     ],
     "GraphQL": [
       "graphql/overview",

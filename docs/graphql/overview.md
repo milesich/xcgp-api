@@ -6,7 +6,7 @@ sidebar_label: Overview
 
 Here are some quick links to get you up and running with the GraphQL API:
 
-* [Authentication](authentication/oauth2.md)
+* [Authentication](authentication/overview.md)
 * [Root endpoint](guides/graphql/using.md#the-graphql-endpoint)
 * [Schema introspection](guides/graphql/introduction.md#discovering-the-graphql-api)
 * [From REST to GraphQL](guides/graphql/from-rest.md)

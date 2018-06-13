@@ -1,6 +1,8 @@
 ---
-title: Grant types
+title: Grants
 ---
+
+An authorization grant is a credential representing the resource owner's authorization (to access its protected resources) used by the client to obtain an access token.
 
 ## Password
 The password grant is used when the application exchanges the user's username and password for an access token.
@@ -15,7 +17,8 @@ Content-Type: application/json
   "grant_type": "password",
   "client_id": "<brand>",
   "username": "<user>",
-  "password": "<pass>"
+  "password": "<pass>",
+  "captcha": "[g-recaptcha-response]"
 }
 ```
 
@@ -25,6 +28,7 @@ Field        | Description
 `client_id`  | This is the brand code given during the brand setup.
 `username`   | The user's username. Currently, `email`, `nickname` and `mobile_number` are allowed usernames depending on the brand configuration.
 `password`   | The user's password.
+`captcha`    | (Optional) The [Google reCAPTCHA](https://www.google.com/recaptcha) response. This is an optional feature that needs to be setup in the brand configuration to be able to take advantage of it.
 
 ## Activation code
 The activation code grant is used when the application exchanges an activation code (given by email or phone) for an access token.
@@ -68,10 +72,10 @@ Field           | Description
 --------------- | -----------
 `grant_type`    | The `grant_type` parameter must be set to `refresh_token`.
 `client_id`     | This is the brand code given during the brand setup.
-`refresh_token` | The refresh token token given in any grant response.
+`refresh_token` | The refresh token given in any grant response.
 
-## Response
-If the request for an access token is valid, the authorization server generates an access token and refresh token and return these to the client, with some additional properties about the authorization:
+## Grant response
+If the grant request is successful, the authorization server generates an access token and refresh token and return these to the client, with some additional properties:
 
 ```json
 {
