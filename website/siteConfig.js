@@ -68,6 +68,12 @@ const siteConfig = {
   /* On page navigation for the current documentation page */
   onPageNav: 'separate',
 
+  // Search
+  algolia: {
+    apiKey: '0cabd5ca720a8dd4c597cb16b8fd909e',
+    indexName: 'xcaliber',
+  },
+
   wrapPagesHTML: true,
 
   // You may provide arbitrary config keys to be used as needed by your
