@@ -12,6 +12,6 @@
 <url> <loc>https://xcaliber-tech.github.io/docs/guides/graphql/overview.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://xcaliber-tech.github.io/docs/guides/graphql/overview.html" /> </url>
 <url> <loc>https://xcaliber-tech.github.io/docs/guides/graphql/using.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://xcaliber-tech.github.io/docs/guides/graphql/using.html" /> </url>
 <url> <loc>https://xcaliber-tech.github.io/docs/rest/resources.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://xcaliber-tech.github.io/docs/rest/resources.html" /> </url>
-<url> <loc>https://xcaliber-tech.github.io/docs/rest/rest-transactions.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://xcaliber-tech.github.io/docs/rest/rest-transactions.html" /> </url>
+<url> <loc>https://xcaliber-tech.github.io/docs/rest/transactions.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://xcaliber-tech.github.io/docs/rest/transactions.html" /> </url>
 <url> <loc>https://xcaliber-tech.github.io/docs/usage.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://xcaliber-tech.github.io/docs/usage.html" /> </url>
 </urlset>
