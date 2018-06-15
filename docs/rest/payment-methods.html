@@ -1,0 +1,227 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Payment methods · XCaliber Gaming Platform API</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="1. [List payment methods](#list-payment-methods)"/><meta property="og:title" content="Payment methods · XCaliber Gaming Platform API"/><meta property="og:type" content="website"/><meta property="og:url" content="https://xcaliber-tech.github.io//xcgp-api/index.html"/><meta property="og:description" content="1. [List payment methods](#list-payment-methods)"/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/xcgp-api/img/favicon.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/tomorrow-night.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/xcgp-api/css/prism.css"/><link rel="stylesheet" href="/xcgp-api/css/main.css"/></head><body class="sideNavVisible doc separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/xcgp-api/"><img class="logo" src="/xcgp-api/img/xcaliber.svg" alt="XCaliber Gaming Platform API"/><h2 class="headerTitleWithLogo">XCaliber Gaming Platform API</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/xcgp-api/docs/usage.html" target="_self">Reference</a></li><li class=""><a href="/xcgp-api/docs/guides/graphql/overview.html" target="_self">Guides</a></li><li class=""><a href="/xcgp-api/explorer.html" target="_self">Explorer</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/xcaliber-tech/xcgp-api/edit/master/docs/rest/payment-methods.md" target="_blank" rel="noreferrer noopener">Edit</a><h1>Payment methods</h1></header><article><div><span><ol>
+<li><a href="#list-payment-methods">List payment methods</a></li>
+</ol>
+<p>The payment methods API supports listing payment methods.</p>
+<h2><a class="anchor" aria-hidden="true" id="list-payment-methods"></a><a href="#list-payment-methods" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>List payment methods</h2>
+<p>Get a list of payment methods that the user can make use of during the deposit or withdraw process.</p>
+<h3><a class="anchor" aria-hidden="true" id="request"></a><a href="#request" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Request</h3>
+<pre><code class="hljs css languages- http"><span class="hljs-keyword">GET</span> <span class="hljs-string">/payment-methods?type=deposit</span> HTTP/1.1
+</code></pre>
+<table>
+<thead>
+<tr><th>Name</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code>type</code></td><td><code>string?</code></td><td>The type: <code>deposit</code> or <code>withdrawal</code>.</td></tr>
+<tr><td><code>bonus_id</code></td><td><code>integer?</code></td><td>The bonus id that the user selected. This is only relevant if your application allows the users to select deposit bonuses before initiating the deposit process.</td></tr>
+</tbody>
+</table>
+<h3><a class="anchor" aria-hidden="true" id="response"></a><a href="#response" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Response</h3>
+<pre><code class="hljs css languages- http">HTTP/1.1 <span class="hljs-number">200</span> OK
+
+<span class="json">{
+  <span class="hljs-attr">"_links"</span>: {
+    <span class="hljs-attr">"self"</span>: {
+      <span class="hljs-attr">"href"</span>: <span class="hljs-string">"https://frontapi.cherrytech.com/payment-methods?type=deposit&amp;page=1"</span>
+    },
+    <span class="hljs-attr">"first"</span>: {
+      <span class="hljs-attr">"href"</span>: <span class="hljs-string">"https://frontapi.cherrytech.com/payment-methods?type=deposit"</span>
+    },
+    <span class="hljs-attr">"last"</span>: {
+      <span class="hljs-attr">"href"</span>: <span class="hljs-string">"https://frontapi.cherrytech.com/payment-methods?type=deposit&amp;page=1"</span>
+    }
+  },
+  <span class="hljs-attr">"_embedded"</span>: {
+    <span class="hljs-attr">"payment_methods"</span>: [
+      {
+        <span class="hljs-attr">"id"</span>: <span class="hljs-number">11</span>,
+        <span class="hljs-attr">"name"</span>: <span class="hljs-string">"visa"</span>,
+        <span class="hljs-attr">"max_amount"</span>: <span class="hljs-number">2000000</span>,
+        <span class="hljs-attr">"min_amount"</span>: <span class="hljs-number">20000</span>,
+        <span class="hljs-attr">"deposit_fixed"</span>: <span class="hljs-number">0</span>,
+        <span class="hljs-attr">"deposit_percent"</span>: <span class="hljs-number">2.5</span>,
+        <span class="hljs-attr">"deposit_cap"</span>: <span class="hljs-number">1000000</span>,
+        <span class="hljs-attr">"withdraw_fixed"</span>: <span class="hljs-number">0</span>,
+        <span class="hljs-attr">"withdraw_percent"</span>: <span class="hljs-number">0</span>,
+        <span class="hljs-attr">"withdraw_cap"</span>: <span class="hljs-number">0</span>,
+        <span class="hljs-attr">"fx_rate"</span>: <span class="hljs-number">9.4268</span>,
+        <span class="hljs-attr">"previous_cards"</span>: <span class="hljs-literal">null</span>,
+        <span class="hljs-attr">"last_amount"</span>: <span class="hljs-literal">null</span>,
+        <span class="hljs-attr">"provider_id"</span>: <span class="hljs-number">51</span>,
+        <span class="hljs-attr">"provider_name"</span>: <span class="hljs-string">"ticketsurf"</span>,
+        <span class="hljs-attr">"enabled"</span>: <span class="hljs-literal">true</span>,
+        <span class="hljs-attr">"default_deposit_amount"</span>: <span class="hljs-number">500</span>,
+        <span class="hljs-attr">"quick_deposit_options"</span>: [],
+        <span class="hljs-attr">"_links"</span>: {
+          <span class="hljs-attr">"self"</span>: {
+            <span class="hljs-attr">"href"</span>: <span class="hljs-string">"https://frontapi.cherrytech.com/payment-methods/11"</span>
+          }
+        }
+      },
+      {
+        <span class="hljs-attr">"id"</span>: <span class="hljs-number">11</span>,
+        <span class="hljs-attr">"name"</span>: <span class="hljs-string">"visa"</span>,
+        <span class="hljs-attr">"max_amount"</span>: <span class="hljs-number">2000000</span>,
+        <span class="hljs-attr">"min_amount"</span>: <span class="hljs-number">20000</span>,
+        <span class="hljs-attr">"deposit_fixed"</span>: <span class="hljs-number">0</span>,
+        <span class="hljs-attr">"deposit_percent"</span>: <span class="hljs-number">2.5</span>,
+        <span class="hljs-attr">"deposit_cap"</span>: <span class="hljs-number">1000000</span>,
+        <span class="hljs-attr">"withdraw_fixed"</span>: <span class="hljs-number">0</span>,
+        <span class="hljs-attr">"withdraw_percent"</span>: <span class="hljs-number">0</span>,
+        <span class="hljs-attr">"withdraw_cap"</span>: <span class="hljs-number">0</span>,
+        <span class="hljs-attr">"fx_rate"</span>: <span class="hljs-number">9.4268</span>,
+        <span class="hljs-attr">"previous_cards"</span>: <span class="hljs-literal">null</span>,
+        <span class="hljs-attr">"last_amount"</span>: <span class="hljs-literal">null</span>,
+        <span class="hljs-attr">"provider_id"</span>: <span class="hljs-number">76</span>,
+        <span class="hljs-attr">"provider_name"</span>: <span class="hljs-string">"epro"</span>,
+        <span class="hljs-attr">"enabled"</span>: <span class="hljs-literal">true</span>,
+        <span class="hljs-attr">"default_deposit_amount"</span>: <span class="hljs-number">500</span>,
+        <span class="hljs-attr">"quick_deposit_options"</span>: [],
+        <span class="hljs-attr">"_links"</span>: {
+          <span class="hljs-attr">"self"</span>: {
+            <span class="hljs-attr">"href"</span>: <span class="hljs-string">"https://frontapi.cherrytech.com/payment-methods/11"</span>
+          }
+        }
+      },
+      {
+        <span class="hljs-attr">"id"</span>: <span class="hljs-number">111</span>,
+        <span class="hljs-attr">"name"</span>: <span class="hljs-string">"paysafecard"</span>,
+        <span class="hljs-attr">"max_amount"</span>: <span class="hljs-number">10000000</span>,
+        <span class="hljs-attr">"min_amount"</span>: <span class="hljs-number">20000</span>,
+        <span class="hljs-attr">"deposit_fixed"</span>: <span class="hljs-number">0</span>,
+        <span class="hljs-attr">"deposit_percent"</span>: <span class="hljs-number">0</span>,
+        <span class="hljs-attr">"deposit_cap"</span>: <span class="hljs-number">0</span>,
+        <span class="hljs-attr">"withdraw_fixed"</span>: <span class="hljs-number">0</span>,
+        <span class="hljs-attr">"withdraw_percent"</span>: <span class="hljs-number">0</span>,
+        <span class="hljs-attr">"withdraw_cap"</span>: <span class="hljs-number">0</span>,
+        <span class="hljs-attr">"fx_rate"</span>: <span class="hljs-number">0</span>,
+        <span class="hljs-attr">"previous_cards"</span>: <span class="hljs-literal">null</span>,
+        <span class="hljs-attr">"last_amount"</span>: <span class="hljs-literal">null</span>,
+        <span class="hljs-attr">"provider_id"</span>: <span class="hljs-literal">null</span>,
+        <span class="hljs-attr">"provider_name"</span>: <span class="hljs-literal">null</span>,
+        <span class="hljs-attr">"enabled"</span>: <span class="hljs-literal">true</span>,
+        <span class="hljs-attr">"default_deposit_amount"</span>: <span class="hljs-number">0</span>,
+        <span class="hljs-attr">"quick_deposit_options"</span>: [],
+        <span class="hljs-attr">"_links"</span>: {
+          <span class="hljs-attr">"self"</span>: {
+            <span class="hljs-attr">"href"</span>: <span class="hljs-string">"https://frontapi.cherrytech.com/payment-methods/111"</span>
+          }
+        }
+      },
+      {
+        <span class="hljs-attr">"id"</span>: <span class="hljs-number">122</span>,
+        <span class="hljs-attr">"name"</span>: <span class="hljs-string">"neteller"</span>,
+        <span class="hljs-attr">"max_amount"</span>: <span class="hljs-number">100000000</span>,
+        <span class="hljs-attr">"min_amount"</span>: <span class="hljs-number">20000</span>,
+        <span class="hljs-attr">"deposit_fixed"</span>: <span class="hljs-number">0</span>,
+        <span class="hljs-attr">"deposit_percent"</span>: <span class="hljs-number">0</span>,
+        <span class="hljs-attr">"deposit_cap"</span>: <span class="hljs-number">0</span>,
+        <span class="hljs-attr">"withdraw_fixed"</span>: <span class="hljs-number">0</span>,
+        <span class="hljs-attr">"withdraw_percent"</span>: <span class="hljs-number">0</span>,
+        <span class="hljs-attr">"withdraw_cap"</span>: <span class="hljs-number">0</span>,
+        <span class="hljs-attr">"fx_rate"</span>: <span class="hljs-number">0</span>,
+        <span class="hljs-attr">"previous_cards"</span>: <span class="hljs-literal">null</span>,
+        <span class="hljs-attr">"last_amount"</span>: <span class="hljs-literal">null</span>,
+        <span class="hljs-attr">"provider_id"</span>: <span class="hljs-literal">null</span>,
+        <span class="hljs-attr">"provider_name"</span>: <span class="hljs-literal">null</span>,
+        <span class="hljs-attr">"enabled"</span>: <span class="hljs-literal">true</span>,
+        <span class="hljs-attr">"default_deposit_amount"</span>: <span class="hljs-number">0</span>,
+        <span class="hljs-attr">"quick_deposit_options"</span>: [],
+        <span class="hljs-attr">"_links"</span>: {
+          <span class="hljs-attr">"self"</span>: {
+            <span class="hljs-attr">"href"</span>: <span class="hljs-string">"https://frontapi.cherrytech.com/payment-methods/122"</span>
+          }
+        }
+      },
+      {
+        <span class="hljs-attr">"id"</span>: <span class="hljs-number">31</span>,
+        <span class="hljs-attr">"name"</span>: <span class="hljs-string">"mastercard"</span>,
+        <span class="hljs-attr">"max_amount"</span>: <span class="hljs-number">2000000</span>,
+        <span class="hljs-attr">"min_amount"</span>: <span class="hljs-number">20000</span>,
+        <span class="hljs-attr">"deposit_fixed"</span>: <span class="hljs-number">0</span>,
+        <span class="hljs-attr">"deposit_percent"</span>: <span class="hljs-number">2.5</span>,
+        <span class="hljs-attr">"deposit_cap"</span>: <span class="hljs-number">0</span>,
+        <span class="hljs-attr">"withdraw_fixed"</span>: <span class="hljs-number">0</span>,
+        <span class="hljs-attr">"withdraw_percent"</span>: <span class="hljs-number">0</span>,
+        <span class="hljs-attr">"withdraw_cap"</span>: <span class="hljs-number">0</span>,
+        <span class="hljs-attr">"fx_rate"</span>: <span class="hljs-number">9.4268</span>,
+        <span class="hljs-attr">"previous_cards"</span>: <span class="hljs-literal">null</span>,
+        <span class="hljs-attr">"last_amount"</span>: <span class="hljs-literal">null</span>,
+        <span class="hljs-attr">"provider_id"</span>: <span class="hljs-number">74</span>,
+        <span class="hljs-attr">"provider_name"</span>: <span class="hljs-string">"icheque"</span>,
+        <span class="hljs-attr">"enabled"</span>: <span class="hljs-literal">true</span>,
+        <span class="hljs-attr">"default_deposit_amount"</span>: <span class="hljs-number">500</span>,
+        <span class="hljs-attr">"quick_deposit_options"</span>: [],
+        <span class="hljs-attr">"_links"</span>: {
+          <span class="hljs-attr">"self"</span>: {
+            <span class="hljs-attr">"href"</span>: <span class="hljs-string">"https://frontapi.cherrytech.com/payment-methods/31"</span>
+          }
+        }
+      },
+      {
+        <span class="hljs-attr">"id"</span>: <span class="hljs-number">41</span>,
+        <span class="hljs-attr">"name"</span>: <span class="hljs-string">"skrill"</span>,
+        <span class="hljs-attr">"max_amount"</span>: <span class="hljs-number">10000000</span>,
+        <span class="hljs-attr">"min_amount"</span>: <span class="hljs-number">20000</span>,
+        <span class="hljs-attr">"deposit_fixed"</span>: <span class="hljs-number">0</span>,
+        <span class="hljs-attr">"deposit_percent"</span>: <span class="hljs-number">0</span>,
+        <span class="hljs-attr">"deposit_cap"</span>: <span class="hljs-number">0</span>,
+        <span class="hljs-attr">"withdraw_fixed"</span>: <span class="hljs-number">0</span>,
+        <span class="hljs-attr">"withdraw_percent"</span>: <span class="hljs-number">0</span>,
+        <span class="hljs-attr">"withdraw_cap"</span>: <span class="hljs-number">0</span>,
+        <span class="hljs-attr">"fx_rate"</span>: <span class="hljs-number">0</span>,
+        <span class="hljs-attr">"previous_cards"</span>: <span class="hljs-literal">null</span>,
+        <span class="hljs-attr">"last_amount"</span>: <span class="hljs-literal">null</span>,
+        <span class="hljs-attr">"provider_id"</span>: <span class="hljs-literal">null</span>,
+        <span class="hljs-attr">"provider_name"</span>: <span class="hljs-literal">null</span>,
+        <span class="hljs-attr">"enabled"</span>: <span class="hljs-literal">true</span>,
+        <span class="hljs-attr">"default_deposit_amount"</span>: <span class="hljs-number">0</span>,
+        <span class="hljs-attr">"quick_deposit_options"</span>: [],
+        <span class="hljs-attr">"_links"</span>: {
+          <span class="hljs-attr">"self"</span>: {
+            <span class="hljs-attr">"href"</span>: <span class="hljs-string">"https://frontapi.cherrytech.com/payment-methods/41"</span>
+          }
+        }
+      }
+    ]
+  },
+  <span class="hljs-attr">"page_count"</span>: <span class="hljs-number">1</span>,
+  <span class="hljs-attr">"page_size"</span>: <span class="hljs-number">25</span>,
+  <span class="hljs-attr">"total_items"</span>: <span class="hljs-number">6</span>,
+  <span class="hljs-attr">"page"</span>: <span class="hljs-number">1</span>
+}
+</span></code></pre>
+<h2><a class="anchor" aria-hidden="true" id="payment-method-object"></a><a href="#payment-method-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Payment method object</h2>
+<table>
+<thead>
+<tr><th>Name</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code>id</code></td><td><code>string</code></td><td>The id.</td></tr>
+<tr><td><code>name</code></td><td><code>string</code></td><td>The name.</td></tr>
+<tr><td><code>max_amount</code></td><td><code>integer</code></td><td>The maximum amount in cents.</td></tr>
+<tr><td><code>min_amount</code></td><td><code>integer</code></td><td>The minimum amount in cents.</td></tr>
+<tr><td><code>deposit_fixed</code></td><td><code>integer</code></td><td>The deposit fee fixed amount in cents.</td></tr>
+<tr><td><code>deposit_percent</code></td><td><code>decimal</code></td><td>The deposit fee percentage.</td></tr>
+<tr><td><code>deposit_cap</code></td><td><code>integer</code></td><td>The maximum deposit fee in cents.</td></tr>
+<tr><td><code>withdraw_fixed</code></td><td><code>integer</code></td><td>The withdraw fee fixed amount in cents.</td></tr>
+<tr><td><code>withdraw_percent</code></td><td><code>decimal</code></td><td>The withdraw fee percentage.</td></tr>
+<tr><td><code>withdraw_cap</code></td><td><code>integer</code></td><td>The maximum withdraw fee in cents.</td></tr>
+<tr><td><code>fx_rate</code></td><td><code>decimal</code></td><td>The exchange rate.</td></tr>
+<tr><td><code>previous_cards</code></td><td><code>object[]?</code></td><td>Previously used cards for this method.</td></tr>
+<tr><td><code>last_amount</code></td><td><code>integer?</code></td><td>The last amount used for this method.</td></tr>
+<tr><td><code>provider_id</code></td><td><code>integer?</code></td><td>The provider id.</td></tr>
+<tr><td><code>provider_name</code></td><td><code>string?</code></td><td>The provider name.</td></tr>
+<tr><td><code>enabled</code></td><td><code>boolean</code></td><td>Whether or not this method is enabled for the given request filters. The application can either hide or fade out the method if it's not enabled.</td></tr>
+<tr><td><code>default_deposit_amount</code></td><td><code>integer</code></td><td>The default deposit amount in cents.</td></tr>
+<tr><td><code>quick_deposit_options</code></td><td><code>integer[]</code></td><td>The quick deposit amounts that can be shown for the user.</td></tr>
+</tbody>
+</table>
+</span></div></article></div><div class="docs-prevnext"></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#list-payment-methods">List payment methods</a><ul class="toc-headings"><li><a href="#request">Request</a></li><li><a href="#response">Response</a></li></ul></li><li><a href="#payment-method-object">Payment method object</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2014 - 2018 XCaliber</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+              var search = docsearch({
+                
+                apiKey: '0cabd5ca720a8dd4c597cb16b8fd909e',
+                indexName: 'xcaliber',
+                inputSelector: '#search_input_react'
+              });
+            </script></body></html>
