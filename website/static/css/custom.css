@@ -23,6 +23,11 @@
   color: $secondaryColor;
 }
 
+code {
+  padding: 2px;
+  margin: 0 2px;
+}
+
 table td code {
   color: $primaryColor;
 	white-space: nowrap;
