@@ -9,7 +9,7 @@ title: Transactions
 The transactions API supports starting, finishing, and listing transactions.
 
 ## Start a transaction
-Starting a transaction is the process of creating it. Some transactions will finish when they are created, but most of the time they need to be [finished using another API call](#finish-a-transaction).
+Starting a transaction is the process of creating it. Some transactions will finish when they are created, but most of the time they need to be [finished](#finish-a-transaction) by updating them with more data.
 
 ### Request
 
@@ -34,11 +34,11 @@ Content-Type: application/json
 Name          | Type      | Description
 ------------- | --------- | -----------
 `type`        | `string`  | The type: `deposit` or `withdrawal`.
-`method_id`   | `integer` | The method id.
-`provider_id` | `integer?` | The provider id. If not given, the platform will attempt to use the best provider for the given method.
-`amount`      | `decimal` | The amount.
+`method_id`   | `integer` | The [method](rest/payment-methods.md) id.
+`provider_id` | `integer?` | The [provider](rest/payment-methods.md) id. If not given, the platform will attempt to use the best provider for the given method.
+`amount`      | `decimal` | The amount in the user currency.
 `bonus`       | `integer?` | The bonus id to be triggered after the transaction is completed.
-`iovation`    | `string?`  | The Iovation code for fraud checking.
+`iovation`    | `string?`  | The [Iovation](https://www.iovation.com/) code for fraud checking.
 `cancel_url`  | `string?`  | The URL to which the browser should redirect to if the transaction is canceled.
 `failed_url`  | `string?`  | The URL to which the browser should redirect to if the transaction fails.
 `pending_url` | `string?`  | The URL to which the browser should redirect to if the transaction goes into a pending status.
