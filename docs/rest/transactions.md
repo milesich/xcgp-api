@@ -81,7 +81,87 @@ HTTP/1.1 201 Created
 ```
 
 ## Finish a transaction
-TODO
+Finishing a transaction is the process of updating an existing transaction with missing data. This missing data is different depending on the action that the start transaction returned, and therefore this section will show the requests for each action.
+
+### Request: `select-card`
+If the transaction response action is `list-cards` then the transaction can be updated with an existing card in the platform by just providing the card id and CCC (Credit Card Code).
+
+```http
+PATCH /transactions/b123deposit HTTP/1.1
+Content-Type: application/json
+
+{
+  "action": "select-card",
+  "cards": [
+    {
+      "ccv": "123",
+      "id": 250760
+    }
+  ]
+}
+```
+
+Name     | Type       | Description
+-------- | ---------- | -----------
+`action` | `string`   | The action that the API should take for this update.
+`cards`  | `object[]` | An array with a single object containing the card `id` and `ccv`.
+
+### Request: `provide-credentials`
+If the transaction response action is `add-credentials-neteller` then the transaction can be updated with the right payment method credentials.
+
+```http
+PATCH /transactions/b123deposit HTTP/1.1
+Content-Type: application/json
+
+{
+  "action": "provide-credentials",
+  "credentials": {
+    "password": "908379",
+    "username": "453501020503"
+  }
+}
+```
+
+Name          | Type      | Description
+------------- | --------- | -----------
+`action`      | `string`  | The action that the API should take for this update.
+`credentials` | `object`  | The credentials needed to complete the transaction.
+
+### Response
+```http
+HTTP/1.1 200 OK
+
+{
+  "id": "b123deposit",
+  "type": null,
+  "amount": null,
+  "currency": null,
+  "start_date": {
+    "date": "2018-06-15 15:49:38.000000",
+    "timezone_type": 3,
+    "timezone": "Europe/Warsaw"
+  },
+  "status": 9,
+  "action": "",
+  "method_id": null,
+  "method_name": null,
+  "provider_id": null,
+  "provider_name": null,
+  "cards": null,
+  "redirect_url": null,
+  "cancel_url": null,
+  "failed_url": null,
+  "pending_url": null,
+  "success_url": null,
+  "credentials": null,
+  "html": null,
+  "_links": {
+    "self": {
+      "href": "https://staging-frontapi.cherrytech.com/transactions/b123deposit"
+    }
+  }
+}
+```
 
 ## List transactions
 TODO
