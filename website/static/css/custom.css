@@ -33,6 +33,10 @@ table td code {
 	white-space: nowrap;
 }
 
+.hljs {
+  background: #eee;
+}
+
 .container .wrapper h3 {
   margin-top: 20px;
 }

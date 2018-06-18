@@ -54,7 +54,7 @@ const siteConfig = {
   // Syntax highlight
   highlight: {
     // Highlight.js theme to use for syntax highlighting in code blocks
-    theme: 'tomorrow-night',
+    theme: 'github',
   },
   usePrism: [
     'graphql',
