@@ -4,9 +4,8 @@ title: Transactions
 
 1. [Start a transaction](#start-a-transaction)
 2. [Finish a transaction](#finish-a-transaction)
-3. [List transactions](#list-transactions)
-
-The transactions API supports starting, finishing, and listing transactions.
+3. [Cancel a withdrawal](#cancel-a-withdrawal)
+4. [List transactions](#list-transactions)
 
 ## Start a transaction
 Starting a transaction is the process of creating it. Some transactions will finish when they are created, but most of the time they need to be [finished](#finish-a-transaction) by updating them with more data.
@@ -214,10 +213,168 @@ The response `status` and `action` can now be used by the application to decide 
   * If the action is `redirect-to-url`, the user should be redirected to the response `redirect_url`.
 
 ## Cancel a withdrawal
-TODO
+To cancel a withdrawal the respective transaction needs to be updated with a `cancel` action.
+
+### Request
+
+```http
+PATCH /transactions/t456withdrawal HTTP/1.1
+Content-Type: application/json
+
+{
+  "action": "cancel"
+}
+```
+
+Name          | Type      | Description
+------------- | --------- | -----------
+`action`      | `string`  | The action that the API should take for this update. Must be `cancel`.
+
+### Response
+```http
+HTTP/1.1 200 OK
+
+{
+  "id": "t456withdrawal",
+  "type": null,
+  "amount": null,
+  "currency": null,
+  "start_date": {
+    "date": "2018-06-15 15:49:38.000000",
+    "timezone_type": 3,
+    "timezone": "Europe/Warsaw"
+  },
+  "status": 13,
+  "action": "",
+  "method_id": null,
+  "method_name": null,
+  "provider_id": null,
+  "provider_name": null,
+  "cards": null,
+  "redirect_url": null,
+  "cancel_url": null,
+  "failed_url": null,
+  "pending_url": null,
+  "success_url": null,
+  "credentials": null,
+  "html": null,
+  "_links": {
+    "self": {
+      "href": "https://staging-frontapi.cherrytech.com/transactions/t123deposit"
+    }
+  }
+}
+```
 
 ## List transactions
-TODO
+List all transactions for the current authenticated user for a given date range.
+
+### Request
+
+```http
+GET /transactions?from=2018-06-11&to=2018-06-18 HTTP/1.1
+```
+
+Name      | Type       | Description
+--------- | ---------- | -----------
+`type`    | `string?`  | The type of transactions to list: `deposit` or `withdrawal`. If not given, then list both of them.
+`from`    | `string?`  | Show transactions from this date (inclusive). The date must be in the format: `yyyy-mm-dd`. If not given, it defaults to the current date.
+`to`      | `string?`  | Show transactions until this date (inclusive). The date must be in the format: `yyyy-mm-dd`. If not given, it defaults to the current date.
+`pending` | `any?`     | If this parameter is set with any value and type is `withdrawal`, the result will have withdrawals that are pending approval. (Also, if this parameter is set, `from` and `to` will be ignored.)
+`page`    | `integer?` | The page to return. It defaults to the first page.
+
+### Response
+
+```http
+HTTP/1.1 200 OK
+
+{
+  "_links": {
+    "self": {
+      "href": "https://frontapi.cherrytech.com/transactions?from=2018-06-11&to=2018-06-18&page=1"
+    },
+    "first": {
+      "href": "https://frontapi.cherrytech.com/transactions?from=2018-06-11&to=2018-06-18"
+    },
+    "last": {
+      "href": "https://frontapi.cherrytech.com/transactions?from=2018-06-11&to=2018-06-18&page=1"
+    }
+  },
+  "_embedded": {
+    "transactions": [
+      {
+        "id": "t8775963deposit",
+        "type": "deposit",
+        "amount": 5000,
+        "currency": "EUR",
+        "start_date": {
+          "date": "2018-06-18 12:34:28.000000",
+          "timezone_type": 3,
+          "timezone": "Europe/Warsaw"
+        },
+        "status": "failed",
+        "action": null,
+        "method_id": 11,
+        "method_name": "Visa",
+        "provider_id": 93,
+        "provider_name": "adyen",
+        "cards": null,
+        "redirect_url": null,
+        "cancel_url": null,
+        "failed_url": null,
+        "pending_url": null,
+        "success_url": null,
+        "credentials": null,
+        "html": null,
+        "_links": {
+          "self": {
+            "href": "https://frontapi.cherrytech.com/transactions/t8775963deposit"
+          }
+        }
+      },
+      {
+        "id": "t8775909deposit",
+        "type": "deposit",
+        "amount": 5000,
+        "currency": "EUR",
+        "start_date": {
+          "date": "2018-06-18 12:19:28.000000",
+          "timezone_type": 3,
+          "timezone": "Europe/Warsaw"
+        },
+        "status": "failed",
+        "action": null,
+        "method_id": 11,
+        "method_name": "Visa",
+        "provider_id": 93,
+        "provider_name": "adyen",
+        "cards": null,
+        "redirect_url": null,
+        "cancel_url": null,
+        "failed_url": null,
+        "pending_url": null,
+        "success_url": null,
+        "credentials": null,
+        "html": null,
+        "_links": {
+          "self": {
+            "href": "https://frontapi.cherrytech.com/transactions/t8775909deposit"
+          }
+        }
+      }
+    ]
+  },
+  "page_count": 1,
+  "page_size": 25,
+  "total_items": 2,
+  "page": 1
+}
+```
+
+> **Note:** the transaction objects of this response are different for legacy reasons. XCaliber didn't want to break existing integrations so it was never tackled. It is planned to be made consistent in the GraphQL variant.
+> * The `amount` is in cents instead of a decimal value.
+> * The `status` is a string instead of a numerical code.
+
 
 ## Transaction object
 

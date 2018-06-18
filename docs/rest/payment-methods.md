@@ -4,8 +4,6 @@ title: Payment methods
 
 1. [List payment methods](#list-payment-methods)
 
-The payment methods API supports listing payment methods.
-
 ## List payment methods
 Get a list of payment methods that the user can make use of during the deposit or withdraw process.
 
