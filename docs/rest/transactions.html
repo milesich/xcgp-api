@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Transactions · XCaliber Gaming Platform API</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="1. [Start a transaction](#start-a-transaction)"/><meta property="og:title" content="Transactions · XCaliber Gaming Platform API"/><meta property="og:type" content="website"/><meta property="og:url" content="https://xcaliber-tech.github.io//xcgp-api/index.html"/><meta property="og:description" content="1. [Start a transaction](#start-a-transaction)"/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/xcgp-api/img/favicon.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/tomorrow-night.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/xcgp-api/css/prism.css"/><link rel="stylesheet" href="/xcgp-api/css/main.css"/></head><body class="sideNavVisible doc separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/xcgp-api/"><img class="logo" src="/xcgp-api/img/xcaliber.svg" alt="XCaliber Gaming Platform API"/><h2 class="headerTitleWithLogo">XCaliber Gaming Platform API</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/xcgp-api/docs/usage.html" target="_self">Reference</a></li><li class=""><a href="/xcgp-api/docs/guides/graphql/overview.html" target="_self">Guides</a></li><li class=""><a href="/xcgp-api/explorer.html" target="_self">Explorer</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/xcaliber-tech/xcgp-api/edit/master/docs/rest/transactions.md" target="_blank" rel="noreferrer noopener">Edit</a><h1>Transactions</h1></header><article><div><span><ol>
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Transactions · XCaliber Gaming Platform API</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="1. [Start a transaction](#start-a-transaction)"/><meta property="og:title" content="Transactions · XCaliber Gaming Platform API"/><meta property="og:type" content="website"/><meta property="og:url" content="https://xcaliber-tech.github.io//xcgp-api/index.html"/><meta property="og:description" content="1. [Start a transaction](#start-a-transaction)"/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/xcgp-api/img/favicon.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/xcgp-api/css/prism.css"/><link rel="stylesheet" href="/xcgp-api/css/main.css"/></head><body class="sideNavVisible doc separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/xcgp-api/"><img class="logo" src="/xcgp-api/img/xcaliber.svg" alt="XCaliber Gaming Platform API"/><h2 class="headerTitleWithLogo">XCaliber Gaming Platform API</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/xcgp-api/docs/usage.html" target="_self">Reference</a></li><li class=""><a href="/xcgp-api/docs/guides/graphql/overview.html" target="_self">Guides</a></li><li class=""><a href="/xcgp-api/explorer.html" target="_self">Explorer</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/xcaliber-tech/xcgp-api/edit/master/docs/rest/transactions.md" target="_blank" rel="noreferrer noopener">Edit</a><h1>Transactions</h1></header><article><div><span><ol>
 <li><a href="#start-a-transaction">Start a transaction</a></li>
 <li><a href="#finish-a-transaction">Finish a transaction</a></li>
 <li><a href="#list-transactions">List transactions</a></li>
@@ -44,7 +44,7 @@
 <pre><code class="hljs css languages- http">HTTP/1.1 <span class="hljs-number">201</span> Created
 
 <span class="json">{
-  <span class="hljs-attr">"id"</span>: <span class="hljs-string">"b123deposit"</span>,
+  <span class="hljs-attr">"id"</span>: <span class="hljs-string">"t123deposit"</span>,
   <span class="hljs-attr">"type"</span>: <span class="hljs-string">"deposit"</span>,
   <span class="hljs-attr">"amount"</span>: <span class="hljs-number">10</span>,
   <span class="hljs-attr">"currency"</span>: <span class="hljs-literal">null</span>,
@@ -69,24 +69,44 @@
   <span class="hljs-attr">"html"</span>: <span class="hljs-literal">null</span>,
   <span class="hljs-attr">"_links"</span>: {
     <span class="hljs-attr">"self"</span>: {
-      <span class="hljs-attr">"href"</span>: <span class="hljs-string">"https://frontapi.cherrytech.com/transactions/b123deposit"</span>
+      <span class="hljs-attr">"href"</span>: <span class="hljs-string">"https://frontapi.cherrytech.com/transactions/t123deposit"</span>
     }
   }
 }
 </span></code></pre>
+<p>The response <code>status</code> and <code>action</code> can now be used by the application to decide what to do next:</p>
+<ul>
+<li>If the <code>status</code> is <code>9</code> (Completed), the user should be communicated that the transaction has successfully completed.</li>
+<li>If the <code>status</code> is <code>8</code> (Failed), the user should be communicated that the transaction has failed.</li>
+<li>If the <code>status</code> is <code>14</code> (Pending), the user should be communicated that the transaction is pending. That means that it will complete or fail asynchronously after a few seconds.</li>
+<li>If the <code>status</code> is <code>15</code> (Pending approval), the user should be communicated that the transaction is pending approval by an agent.</li>
+<li>Otherwise, the <code>action</code> field should be checked instead:
+<ul>
+<li>If the action is <code>html-provided</code>, the response <code>html</code> should be presented to the user. (It's recommend but not mandatory to embed this snippet in an iframe.)</li>
+<li>If the action is <code>iframe-sent</code>, the response <code>redirect_url</code> should be presented to the user in an iframe. (Alternatively the user can be redirected instead.)</li>
+<li>If the action is <code>redirect-to-url</code>, the user should be redirected to the response <code>redirect_url</code>.</li>
+<li>If the action is <code>add-card</code>, the user should be presented with a form to add the following card details: name, number, expiry month and year, and security code.</li>
+<li>If the action is <code>add-card-no-ccc</code>, the user should be presented with a form to add the following card details: name, number and expiry month and year.</li>
+<li>If the action is <code>list-cards</code>, the user should be presented with a form listing the response <code>cards</code> so that he can select one. A new card can also be added at this stage, in which case the same flow as <code>add-card</code> can be done.</li>
+<li>If the action is <code>add-credentials-neteller</code>, the user should be presented with a form to add <a href="https://www.neteller.com/">Neteller</a>'s account id (or email) and secure id.</li>
+</ul></li>
+</ul>
 <h2><a class="anchor" aria-hidden="true" id="finish-a-transaction"></a><a href="#finish-a-transaction" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Finish a transaction</h2>
 <p>Finishing a transaction is the process of updating an existing transaction with missing data. This missing data is different depending on the action that the start transaction returned, and therefore this section will show the requests for each action.</p>
-<h3><a class="anchor" aria-hidden="true" id="request-select-card"></a><a href="#request-select-card" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Request: <code>select-card</code></h3>
-<p>If the transaction response action is <code>list-cards</code> then the transaction can be updated with an existing card in the platform by just providing the card id and CCC (Credit Card Code).</p>
-<pre><code class="hljs css languages- http"><span class="hljs-keyword">PATCH</span> <span class="hljs-string">/transactions/b123deposit</span> HTTP/1.1
+<h3><a class="anchor" aria-hidden="true" id="request-add-card"></a><a href="#request-add-card" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Request: <code>add-card</code></h3>
+<p>If the transaction response action is <code>add-card</code> or <code>add-card-no-ccc</code> then the transaction can be updated with a new card by providing the needed card details.</p>
+<pre><code class="hljs css languages- http"><span class="hljs-keyword">PATCH</span> <span class="hljs-string">/transactions/t123deposit</span> HTTP/1.1
 <span class="hljs-attribute">Content-Type</span>: application/json
 
 <span class="json">{
-  <span class="hljs-attr">"action"</span>: <span class="hljs-string">"select-card"</span>,
+  <span class="hljs-attr">"action"</span>: <span class="hljs-string">"add-card"</span>,
   <span class="hljs-attr">"cards"</span>: [
     {
-      <span class="hljs-attr">"ccv"</span>: <span class="hljs-string">"123"</span>,
-      <span class="hljs-attr">"id"</span>: <span class="hljs-number">250760</span>
+      <span class="hljs-attr">"name"</span>: <span class="hljs-string">"XCaliber Card"</span>,
+      <span class="hljs-attr">"number"</span>: <span class="hljs-string">"4111111111111111"</span>,
+      <span class="hljs-attr">"expiry_month"</span>: <span class="hljs-number">1</span>,
+      <span class="hljs-attr">"expiry_year"</span>: <span class="hljs-number">2050</span>,
+      <span class="hljs-attr">"ccv"</span>: <span class="hljs-string">"123"</span>
     }
   ]
 }
@@ -96,20 +116,44 @@
 <tr><th>Name</th><th>Type</th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td><code>action</code></td><td><code>string</code></td><td>The action that the API should take for this update.</td></tr>
-<tr><td><code>cards</code></td><td><code>object[]</code></td><td>An array with a single object containing the card <code>id</code> and <code>ccv</code>.</td></tr>
+<tr><td><code>action</code></td><td><code>string</code></td><td>The action that the API should take for this update. Must be <code>add-card</code>. (Also accepted for ease of use: <code>add-card-no-ccc</code>.)</td></tr>
+<tr><td><code>cards</code></td><td><code>object[]</code></td><td>An array with a single object containing the card<br><code>name</code>: the name on the card<br><code>number</code>: the card number<br><code>expiry_month</code>: the expiry month<br><code>expiry_year</code>: the expiry year<br><code>ccv</code>: the security code (CVV, CVV2, CVC or CSC)<br><br><strong>Note:</strong> the <code>ccv</code> is optional if the transaction response action was <code>add-card-no-ccc</code>.</td></tr>
+</tbody>
+</table>
+<h3><a class="anchor" aria-hidden="true" id="request-select-card"></a><a href="#request-select-card" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Request: <code>select-card</code></h3>
+<p>If the transaction response action is <code>list-cards</code> then the transaction can be updated with an existing card in the platform by just providing the card id and CCC (Credit Card Code).</p>
+<pre><code class="hljs css languages- http"><span class="hljs-keyword">PATCH</span> <span class="hljs-string">/transactions/t123deposit</span> HTTP/1.1
+<span class="hljs-attribute">Content-Type</span>: application/json
+
+<span class="json">{
+  <span class="hljs-attr">"action"</span>: <span class="hljs-string">"select-card"</span>,
+  <span class="hljs-attr">"cards"</span>: [
+    {
+      <span class="hljs-attr">"id"</span>: <span class="hljs-number">250760</span>,
+      <span class="hljs-attr">"ccv"</span>: <span class="hljs-string">"123"</span>
+    }
+  ]
+}
+</span></code></pre>
+<table>
+<thead>
+<tr><th>Name</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code>action</code></td><td><code>string</code></td><td>The action that the API should take for this update. Must be <code>select-card</code>. (Also accepted for ease of use: <code>list-cards</code>.)</td></tr>
+<tr><td><code>cards</code></td><td><code>object[]</code></td><td>An array with a single object containing the card <code>id</code> and <code>ccv</code> (CVV, CVV2, CVC or CSC).</td></tr>
 </tbody>
 </table>
 <h3><a class="anchor" aria-hidden="true" id="request-provide-credentials"></a><a href="#request-provide-credentials" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Request: <code>provide-credentials</code></h3>
-<p>If the transaction response action is <code>add-credentials-neteller</code> then the transaction can be updated with the right payment method credentials.</p>
-<pre><code class="hljs css languages- http"><span class="hljs-keyword">PATCH</span> <span class="hljs-string">/transactions/b123deposit</span> HTTP/1.1
+<p>If the transaction response action is <code>add-credentials</code> or <code>add-credentials-neteller</code> then the transaction can be updated with the right payment method credentials.</p>
+<pre><code class="hljs css languages- http"><span class="hljs-keyword">PATCH</span> <span class="hljs-string">/transactions/t123deposit</span> HTTP/1.1
 <span class="hljs-attribute">Content-Type</span>: application/json
 
 <span class="json">{
   <span class="hljs-attr">"action"</span>: <span class="hljs-string">"provide-credentials"</span>,
   <span class="hljs-attr">"credentials"</span>: {
-    <span class="hljs-attr">"password"</span>: <span class="hljs-string">"908379"</span>,
-    <span class="hljs-attr">"username"</span>: <span class="hljs-string">"453501020503"</span>
+    <span class="hljs-attr">"username"</span>: <span class="hljs-string">"453501020503"</span>,
+    <span class="hljs-attr">"password"</span>: <span class="hljs-string">"908379"</span>
   }
 }
 </span></code></pre>
@@ -118,15 +162,15 @@
 <tr><th>Name</th><th>Type</th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td><code>action</code></td><td><code>string</code></td><td>The action that the API should take for this update.</td></tr>
-<tr><td><code>credentials</code></td><td><code>object</code></td><td>The credentials needed to complete the transaction.</td></tr>
+<tr><td><code>action</code></td><td><code>string</code></td><td>The action that the API should take for this update. Must be <code>provide-credentials</code>. (Also accepted for ease of use: <code>add-credentials</code> and <code>add-credentials-neteller</code>.)</td></tr>
+<tr><td><code>credentials</code></td><td><code>object</code></td><td>The credentials needed to complete the transaction. It must be an object with a <code>username</code> and <code>password</code>.<br><br><strong>Note:</strong> for <a href="https://www.neteller.com/">Neteller</a> the username is the account id or email, and the password is the secure id.</td></tr>
 </tbody>
 </table>
 <h3><a class="anchor" aria-hidden="true" id="response-1"></a><a href="#response-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Response</h3>
 <pre><code class="hljs css languages- http">HTTP/1.1 <span class="hljs-number">200</span> OK
 
 <span class="json">{
-  <span class="hljs-attr">"id"</span>: <span class="hljs-string">"b123deposit"</span>,
+  <span class="hljs-attr">"id"</span>: <span class="hljs-string">"t123deposit"</span>,
   <span class="hljs-attr">"type"</span>: <span class="hljs-literal">null</span>,
   <span class="hljs-attr">"amount"</span>: <span class="hljs-literal">null</span>,
   <span class="hljs-attr">"currency"</span>: <span class="hljs-literal">null</span>,
@@ -151,11 +195,26 @@
   <span class="hljs-attr">"html"</span>: <span class="hljs-literal">null</span>,
   <span class="hljs-attr">"_links"</span>: {
     <span class="hljs-attr">"self"</span>: {
-      <span class="hljs-attr">"href"</span>: <span class="hljs-string">"https://staging-frontapi.cherrytech.com/transactions/b123deposit"</span>
+      <span class="hljs-attr">"href"</span>: <span class="hljs-string">"https://staging-frontapi.cherrytech.com/transactions/t123deposit"</span>
     }
   }
 }
 </span></code></pre>
+<p>The response <code>status</code> and <code>action</code> can now be used by the application to decide what to do next:</p>
+<ul>
+<li>If the <code>status</code> is <code>9</code> (Completed), the user should be communicated that the transaction has successfully completed.</li>
+<li>If the <code>status</code> is <code>8</code> (Failed), the user should be communicated that the transaction has failed.</li>
+<li>If the <code>status</code> is <code>14</code> (Pending), the user should be communicated that the transaction is pending. That means that it will complete or fail asynchronously after a few seconds.</li>
+<li>If the <code>status</code> is <code>15</code> (Pending approval), the user should be communicated that the transaction is pending approval by an agent.</li>
+<li>Otherwise, the <code>action</code> field should be checked instead:
+<ul>
+<li>If the action is <code>html-provided</code>, the response <code>html</code> should be presented to the user. (It's recommend but not mandatory to embed this snippet in an iframe.)</li>
+<li>If the action is <code>iframe-sent</code>, the response <code>redirect_url</code> should be presented to the user in an iframe. (Alternatively the user can be redirected instead.)</li>
+<li>If the action is <code>redirect-to-url</code>, the user should be redirected to the response <code>redirect_url</code>.</li>
+</ul></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="cancel-a-withdrawal"></a><a href="#cancel-a-withdrawal" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Cancel a withdrawal</h2>
+<p>TODO</p>
 <h2><a class="anchor" aria-hidden="true" id="list-transactions"></a><a href="#list-transactions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>List transactions</h2>
 <p>TODO</p>
 <h2><a class="anchor" aria-hidden="true" id="transaction-object"></a><a href="#transaction-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Transaction object</h2>
@@ -193,7 +252,7 @@
 </thead>
 <tbody>
 <tr><td><code>add-card</code></td><td>The application should display a form with the necessary card details for the user to fill in.</td></tr>
-<tr><td><code>add-card-no-ccc</code></td><td>The application should display a form with the necessary card details for the user to fill in except the CCC (Credit Card Code, also known as CVC, CVV, etc).</td></tr>
+<tr><td><code>add-card-no-ccc</code></td><td>The application should display a form with the necessary card details for the user to fill in except the security code.</td></tr>
 <tr><td><code>add-credentials-neteller</code></td><td>The application should display a form with <a href="https://www.neteller.com/">Neteller</a> secure id and code fields.</td></tr>
 <tr><td><code>html-provided</code></td><td>The application should display the given HTML snippet to the user.</td></tr>
 <tr><td><code>iframe-sent</code></td><td>The application should display an iframe with the given URL. (Can also do a redirect if it's preferred.)</td></tr>
@@ -223,7 +282,7 @@
 <tr><td><code>16</code></td><td>Credentials requested</td><td>The transaction needs to be updated with credentials.</td></tr>
 </tbody>
 </table>
-</span></div></article></div><div class="docs-prevnext"></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#start-a-transaction">Start a transaction</a><ul class="toc-headings"><li><a href="#request">Request</a></li><li><a href="#response">Response</a></li></ul></li><li><a href="#finish-a-transaction">Finish a transaction</a><ul class="toc-headings"><li><a href="#request-select-card">Request: <code>select-card</code></a></li><li><a href="#request-provide-credentials">Request: <code>provide-credentials</code></a></li><li><a href="#response-1">Response</a></li></ul></li><li><a href="#list-transactions">List transactions</a></li><li><a href="#transaction-object">Transaction object</a></li><li><a href="#transaction-actions">Transaction actions</a></li><li><a href="#transaction-statuses">Transaction statuses</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2014 - 2018 XCaliber</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+</span></div></article></div><div class="docs-prevnext"></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#start-a-transaction">Start a transaction</a><ul class="toc-headings"><li><a href="#request">Request</a></li><li><a href="#response">Response</a></li></ul></li><li><a href="#finish-a-transaction">Finish a transaction</a><ul class="toc-headings"><li><a href="#request-add-card">Request: <code>add-card</code></a></li><li><a href="#request-select-card">Request: <code>select-card</code></a></li><li><a href="#request-provide-credentials">Request: <code>provide-credentials</code></a></li><li><a href="#response-1">Response</a></li></ul></li><li><a href="#cancel-a-withdrawal">Cancel a withdrawal</a></li><li><a href="#list-transactions">List transactions</a></li><li><a href="#transaction-object">Transaction object</a></li><li><a href="#transaction-actions">Transaction actions</a></li><li><a href="#transaction-statuses">Transaction statuses</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2014 - 2018 XCaliber</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
               var search = docsearch({
                 
                 apiKey: '0cabd5ca720a8dd4c597cb16b8fd909e',
