@@ -1,0 +1,17 @@
+{
+  "name": "generator",
+  "version": "1.0.0",
+  "scripts": {
+		"clean": "rm -rf ../docs/graphql/schema",
+		"generate:main": "npm run clean && graphdoc -e https://frontapi.cherrytech.com/graphql -t ./template-main -p ./plugins/default -o ../docs/graphql/schema && npm run rename && npm run fixhtmlentities",
+		"generate:menu": "graphdoc -e https://frontapi.cherrytech.com/graphql -t ./template-menu -p ./plugins/default -o ./.tmp",
+		"rename:doc": "find ../docs/graphql/schema -name '*.doc.html' -exec bash -c 'mv \"$1\" \"${1%.doc.html}\".md' - '{}' \\;",
+		"rename:spec": "find ../docs/graphql/schema -name '*.spec.html' -exec bash -c 'mv \"$1\" \"${1%.spec.html}\".md' - '{}' \\;",
+		"rename": "npm run rename:doc && npm run rename:spec",
+		"fixhtmlentities": "find ../docs/graphql/schema -type f -exec sed -i '' 's/&#x60;/`/g; s/&#x2F;/\\//g;' {} +",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "@2fd/graphdoc": "^2.4.0"
+	}
+}
