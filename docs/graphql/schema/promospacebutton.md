@@ -15,7 +15,7 @@ type PromoSpaceButton {
 
   action: String 
 
-  # JSON object containing parameters like &quot;id&quot; and &quot;url&quot;
+  # JSON object containing parameters like "id" and "url"
   actionParams: JSON 
 
 }

@@ -280,7 +280,7 @@ type Query {
     state: String,
     groups: String,
     jurisdiction: String
-  ): PromoSpace @deprecated( reason: &quot;Use `promotion(s)` query instead.&quot; )
+  ): PromoSpace @deprecated( reason: "Use `promotion(s)` query instead." )
 
   # Arguments
   #   after
@@ -292,7 +292,7 @@ type Query {
     first: Int,
     before: String,
     last: Int
-  ): PromoSpaceConnection @deprecated( reason: &quot;Use `promotion(s)` query instead.&quot; )
+  ): PromoSpaceConnection @deprecated( reason: "Use `promotion(s)` query instead." )
 
   # Arguments
   #   id

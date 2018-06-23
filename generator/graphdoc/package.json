@@ -2,15 +2,8 @@
   "name": "@2fd/graphdoc",
   "version": "2.4.0",
   "description": "Static page generator for documenting GraphQL Schema",
-  "main": "bin/graphdoc",
-  "bin": {
-    "graphdoc": "./bin/graphdoc.js"
-  },
   "scripts": {
     "sass": "node-sass --output-style compressed template/slds/styles/graphdoc.scss > template/slds/styles/graphdoc.css",
-    "compile": "tsc -p .",
-    "declaration": "tsc -d -p tsconfig.json",
-    "readme": "node ./README.js",
     "doc.github": "node bin/graphdoc.js -c example.github.json -f -v",
     "doc.pokemon": "node bin/graphdoc.js -c example.pokemon.json -f -v",
     "doc.shopify": "node bin/graphdoc.js -c example.shopify.json -f -v",
@@ -19,19 +12,8 @@
     "doc.starwars-js": "node bin/graphdoc.js -c example.starWars-js.json -f -v",
     "test": "jest"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/2fd/graphdoc.git"
-  },
-  "keywords": [
-    "graphql",
-    "documentation"
-  ],
   "author": "Fede Ramirez <i@2fd.me>",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/2fd/graphdoc/issues"
-  },
   "homepage": "https://github.com/2fd/graphdoc#readme",
   "devDependencies": {
     "@salesforce-ux/design-system": "2.2.1",
@@ -48,7 +30,6 @@
     "@types/request": "^0.0.40",
     "@types/striptags": "^0.0.5",
     "chai": "^3.5.0",
-    "handlebars": "^4.0.10",
     "jest": "^18.1.0",
     "node-sass": "^3.8.0",
     "typescript": "~2.3.0"
@@ -67,7 +48,6 @@
     "word-wrap": "^1.2.1"
   },
   "graphdoc": {
-    "ga": "UA-54154153-2",
     "graphiql": "https://developer.github.com/early-access/graphql/explorer/",
     "logo": "<a href=\"https://developer.github.com/early-access/graphql\" target=\"_blank\" style=\"display:block;padding:1rem 3rem\"><img src=\"https://assets-cdn.github.com/images/modules/logos_page/GitHub-Logo.png\" /></a>",
     "schemaFile": "./test/github.json",

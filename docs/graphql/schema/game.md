@@ -82,7 +82,7 @@ type Game implements Node {
   # The thumbnail of the game.
   thumbnail: String 
 
-  # The vendor launch properties or `null` if the game can&#39;t be launched.
+  # The vendor launch properties or `null` if the game can't be launched.
   #
   # Arguments
   #   return_url:   return_url
@@ -136,7 +136,7 @@ type Game implements Node {
   # Whether the game is a mobile version or not
   mobile: Boolean! 
 
-  # A list of tags for filtering like &quot;jackpot&quot; or &quot;netent&quot;
+  # A list of tags for filtering like "jackpot" or "netent"
   tags: [String] 
 
 }

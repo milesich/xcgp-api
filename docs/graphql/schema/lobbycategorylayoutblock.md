@@ -36,10 +36,10 @@ type LobbyCategoryLayoutBlock {
   # Block type.
   type: String! 
 
-  # Game object. Always null if type !&#x3D; game.
+  # Game object. Always null if type != game.
   game: Game 
 
-  # List of promotions. Always null if type !&#x3D; promotions.
+  # List of promotions. Always null if type != promotions.
   promotions: [Promotion] 
 
 }

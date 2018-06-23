@@ -21,7 +21,7 @@ type LobbyCategory implements Node {
   # The order of the game category.
   order: Int! 
 
-  layouts: [LobbyCategoryLayout] @deprecated( reason: &quot;Use layoutConnection instead for pagination possibilities&quot; )
+  layouts: [LobbyCategoryLayout] @deprecated( reason: "Use layoutConnection instead for pagination possibilities" )
 
   # Arguments
   #   after
