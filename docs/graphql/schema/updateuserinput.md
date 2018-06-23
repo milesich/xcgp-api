@@ -2,8 +2,7 @@
 title: UpdateUserInput
 ---
 
-<p>Input for updating a user</p>
-
+Input for updating a user
 
 ## Schema definition
 ```graphql

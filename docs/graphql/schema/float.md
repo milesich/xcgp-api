@@ -2,10 +2,9 @@
 title: Float
 ---
 
-<p>The <code>Float</code> scalar type represents signed double-precision fractional
+The `Float` scalar type represents signed double-precision fractional
 values as specified by
-<a href="http://en.wikipedia.org/wiki/IEEE_floating_point">IEEE 754</a>. </p>
-
+[IEEE 754](http://en.wikipedia.org/wiki/IEEE_floating_point). 
 
 ## Schema definition
 ```graphql

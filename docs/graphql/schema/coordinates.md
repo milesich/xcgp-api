@@ -2,8 +2,7 @@
 title: Coordinates
 ---
 
-<p>A set of coordinates</p>
-
+A set of coordinates
 
 ## Schema definition
 ```graphql

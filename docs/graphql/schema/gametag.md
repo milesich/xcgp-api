@@ -2,8 +2,7 @@
 title: GameTag
 ---
 
-<p>A game tag that can be used to filter games</p>
-
+A game tag that can be used to filter games
 
 ## Schema definition
 ```graphql

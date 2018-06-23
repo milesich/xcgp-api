@@ -2,8 +2,7 @@
 title: Win
 ---
 
-<p>A win</p>
-
+A win
 
 ## Schema definition
 ```graphql

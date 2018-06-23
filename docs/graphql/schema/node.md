@@ -2,8 +2,7 @@
 title: Node
 ---
 
-<p>An object with an ID</p>
-
+An object with an ID
 
 ## Schema definition
 ```graphql

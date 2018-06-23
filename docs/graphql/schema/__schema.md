@@ -2,8 +2,7 @@
 title: __Schema
 ---
 
-<p>A GraphQL Schema defines the capabilities of a GraphQL server. It exposes all available types and directives on the server, as well as the entry points for query, mutation, and subscription operations.</p>
-
+A GraphQL Schema defines the capabilities of a GraphQL server. It exposes all available types and directives on the server, as well as the entry points for query, mutation, and subscription operations.
 
 ## Schema definition
 ```graphql

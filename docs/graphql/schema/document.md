@@ -2,8 +2,7 @@
 title: Document
 ---
 
-<p>A document</p>
-
+A document
 
 ## Schema definition
 ```graphql

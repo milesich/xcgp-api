@@ -2,8 +2,7 @@
 title: QnaContent
 ---
 
-<p>The content for a question and answer</p>
-
+The content for a question and answer
 
 ## Schema definition
 ```graphql

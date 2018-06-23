@@ -2,8 +2,7 @@
 title: LobbyCategoryLayoutBlock
 ---
 
-<p>Block of games for a category layout</p>
-
+Block of games for a category layout
 
 ## Schema definition
 ```graphql

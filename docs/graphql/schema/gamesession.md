@@ -2,8 +2,7 @@
 title: GameSession
 ---
 
-<p>A game session</p>
-
+A game session
 
 ## Schema definition
 ```graphql

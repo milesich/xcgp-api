@@ -2,8 +2,7 @@
 title: deprecated
 ---
 
-<p>Marks an element of a GraphQL schema as no longer supported.</p>
-
+Marks an element of a GraphQL schema as no longer supported.
 
 ## Schema definition
 ```graphql

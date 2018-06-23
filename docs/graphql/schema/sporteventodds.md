@@ -2,8 +2,7 @@
 title: SportEventOdds
 ---
 
-<p>A set of sport odds for an event</p>
-
+A set of sport odds for an event
 
 ## Schema definition
 ```graphql

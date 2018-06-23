@@ -2,8 +2,7 @@
 title: __TypeKind
 ---
 
-<p>An enum describing what kind of type a given <code>__Type</code> is.</p>
-
+An enum describing what kind of type a given `__Type` is.
 
 ## Schema definition
 ```graphql

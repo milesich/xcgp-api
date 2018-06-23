@@ -2,8 +2,7 @@
 title: Game
 ---
 
-<p>A game.</p>
-
+A game.
 
 ## Schema definition
 ```graphql

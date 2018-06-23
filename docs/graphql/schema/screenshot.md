@@ -2,8 +2,7 @@
 title: Screenshot
 ---
 
-<p>A game screenshot.</p>
-
+A game screenshot.
 
 ## Schema definition
 ```graphql

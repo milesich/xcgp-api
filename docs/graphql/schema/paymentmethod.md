@@ -2,8 +2,7 @@
 title: PaymentMethod
 ---
 
-<p>A payment method</p>
-
+A payment method
 
 ## Schema definition
 ```graphql

@@ -2,8 +2,7 @@
 title: Boolean
 ---
 
-<p>The <code>Boolean</code> scalar type represents <code>true</code> or <code>false</code>.</p>
-
+The `Boolean` scalar type represents `true` or `false`.
 
 ## Schema definition
 ```graphql

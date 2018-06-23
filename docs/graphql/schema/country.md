@@ -2,8 +2,7 @@
 title: Country
 ---
 
-<p>A country</p>
-
+A country
 
 ## Schema definition
 ```graphql

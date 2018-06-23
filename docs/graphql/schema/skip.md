@@ -2,8 +2,7 @@
 title: skip
 ---
 
-<p>Directs the executor to skip this field or fragment when the <code>if</code> argument is true.</p>
-
+Directs the executor to skip this field or fragment when the `if` argument is true.
 
 ## Schema definition
 ```graphql

@@ -2,8 +2,7 @@
 title: Feed
 ---
 
-<p>A feed item</p>
-
+A feed item
 
 ## Schema definition
 ```graphql

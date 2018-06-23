@@ -2,8 +2,7 @@
 title: Jackpot
 ---
 
-<p>A jackpot</p>
-
+A jackpot
 
 ## Schema definition
 ```graphql

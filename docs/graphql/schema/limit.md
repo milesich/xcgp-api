@@ -2,8 +2,7 @@
 title: Limit
 ---
 
-<p>A limit</p>
-
+A limit
 
 ## Schema definition
 ```graphql

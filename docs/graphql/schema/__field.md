@@ -2,8 +2,7 @@
 title: __Field
 ---
 
-<p>Object and Interface types are described by a list of Fields, each of which has a name, potentially a list of arguments, and a return type.</p>
-
+Object and Interface types are described by a list of Fields, each of which has a name, potentially a list of arguments, and a return type.
 
 ## Schema definition
 ```graphql

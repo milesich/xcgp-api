@@ -2,8 +2,7 @@
 title: Seo
 ---
 
-<p>A search engine optimisation definition</p>
-
+A search engine optimisation definition
 
 ## Schema definition
 ```graphql

@@ -2,8 +2,7 @@
 title: SportEvent
 ---
 
-<p>A sport event</p>
-
+A sport event
 
 ## Schema definition
 ```graphql

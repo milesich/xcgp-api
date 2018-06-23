@@ -2,8 +2,7 @@
 title: Transaction
 ---
 
-<p>A transaction</p>
-
+A transaction
 
 ## Schema definition
 ```graphql

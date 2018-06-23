@@ -2,8 +2,7 @@
 title: Lobby
 ---
 
-<p>A lobby containing game categories.</p>
-
+A lobby containing game categories.
 
 ## Schema definition
 ```graphql

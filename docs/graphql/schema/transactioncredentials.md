@@ -2,8 +2,7 @@
 title: TransactionCredentials
 ---
 
-<p>The credentials for a transaction</p>
-
+The credentials for a transaction
 
 ## Schema definition
 ```graphql

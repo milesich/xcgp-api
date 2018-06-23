@@ -2,8 +2,7 @@
 title: FeedConnection
 ---
 
-<p>A connection to a list of items.</p>
-
+A connection to a list of items.
 
 ## Schema definition
 ```graphql

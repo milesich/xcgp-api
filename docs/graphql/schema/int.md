@@ -2,9 +2,8 @@
 title: Int
 ---
 
-<p>The <code>Int</code> scalar type represents non-fractional signed whole numeric
-values. Int can represent values between -(2^31) and 2^31 - 1. </p>
-
+The `Int` scalar type represents non-fractional signed whole numeric
+values. Int can represent values between -(2^31) and 2^31 - 1. 
 
 ## Schema definition
 ```graphql

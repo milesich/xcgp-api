@@ -2,8 +2,7 @@
 title: User
 ---
 
-<p>A user</p>
-
+A user
 
 ## Schema definition
 ```graphql

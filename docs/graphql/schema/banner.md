@@ -2,8 +2,7 @@
 title: Banner
 ---
 
-<p>A banner</p>
-
+A banner
 
 ## Schema definition
 ```graphql

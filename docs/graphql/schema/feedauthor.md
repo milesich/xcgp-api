@@ -2,8 +2,7 @@
 title: FeedAuthor
 ---
 
-<p>The author of a feed</p>
-
+The author of a feed
 
 ## Schema definition
 ```graphql

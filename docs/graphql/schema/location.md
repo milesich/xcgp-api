@@ -2,8 +2,7 @@
 title: Location
 ---
 
-<p>A location</p>
-
+A location
 
 ## Schema definition
 ```graphql

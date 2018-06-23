@@ -2,8 +2,7 @@
 title: PageInfo
 ---
 
-<p>Information about pagination in a connection.</p>
-
+Information about pagination in a connection.
 
 ## Schema definition
 ```graphql

@@ -1,4 +1,3 @@
-import * as marked from 'marked';
 import * as slug from 'slug';
 import { Plugin } from './plugin';
 import {
@@ -49,7 +48,7 @@ export async function createData(
         'GraphQL schema documentation';
 
     const description = type ?
-        marked(type.description || '') :
+        type.description || '' :
         projectPackage.description;
 
     return {

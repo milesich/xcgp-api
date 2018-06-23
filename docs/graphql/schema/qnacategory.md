@@ -2,8 +2,7 @@
 title: QnaCategory
 ---
 
-<p>A category of question and answers</p>
-
+A category of question and answers
 
 ## Schema definition
 ```graphql

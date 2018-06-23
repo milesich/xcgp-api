@@ -2,8 +2,7 @@
 title: Currency
 ---
 
-<p>A currency</p>
-
+A currency
 
 ## Schema definition
 ```graphql

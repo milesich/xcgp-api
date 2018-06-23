@@ -2,8 +2,7 @@
 title: Card
 ---
 
-<p>A card</p>
-
+A card
 
 ## Schema definition
 ```graphql

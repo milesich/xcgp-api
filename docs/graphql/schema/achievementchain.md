@@ -2,8 +2,7 @@
 title: AchievementChain
 ---
 
-<p>An achievement chain is a group of achievements</p>
-
+An achievement chain is a group of achievements
 
 ## Schema definition
 ```graphql

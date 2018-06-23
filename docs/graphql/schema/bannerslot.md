@@ -2,8 +2,7 @@
 title: BannerSlot
 ---
 
-<p>A banner slot containing banners</p>
-
+A banner slot containing banners
 
 ## Schema definition
 ```graphql

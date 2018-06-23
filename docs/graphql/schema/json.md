@@ -2,8 +2,7 @@
 title: JSON
 ---
 
-<p>The <code>JSON</code> scalar type represents JSON values as specified by <a href="http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf">ECMA-404</a>.</p>
-
+The `JSON` scalar type represents JSON values as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
 
 ## Schema definition
 ```graphql

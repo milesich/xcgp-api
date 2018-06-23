@@ -2,8 +2,7 @@
 title: LobbyCategory
 ---
 
-<p>A lobby category.</p>
-
+A lobby category.
 
 ## Schema definition
 ```graphql

@@ -2,8 +2,7 @@
 title: SeoMetaTag
 ---
 
-<p>Meta tag for a search engine optimisation definition</p>
-
+Meta tag for a search engine optimisation definition
 
 ## Schema definition
 ```graphql

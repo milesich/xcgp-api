@@ -2,8 +2,7 @@
 title: Bonus
 ---
 
-<p>A bonus</p>
-
+A bonus
 
 ## Schema definition
 ```graphql

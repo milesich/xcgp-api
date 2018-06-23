@@ -2,8 +2,7 @@
 title: include
 ---
 
-<p>Directs the executor to include this field or fragment only when the <code>if</code> argument is true.</p>
-
+Directs the executor to include this field or fragment only when the `if` argument is true.
 
 ## Schema definition
 ```graphql

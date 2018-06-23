@@ -2,8 +2,7 @@
 title: LanguageEdge
 ---
 
-<p>An edge in a connection</p>
-
+An edge in a connection
 
 ## Schema definition
 ```graphql

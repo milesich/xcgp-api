@@ -2,8 +2,7 @@
 title: Achievement
 ---
 
-<p>An achievement</p>
-
+An achievement
 
 ## Schema definition
 ```graphql

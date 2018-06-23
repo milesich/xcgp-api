@@ -2,8 +2,7 @@
 title: SeoLink
 ---
 
-<p>Link for a search engine optimisation definition</p>
-
+Link for a search engine optimisation definition
 
 ## Schema definition
 ```graphql

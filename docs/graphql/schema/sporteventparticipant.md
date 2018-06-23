@@ -2,8 +2,7 @@
 title: SportEventParticipant
 ---
 
-<p>A sport event participant</p>
-
+A sport event participant
 
 ## Schema definition
 ```graphql

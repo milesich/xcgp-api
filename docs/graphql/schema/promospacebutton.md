@@ -2,8 +2,7 @@
 title: PromoSpaceButton
 ---
 
-<p>A promo space button</p>
-
+A promo space button
 
 ## Schema definition
 ```graphql

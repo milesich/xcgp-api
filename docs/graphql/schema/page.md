@@ -2,8 +2,7 @@
 title: Page
 ---
 
-<p>A page</p>
-
+A page
 
 ## Schema definition
 ```graphql

@@ -2,8 +2,7 @@
 title: Language
 ---
 
-<p>A language</p>
-
+A language
 
 ## Schema definition
 ```graphql

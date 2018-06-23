@@ -2,8 +2,7 @@
 title: CreateUserInput
 ---
 
-<p>Input for registering/creating a user</p>
-
+Input for registering/creating a user
 
 ## Schema definition
 ```graphql
