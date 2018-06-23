@@ -290,6 +290,7 @@ export class GraphQLDocumentor extends Command<Flags, Params> {
     const templateData = await createData(projectPackageJSON, graphdocPakageJSON, plugins, type);
     const file = type ? getFilenameOf(type) : 'schema.md';
     const filepath = path.resolve(projectPackageJSON.graphdoc.output, file);
-    return await writeFile(filepath, render(partials.index, templateData, partials));
+    const template = type && partials[type.name.toLowerCase()] || partials.index;
+    return await writeFile(filepath, render(template, templateData, partials));
   }
 }

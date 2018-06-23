@@ -17,7 +17,8 @@ type Country {
   # Country name
   name: String 
 
-  # An example of a phone number from this country. Example: 9696 1234 for Malta
+  # An example of a phone number from this country. Example: 9696 1234 for
+  # Malta
   examplePhone: String 
 
   # Code for country flag.

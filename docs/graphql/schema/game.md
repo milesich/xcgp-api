@@ -66,7 +66,8 @@ type Game implements Node {
 
   lastDraw: GameLastDraw 
 
-  # ISO 4217 Currency Code of this game as a particular currency may be enforced
+  # ISO 4217 Currency Code of this game as a particular currency may be
+  # enforced
   currency: String! 
 
   # The height of the game.

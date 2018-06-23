@@ -47,7 +47,7 @@ input CreateUserInput {
   # ISO 4217 Currency code. Example: GBP or EUR
   currency: String
 
-  # URL Prefix before activation ID/Hash is added to the end. Example: 
+  # URL Prefix before activation ID/Hash is added to the end. Example:
   # https://site.com/activate/
   activationLink: String!
 

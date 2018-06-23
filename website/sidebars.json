@@ -13,7 +13,7 @@
     "GraphQL": [
       "graphql/overview",
       "graphql/schema",
-      "graphql/queries",
+      "graphql/schema/query",
       "graphql/mutations",
       "graphql/objects",
       "graphql/scalars"

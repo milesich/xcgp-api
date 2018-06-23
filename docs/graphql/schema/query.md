@@ -2,6 +2,9 @@
 title: Query
 ---
 
+Every GraphQL schema has a root type for both queries and mutations. The [query type](https://facebook.github.io/graphql/draft/#sec-Type-System) defines GraphQL operations that retrieve data from the server.
+
+For more information, see "[About queries](guides/graphql/using.md#about-queries)".
 
 
 ## Schema definition
@@ -90,7 +93,13 @@ type Query {
   #   before
   #   last
   #   type:   type
-  bonuses(after: String, first: Int, before: String, last: Int, type: BonusType!): BonusConnection 
+  bonuses(
+    after: String,
+    first: Int,
+    before: String,
+    last: Int,
+    type: BonusType!
+  ): BonusConnection 
 
   # Arguments
   #   after
@@ -98,7 +107,13 @@ type Query {
   #   before
   #   last
   #   enabled:   enabled
-  countries(after: String, first: Int, before: String, last: Int, enabled: Boolean): CountryConnection 
+  countries(
+    after: String,
+    first: Int,
+    before: String,
+    last: Int,
+    enabled: Boolean
+  ): CountryConnection 
 
   # Arguments
   #   after
@@ -227,7 +242,13 @@ type Query {
   #   playerState:   playerState
   #   groups:   groups
   #   country:   country
-  lobby(id: String, slug: String, playerState: String, groups: String, country: String): Lobby 
+  lobby(
+    id: String,
+    slug: String,
+    playerState: String,
+    groups: String,
+    country: String
+  ): Lobby 
 
   # Arguments
   #   after
@@ -248,7 +269,13 @@ type Query {
   #   before
   #   last
   #   category
-  pages(after: String, first: Int, before: String, last: Int, category: String!): PageConnection 
+  pages(
+    after: String,
+    first: Int,
+    before: String,
+    last: Int,
+    category: String!
+  ): PageConnection 
 
   # Arguments
   #   id

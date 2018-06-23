@@ -18,7 +18,12 @@ type PromoSpace implements Node {
   #   first
   #   before
   #   last
-  spaceConnection(after: String, first: Int, before: String, last: Int): SpaceConnection 
+  spaceConnection(
+    after: String,
+    first: Int,
+    before: String,
+    last: Int
+  ): SpaceConnection 
 
   # Arguments
   #   slug:   slug

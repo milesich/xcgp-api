@@ -27,7 +27,12 @@ type LobbyCategory implements Node {
   #   first
   #   before
   #   last
-  layoutConnection(after: String, first: Int, before: String, last: Int): LobbyCategoryLayoutConnection 
+  layoutConnection(
+    after: String,
+    first: Int,
+    before: String,
+    last: Int
+  ): LobbyCategoryLayoutConnection 
 
 }
 ```
