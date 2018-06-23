@@ -16,5 +16,6 @@ type LimitEdge {
 
 }
 ```
+
 ## Required by
 * [LimitConnection](graphql/schema/limitconnection.md): A connection to a list of items.

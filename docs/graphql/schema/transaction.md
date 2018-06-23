@@ -41,6 +41,7 @@ type Transaction implements Node {
 
 }
 ```
+
 ## Required by
 * [Query](graphql/schema/query.md)
 * [TransactionConnection](graphql/schema/transactionconnection.md): A connection to a list of items.

@@ -60,6 +60,7 @@ type PaymentMethod implements Node {
 
 }
 ```
+
 ## Required by
 * [PaymentMethodConnection](graphql/schema/paymentmethodconnection.md): A connection to a list of items.
 * [PaymentMethodEdge](graphql/schema/paymentmethodedge.md): An edge in a connection

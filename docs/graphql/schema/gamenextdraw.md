@@ -14,5 +14,6 @@ type GameNextDraw {
 
 }
 ```
+
 ## Required by
 * [Game](graphql/schema/game.md): A game.

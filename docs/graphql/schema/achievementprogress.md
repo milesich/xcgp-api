@@ -22,5 +22,6 @@ type AchievementProgress {
 
 }
 ```
+
 ## Required by
 * [Achievement](graphql/schema/achievement.md): An achievement

@@ -44,5 +44,6 @@ enum TransactionStatus {
 
 }
 ```
+
 ## Required by
 * [Transaction](graphql/schema/transaction.md): A transaction

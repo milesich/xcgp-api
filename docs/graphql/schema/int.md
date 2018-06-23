@@ -9,6 +9,7 @@ values. Int can represent values between -(2^31) and 2^31 - 1.
 ```graphql
 scalar Int
 ```
+
 ## Required by
 * [AchievementChain](graphql/schema/achievementchain.md): An achievement chain is a group of achievements
 * [AchievementChainConnection](graphql/schema/achievementchainconnection.md): A connection to a list of items.

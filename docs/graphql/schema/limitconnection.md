@@ -32,5 +32,6 @@ type LimitConnection {
 
 }
 ```
+
 ## Required by
 * [Query](graphql/schema/query.md)

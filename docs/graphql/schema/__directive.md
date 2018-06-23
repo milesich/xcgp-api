@@ -26,5 +26,6 @@ type __Directive {
 
 }
 ```
+
 ## Required by
 * [__Schema](graphql/schema/__schema.md): A GraphQL Schema defines the capabilities of a GraphQL server. It exposes all available types and directives on the server, as well as the entry points for query, mutation, and subscription operations.

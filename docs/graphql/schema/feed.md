@@ -25,6 +25,7 @@ type Feed implements Node {
 
 }
 ```
+
 ## Required by
 * [FeedConnection](graphql/schema/feedconnection.md): A connection to a list of items.
 * [FeedEdge](graphql/schema/feededge.md): An edge in a connection

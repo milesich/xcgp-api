@@ -32,6 +32,7 @@ type AchievementConnection {
 
 }
 ```
+
 ## Required by
 * [AchievementChain](graphql/schema/achievementchain.md): An achievement chain is a group of achievements
 * [Query](graphql/schema/query.md)

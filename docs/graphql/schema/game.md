@@ -140,6 +140,7 @@ type Game implements Node {
 
 }
 ```
+
 ## Required by
 * [Banner](graphql/schema/banner.md): A banner
 * [Bonus](graphql/schema/bonus.md): A bonus

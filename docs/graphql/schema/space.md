@@ -61,6 +61,7 @@ type Space implements Node {
 
 }
 ```
+
 ## Required by
 * [PromoSpace](graphql/schema/promospace.md): A promo space
 * [SpaceConnection](graphql/schema/spaceconnection.md): A connection to a list of items.

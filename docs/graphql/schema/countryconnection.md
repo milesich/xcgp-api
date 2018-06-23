@@ -32,5 +32,6 @@ type CountryConnection {
 
 }
 ```
+
 ## Required by
 * [Query](graphql/schema/query.md)

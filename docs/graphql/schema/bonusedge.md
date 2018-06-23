@@ -16,5 +16,6 @@ type BonusEdge {
 
 }
 ```
+
 ## Required by
 * [BonusConnection](graphql/schema/bonusconnection.md): A connection to a list of items.

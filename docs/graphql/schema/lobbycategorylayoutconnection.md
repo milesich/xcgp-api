@@ -32,5 +32,6 @@ type LobbyCategoryLayoutConnection {
 
 }
 ```
+
 ## Required by
 * [LobbyCategory](graphql/schema/lobbycategory.md): A lobby category.

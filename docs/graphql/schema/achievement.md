@@ -30,6 +30,7 @@ type Achievement {
 
 }
 ```
+
 ## Required by
 * [AchievementConnection](graphql/schema/achievementconnection.md): A connection to a list of items.
 * [AchievementEdge](graphql/schema/achievementedge.md): An edge in a connection

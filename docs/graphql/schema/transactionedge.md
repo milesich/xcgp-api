@@ -16,5 +16,6 @@ type TransactionEdge {
 
 }
 ```
+
 ## Required by
 * [TransactionConnection](graphql/schema/transactionconnection.md): A connection to a list of items.

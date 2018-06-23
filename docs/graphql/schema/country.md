@@ -34,6 +34,7 @@ type Country {
 
 }
 ```
+
 ## Required by
 * [CountryConnection](graphql/schema/countryconnection.md): A connection to a list of items.
 * [CountryEdge](graphql/schema/countryedge.md): An edge in a connection

@@ -68,6 +68,7 @@ type User implements Node {
 
 }
 ```
+
 ## Required by
 * [CreateUserPayload](graphql/schema/createuserpayload.md)
 * [Query](graphql/schema/query.md)

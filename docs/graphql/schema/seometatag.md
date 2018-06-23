@@ -16,5 +16,6 @@ type SeoMetaTag {
 
 }
 ```
+
 ## Required by
 * [Seo](graphql/schema/seo.md): A search engine optimisation definition

@@ -60,6 +60,7 @@ type AchievementChain {
 
 }
 ```
+
 ## Required by
 * [AchievementChainConnection](graphql/schema/achievementchainconnection.md): A connection to a list of items.
 * [AchievementChainEdge](graphql/schema/achievementchainedge.md): An edge in a connection

@@ -16,5 +16,6 @@ type WinEdge {
 
 }
 ```
+
 ## Required by
 * [WinConnection](graphql/schema/winconnection.md): A connection to a list of items.

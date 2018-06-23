@@ -14,5 +14,6 @@ type FeedAuthor {
 
 }
 ```
+
 ## Required by
 * [Feed](graphql/schema/feed.md): A feed item

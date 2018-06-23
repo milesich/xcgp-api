@@ -16,5 +16,6 @@ type LobbyCategoryLayoutEdge {
 
 }
 ```
+
 ## Required by
 * [LobbyCategoryLayoutConnection](graphql/schema/lobbycategorylayoutconnection.md): A connection to a list of items.

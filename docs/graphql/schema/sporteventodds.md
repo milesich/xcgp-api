@@ -16,5 +16,6 @@ type SportEventOdds {
 
 }
 ```
+
 ## Required by
 * [SportEvent](graphql/schema/sportevent.md): A sport event

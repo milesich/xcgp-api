@@ -16,5 +16,6 @@ type LanguageEdge {
 
 }
 ```
+
 ## Required by
 * [LanguageConnection](graphql/schema/languageconnection.md): A connection to a list of items.

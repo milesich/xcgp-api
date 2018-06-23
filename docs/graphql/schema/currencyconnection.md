@@ -32,5 +32,6 @@ type CurrencyConnection {
 
 }
 ```
+
 ## Required by
 * [Query](graphql/schema/query.md)

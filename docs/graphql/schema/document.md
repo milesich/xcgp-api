@@ -25,6 +25,7 @@ type Document implements Node {
 
 }
 ```
+
 ## Required by
 * [DocumentConnection](graphql/schema/documentconnection.md): A connection to a list of items.
 * [DocumentEdge](graphql/schema/documentedge.md): An edge in a connection

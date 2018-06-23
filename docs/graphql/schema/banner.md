@@ -20,6 +20,7 @@ type Banner {
 
 }
 ```
+
 ## Required by
 * [BannerConnection](graphql/schema/bannerconnection.md): A connection to a list of items.
 * [BannerEdge](graphql/schema/banneredge.md): An edge in a connection

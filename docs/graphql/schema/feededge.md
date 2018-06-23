@@ -16,5 +16,6 @@ type FeedEdge {
 
 }
 ```
+
 ## Required by
 * [FeedConnection](graphql/schema/feedconnection.md): A connection to a list of items.

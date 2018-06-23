@@ -16,5 +16,6 @@ type DocumentEdge {
 
 }
 ```
+
 ## Required by
 * [DocumentConnection](graphql/schema/documentconnection.md): A connection to a list of items.

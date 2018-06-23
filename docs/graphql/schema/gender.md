@@ -14,6 +14,7 @@ enum Gender {
 
 }
 ```
+
 ## Required by
 * [CreateUserInput](graphql/schema/createuserinput.md): Input for registering/creating a user
 * [User](graphql/schema/user.md): A user

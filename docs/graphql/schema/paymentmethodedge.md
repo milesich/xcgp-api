@@ -16,5 +16,6 @@ type PaymentMethodEdge {
 
 }
 ```
+
 ## Required by
 * [PaymentMethodConnection](graphql/schema/paymentmethodconnection.md): A connection to a list of items.

@@ -16,6 +16,7 @@ type GameTag {
 
 }
 ```
+
 ## Required by
 * [GameTagConnection](graphql/schema/gametagconnection.md): A connection to a list of items.
 * [GameTagEdge](graphql/schema/gametagedge.md): An edge in a connection

@@ -16,5 +16,6 @@ type Screenshot {
 
 }
 ```
+
 ## Required by
 * [Game](graphql/schema/game.md): A game.

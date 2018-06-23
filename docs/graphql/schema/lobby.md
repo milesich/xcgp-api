@@ -36,6 +36,7 @@ type Lobby implements Node {
 
 }
 ```
+
 ## Required by
 * [LobbyConnection](graphql/schema/lobbyconnection.md): A connection to a list of items.
 * [LobbyEdge](graphql/schema/lobbyedge.md): An edge in a connection

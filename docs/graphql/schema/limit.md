@@ -37,6 +37,7 @@ type Limit implements Node {
 
 }
 ```
+
 ## Required by
 * [LimitConnection](graphql/schema/limitconnection.md): A connection to a list of items.
 * [LimitEdge](graphql/schema/limitedge.md): An edge in a connection

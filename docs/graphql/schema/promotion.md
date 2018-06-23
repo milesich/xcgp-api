@@ -61,6 +61,7 @@ type Promotion implements Node {
 
 }
 ```
+
 ## Required by
 * [LobbyCategoryLayoutBlock](graphql/schema/lobbycategorylayoutblock.md): Block of games for a category layout
 * [PromotionConnection](graphql/schema/promotionconnection.md): A connection to a list of items.

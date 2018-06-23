@@ -16,5 +16,6 @@ type LobbyEdge {
 
 }
 ```
+
 ## Required by
 * [LobbyConnection](graphql/schema/lobbyconnection.md): A connection to a list of items.

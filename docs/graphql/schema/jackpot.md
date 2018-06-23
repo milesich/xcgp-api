@@ -16,6 +16,7 @@ type Jackpot {
 
 }
 ```
+
 ## Required by
 * [JackpotConnection](graphql/schema/jackpotconnection.md): A connection to a list of items.
 * [JackpotEdge](graphql/schema/jackpotedge.md): An edge in a connection

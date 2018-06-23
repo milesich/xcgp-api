@@ -14,5 +14,6 @@ type LocationCountry {
 
 }
 ```
+
 ## Required by
 * [Location](graphql/schema/location.md): A location

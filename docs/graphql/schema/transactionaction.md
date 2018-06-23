@@ -24,5 +24,6 @@ enum TransactionAction {
 
 }
 ```
+
 ## Required by
 * [Transaction](graphql/schema/transaction.md): A transaction

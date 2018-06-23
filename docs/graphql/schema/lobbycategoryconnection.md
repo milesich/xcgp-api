@@ -32,5 +32,6 @@ type LobbyCategoryConnection {
 
 }
 ```
+
 ## Required by
 * [Lobby](graphql/schema/lobby.md): A lobby containing game categories.

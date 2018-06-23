@@ -32,5 +32,6 @@ type FeedConnection {
 
 }
 ```
+
 ## Required by
 * [Query](graphql/schema/query.md)

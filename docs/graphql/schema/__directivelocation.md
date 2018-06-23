@@ -64,6 +64,7 @@ enum __DirectiveLocation {
 
 }
 ```
+
 ## Required by
 * [__Directive](graphql/schema/__directive.md): A Directive provides a way to describe alternate runtime execution and type validation behavior in a GraphQL document.
 

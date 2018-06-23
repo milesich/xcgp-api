@@ -15,6 +15,7 @@ type BannerSlot implements Node {
 
 }
 ```
+
 ## Required by
 * [BannerSlotConnection](graphql/schema/bannerslotconnection.md): A connection to a list of items.
 * [BannerSlotEdge](graphql/schema/bannerslotedge.md): An edge in a connection

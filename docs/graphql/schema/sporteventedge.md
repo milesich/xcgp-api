@@ -16,5 +16,6 @@ type SportEventEdge {
 
 }
 ```
+
 ## Required by
 * [SportEventConnection](graphql/schema/sporteventconnection.md): A connection to a list of items.

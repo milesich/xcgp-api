@@ -31,6 +31,7 @@ type LobbyCategory implements Node {
 
 }
 ```
+
 ## Required by
 * [LobbyCategoryConnection](graphql/schema/lobbycategoryconnection.md): A connection to a list of items.
 * [LobbyCategoryEdge](graphql/schema/lobbycategoryedge.md): An edge in a connection

@@ -19,6 +19,7 @@ type PromoSpaceButton {
 
 }
 ```
+
 ## Required by
 * [Promotion](graphql/schema/promotion.md): A promotion
 * [Space](graphql/schema/space.md): A promotion

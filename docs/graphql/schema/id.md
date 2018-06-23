@@ -12,6 +12,7 @@ When expected as an input type, any string (such as `"4"`) or integer
 ```graphql
 scalar ID
 ```
+
 ## Required by
 * [BannerSlot](graphql/schema/bannerslot.md): A banner slot containing banners
 * [Bonus](graphql/schema/bonus.md): A bonus

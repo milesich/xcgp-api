@@ -32,5 +32,6 @@ type BannerSlotConnection {
 
 }
 ```
+
 ## Required by
 * [Query](graphql/schema/query.md)

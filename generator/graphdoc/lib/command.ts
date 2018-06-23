@@ -288,7 +288,7 @@ export class GraphQLDocumentor extends Command<Flags, Params> {
 
   async renderFile(projectPackageJSON: ProjectPackage, partials: Partials, plugins: PluginInterface[], type?: TypeRef) {
     const templateData = await createData(projectPackageJSON, graphdocPakageJSON, plugins, type);
-    const file = type ? getFilenameOf(type) : 'index.md';
+    const file = type ? getFilenameOf(type) : 'schema.md';
     const filepath = path.resolve(projectPackageJSON.graphdoc.output, file);
     return await writeFile(filepath, render(partials.index, templateData, partials));
   }

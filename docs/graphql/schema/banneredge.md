@@ -16,5 +16,6 @@ type BannerEdge {
 
 }
 ```
+
 ## Required by
 * [BannerConnection](graphql/schema/bannerconnection.md): A connection to a list of items.

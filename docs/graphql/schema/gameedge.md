@@ -16,5 +16,6 @@ type GameEdge {
 
 }
 ```
+
 ## Required by
 * [GameConnection](graphql/schema/gameconnection.md): A connection to a list of items.

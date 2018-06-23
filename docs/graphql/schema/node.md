@@ -13,6 +13,7 @@ interface Node {
 
 }
 ```
+
 ## Required by
 * [BannerSlot](graphql/schema/bannerslot.md): A banner slot containing banners
 * [Bonus](graphql/schema/bonus.md): A bonus

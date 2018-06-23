@@ -8,6 +8,7 @@ The `Boolean` scalar type represents `true` or `false`.
 ```graphql
 scalar Boolean
 ```
+
 ## Required by
 * [AchievementChain](graphql/schema/achievementchain.md): An achievement chain is a group of achievements
 * [Bonus](graphql/schema/bonus.md): A bonus

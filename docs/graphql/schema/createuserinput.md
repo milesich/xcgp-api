@@ -55,5 +55,6 @@ input CreateUserInput {
   voucher: String
 }
 ```
+
 ## Required by
 * [Mutation](graphql/schema/mutation.md)

@@ -32,5 +32,6 @@ type SportEventConnection {
 
 }
 ```
+
 ## Required by
 * [Query](graphql/schema/query.md)

@@ -16,5 +16,6 @@ type SpaceEdge {
 
 }
 ```
+
 ## Required by
 * [SpaceConnection](graphql/schema/spaceconnection.md): A connection to a list of items.

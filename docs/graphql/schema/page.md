@@ -37,6 +37,7 @@ type Page implements Node {
 
 }
 ```
+
 ## Required by
 * [PageConnection](graphql/schema/pageconnection.md): A connection to a list of items.
 * [PageEdge](graphql/schema/pageedge.md): An edge in a connection

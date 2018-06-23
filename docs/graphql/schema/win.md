@@ -18,6 +18,7 @@ type Win {
 
 }
 ```
+
 ## Required by
 * [Query](graphql/schema/query.md)
 * [WinConnection](graphql/schema/winconnection.md): A connection to a list of items.

@@ -35,5 +35,6 @@ type Card implements Node {
 
 }
 ```
+
 ## Required by
 * [Transaction](graphql/schema/transaction.md): A transaction

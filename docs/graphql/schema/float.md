@@ -10,6 +10,7 @@ values as specified by
 ```graphql
 scalar Float
 ```
+
 ## Required by
 * [Achievement](graphql/schema/achievement.md): An achievement
 * [AchievementProgress](graphql/schema/achievementprogress.md)

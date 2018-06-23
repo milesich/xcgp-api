@@ -8,6 +8,7 @@ The `JSON` scalar type represents JSON values as specified by [ECMA-404](http://
 ```graphql
 scalar JSON
 ```
+
 ## Required by
 * [CreateUserPayload](graphql/schema/createuserpayload.md)
 * [Game](graphql/schema/game.md): A game.

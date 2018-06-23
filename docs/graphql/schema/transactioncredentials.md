@@ -14,5 +14,6 @@ type TransactionCredentials {
 
 }
 ```
+
 ## Required by
 * [Transaction](graphql/schema/transaction.md): A transaction

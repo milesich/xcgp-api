@@ -43,5 +43,6 @@ type LobbyCategoryLayoutBlock {
 
 }
 ```
+
 ## Required by
 * [LobbyCategoryLayout](graphql/schema/lobbycategorylayout.md): Layout for a lobby category.

@@ -16,5 +16,6 @@ type PageEdge {
 
 }
 ```
+
 ## Required by
 * [PageConnection](graphql/schema/pageconnection.md): A connection to a list of items.

@@ -32,5 +32,6 @@ type JackpotConnection {
 
 }
 ```
+
 ## Required by
 * [Query](graphql/schema/query.md)

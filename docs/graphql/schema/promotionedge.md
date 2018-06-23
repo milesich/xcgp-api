@@ -16,5 +16,6 @@ type PromotionEdge {
 
 }
 ```
+
 ## Required by
 * [PromotionConnection](graphql/schema/promotionconnection.md): A connection to a list of items.

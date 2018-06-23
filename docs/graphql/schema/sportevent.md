@@ -25,6 +25,7 @@ type SportEvent implements Node {
 
 }
 ```
+
 ## Required by
 * [Query](graphql/schema/query.md)
 * [SportEventConnection](graphql/schema/sporteventconnection.md): A connection to a list of items.

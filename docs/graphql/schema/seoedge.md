@@ -16,5 +16,6 @@ type SeoEdge {
 
 }
 ```
+
 ## Required by
 * [SeoConnection](graphql/schema/seoconnection.md): A connection to a list of items.

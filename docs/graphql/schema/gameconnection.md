@@ -32,5 +32,6 @@ type GameConnection {
 
 }
 ```
+
 ## Required by
 * [Query](graphql/schema/query.md)

@@ -16,5 +16,6 @@ type PromoSpaceEdge {
 
 }
 ```
+
 ## Required by
 * [PromoSpaceConnection](graphql/schema/promospaceconnection.md): A connection to a list of items.

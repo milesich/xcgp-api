@@ -14,5 +14,6 @@ type CreateUserPayload {
 
 }
 ```
+
 ## Required by
 * [Mutation](graphql/schema/mutation.md)

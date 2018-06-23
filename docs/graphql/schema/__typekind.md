@@ -35,6 +35,7 @@ enum __TypeKind {
 
 }
 ```
+
 ## Required by
 * [__Type](graphql/schema/__type.md): The fundamental unit of any GraphQL Schema is the type. There are many kinds of types in GraphQL as represented by the `__TypeKind` enum.
 

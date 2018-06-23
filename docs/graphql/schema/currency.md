@@ -22,6 +22,7 @@ type Currency {
 
 }
 ```
+
 ## Required by
 * [CurrencyConnection](graphql/schema/currencyconnection.md): A connection to a list of items.
 * [CurrencyEdge](graphql/schema/currencyedge.md): An edge in a connection

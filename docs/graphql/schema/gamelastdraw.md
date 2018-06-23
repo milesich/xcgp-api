@@ -16,5 +16,6 @@ type GameLastDraw {
 
 }
 ```
+
 ## Required by
 * [Game](graphql/schema/game.md): A game.

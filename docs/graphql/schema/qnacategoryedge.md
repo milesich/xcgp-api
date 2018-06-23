@@ -16,5 +16,6 @@ type QnaCategoryEdge {
 
 }
 ```
+
 ## Required by
 * [QnaCategoryConnection](graphql/schema/qnacategoryconnection.md): A connection to a list of items.

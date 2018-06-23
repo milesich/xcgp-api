@@ -19,6 +19,7 @@ type QnaCategory implements Node {
 
 }
 ```
+
 ## Required by
 * [QnaCategoryConnection](graphql/schema/qnacategoryconnection.md): A connection to a list of items.
 * [QnaCategoryEdge](graphql/schema/qnacategoryedge.md): An edge in a connection

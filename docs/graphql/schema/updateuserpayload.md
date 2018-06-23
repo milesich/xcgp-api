@@ -14,5 +14,6 @@ type UpdateUserPayload {
 
 }
 ```
+
 ## Required by
 * [Mutation](graphql/schema/mutation.md)

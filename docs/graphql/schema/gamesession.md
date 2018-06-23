@@ -27,6 +27,7 @@ type GameSession implements Node {
 
 }
 ```
+
 ## Required by
 * [GameSessionConnection](graphql/schema/gamesessionconnection.md): A connection to a list of items.
 * [GameSessionEdge](graphql/schema/gamesessionedge.md): An edge in a connection

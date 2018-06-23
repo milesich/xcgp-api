@@ -10,6 +10,7 @@ represent free-form human-readable text.
 ```graphql
 scalar String
 ```
+
 ## Required by
 * [Achievement](graphql/schema/achievement.md): An achievement
 * [AchievementChain](graphql/schema/achievementchain.md): An achievement chain is a group of achievements

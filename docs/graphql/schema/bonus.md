@@ -54,6 +54,7 @@ type Bonus implements Node {
 
 }
 ```
+
 ## Required by
 * [BonusConnection](graphql/schema/bonusconnection.md): A connection to a list of items.
 * [BonusEdge](graphql/schema/bonusedge.md): An edge in a connection

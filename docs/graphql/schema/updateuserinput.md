@@ -26,5 +26,6 @@ input UpdateUserInput {
   mobileNumber: String
 }
 ```
+
 ## Required by
 * [Mutation](graphql/schema/mutation.md)

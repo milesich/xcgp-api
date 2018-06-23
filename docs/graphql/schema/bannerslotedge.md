@@ -16,5 +16,6 @@ type BannerSlotEdge {
 
 }
 ```
+
 ## Required by
 * [BannerSlotConnection](graphql/schema/bannerslotconnection.md): A connection to a list of items.

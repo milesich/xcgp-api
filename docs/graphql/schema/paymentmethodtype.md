@@ -14,5 +14,6 @@ enum PaymentMethodType {
 
 }
 ```
+
 ## Required by
 * [Query](graphql/schema/query.md)

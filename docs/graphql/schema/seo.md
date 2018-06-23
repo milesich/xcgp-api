@@ -25,6 +25,7 @@ type Seo implements Node {
 
 }
 ```
+
 ## Required by
 * [Query](graphql/schema/query.md)
 * [SeoConnection](graphql/schema/seoconnection.md): A connection to a list of items.

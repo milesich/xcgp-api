@@ -26,6 +26,7 @@ type PromoSpace implements Node {
 
 }
 ```
+
 ## Required by
 * [PromoSpaceConnection](graphql/schema/promospaceconnection.md): A connection to a list of items.
 * [PromoSpaceEdge](graphql/schema/promospaceedge.md): An edge in a connection

@@ -22,6 +22,7 @@ type PageInfo {
 
 }
 ```
+
 ## Required by
 * [AchievementChainConnection](graphql/schema/achievementchainconnection.md): A connection to a list of items.
 * [AchievementConnection](graphql/schema/achievementconnection.md): A connection to a list of items.

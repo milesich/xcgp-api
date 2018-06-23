@@ -16,5 +16,6 @@ type QnaContent {
 
 }
 ```
+
 ## Required by
 * [QnaCategory](graphql/schema/qnacategory.md): A category of question and answers

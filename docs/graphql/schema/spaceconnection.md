@@ -32,5 +32,6 @@ type SpaceConnection {
 
 }
 ```
+
 ## Required by
 * [PromoSpace](graphql/schema/promospace.md): A promo space

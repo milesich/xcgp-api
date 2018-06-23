@@ -18,5 +18,6 @@ enum BonusType {
 
 }
 ```
+
 ## Required by
 * [Query](graphql/schema/query.md)

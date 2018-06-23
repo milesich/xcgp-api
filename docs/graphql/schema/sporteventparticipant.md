@@ -14,5 +14,6 @@ type SportEventParticipant {
 
 }
 ```
+
 ## Required by
 * [SportEvent](graphql/schema/sportevent.md): A sport event
