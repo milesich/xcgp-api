@@ -25,7 +25,7 @@ export interface PluginInterface {
    *      items: [
    *          {
    *              text: 'Query',
-   *              href: './query.doc.html',
+   *              href: './query.md',
    *              isActive: false
    *          },
    *          // ...
@@ -38,7 +38,7 @@ export interface PluginInterface {
    *
    * [
    *  new NavigationSection('Schema', [
-   *      new NavigationItem('Query', ./query.doc.html', false)
+   *      new NavigationItem('Query', ./query.md', false)
    *  ]),
    *  // ...
    * ]

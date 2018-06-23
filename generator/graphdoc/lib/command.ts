@@ -130,7 +130,7 @@ export class GraphQLDocumentor extends Command<Flags, Params> {
             const partials: Partials = await this.getTemplatePartials(
                 projectPackageJSON.graphdoc.template
             );
-            // Render index.html
+            // Render index.md
             output.info('render', 'index');
             await this.renderFile(
                 projectPackageJSON,
@@ -152,7 +152,7 @@ export class GraphQLDocumentor extends Command<Flags, Params> {
                 });
 
             const files = await Promise.all(renderTypes);
-            output.ok('complete', String(files.length + 1 /* index.html */) + ' files generated.');
+            output.ok('complete', String(files.length + 1 /* index.md */) + ' files generated.');
 
         } catch (err) {
             output.error(err);
@@ -288,7 +288,7 @@ export class GraphQLDocumentor extends Command<Flags, Params> {
 
     async renderFile(projectPackageJSON: ProjectPackage, partials: Partials, plugins: PluginInterface[], type?: TypeRef) {
         const templateData = await createData(projectPackageJSON, graphdocPakageJSON, plugins, type);
-        const file = type ? getFilenameOf(type) : 'index.html';
+        const file = type ? getFilenameOf(type) : 'index.md';
         const filepath = path.resolve(projectPackageJSON.graphdoc.output, file);
         return await writeFile(filepath, render(partials.index, templateData, partials));
     }

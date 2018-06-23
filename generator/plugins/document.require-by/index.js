@@ -81,11 +81,6 @@ class RequireByPlugin extends GraphDoc.Plugin {
 				.join(`\n`),
 		}];
 	}
-
-	url(type) {
-		const name = GraphDoc.getTypeOf(type).name.toLowerCase();
-		return `graphql/schema/${name}.md`;
-	}
 }
 
 exports.default = RequireByPlugin;

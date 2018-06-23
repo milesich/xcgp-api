@@ -15,7 +15,7 @@ describe('pĺugins/navigation.directive#NavigationDirectives', () => {
             {
                 title: 'Input Objects',
                 items: [
-                    { text: 'AddCommentInput', href: '/addcommentinput.doc.html', isActive: false },
+                    { text: 'AddCommentInput', href: '/addcommentinput.md', isActive: false },
                 ]
             }
         ]);

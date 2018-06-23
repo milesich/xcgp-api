@@ -18,12 +18,8 @@ export function getTypeOf(type: TypeRef): TypeRef {
 }
 
 export function getFilenameOf(type: TypeRef): string {
-  const name = (getTypeOf(type).name as string).toLowerCase();
-
-  if (name[0] === '_' && name[1] === '_')
-    return name.slice(2) + '.spec.html';
-
-  return name + '.doc.html';
+  const name = getTypeOf(type).name.toLowerCase();
+  return `${name}.md`;
 }
 
 const fullTypeFragment = `

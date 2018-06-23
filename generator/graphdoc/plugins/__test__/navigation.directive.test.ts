@@ -15,9 +15,9 @@ describe('pĺugins/navigation.directive#NavigationDirectives', () => {
             {
                 title: 'Directives',
                 items: [
-                    { text: 'deprecated', href: '/deprecated.doc.html', isActive: false },
-                    { text: 'include', href: '/include.doc.html', isActive: false },
-                    { text: 'skip', href: '/skip.doc.html', isActive: false },
+                    { text: 'deprecated', href: '/deprecated.md', isActive: false },
+                    { text: 'include', href: '/include.md', isActive: false },
+                    { text: 'skip', href: '/skip.md', isActive: false },
                 ]
             }
         ]);

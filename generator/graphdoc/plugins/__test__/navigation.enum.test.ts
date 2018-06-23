@@ -15,8 +15,8 @@ describe('pĺugins/navigation.directive#NavigationDirectives', () => {
             {
                 title: 'Enums',
                 items: [
-                    { text: '__DirectiveLocation', href: '/directivelocation.spec.html', isActive: false },
-                    { text: '__TypeKind', href: '/typekind.spec.html', isActive: false },
+                    { text: '__DirectiveLocation', href: '/__directivelocation.md', isActive: false },
+                    { text: '__TypeKind', href: '/__typekind.md', isActive: false },
                 ]
             }
         ]);
