@@ -130,12 +130,22 @@ export class GraphQLDocumentor extends Command<Flags, Params> {
       const partials: Partials = await this.getTemplatePartials(
         projectPackageJSON.graphdoc.template
       );
-      // Render index.md
-      output.info('render', 'index');
+      // Render schema.md
+      output.info('render', 'schema');
       await this.renderFile(
         projectPackageJSON,
         partials,
-        plugins
+        plugins,
+        'schema',
+      );
+
+      // Render objects.md
+      output.info('render', 'objects');
+      await this.renderFile(
+        projectPackageJSON,
+        partials,
+        plugins,
+        'objects',
       );
 
       // Render types
@@ -148,11 +158,13 @@ export class GraphQLDocumentor extends Command<Flags, Params> {
             projectPackageJSON,
             partials,
             plugins,
-            type);
+            'type',
+            type,
+          );
         });
 
       const files = await Promise.all(renderTypes);
-      output.ok('complete', String(files.length + 1 /* index.md */) + ' files generated.');
+      output.ok('complete', String(files.length + 2) + ' files generated.');
 
     } catch (err) {
       output.error(err);
@@ -247,10 +259,10 @@ export class GraphQLDocumentor extends Command<Flags, Params> {
         .then(content => partials[name] = content);
     }));
 
-    if (!partials.index)
+    if (!partials.type)
       throw new Error(
-        'The index partial is missing (file ' +
-        path.resolve(templateDir, 'index.mustache') + ' not found).'
+        'The type partial is missing (file ' +
+        path.resolve(templateDir, 'type.mustache') + ' not found).'
       );
 
     return partials;
@@ -286,11 +298,11 @@ export class GraphQLDocumentor extends Command<Flags, Params> {
     }
   }
 
-  async renderFile(projectPackageJSON: ProjectPackage, partials: Partials, plugins: PluginInterface[], type?: TypeRef) {
+  async renderFile(projectPackageJSON: ProjectPackage, partials: Partials, plugins: PluginInterface[], name: string, type?: TypeRef) {
     const templateData = await createData(projectPackageJSON, graphdocPakageJSON, plugins, type);
-    const file = type ? getFilenameOf(type) : 'schema.md';
+    const file = type ? getFilenameOf(type) : `${name}.md`;
     const filepath = path.resolve(projectPackageJSON.graphdoc.output, file);
-    const template = type && partials[type.name.toLowerCase()] || partials.index;
+    const template = partials[file.substr(0, file.length - 3)] || partials.type;
     return await writeFile(filepath, render(template, templateData, partials));
   }
 }

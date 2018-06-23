@@ -1,5 +1,4 @@
 ---
-id: objects
 title: Objects
 ---
 
@@ -112,9 +111,9 @@ For more information, see "[Introduction to GraphQL](guides/graphql/introduction
 * [Win](graphql/schema/win.md)
 * [WinConnection](graphql/schema/winconnection.md)
 * [WinEdge](graphql/schema/winedge.md)
-* [__Directive](graphql/schema/directive.md)
-* [__EnumValue](graphql/schema/enumvalue.md)
-* [__Field](graphql/schema/field.md)
-* [__InputValue](graphql/schema/inputvalue.md)
-* [__Schema](graphql/schema/schema.md)
-* [__Type](graphql/schema/type.md)
+* [__Directive](graphql/schema/__directive.md)
+* [__EnumValue](graphql/schema/__enumvalue.md)
+* [__Field](graphql/schema/__field.md)
+* [__InputValue](graphql/schema/__inputvalue.md)
+* [__Schema](graphql/schema/__schema.md)
+* [__Type](graphql/schema/__type.md)
