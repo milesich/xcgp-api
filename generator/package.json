@@ -2,7 +2,7 @@
   "name": "generator",
   "version": "1.0.0",
   "scripts": {
-    "graphdoc": "node -r ./node_modules/ts-node/register graphdoc/bin/graphdoc.ts -f -b graphql/schema/ -p ./plugins/default",
+    "graphdoc": "node -r ./node_modules/ts-node/register graphdoc/bin/graphdoc.ts -f -b graphql/schema/",
     "generate:main": "npm run graphdoc -- -e https://frontapi.cherrytech.com/graphql -t ./template-main -o ../docs/graphql/schema",
     "generate:menu": "npm run graphdoc -- -e https://frontapi.cherrytech.com/graphql -t ./template-menu -o ./.tmp",
     "test": "echo \"Error: no test specified\" && exit 1"
