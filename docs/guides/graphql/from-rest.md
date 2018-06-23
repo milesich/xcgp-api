@@ -47,7 +47,7 @@ query {
 ## Strong typing
 GraphQL schemas are strongly typed, making data handling safer.
 
-Consider an example of updating an user mobile code using a GraphQL [mutation](graphql/mutations.md), and mistakenly specifying a string rather than an integer for the value of `mobileCode`:
+Consider an example of updating an user mobile code using a GraphQL [mutation](graphql/schema/mutation.md), and mistakenly specifying a string rather than an integer for the value of `mobileCode`:
 
 <sub>[Run in Explorer](../../../explorer.html?query=mutation%20%7B%0A%20%20updateUser(input%3A%20%7B%20mobileCode%3A%20"356"%20%7D)%20%7B%0A%20%20user%20%7B%0A%20%20%20%20id%0A%20%20%20%20mobileCode%0A%20%20%20%20mobileNumber%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D)</sub>
 ```graphql

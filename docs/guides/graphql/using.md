@@ -31,7 +31,7 @@ curl -H "Content-Type: application/json" -X POST -d " \
 > **Note:** The string value of "query" must escape newline characters or the schema will not parse it correctly. For the POST body, use outer double quotes and escaped inner double quotes.
 
 ## About query and mutation operations
-The two types of allowed operations in GraphQL API are *queries* and *mutations*. Comparing GraphQL to REST, queries operate like `GET` requests, while mutations operate like `POST`/`PATCH`/`DELETE`. The [mutation name](graphql/mutations.md) determines which modification is executed.
+The two types of allowed operations in GraphQL API are *queries* and *mutations*. Comparing GraphQL to REST, queries operate like `GET` requests, while mutations operate like `POST`/`PATCH`/`DELETE`. The [mutation name](graphql/schema/mutation.md) determines which modification is executed.
 
 Queries and mutations share similar forms, with some important differences.
 
@@ -64,7 +64,7 @@ mutation {
 
 The input object in this example is `MutationNameInput`, and the payload object is `MutationNamePayload`.
 
-In the [mutations](graphql/mutations.md) reference, the listed *input fields* are what you pass as the input object. The listed *return fields* are what you pass as the payload object.
+In the [mutations](graphql/schema/mutation.md) reference, the listed *input fields* are what you pass as the input object. The listed *return fields* are what you pass as the payload object.
 
 For a real-world example, see "[Example mutation](#example-mutation)".
 
