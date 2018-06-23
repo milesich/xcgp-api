@@ -46,7 +46,7 @@ export async function createData(
 
     const title = name ||
         projectPackage.graphdoc.title ||
-        'Graphql schema documentation';
+        'GraphQL schema documentation';
 
     const description = type ?
         marked(type.description || '') :

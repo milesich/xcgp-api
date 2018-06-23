@@ -1,4 +1,3 @@
-import * as Bluebird from 'bluebird';
 import * as request from 'request';
 
 import { Introspection, Schema, SchemaLoader } from '../interface';
@@ -13,7 +12,7 @@ export type THttpSchemaLoaderOptions = {
 
 async function r(options: request.OptionsWithUrl) {
 
-    return new Bluebird<Schema>((resolve, reject) => {
+    return new Promise<Schema>((resolve, reject) => {
         request(options, function (error, res, body: Introspection | string) {
 
             if (error)

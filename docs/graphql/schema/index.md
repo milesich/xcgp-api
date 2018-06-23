@@ -1,5 +1,5 @@
 ---
-title: Graphql schema documentation
+title: GraphQL schema documentation
 ---
 
 
