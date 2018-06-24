@@ -16,6 +16,7 @@
       "graphql/schema/query",
       "graphql/schema/mutation",
       "graphql/schema/objects",
+      "graphql/schema/interfaces",
       "graphql/scalars"
     ]
   },

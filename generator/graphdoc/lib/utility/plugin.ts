@@ -17,7 +17,7 @@ import { getFilenameOf } from './introspection';
 /**
  * Plugin Base implementation
  */
-export abstract class Plugin implements PluginInterface, PluginImplementedInterface {
+export abstract class Plugin implements PluginImplementedInterface {
 
   static collect<T>(collection: T[][]): T[] {
     let result: T[] = [];
@@ -84,11 +84,6 @@ export abstract class Plugin implements PluginInterface, PluginImplementedInterf
   typeMap: { [name: string]: SchemaType } = {};
 
   directiveMap: { [name: string]: Directive } = {};
-
-  // getNavigations?: (buildForType?: string) => NavigationSectionInterface[] | PromiseLike<NavigationSectionInterface[]>;
-  // getDocuments?: (buildForType?: string) => DocumentSectionInterface[] | PromiseLike<DocumentSectionInterface[]>;
-  // getHeaders?: (buildForType?: string) => string[] | PromiseLike<string[]>;
-  // getAssets?: () => string[] | PromiseLike<string[]>;
 
   constructor(
     public document: Schema,

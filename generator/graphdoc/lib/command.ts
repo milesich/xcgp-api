@@ -130,23 +130,17 @@ export class GraphQLDocumentor extends Command<Flags, Params> {
       const partials: Partials = await this.getTemplatePartials(
         projectPackageJSON.graphdoc.template
       );
-      // Render schema.md
-      output.info('render', 'schema');
-      await this.renderFile(
-        projectPackageJSON,
-        partials,
-        plugins,
-        'schema',
-      );
-
-      // Render objects.md
-      output.info('render', 'objects');
-      await this.renderFile(
-        projectPackageJSON,
-        partials,
-        plugins,
-        'objects',
-      );
+      // Render extra pages
+      const extraPages = ['schema', 'objects', 'interfaces'];
+      for (const page of extraPages) {
+        output.info('render', page);
+        await this.renderFile(
+          projectPackageJSON,
+          partials,
+          plugins,
+          page,
+        );
+      }
 
       // Render types
       const renderTypes = ([] as any[])
@@ -164,7 +158,7 @@ export class GraphQLDocumentor extends Command<Flags, Params> {
         });
 
       const files = await Promise.all(renderTypes);
-      output.ok('complete', String(files.length + 2) + ' files generated.');
+      output.ok('complete', String(files.length + extraPages.length) + ' files generated.');
 
     } catch (err) {
       output.error(err);

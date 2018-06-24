@@ -23,7 +23,7 @@ This means that if you try to return a field that is not a scalar, schema valida
 An argument is a set of key-value pairs attached to a specific field. Some fields require an argument. [Mutations](guides/graphql/using.md#about-mutations) require an input object as an argument.
 
 ### Implementation
-A GraphQL schema may use the term *implements* to define how an object inherits from an [interface](TODO).
+A GraphQL schema may use the term *implements* to define how an object inherits from an [interface](graphql/schema/interfaces.md).
 
 Here's a contrived example of a schema that defines interface `X` and object `Y`:
 
@@ -43,8 +43,8 @@ type Y implements X {
 This means object `Y` requires the same fields/arguments/return types that interface `X` does, while adding new fields specific to object `Y`. (The `!` means the field is required.)
 
 In the reference docs, you'll find that:
-* Each [object](TODO) lists the interface(s) *from which it inherits* under **Implements**.
-* Each [interface](TODO) lists the objects *that inherit from it* under **Implementations**.
+* Each [object](graphql/schema/objects.md) lists the interface(s) *from which it inherits* under **Implements**.
+* Each [interface](graphql/schema/interfaces.md) lists the objects *that inherit from it* under **Implementations**.
 
 ### Connection
 Connections let you query related objects as part of the same call. With connections, you can use a single GraphQL call where you would have to use multiple calls to a REST API. For more information, see "[From REST to GraphQL](guides/graphql/from-rest.md)".

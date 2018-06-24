@@ -4,7 +4,8 @@ import {
   PluginInterface,
   TypeRef,
   NavigationSectionInterface,
-  DocumentSectionInterface
+  DocumentSectionInterface,
+  NavigationItemInterface,
 } from '../interface';
 
 export function slugTemplate() {
@@ -19,7 +20,7 @@ export type TemplateData = {
   description: string,
   headers: string,
   navigations: NavigationSectionInterface[],
-  objects: NavigationSectionInterface[],
+  types: { [type: string]: NavigationItemInterface[] },
   documents: DocumentSectionInterface[],
   projectPackage: any,
   graphdocPackage: any,
@@ -51,7 +52,12 @@ export async function createData(
     type.description || '' :
     projectPackage.description;
 
-  const objects = navigations.filter(nav => nav.title === 'Objects');
+  const objectsNav = navigations.find(nav => nav.title === 'Objects');
+  const interfacesNav = navigations.find(nav => nav.title === 'Interfaces');
+  const types = {
+    objects: objectsNav ? objectsNav.items : [],
+    interfaces: interfacesNav ? interfacesNav.items : [],
+  };
 
   return {
     title,
@@ -60,7 +66,7 @@ export async function createData(
     headers: headers.join(''),
     navigations,
     documents,
-    objects,
+    types,
     projectPackage,
     graphdocPackage,
     slug: slugTemplate
