@@ -16,7 +16,7 @@ The endpoint remains constant no matter what operation you perform.
 ## Communicating with GraphQL
 Because GraphQL operations consist of multiline JSON, XCaliber recommends using the [Explorer](guides/graphql/explorer.md) to make GraphQL calls. You can also use cURL or any other HTTP-speaking library.
 
-In REST, [HTTP verbs](TODO) determine the operation performed. In GraphQL, you'll provide a JSON-encoded body whether you're performing a query or a mutation, so the HTTP verb is `POST`. For more information on GraphQL versus REST, see "[From REST to GraphQL](guides/graphql/from-rest.md)".
+In REST, [HTTP verbs](rest/overview.md#http-verbs) determine the operation performed. In GraphQL, you'll provide a JSON-encoded body whether you're performing a query or a mutation, so the HTTP verb is `POST`. For more information on GraphQL versus REST, see "[From REST to GraphQL](guides/graphql/from-rest.md)".
 
 To query GraphQL using cURL, make a `POST` request with a JSON payload. The payload must contain a string called `query`:
 

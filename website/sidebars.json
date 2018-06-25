@@ -8,6 +8,7 @@
       "authentication/grants"
     ],
     "REST": [
+      "rest/overview",
       "rest/resources"
     ],
     "GraphQL": [
