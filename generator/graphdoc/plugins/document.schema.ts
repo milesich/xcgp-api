@@ -151,17 +151,6 @@ export default class SchemaPlugin extends Plugin implements PluginInterface {
     return `@deprecated( reason: "${fieldOrEnumVal.deprecationReason}" )`;
   }
 
-  deprecatedLength(fieldOrEnumVal: Field | EnumValue): number {
-    if (!fieldOrEnumVal.isDeprecated)
-      return 0;
-
-    if (!fieldOrEnumVal.deprecationReason) {
-      return '@deprecated'.length;
-    }
-
-    return '@deprecated( reason: "'.length + fieldOrEnumVal.deprecationReason.length + '" )'.length;
-  }
-
   description(description: string): string[] {
     if (!description) {
       return [];
@@ -317,4 +306,4 @@ function useIdentifier(type, toUrl) {
     default:
       return type.name;
   }
-};
+}

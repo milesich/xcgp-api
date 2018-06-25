@@ -406,5 +406,234 @@ type Query {
 }
 ```
 
+## Connections
+
+**achievements ([`AchievementConnection`](graphql/schema/achievementconnection.md))**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`after` | [`String`](graphql/schema/string.md) | -
+`first` | [`Int`](graphql/schema/int.md) | -
+`before` | [`String`](graphql/schema/string.md) | -
+`last` | [`Int`](graphql/schema/int.md) | -
+`id` | [`String`](graphql/schema/string.md) | -
+`achievementChainId` | [`String`](graphql/schema/string.md) | -
+
+**achievementChains ([`AchievementChainConnection`](graphql/schema/achievementchainconnection.md))**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`after` | [`String`](graphql/schema/string.md) | -
+`first` | [`Int`](graphql/schema/int.md) | -
+`before` | [`String`](graphql/schema/string.md) | -
+`last` | [`Int`](graphql/schema/int.md) | -
+`name` | [`String`](graphql/schema/string.md) | Filter by name
+`enabled` | [`Boolean`](graphql/schema/boolean.md) | Filter chains by if enabled or not
+`activationDate` | [`String`](graphql/schema/string.md) | Filter by activation date
+`expiryDate` | [`String`](graphql/schema/string.md) | Filter by expiration date
+
+**bonuses ([`BonusConnection`](graphql/schema/bonusconnection.md))**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`after` | [`String`](graphql/schema/string.md) | -
+`first` | [`Int`](graphql/schema/int.md) | -
+`before` | [`String`](graphql/schema/string.md) | -
+`last` | [`Int`](graphql/schema/int.md) | -
+`type` | [`BonusType`](graphql/schema/bonustype.md)! | The bonus type
+
+**countries ([`CountryConnection`](graphql/schema/countryconnection.md))**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`after` | [`String`](graphql/schema/string.md) | -
+`first` | [`Int`](graphql/schema/int.md) | -
+`before` | [`String`](graphql/schema/string.md) | -
+`last` | [`Int`](graphql/schema/int.md) | -
+`enabled` | [`Boolean`](graphql/schema/boolean.md) | Filter countries by if enabled or not
+
+**currencies ([`CurrencyConnection`](graphql/schema/currencyconnection.md))**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`after` | [`String`](graphql/schema/string.md) | -
+`first` | [`Int`](graphql/schema/int.md) | -
+`before` | [`String`](graphql/schema/string.md) | -
+`last` | [`Int`](graphql/schema/int.md) | -
+`enabled` | [`Boolean`](graphql/schema/boolean.md) | Filter currencies by if enabled or not
+
+**documents ([`DocumentConnection`](graphql/schema/documentconnection.md))**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`after` | [`String`](graphql/schema/string.md) | -
+`first` | [`Int`](graphql/schema/int.md) | -
+`before` | [`String`](graphql/schema/string.md) | -
+`last` | [`Int`](graphql/schema/int.md) | -
+
+**feeds ([`FeedConnection`](graphql/schema/feedconnection.md))**
+
+Look up feed entries.Argument | Type | Description
+-------- | ---- | -----------
+`after` | [`String`](graphql/schema/string.md) | -
+`first` | [`Int`](graphql/schema/int.md) | -
+`before` | [`String`](graphql/schema/string.md) | -
+`last` | [`Int`](graphql/schema/int.md) | -
+
+**games ([`GameConnection`](graphql/schema/gameconnection.md))**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`after` | [`String`](graphql/schema/string.md) | -
+`first` | [`Int`](graphql/schema/int.md) | -
+`before` | [`String`](graphql/schema/string.md) | -
+`last` | [`Int`](graphql/schema/int.md) | -
+`vendor` | [`String`](graphql/schema/string.md) | Example: netent
+`enabled` | [`Boolean`](graphql/schema/boolean.md) | Filter games by if enabled or not
+`bonus` | [`Boolean`](graphql/schema/boolean.md) | Filter games by if they have a bonus or not
+`jackpot` | [`Boolean`](graphql/schema/boolean.md) | Filter games by if they have a jackpot or not
+`playerState` | [`String`](graphql/schema/string.md) | The player state as some games are only visible for logged-in players. Example: li
+`country` | [`String`](graphql/schema/string.md) | ISO 3166-1 alpha-2 country code. Some countries block games.
+
+**gameTags ([`GameTagConnection`](graphql/schema/gametagconnection.md))**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`after` | [`String`](graphql/schema/string.md) | -
+`first` | [`Int`](graphql/schema/int.md) | -
+`before` | [`String`](graphql/schema/string.md) | -
+`last` | [`Int`](graphql/schema/int.md) | -
+
+**gameSessions ([`GameSessionConnection`](graphql/schema/gamesessionconnection.md))**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`after` | [`String`](graphql/schema/string.md) | -
+`first` | [`Int`](graphql/schema/int.md) | -
+`before` | [`String`](graphql/schema/string.md) | -
+`last` | [`Int`](graphql/schema/int.md) | -
+`from` | [`String`](graphql/schema/string.md) | yyyy-mm-dd formatted date: 2014-10-13
+`to` | [`String`](graphql/schema/string.md) | yyyy-mm-dd formatted date: 2016-10-13
+
+**jackpots ([`JackpotConnection`](graphql/schema/jackpotconnection.md))**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`after` | [`String`](graphql/schema/string.md) | -
+`first` | [`Int`](graphql/schema/int.md) | -
+`before` | [`String`](graphql/schema/string.md) | -
+`last` | [`Int`](graphql/schema/int.md) | -
+
+**languages ([`LanguageConnection`](graphql/schema/languageconnection.md))**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`after` | [`String`](graphql/schema/string.md) | -
+`first` | [`Int`](graphql/schema/int.md) | -
+`before` | [`String`](graphql/schema/string.md) | -
+`last` | [`Int`](graphql/schema/int.md) | -
+
+**limits ([`LimitConnection`](graphql/schema/limitconnection.md))**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`after` | [`String`](graphql/schema/string.md) | -
+`first` | [`Int`](graphql/schema/int.md) | -
+`before` | [`String`](graphql/schema/string.md) | -
+`last` | [`Int`](graphql/schema/int.md) | -
+
+**lobbies ([`LobbyConnection`](graphql/schema/lobbyconnection.md))**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`after` | [`String`](graphql/schema/string.md) | -
+`first` | [`Int`](graphql/schema/int.md) | -
+`before` | [`String`](graphql/schema/string.md) | -
+`last` | [`Int`](graphql/schema/int.md) | -
+
+**pages ([`PageConnection`](graphql/schema/pageconnection.md))**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`after` | [`String`](graphql/schema/string.md) | -
+`first` | [`Int`](graphql/schema/int.md) | -
+`before` | [`String`](graphql/schema/string.md) | -
+`last` | [`Int`](graphql/schema/int.md) | -
+`category` | [`String`](graphql/schema/string.md)! | -
+
+**paymentMethods ([`PaymentMethodConnection`](graphql/schema/paymentmethodconnection.md))**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`after` | [`String`](graphql/schema/string.md) | -
+`first` | [`Int`](graphql/schema/int.md) | -
+`before` | [`String`](graphql/schema/string.md) | -
+`last` | [`Int`](graphql/schema/int.md) | -
+`type` | [`TransactionType`](graphql/schema/transactiontype.md)! | The transaction type filter. Used to filter available payment methods during the deposit or withdraw process.
+
+**promotions ([`PromotionConnection`](graphql/schema/promotionconnection.md))**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`after` | [`String`](graphql/schema/string.md) | -
+`first` | [`Int`](graphql/schema/int.md) | -
+`before` | [`String`](graphql/schema/string.md) | -
+`last` | [`Int`](graphql/schema/int.md) | -
+`template` | [`String`](graphql/schema/string.md) | The template to use for metadata. Example: cd1
+`slug` | [`String`](graphql/schema/string.md) | The URL slug. Example: welcome-bonus
+`groups` | [`String`](graphql/schema/string.md) | Comma separated list of player groups. Example: -1
+`playerState` | [`String`](graphql/schema/string.md) | The player state for cache busting purposes. Example: li
+`jurisdiction` | [`String`](graphql/schema/string.md) | The player jurisdiction for cache busting purposes. Example: mga
+
+**qnaCategories ([`QnaCategoryConnection`](graphql/schema/qnacategoryconnection.md))**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`after` | [`String`](graphql/schema/string.md) | -
+`first` | [`Int`](graphql/schema/int.md) | -
+`before` | [`String`](graphql/schema/string.md) | -
+`last` | [`Int`](graphql/schema/int.md) | -
+`section` | [`String`](graphql/schema/string.md)! | -
+
+**seos ([`SeoConnection`](graphql/schema/seoconnection.md))**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`after` | [`String`](graphql/schema/string.md) | -
+`first` | [`Int`](graphql/schema/int.md) | -
+`before` | [`String`](graphql/schema/string.md) | -
+`last` | [`Int`](graphql/schema/int.md) | -
+
+**sportEvents ([`SportEventConnection`](graphql/schema/sporteventconnection.md))**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`after` | [`String`](graphql/schema/string.md) | -
+`first` | [`Int`](graphql/schema/int.md) | -
+`before` | [`String`](graphql/schema/string.md) | -
+`last` | [`Int`](graphql/schema/int.md) | -
+`live` | [`Boolean`](graphql/schema/boolean.md) | -
+
+**transactions ([`TransactionConnection`](graphql/schema/transactionconnection.md))**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`after` | [`String`](graphql/schema/string.md) | -
+`first` | [`Int`](graphql/schema/int.md) | -
+`before` | [`String`](graphql/schema/string.md) | -
+`last` | [`Int`](graphql/schema/int.md) | -
+`from` | [`String`](graphql/schema/string.md) | yyyy-mm-dd formatted date: 2014-10-13
+`to` | [`String`](graphql/schema/string.md) | yyyy-mm-dd formatted date: 2016-10-13
+
+**wins ([`WinConnection`](graphql/schema/winconnection.md))**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`after` | [`String`](graphql/schema/string.md) | -
+`first` | [`Int`](graphql/schema/int.md) | -
+`before` | [`String`](graphql/schema/string.md) | -
+`last` | [`Int`](graphql/schema/int.md) | -
+
+
 ## Required by
 This element is not required by anyone.

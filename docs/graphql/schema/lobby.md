@@ -37,6 +37,19 @@ type Lobby implements Node {
 }
 ```
 
+## Connections
+
+**categoryConnection ([`LobbyCategoryConnection`](graphql/schema/lobbycategoryconnection.md))**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`after` | [`String`](graphql/schema/string.md) | -
+`first` | [`Int`](graphql/schema/int.md) | -
+`before` | [`String`](graphql/schema/string.md) | -
+`last` | [`Int`](graphql/schema/int.md) | -
+`slug` | [`String`](graphql/schema/string.md) | -
+
+
 ## Required by
 * [LobbyConnection](graphql/schema/lobbyconnection.md): A connection to a list of items.
 * [LobbyEdge](graphql/schema/lobbyedge.md): An edge in a connection

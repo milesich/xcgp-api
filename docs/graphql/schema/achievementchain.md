@@ -61,6 +61,31 @@ type AchievementChain {
 }
 ```
 
+## Connections
+
+**achievementConnection ([`AchievementConnection`](graphql/schema/achievementconnection.md))**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`after` | [`String`](graphql/schema/string.md) | -
+`first` | [`Int`](graphql/schema/int.md) | -
+`before` | [`String`](graphql/schema/string.md) | -
+`last` | [`Int`](graphql/schema/int.md) | -
+`id` | [`String`](graphql/schema/string.md) | -
+`achievementChainId` | [`String`](graphql/schema/string.md) | -
+
+**userAchievementConnection ([`AchievementConnection`](graphql/schema/achievementconnection.md))**
+
+Argument | Type | Description
+-------- | ---- | -----------
+`after` | [`String`](graphql/schema/string.md) | -
+`first` | [`Int`](graphql/schema/int.md) | -
+`before` | [`String`](graphql/schema/string.md) | -
+`last` | [`Int`](graphql/schema/int.md) | -
+`id` | [`String`](graphql/schema/string.md) | -
+`achievementChainId` | [`String`](graphql/schema/string.md) | -
+
+
 ## Required by
 * [AchievementChainConnection](graphql/schema/achievementchainconnection.md): A connection to a list of items.
 * [AchievementChainEdge](graphql/schema/achievementchainedge.md): An edge in a connection
