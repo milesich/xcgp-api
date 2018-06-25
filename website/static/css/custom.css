@@ -23,26 +23,16 @@
   color: $secondaryColor;
 }
 
-code {
-  padding: 2px;
-  margin: 0 2px;
-}
-
-table td code {
-  color: $primaryColor;
-	white-space: nowrap;
-}
-
-.hljs {
-  background: #eee;
-}
-
-.container .wrapper h3 {
-  margin-top: 20px;
-}
-
 sub {
   font-size: 80%;
+}
+
+.docsNavContainer {
+  overflow-y: auto;
+}
+
+.toc, .mainContainer {
+  padding: 0;
 }
 
 /* Hack to make #graphiql 100% height. (Selector is too broad.) */
@@ -52,4 +42,8 @@ sub {
 
 #graphiql {
   flex: 1;
+}
+
+#graphiql * {
+  box-sizing: content-box;
 }
