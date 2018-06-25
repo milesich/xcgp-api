@@ -56,11 +56,13 @@ export async function createData(
   const interfacesNav = navigations.find(nav => nav.title === 'Interfaces');
   const enumsNav = navigations.find(nav => nav.title === 'Enums');
   const unionsNav = navigations.find(nav => nav.title === 'Unions');
+  const inputObjectsNav = navigations.find(nav => nav.title === 'Input Objects');
   const types = {
     objects: objectsNav ? objectsNav.items : [],
     interfaces: interfacesNav ? interfacesNav.items : [],
     enums: enumsNav ? enumsNav.items : [],
     unions: unionsNav ? unionsNav.items : [],
+    inputObjects: inputObjectsNav ? inputObjectsNav.items : [],
   };
 
   return {
