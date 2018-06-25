@@ -6,4 +6,6 @@ title: Interfaces
 
 For more information, see "[Implementation](guides/graphql/introduction.md#implementation)".
 
+## List of interfaces
+
 * [Node](graphql/schema/node.md)

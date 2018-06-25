@@ -6,6 +6,8 @@ title: Objects
 
 For more information, see "[Introduction to GraphQL](guides/graphql/introduction.md)".
 
+## List of objects
+
 * [Achievement](graphql/schema/achievement.md)
 * [AchievementChain](graphql/schema/achievementchain.md)
 * [AchievementChainConnection](graphql/schema/achievementchainconnection.md)
