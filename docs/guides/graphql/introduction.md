@@ -13,7 +13,7 @@ A schema defines a GraphQL API's type system. It describes the complete set of p
 ### Field
 A field is a unit of data you can retrieve from an object. As the [official GraphQL docs](https://graphql.org/learn/schema/) say: "The GraphQL query language is basically about selecting fields on objects."
 
-The [official spec](http://facebook.github.io/graphql/draft/#sec-Language.Fields) also says about fields:
+The [official spec](https://facebook.github.io/graphql/draft/#sec-Language.Fields) also says about fields:
 
 > All GraphQL operations must specify their selections down to fields which return scalar values to ensure an unambiguously shaped response.
 

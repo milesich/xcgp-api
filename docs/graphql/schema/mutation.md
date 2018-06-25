@@ -2,7 +2,7 @@
 title: Mutation
 ---
 
-Every GraphQL schema has a root type for both queries and mutations. The [mutation type](http://facebook.github.io/graphql/draft/#sec-Type-System) defines GraphQL operations that change data on the server. It is analogous to performing HTTP verbs such as `POST`, `PATCH`, and `DELETE`.
+Every GraphQL schema has a root type for both queries and mutations. The [mutation type](https://facebook.github.io/graphql/draft/#sec-Type-System) defines GraphQL operations that change data on the server. It is analogous to performing HTTP verbs such as `POST`, `PATCH`, and `DELETE`.
 
 For more information, see "[About mutations](guides/graphql/using.md#about-mutations)".
 

@@ -19,7 +19,7 @@
       "graphql/schema/interfaces",
       "graphql/schema/enums",
       "graphql/schema/inputobjects",
-      "graphql/scalars"
+      "graphql/schema/scalars"
     ]
   },
   "guides": {

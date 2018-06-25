@@ -36,7 +36,7 @@ The two types of allowed operations in GraphQL API are *queries* and *mutations*
 Queries and mutations share similar forms, with some important differences.
 
 ### About queries
-GraphQL queries return only the data you specify. To form a query, you must specify [fields within fields](guides/graphql/introduction.md#field) (also known as *nested subfields*) until you return only [scalars](graphql/scalars.md).
+GraphQL queries return only the data you specify. To form a query, you must specify [fields within fields](guides/graphql/introduction.md#field) (also known as *nested subfields*) until you return only [scalars](graphql/schema/scalars.md).
 
 Queries are structured like this:
 ```graphql

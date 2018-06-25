@@ -16,7 +16,7 @@ For support requests, bug reports, and discussions, use the [XCaliber Support Po
 ## What is GraphQL?
 The [GraphQL](https://graphql.org/) data query language is:
 
-* **A [specification](http://facebook.github.io/graphql/).** The spec determines the validity of the schema on the API server. The schema determines the validity of the client calls.
+* **A [specification](https://facebook.github.io/graphql/).** The spec determines the validity of the schema on the API server. The schema determines the validity of the client calls.
 * **[Strongly typed](#about-the-graphql-schema-reference).** The schema defines an API's type system and all object relationships.
 * **[Introspective](guides/graphql/introduction.md#discovering-the-graphql-api).** A client can query the schema for details about the schema.
 * **[Hierarchical](guides/graphql/using.md).** The shape of a GraphQL call mirrors the shape of the JSON data it returns. Nested fields let you query for and receive only the data you specify in a single round trip.
@@ -29,7 +29,7 @@ XCaliber chose GraphQL because it offers significantly more flexibility for our 
 The docs in the menu are generated from the XCaliber Gaming Platform GraphQL [schema](guides/graphql/introduction.md#discovering-the-graphql-api). All calls are validated and executed against the schema. Use these docs to find out what data you can call:
 
 * Allowed operators: [queries](graphql/schema/query.md) and [mutations](graphql/schema/mutation.md).
-* Schema-defined types: [scalars](graphql/scalars.md), [objects](graphql/schema/objects.md), [enums](graphql/schema/enums.md), [interfaces](graphql/schema/interfaces.md), [unions](graphql/schema/unions.md), and [input objects](graphql/schema/inputobjects.md).
+* Schema-defined types: [scalars](graphql/schema/scalars.md), [objects](graphql/schema/objects.md), [enums](graphql/schema/enums.md), [interfaces](graphql/schema/interfaces.md), [unions](graphql/schema/unions.md), and [input objects](graphql/schema/inputobjects.md).
 
 You can access this same content via the [Explorer](guides/graphql/explorer.md). Note that you may need to rely on both the docs and the schema validation to successfully call the GraphQL API.
 
