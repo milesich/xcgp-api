@@ -3,16 +3,16 @@
 <pre><code class="hljs css languages- graphql">type Lobby implements Node <span class="token punctuation">{</span>
 
   <span class="token comment"># The ID of an object</span>
-  <span class="token attr-name">id</span><span class="token punctuation">:</span> ID<span class="token operator">!</span> 
+  <span class="token attr-name">id</span><span class="token punctuation">:</span> ID<span class="token operator">!</span>
 
   <span class="token comment"># The name of the lobby.</span>
-  <span class="token attr-name">name</span><span class="token punctuation">:</span> String<span class="token operator">!</span> 
+  <span class="token attr-name">name</span><span class="token punctuation">:</span> String<span class="token operator">!</span>
 
   <span class="token comment"># The slug of the lobby.</span>
-  <span class="token attr-name">slug</span><span class="token punctuation">:</span> ID<span class="token operator">!</span> 
+  <span class="token attr-name">slug</span><span class="token punctuation">:</span> ID<span class="token operator">!</span>
 
   <span class="token comment"># Games</span>
-  <span class="token attr-name">games</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>Game<span class="token punctuation">]</span> 
+  <span class="token attr-name">games</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>Game<span class="token punctuation">]</span>
 
   <span class="token comment"># Arguments</span>
   <span class="token comment">#   after</span>
@@ -26,7 +26,7 @@
     <span class="token attr-name">before</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span>
     <span class="token attr-name">last</span><span class="token punctuation">:</span> Int<span class="token punctuation">,</span>
     <span class="token attr-name">slug</span><span class="token punctuation">:</span> String
-  <span class="token punctuation">)</span><span class="token punctuation">:</span> LobbyCategoryConnection 
+  <span class="token punctuation">)</span><span class="token punctuation">:</span> LobbyCategoryConnection
 
 <span class="token punctuation">}</span>
 </code></pre>

@@ -3,55 +3,55 @@
 <pre><code class="hljs css languages- graphql">type Promotion implements Node <span class="token punctuation">{</span>
 
   <span class="token comment"># The ID of an object</span>
-  <span class="token attr-name">id</span><span class="token punctuation">:</span> ID<span class="token operator">!</span> 
+  <span class="token attr-name">id</span><span class="token punctuation">:</span> ID<span class="token operator">!</span>
 
   <span class="token comment"># The template used for hydration. Useful for debugging.</span>
-  <span class="token attr-name">template</span><span class="token punctuation">:</span> String 
+  <span class="token attr-name">template</span><span class="token punctuation">:</span> String
 
   <span class="token comment"># The internal name. Useful for debugging.</span>
-  <span class="token attr-name">name</span><span class="token punctuation">:</span> String 
+  <span class="token attr-name">name</span><span class="token punctuation">:</span> String
 
   <span class="token comment"># The URL slug. Unique per locale.</span>
-  <span class="token attr-name">slug</span><span class="token punctuation">:</span> String 
+  <span class="token attr-name">slug</span><span class="token punctuation">:</span> String
 
-  <span class="token attr-name">activeFrom</span><span class="token punctuation">:</span> String 
+  <span class="token attr-name">activeFrom</span><span class="token punctuation">:</span> String
 
-  <span class="token attr-name">expiresAt</span><span class="token punctuation">:</span> String 
+  <span class="token attr-name">expiresAt</span><span class="token punctuation">:</span> String
 
   <span class="token comment"># Example: casino</span>
-  <span class="token attr-name">category</span><span class="token punctuation">:</span> String 
+  <span class="token attr-name">category</span><span class="token punctuation">:</span> String
 
   <span class="token comment"># Image URL of the category if category is custom.</span>
-  <span class="token attr-name">categoryImage</span><span class="token punctuation">:</span> String 
+  <span class="token attr-name">categoryImage</span><span class="token punctuation">:</span> String
 
   <span class="token comment"># Banner URL for static image</span>
-  <span class="token attr-name">bannerStatic</span><span class="token punctuation">:</span> String 
+  <span class="token attr-name">bannerStatic</span><span class="token punctuation">:</span> String
 
   <span class="token comment"># Banner URL for HTML5 banner page</span>
-  <span class="token attr-name">bannerHtml5</span><span class="token punctuation">:</span> String 
+  <span class="token attr-name">bannerHtml5</span><span class="token punctuation">:</span> String
 
   <span class="token comment"># Small bar on top left corner; ribbon</span>
-  <span class="token attr-name">badge</span><span class="token punctuation">:</span> String 
+  <span class="token attr-name">badge</span><span class="token punctuation">:</span> String
 
   <span class="token comment"># Background color</span>
-  <span class="token attr-name">backgroundColor</span><span class="token punctuation">:</span> String 
+  <span class="token attr-name">backgroundColor</span><span class="token punctuation">:</span> String
 
   <span class="token comment"># Game</span>
-  <span class="token attr-name">game</span><span class="token punctuation">:</span> Game 
+  <span class="token attr-name">game</span><span class="token punctuation">:</span> Game
 
   <span class="token comment"># Display jackpot</span>
-  <span class="token attr-name">showJackpot</span><span class="token punctuation">:</span> Boolean 
+  <span class="token attr-name">showJackpot</span><span class="token punctuation">:</span> Boolean
 
   <span class="token comment"># Display countdown</span>
-  <span class="token attr-name">showCountdown</span><span class="token punctuation">:</span> Boolean 
+  <span class="token attr-name">showCountdown</span><span class="token punctuation">:</span> Boolean
 
-  <span class="token attr-name">titles</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>String<span class="token punctuation">]</span> 
+  <span class="token attr-name">titles</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>String<span class="token punctuation">]</span>
 
-  <span class="token attr-name">descriptions</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>String<span class="token punctuation">]</span> 
+  <span class="token attr-name">descriptions</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>String<span class="token punctuation">]</span>
 
-  <span class="token attr-name">buttons</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>PromoSpaceButton<span class="token punctuation">]</span> 
+  <span class="token attr-name">buttons</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>PromoSpaceButton<span class="token punctuation">]</span>
 
-  <span class="token attr-name">links</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>PromoSpaceButton<span class="token punctuation">]</span> 
+  <span class="token attr-name">links</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>PromoSpaceButton<span class="token punctuation">]</span>
 
 <span class="token punctuation">}</span>
 </code></pre>

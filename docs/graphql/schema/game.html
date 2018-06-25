@@ -3,135 +3,137 @@
 <pre><code class="hljs css languages- graphql">type Game implements Node <span class="token punctuation">{</span>
 
   <span class="token comment"># The ID of an object</span>
-  <span class="token attr-name">id</span><span class="token punctuation">:</span> ID<span class="token operator">!</span> 
+  <span class="token attr-name">id</span><span class="token punctuation">:</span> ID<span class="token operator">!</span>
 
   <span class="token comment"># The name of the game.</span>
-  <span class="token attr-name">name</span><span class="token punctuation">:</span> String<span class="token operator">!</span> 
+  <span class="token attr-name">name</span><span class="token punctuation">:</span> String<span class="token operator">!</span>
 
   <span class="token comment"># The vendor of the game.</span>
-  <span class="token attr-name">vendor</span><span class="token punctuation">:</span> String<span class="token operator">!</span> 
+  <span class="token attr-name">vendor</span><span class="token punctuation">:</span> String<span class="token operator">!</span>
 
   <span class="token comment"># The background of the game.</span>
-  <span class="token attr-name">background</span><span class="token punctuation">:</span> String 
+  <span class="token attr-name">background</span><span class="token punctuation">:</span> String
 
   <span class="token comment"># A short description of the game.</span>
-  <span class="token attr-name">description</span><span class="token punctuation">:</span> String<span class="token operator">!</span> 
+  <span class="token attr-name">description</span><span class="token punctuation">:</span> String<span class="token operator">!</span>
 
   <span class="token comment"># A long description of the game.</span>
-  <span class="token attr-name">descriptionLong</span><span class="token punctuation">:</span> String<span class="token operator">!</span> 
+  <span class="token attr-name">descriptionLong</span><span class="token punctuation">:</span> String<span class="token operator">!</span>
 
   <span class="token comment"># The stakes of the game.</span>
-  <span class="token attr-name">gameStakes</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>String<span class="token punctuation">]</span> 
+  <span class="token attr-name">gameStakes</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>String<span class="token punctuation">]</span>
 
   <span class="token comment"># If the game has a bonus or not.</span>
-  <span class="token attr-name">bonus</span><span class="token punctuation">:</span> Boolean<span class="token operator">!</span> 
+  <span class="token attr-name">bonus</span><span class="token punctuation">:</span> Boolean<span class="token operator">!</span>
 
   <span class="token comment"># If the game has free spins or not.</span>
-  <span class="token attr-name">freeSpins</span><span class="token punctuation">:</span> Boolean<span class="token operator">!</span> 
+  <span class="token attr-name">freeSpins</span><span class="token punctuation">:</span> Boolean<span class="token operator">!</span>
 
   <span class="token comment"># The amount of lines for this game.</span>
-  <span class="token attr-name">lines</span><span class="token punctuation">:</span> Int 
+  <span class="token attr-name">lines</span><span class="token punctuation">:</span> Int
 
   <span class="token comment"># The minimum bet amount for this game.</span>
   <span class="token comment">#</span>
   <span class="token comment"># Arguments</span>
-  <span class="token comment">#   currency:   currency</span>
-  minBet<span class="token punctuation">(</span><span class="token attr-name">currency</span><span class="token punctuation">:</span> String<span class="token punctuation">)</span><span class="token punctuation">:</span> Float 
+  <span class="token comment">#   currency: ISO 4217 Currency Code. Value changes based on currency.</span>
+  minBet<span class="token punctuation">(</span><span class="token attr-name">currency</span><span class="token punctuation">:</span> String<span class="token punctuation">)</span><span class="token punctuation">:</span> Float
 
   <span class="token comment"># The maximum bet amount for this game.</span>
   <span class="token comment">#</span>
   <span class="token comment"># Arguments</span>
-  <span class="token comment">#   currency:   currency</span>
-  maxBet<span class="token punctuation">(</span><span class="token attr-name">currency</span><span class="token punctuation">:</span> String<span class="token punctuation">)</span><span class="token punctuation">:</span> Float 
+  <span class="token comment">#   currency: ISO 4217 Currency Code. Value changes based on currency.</span>
+  maxBet<span class="token punctuation">(</span><span class="token attr-name">currency</span><span class="token punctuation">:</span> String<span class="token punctuation">)</span><span class="token punctuation">:</span> Float
 
   <span class="token comment"># The price of a ticket to play if this is a lottery game</span>
   <span class="token comment">#</span>
   <span class="token comment"># Arguments</span>
-  <span class="token comment">#   currency:   currency</span>
-  ticketPrice<span class="token punctuation">(</span><span class="token attr-name">currency</span><span class="token punctuation">:</span> String<span class="token punctuation">)</span><span class="token punctuation">:</span> Float 
+  <span class="token comment">#   currency: ISO 4217 Currency Code. Value changes based on currency.</span>
+  ticketPrice<span class="token punctuation">(</span><span class="token attr-name">currency</span><span class="token punctuation">:</span> String<span class="token punctuation">)</span><span class="token punctuation">:</span> Float
 
   <span class="token comment"># The total jackpot amount to be won if this game has one</span>
   <span class="token comment">#</span>
   <span class="token comment"># Arguments</span>
-  <span class="token comment">#   currency:   currency</span>
-  jackpot<span class="token punctuation">(</span><span class="token attr-name">currency</span><span class="token punctuation">:</span> String<span class="token punctuation">)</span><span class="token punctuation">:</span> Float 
+  <span class="token comment">#   currency: ISO 4217 Currency Code. Value changes based on currency.</span>
+  jackpot<span class="token punctuation">(</span><span class="token attr-name">currency</span><span class="token punctuation">:</span> String<span class="token punctuation">)</span><span class="token punctuation">:</span> Float
 
-  <span class="token attr-name">nextDraw</span><span class="token punctuation">:</span> GameNextDraw 
+  <span class="token attr-name">nextDraw</span><span class="token punctuation">:</span> GameNextDraw
 
-  <span class="token attr-name">lastDraw</span><span class="token punctuation">:</span> GameLastDraw 
+  <span class="token attr-name">lastDraw</span><span class="token punctuation">:</span> GameLastDraw
 
   <span class="token comment"># ISO 4217 Currency Code of this game as a particular currency may be</span>
   <span class="token comment"># enforced</span>
-  <span class="token attr-name">currency</span><span class="token punctuation">:</span> String<span class="token operator">!</span> 
+  <span class="token attr-name">currency</span><span class="token punctuation">:</span> String<span class="token operator">!</span>
 
   <span class="token comment"># The height of the game.</span>
-  <span class="token attr-name">height</span><span class="token punctuation">:</span> Int<span class="token operator">!</span> 
+  <span class="token attr-name">height</span><span class="token punctuation">:</span> Int<span class="token operator">!</span>
 
   <span class="token comment"># The label of the game.</span>
-  <span class="token attr-name">label</span><span class="token punctuation">:</span> String 
+  <span class="token attr-name">label</span><span class="token punctuation">:</span> String
 
   <span class="token comment"># The slug of the game.</span>
-  <span class="token attr-name">slug</span><span class="token punctuation">:</span> String<span class="token operator">!</span> 
+  <span class="token attr-name">slug</span><span class="token punctuation">:</span> String<span class="token operator">!</span>
 
   <span class="token comment"># The thumbnail of the game.</span>
-  <span class="token attr-name">thumbnail</span><span class="token punctuation">:</span> String 
+  <span class="token attr-name">thumbnail</span><span class="token punctuation">:</span> String
 
   <span class="token comment"># The vendor launch properties or `null` if the game can't be launched.</span>
   <span class="token comment">#</span>
   <span class="token comment"># Arguments</span>
-  <span class="token comment">#   return_url:   return_url</span>
-  <span class="token comment">#   deposit_url:   deposit_url</span>
-  <span class="token comment">#   history_url:   history_url</span>
+  <span class="token comment">#   return_url: The URL where you would like the user to return to upon</span>
+  <span class="token comment"># exiting the game</span>
+  <span class="token comment">#   deposit_url: The URL where you would like the user to go to deposit</span>
+  <span class="token comment">#   history_url: The URL where you would like the user to go to check</span>
+  <span class="token comment"># the account history</span>
   vendorProperties<span class="token punctuation">(</span>
     <span class="token attr-name">return_url</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span>
     <span class="token attr-name">deposit_url</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span>
     <span class="token attr-name">history_url</span><span class="token punctuation">:</span> String
-  <span class="token punctuation">)</span><span class="token punctuation">:</span> JSON 
+  <span class="token punctuation">)</span><span class="token punctuation">:</span> JSON
 
   <span class="token comment"># The width of the game.</span>
-  <span class="token attr-name">width</span><span class="token punctuation">:</span> Int<span class="token operator">!</span> 
+  <span class="token attr-name">width</span><span class="token punctuation">:</span> Int<span class="token operator">!</span>
 
   <span class="token comment"># The creation date of the game.</span>
-  <span class="token attr-name">createdAt</span><span class="token punctuation">:</span> String<span class="token operator">!</span> 
+  <span class="token attr-name">createdAt</span><span class="token punctuation">:</span> String<span class="token operator">!</span>
 
   <span class="token comment"># The date the game was last updated.</span>
-  <span class="token attr-name">updatedAt</span><span class="token punctuation">:</span> String<span class="token operator">!</span> 
+  <span class="token attr-name">updatedAt</span><span class="token punctuation">:</span> String<span class="token operator">!</span>
 
   <span class="token comment"># The screenshot of the game.</span>
-  <span class="token attr-name">screenshot</span><span class="token punctuation">:</span> String 
+  <span class="token attr-name">screenshot</span><span class="token punctuation">:</span> String
 
   <span class="token comment"># The homepage image of the game.</span>
-  <span class="token attr-name">homepageImage</span><span class="token punctuation">:</span> String 
+  <span class="token attr-name">homepageImage</span><span class="token punctuation">:</span> String
 
   <span class="token comment"># Whether the game is enabled.</span>
-  <span class="token attr-name">enabled</span><span class="token punctuation">:</span> Boolean<span class="token operator">!</span> 
+  <span class="token attr-name">enabled</span><span class="token punctuation">:</span> Boolean<span class="token operator">!</span>
 
   <span class="token comment"># The volatility of the game.</span>
-  <span class="token attr-name">volatility</span><span class="token punctuation">:</span> Int<span class="token operator">!</span> 
+  <span class="token attr-name">volatility</span><span class="token punctuation">:</span> Int<span class="token operator">!</span>
 
   <span class="token comment"># The rating of the game.</span>
-  <span class="token attr-name">rating</span><span class="token punctuation">:</span> Int<span class="token operator">!</span> 
+  <span class="token attr-name">rating</span><span class="token punctuation">:</span> Int<span class="token operator">!</span>
 
   <span class="token comment"># The backgrounds of the game.</span>
-  <span class="token attr-name">backgrounds</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>String<span class="token punctuation">]</span> 
+  <span class="token attr-name">backgrounds</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>String<span class="token punctuation">]</span>
 
   <span class="token comment"># The screenshots of the game.</span>
-  <span class="token attr-name">screenshots</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>Screenshot<span class="token punctuation">]</span> 
+  <span class="token attr-name">screenshots</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>Screenshot<span class="token punctuation">]</span>
 
   <span class="token comment"># The thumbnails of the game.</span>
-  <span class="token attr-name">thumbnails</span><span class="token punctuation">:</span> JSON 
+  <span class="token attr-name">thumbnails</span><span class="token punctuation">:</span> JSON
 
   <span class="token comment"># The jurisdiction of the game.</span>
-  <span class="token attr-name">jurisdiction</span><span class="token punctuation">:</span> String<span class="token operator">!</span> 
+  <span class="token attr-name">jurisdiction</span><span class="token punctuation">:</span> String<span class="token operator">!</span>
 
   <span class="token comment"># Whether the player needs to login to open the game.</span>
-  <span class="token attr-name">loginRequired</span><span class="token punctuation">:</span> Boolean<span class="token operator">!</span> 
+  <span class="token attr-name">loginRequired</span><span class="token punctuation">:</span> Boolean<span class="token operator">!</span>
 
   <span class="token comment"># Whether the game is a mobile version or not</span>
-  <span class="token attr-name">mobile</span><span class="token punctuation">:</span> Boolean<span class="token operator">!</span> 
+  <span class="token attr-name">mobile</span><span class="token punctuation">:</span> Boolean<span class="token operator">!</span>
 
   <span class="token comment"># A list of tags for filtering like "jackpot" or "netent"</span>
-  <span class="token attr-name">tags</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>String<span class="token punctuation">]</span> 
+  <span class="token attr-name">tags</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>String<span class="token punctuation">]</span>
 
 <span class="token punctuation">}</span>
 </code></pre>
@@ -147,7 +149,6 @@
 <li><a href="/xcgp-api/docs/graphql/schema/page.html">Page</a>: A page</li>
 <li><a href="/xcgp-api/docs/graphql/schema/promotion.html">Promotion</a>: A promotion</li>
 <li><a href="/xcgp-api/docs/graphql/schema/query.html">Query</a></li>
-<li><a href="/xcgp-api/docs/graphql/schema/space.html">Space</a>: A promotion</li>
 <li><a href="/xcgp-api/docs/graphql/schema/win.html">Win</a>: A win</li>
 </ul>
 </span></div></article></div><div class="docs-prevnext"></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#schema-definition">Schema definition</a></li><li><a href="#required-by">Required by</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2014 - 2018 XCaliber</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>

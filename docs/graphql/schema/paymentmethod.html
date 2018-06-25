@@ -3,54 +3,54 @@
 <pre><code class="hljs css languages- graphql">type PaymentMethod implements Node <span class="token punctuation">{</span>
 
   <span class="token comment"># The ID of an object</span>
-  <span class="token attr-name">id</span><span class="token punctuation">:</span> ID<span class="token operator">!</span> 
+  <span class="token attr-name">id</span><span class="token punctuation">:</span> ID<span class="token operator">!</span>
 
   <span class="token comment"># The maximum fee for a deposit</span>
-  <span class="token attr-name">depositCap</span><span class="token punctuation">:</span> Float 
+  <span class="token attr-name">depositCap</span><span class="token punctuation">:</span> Float
 
   <span class="token comment"># A fixed fee for this deopsit</span>
-  <span class="token attr-name">depositFixed</span><span class="token punctuation">:</span> Float 
+  <span class="token attr-name">depositFixed</span><span class="token punctuation">:</span> Float
 
   <span class="token comment"># A percentage fee for this deposit</span>
-  <span class="token attr-name">depositPercent</span><span class="token punctuation">:</span> Float 
+  <span class="token attr-name">depositPercent</span><span class="token punctuation">:</span> Float
 
   <span class="token comment"># The foreign exchange rate for this payment method</span>
-  <span class="token attr-name">fxRate</span><span class="token punctuation">:</span> Float 
+  <span class="token attr-name">fxRate</span><span class="token punctuation">:</span> Float
 
   <span class="token comment"># The last amount deposited with this method</span>
-  <span class="token attr-name">lastAmount</span><span class="token punctuation">:</span> Float 
+  <span class="token attr-name">lastAmount</span><span class="token punctuation">:</span> Float
 
   <span class="token comment"># The maximum amount for a transaction with this method</span>
-  <span class="token attr-name">maxAmount</span><span class="token punctuation">:</span> Float 
+  <span class="token attr-name">maxAmount</span><span class="token punctuation">:</span> Float
 
   <span class="token comment"># The minimum amount for a transaction with this method</span>
-  <span class="token attr-name">minAmount</span><span class="token punctuation">:</span> Float 
+  <span class="token attr-name">minAmount</span><span class="token punctuation">:</span> Float
 
   <span class="token comment"># Name of this payment method</span>
-  <span class="token attr-name">name</span><span class="token punctuation">:</span> String 
+  <span class="token attr-name">name</span><span class="token punctuation">:</span> String
 
-  <span class="token attr-name">previousCards</span><span class="token punctuation">:</span> String 
+  <span class="token attr-name">previousCards</span><span class="token punctuation">:</span> String
 
   <span class="token comment"># ID of the payment provider for this method</span>
-  <span class="token attr-name">providerId</span><span class="token punctuation">:</span> String 
+  <span class="token attr-name">providerId</span><span class="token punctuation">:</span> String
 
   <span class="token comment"># Name of the payment provider for this method</span>
-  <span class="token attr-name">providerName</span><span class="token punctuation">:</span> String 
+  <span class="token attr-name">providerName</span><span class="token punctuation">:</span> String
 
   <span class="token comment"># The maximum fee for a withdrawal</span>
-  <span class="token attr-name">withdrawCap</span><span class="token punctuation">:</span> Float 
+  <span class="token attr-name">withdrawCap</span><span class="token punctuation">:</span> Float
 
   <span class="token comment"># A fixed fee for this withdrawal</span>
-  <span class="token attr-name">withdrawFixed</span><span class="token punctuation">:</span> Float 
+  <span class="token attr-name">withdrawFixed</span><span class="token punctuation">:</span> Float
 
   <span class="token comment"># A percentage fee for this withdrawal</span>
-  <span class="token attr-name">withdrawPercent</span><span class="token punctuation">:</span> Float 
+  <span class="token attr-name">withdrawPercent</span><span class="token punctuation">:</span> Float
 
   <span class="token comment"># The default amount for deposit</span>
-  <span class="token attr-name">defaultDepositAmount</span><span class="token punctuation">:</span> Int 
+  <span class="token attr-name">defaultDepositAmount</span><span class="token punctuation">:</span> Int
 
   <span class="token comment"># List of predefined deposit amounts</span>
-  <span class="token attr-name">quickDepositOptions</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>Int<span class="token punctuation">]</span> 
+  <span class="token attr-name">quickDepositOptions</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>Int<span class="token punctuation">]</span>
 
 <span class="token punctuation">}</span>
 </code></pre>

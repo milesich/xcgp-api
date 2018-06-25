@@ -29,12 +29,12 @@
   <span class="token comment"># Fetches an object given its ID</span>
   <span class="token comment">#</span>
   <span class="token comment"># Arguments</span>
-  <span class="token comment">#   id:   id</span>
-  node<span class="token punctuation">(</span><span class="token attr-name">id</span><span class="token punctuation">:</span> ID<span class="token operator">!</span><span class="token punctuation">)</span><span class="token punctuation">:</span> Node 
+  <span class="token comment">#   id: The ID of an object</span>
+  node<span class="token punctuation">(</span><span class="token attr-name">id</span><span class="token punctuation">:</span> ID<span class="token operator">!</span><span class="token punctuation">)</span><span class="token punctuation">:</span> Node
 
   <span class="token comment"># Arguments</span>
   <span class="token comment">#   id</span>
-  achievement<span class="token punctuation">(</span><span class="token attr-name">id</span><span class="token punctuation">:</span> String<span class="token punctuation">)</span><span class="token punctuation">:</span> Achievement 
+  achievement<span class="token punctuation">(</span><span class="token attr-name">id</span><span class="token punctuation">:</span> String<span class="token punctuation">)</span><span class="token punctuation">:</span> Achievement
 
   <span class="token comment"># Arguments</span>
   <span class="token comment">#   after</span>
@@ -50,21 +50,21 @@
     <span class="token attr-name">last</span><span class="token punctuation">:</span> Int<span class="token punctuation">,</span>
     <span class="token attr-name">id</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span>
     <span class="token attr-name">achievementChainId</span><span class="token punctuation">:</span> String
-  <span class="token punctuation">)</span><span class="token punctuation">:</span> AchievementConnection 
+  <span class="token punctuation">)</span><span class="token punctuation">:</span> AchievementConnection
 
   <span class="token comment"># Arguments</span>
   <span class="token comment">#   id</span>
-  achievementChain<span class="token punctuation">(</span><span class="token attr-name">id</span><span class="token punctuation">:</span> String<span class="token punctuation">)</span><span class="token punctuation">:</span> AchievementChain 
+  achievementChain<span class="token punctuation">(</span><span class="token attr-name">id</span><span class="token punctuation">:</span> String<span class="token punctuation">)</span><span class="token punctuation">:</span> AchievementChain
 
   <span class="token comment"># Arguments</span>
   <span class="token comment">#   after</span>
   <span class="token comment">#   first</span>
   <span class="token comment">#   before</span>
   <span class="token comment">#   last</span>
-  <span class="token comment">#   name:   name</span>
-  <span class="token comment">#   enabled:   enabled</span>
-  <span class="token comment">#   activationDate:   activationDate</span>
-  <span class="token comment">#   expiryDate:   expiryDate</span>
+  <span class="token comment">#   name: Filter by name</span>
+  <span class="token comment">#   enabled: Filter chains by if enabled or not</span>
+  <span class="token comment">#   activationDate: Filter by activation date</span>
+  <span class="token comment">#   expiryDate: Filter by expiration date</span>
   achievementChains<span class="token punctuation">(</span>
     <span class="token attr-name">after</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span>
     <span class="token attr-name">first</span><span class="token punctuation">:</span> Int<span class="token punctuation">,</span>
@@ -74,92 +74,96 @@
     <span class="token attr-name">enabled</span><span class="token punctuation">:</span> Boolean<span class="token punctuation">,</span>
     <span class="token attr-name">activationDate</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span>
     <span class="token attr-name">expiryDate</span><span class="token punctuation">:</span> String
-  <span class="token punctuation">)</span><span class="token punctuation">:</span> AchievementChainConnection 
+  <span class="token punctuation">)</span><span class="token punctuation">:</span> AchievementChainConnection
 
   <span class="token comment"># Arguments</span>
   <span class="token comment">#   id</span>
-  bonus<span class="token punctuation">(</span><span class="token attr-name">id</span><span class="token punctuation">:</span> ID<span class="token operator">!</span><span class="token punctuation">)</span><span class="token punctuation">:</span> Bonus 
+  bonus<span class="token punctuation">(</span><span class="token attr-name">id</span><span class="token punctuation">:</span> ID<span class="token operator">!</span><span class="token punctuation">)</span><span class="token punctuation">:</span> Bonus
 
   <span class="token comment"># Arguments</span>
   <span class="token comment">#   after</span>
   <span class="token comment">#   first</span>
   <span class="token comment">#   before</span>
   <span class="token comment">#   last</span>
-  <span class="token comment">#   type:   type</span>
+  <span class="token comment">#   type: The bonus type</span>
   bonuses<span class="token punctuation">(</span>
     <span class="token attr-name">after</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span>
     <span class="token attr-name">first</span><span class="token punctuation">:</span> Int<span class="token punctuation">,</span>
     <span class="token attr-name">before</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span>
     <span class="token attr-name">last</span><span class="token punctuation">:</span> Int<span class="token punctuation">,</span>
     <span class="token attr-name">type</span><span class="token punctuation">:</span> BonusType<span class="token operator">!</span>
-  <span class="token punctuation">)</span><span class="token punctuation">:</span> BonusConnection 
+  <span class="token punctuation">)</span><span class="token punctuation">:</span> BonusConnection
 
   <span class="token comment"># Arguments</span>
   <span class="token comment">#   after</span>
   <span class="token comment">#   first</span>
   <span class="token comment">#   before</span>
   <span class="token comment">#   last</span>
-  <span class="token comment">#   enabled:   enabled</span>
+  <span class="token comment">#   enabled: Filter countries by if enabled or not</span>
   countries<span class="token punctuation">(</span>
     <span class="token attr-name">after</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span>
     <span class="token attr-name">first</span><span class="token punctuation">:</span> Int<span class="token punctuation">,</span>
     <span class="token attr-name">before</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span>
     <span class="token attr-name">last</span><span class="token punctuation">:</span> Int<span class="token punctuation">,</span>
     <span class="token attr-name">enabled</span><span class="token punctuation">:</span> Boolean
-  <span class="token punctuation">)</span><span class="token punctuation">:</span> CountryConnection 
+  <span class="token punctuation">)</span><span class="token punctuation">:</span> CountryConnection
 
   <span class="token comment"># Arguments</span>
   <span class="token comment">#   after</span>
   <span class="token comment">#   first</span>
   <span class="token comment">#   before</span>
   <span class="token comment">#   last</span>
-  <span class="token comment">#   enabled:   enabled</span>
+  <span class="token comment">#   enabled: Filter currencies by if enabled or not</span>
   currencies<span class="token punctuation">(</span>
     <span class="token attr-name">after</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span>
     <span class="token attr-name">first</span><span class="token punctuation">:</span> Int<span class="token punctuation">,</span>
     <span class="token attr-name">before</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span>
     <span class="token attr-name">last</span><span class="token punctuation">:</span> Int<span class="token punctuation">,</span>
     <span class="token attr-name">enabled</span><span class="token punctuation">:</span> Boolean
-  <span class="token punctuation">)</span><span class="token punctuation">:</span> CurrencyConnection 
+  <span class="token punctuation">)</span><span class="token punctuation">:</span> CurrencyConnection
 
   <span class="token comment"># Arguments</span>
   <span class="token comment">#   id</span>
-  document<span class="token punctuation">(</span><span class="token attr-name">id</span><span class="token punctuation">:</span> ID<span class="token operator">!</span><span class="token punctuation">)</span><span class="token punctuation">:</span> Document 
+  document<span class="token punctuation">(</span><span class="token attr-name">id</span><span class="token punctuation">:</span> ID<span class="token operator">!</span><span class="token punctuation">)</span><span class="token punctuation">:</span> Document
 
   <span class="token comment"># Arguments</span>
   <span class="token comment">#   after</span>
   <span class="token comment">#   first</span>
   <span class="token comment">#   before</span>
   <span class="token comment">#   last</span>
-  documents<span class="token punctuation">(</span><span class="token attr-name">after</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span> <span class="token attr-name">first</span><span class="token punctuation">:</span> Int<span class="token punctuation">,</span> <span class="token attr-name">before</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span> <span class="token attr-name">last</span><span class="token punctuation">:</span> Int<span class="token punctuation">)</span><span class="token punctuation">:</span> DocumentConnection 
+  documents<span class="token punctuation">(</span><span class="token attr-name">after</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span> <span class="token attr-name">first</span><span class="token punctuation">:</span> Int<span class="token punctuation">,</span> <span class="token attr-name">before</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span> <span class="token attr-name">last</span><span class="token punctuation">:</span> Int<span class="token punctuation">)</span><span class="token punctuation">:</span> DocumentConnection
 
   <span class="token comment"># Arguments</span>
   <span class="token comment">#   id</span>
-  feed<span class="token punctuation">(</span><span class="token attr-name">id</span><span class="token punctuation">:</span> ID<span class="token operator">!</span><span class="token punctuation">)</span><span class="token punctuation">:</span> Feed 
+  feed<span class="token punctuation">(</span><span class="token attr-name">id</span><span class="token punctuation">:</span> ID<span class="token operator">!</span><span class="token punctuation">)</span><span class="token punctuation">:</span> Feed
+
+  <span class="token comment"># Look up feed entries.</span>
+  <span class="token comment">#</span>
+  <span class="token comment"># Arguments</span>
+  <span class="token comment">#   after</span>
+  <span class="token comment">#   first</span>
+  <span class="token comment">#   before</span>
+  <span class="token comment">#   last</span>
+  feeds<span class="token punctuation">(</span><span class="token attr-name">after</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span> <span class="token attr-name">first</span><span class="token punctuation">:</span> Int<span class="token punctuation">,</span> <span class="token attr-name">before</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span> <span class="token attr-name">last</span><span class="token punctuation">:</span> Int<span class="token punctuation">)</span><span class="token punctuation">:</span> FeedConnection
+
+  <span class="token comment"># Arguments</span>
+  <span class="token comment">#   id</span>
+  <span class="token comment">#   vendor_slug: Example: netent-starburst</span>
+  game<span class="token punctuation">(</span><span class="token attr-name">id</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span> <span class="token attr-name">vendor_slug</span><span class="token punctuation">:</span> String<span class="token punctuation">)</span><span class="token punctuation">:</span> Game
 
   <span class="token comment"># Arguments</span>
   <span class="token comment">#   after</span>
   <span class="token comment">#   first</span>
   <span class="token comment">#   before</span>
   <span class="token comment">#   last</span>
-  feeds<span class="token punctuation">(</span><span class="token attr-name">after</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span> <span class="token attr-name">first</span><span class="token punctuation">:</span> Int<span class="token punctuation">,</span> <span class="token attr-name">before</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span> <span class="token attr-name">last</span><span class="token punctuation">:</span> Int<span class="token punctuation">)</span><span class="token punctuation">:</span> FeedConnection 
-
-  <span class="token comment"># Arguments</span>
-  <span class="token comment">#   id</span>
-  <span class="token comment">#   vendor_slug:   vendor_slug</span>
-  game<span class="token punctuation">(</span><span class="token attr-name">id</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span> <span class="token attr-name">vendor_slug</span><span class="token punctuation">:</span> String<span class="token punctuation">)</span><span class="token punctuation">:</span> Game 
-
-  <span class="token comment"># Arguments</span>
-  <span class="token comment">#   after</span>
-  <span class="token comment">#   first</span>
-  <span class="token comment">#   before</span>
-  <span class="token comment">#   last</span>
-  <span class="token comment">#   vendor:   vendor</span>
-  <span class="token comment">#   enabled:   enabled</span>
-  <span class="token comment">#   bonus:   bonus</span>
-  <span class="token comment">#   jackpot:   jackpot</span>
-  <span class="token comment">#   playerState:   playerState</span>
-  <span class="token comment">#   country:   country</span>
+  <span class="token comment">#   vendor: Example: netent</span>
+  <span class="token comment">#   enabled: Filter games by if enabled or not</span>
+  <span class="token comment">#   bonus: Filter games by if they have a bonus or not</span>
+  <span class="token comment">#   jackpot: Filter games by if they have a jackpot or not</span>
+  <span class="token comment">#   playerState: The player state as some games are only visible for</span>
+  <span class="token comment"># logged-in players. Example: li</span>
+  <span class="token comment">#   country: ISO 3166-1 alpha-2 country code. Some countries block</span>
+  <span class="token comment"># games.</span>
   games<span class="token punctuation">(</span>
     <span class="token attr-name">after</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span>
     <span class="token attr-name">first</span><span class="token punctuation">:</span> Int<span class="token punctuation">,</span>
@@ -171,26 +175,26 @@
     <span class="token attr-name">jackpot</span><span class="token punctuation">:</span> Boolean<span class="token punctuation">,</span>
     <span class="token attr-name">playerState</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span>
     <span class="token attr-name">country</span><span class="token punctuation">:</span> String
-  <span class="token punctuation">)</span><span class="token punctuation">:</span> GameConnection 
+  <span class="token punctuation">)</span><span class="token punctuation">:</span> GameConnection
 
   <span class="token comment"># Arguments</span>
   <span class="token comment">#   after</span>
   <span class="token comment">#   first</span>
   <span class="token comment">#   before</span>
   <span class="token comment">#   last</span>
-  gameTags<span class="token punctuation">(</span><span class="token attr-name">after</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span> <span class="token attr-name">first</span><span class="token punctuation">:</span> Int<span class="token punctuation">,</span> <span class="token attr-name">before</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span> <span class="token attr-name">last</span><span class="token punctuation">:</span> Int<span class="token punctuation">)</span><span class="token punctuation">:</span> GameTagConnection 
+  gameTags<span class="token punctuation">(</span><span class="token attr-name">after</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span> <span class="token attr-name">first</span><span class="token punctuation">:</span> Int<span class="token punctuation">,</span> <span class="token attr-name">before</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span> <span class="token attr-name">last</span><span class="token punctuation">:</span> Int<span class="token punctuation">)</span><span class="token punctuation">:</span> GameTagConnection
 
   <span class="token comment"># Arguments</span>
   <span class="token comment">#   id</span>
-  gameSession<span class="token punctuation">(</span><span class="token attr-name">id</span><span class="token punctuation">:</span> ID<span class="token operator">!</span><span class="token punctuation">)</span><span class="token punctuation">:</span> GameSession 
+  gameSession<span class="token punctuation">(</span><span class="token attr-name">id</span><span class="token punctuation">:</span> ID<span class="token operator">!</span><span class="token punctuation">)</span><span class="token punctuation">:</span> GameSession
 
   <span class="token comment"># Arguments</span>
   <span class="token comment">#   after</span>
   <span class="token comment">#   first</span>
   <span class="token comment">#   before</span>
   <span class="token comment">#   last</span>
-  <span class="token comment">#   from:   from</span>
-  <span class="token comment">#   to:   to</span>
+  <span class="token comment">#   from: yyyy-mm-dd formatted date: 2014-10-13</span>
+  <span class="token comment">#   to: yyyy-mm-dd formatted date: 2016-10-13</span>
   gameSessions<span class="token punctuation">(</span>
     <span class="token attr-name">after</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span>
     <span class="token attr-name">first</span><span class="token punctuation">:</span> Int<span class="token punctuation">,</span>
@@ -198,63 +202,65 @@
     <span class="token attr-name">last</span><span class="token punctuation">:</span> Int<span class="token punctuation">,</span>
     <span class="token attr-name">from</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span>
     <span class="token attr-name">to</span><span class="token punctuation">:</span> String
-  <span class="token punctuation">)</span><span class="token punctuation">:</span> GameSessionConnection 
+  <span class="token punctuation">)</span><span class="token punctuation">:</span> GameSessionConnection
 
   <span class="token comment"># Arguments</span>
   <span class="token comment">#   id</span>
-  jackpot<span class="token punctuation">(</span><span class="token attr-name">id</span><span class="token punctuation">:</span> ID<span class="token operator">!</span><span class="token punctuation">)</span><span class="token punctuation">:</span> Jackpot 
+  jackpot<span class="token punctuation">(</span><span class="token attr-name">id</span><span class="token punctuation">:</span> ID<span class="token operator">!</span><span class="token punctuation">)</span><span class="token punctuation">:</span> Jackpot
 
   <span class="token comment"># Arguments</span>
   <span class="token comment">#   after</span>
   <span class="token comment">#   first</span>
   <span class="token comment">#   before</span>
   <span class="token comment">#   last</span>
-  jackpots<span class="token punctuation">(</span><span class="token attr-name">after</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span> <span class="token attr-name">first</span><span class="token punctuation">:</span> Int<span class="token punctuation">,</span> <span class="token attr-name">before</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span> <span class="token attr-name">last</span><span class="token punctuation">:</span> Int<span class="token punctuation">)</span><span class="token punctuation">:</span> JackpotConnection 
+  jackpots<span class="token punctuation">(</span><span class="token attr-name">after</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span> <span class="token attr-name">first</span><span class="token punctuation">:</span> Int<span class="token punctuation">,</span> <span class="token attr-name">before</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span> <span class="token attr-name">last</span><span class="token punctuation">:</span> Int<span class="token punctuation">)</span><span class="token punctuation">:</span> JackpotConnection
 
   <span class="token comment"># Arguments</span>
   <span class="token comment">#   after</span>
   <span class="token comment">#   first</span>
   <span class="token comment">#   before</span>
   <span class="token comment">#   last</span>
-  languages<span class="token punctuation">(</span><span class="token attr-name">after</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span> <span class="token attr-name">first</span><span class="token punctuation">:</span> Int<span class="token punctuation">,</span> <span class="token attr-name">before</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span> <span class="token attr-name">last</span><span class="token punctuation">:</span> Int<span class="token punctuation">)</span><span class="token punctuation">:</span> LanguageConnection 
+  languages<span class="token punctuation">(</span><span class="token attr-name">after</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span> <span class="token attr-name">first</span><span class="token punctuation">:</span> Int<span class="token punctuation">,</span> <span class="token attr-name">before</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span> <span class="token attr-name">last</span><span class="token punctuation">:</span> Int<span class="token punctuation">)</span><span class="token punctuation">:</span> LanguageConnection
 
   <span class="token comment"># Arguments</span>
   <span class="token comment">#   id</span>
-  limit<span class="token punctuation">(</span><span class="token attr-name">id</span><span class="token punctuation">:</span> ID<span class="token operator">!</span><span class="token punctuation">)</span><span class="token punctuation">:</span> Limit 
+  limit<span class="token punctuation">(</span><span class="token attr-name">id</span><span class="token punctuation">:</span> ID<span class="token operator">!</span><span class="token punctuation">)</span><span class="token punctuation">:</span> Limit
 
   <span class="token comment"># Arguments</span>
   <span class="token comment">#   after</span>
   <span class="token comment">#   first</span>
   <span class="token comment">#   before</span>
   <span class="token comment">#   last</span>
-  limits<span class="token punctuation">(</span><span class="token attr-name">after</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span> <span class="token attr-name">first</span><span class="token punctuation">:</span> Int<span class="token punctuation">,</span> <span class="token attr-name">before</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span> <span class="token attr-name">last</span><span class="token punctuation">:</span> Int<span class="token punctuation">)</span><span class="token punctuation">:</span> LimitConnection 
+  limits<span class="token punctuation">(</span><span class="token attr-name">after</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span> <span class="token attr-name">first</span><span class="token punctuation">:</span> Int<span class="token punctuation">,</span> <span class="token attr-name">before</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span> <span class="token attr-name">last</span><span class="token punctuation">:</span> Int<span class="token punctuation">)</span><span class="token punctuation">:</span> LimitConnection
 
   <span class="token comment"># Arguments</span>
   <span class="token comment">#   id</span>
-  <span class="token comment">#   slug:   slug</span>
-  <span class="token comment">#   playerState:   playerState</span>
-  <span class="token comment">#   groups:   groups</span>
-  <span class="token comment">#   country:   country</span>
+  <span class="token comment">#   slug: Example: casinov2</span>
+  <span class="token comment">#   playerState: The player state as some games are only visible for</span>
+  <span class="token comment"># logged-in players. Example: li</span>
+  <span class="token comment">#   groups: Comma separated list of player groups. Example: -1</span>
+  <span class="token comment">#   country: ISO 3166-1 alpha-2 country code. Some countries block</span>
+  <span class="token comment"># games.</span>
   lobby<span class="token punctuation">(</span>
     <span class="token attr-name">id</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span>
     <span class="token attr-name">slug</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span>
     <span class="token attr-name">playerState</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span>
     <span class="token attr-name">groups</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span>
     <span class="token attr-name">country</span><span class="token punctuation">:</span> String
-  <span class="token punctuation">)</span><span class="token punctuation">:</span> Lobby 
+  <span class="token punctuation">)</span><span class="token punctuation">:</span> Lobby
 
   <span class="token comment"># Arguments</span>
   <span class="token comment">#   after</span>
   <span class="token comment">#   first</span>
   <span class="token comment">#   before</span>
   <span class="token comment">#   last</span>
-  lobbies<span class="token punctuation">(</span><span class="token attr-name">after</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span> <span class="token attr-name">first</span><span class="token punctuation">:</span> Int<span class="token punctuation">,</span> <span class="token attr-name">before</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span> <span class="token attr-name">last</span><span class="token punctuation">:</span> Int<span class="token punctuation">)</span><span class="token punctuation">:</span> LobbyConnection 
+  lobbies<span class="token punctuation">(</span><span class="token attr-name">after</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span> <span class="token attr-name">first</span><span class="token punctuation">:</span> Int<span class="token punctuation">,</span> <span class="token attr-name">before</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span> <span class="token attr-name">last</span><span class="token punctuation">:</span> Int<span class="token punctuation">)</span><span class="token punctuation">:</span> LobbyConnection
 
-  <span class="token attr-name">location</span><span class="token punctuation">:</span> Location 
+  <span class="token attr-name">location</span><span class="token punctuation">:</span> Location
 
   <span class="token comment"># Arguments</span>
   <span class="token comment">#   id</span>
-  page<span class="token punctuation">(</span><span class="token attr-name">id</span><span class="token punctuation">:</span> ID<span class="token operator">!</span><span class="token punctuation">)</span><span class="token punctuation">:</span> Page 
+  page<span class="token punctuation">(</span><span class="token attr-name">id</span><span class="token punctuation">:</span> ID<span class="token operator">!</span><span class="token punctuation">)</span><span class="token punctuation">:</span> Page
 
   <span class="token comment"># Arguments</span>
   <span class="token comment">#   after</span>
@@ -268,76 +274,55 @@
     <span class="token attr-name">before</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span>
     <span class="token attr-name">last</span><span class="token punctuation">:</span> Int<span class="token punctuation">,</span>
     <span class="token attr-name">category</span><span class="token punctuation">:</span> String<span class="token operator">!</span>
-  <span class="token punctuation">)</span><span class="token punctuation">:</span> PageConnection 
+  <span class="token punctuation">)</span><span class="token punctuation">:</span> PageConnection
 
   <span class="token comment"># Arguments</span>
   <span class="token comment">#   id</span>
-  paymentMethod<span class="token punctuation">(</span><span class="token attr-name">id</span><span class="token punctuation">:</span> ID<span class="token operator">!</span><span class="token punctuation">)</span><span class="token punctuation">:</span> PaymentMethod 
+  paymentMethod<span class="token punctuation">(</span><span class="token attr-name">id</span><span class="token punctuation">:</span> ID<span class="token operator">!</span><span class="token punctuation">)</span><span class="token punctuation">:</span> PaymentMethod
 
   <span class="token comment"># Arguments</span>
   <span class="token comment">#   after</span>
   <span class="token comment">#   first</span>
   <span class="token comment">#   before</span>
   <span class="token comment">#   last</span>
-  <span class="token comment">#   type:   type</span>
+  <span class="token comment">#   type: The transaction type filter. Used to filter available payment</span>
+  <span class="token comment"># methods during the deposit or withdraw process.</span>
   paymentMethods<span class="token punctuation">(</span>
     <span class="token attr-name">after</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span>
     <span class="token attr-name">first</span><span class="token punctuation">:</span> Int<span class="token punctuation">,</span>
     <span class="token attr-name">before</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span>
     <span class="token attr-name">last</span><span class="token punctuation">:</span> Int<span class="token punctuation">,</span>
     <span class="token attr-name">type</span><span class="token punctuation">:</span> TransactionType<span class="token operator">!</span>
-  <span class="token punctuation">)</span><span class="token punctuation">:</span> PaymentMethodConnection 
+  <span class="token punctuation">)</span><span class="token punctuation">:</span> PaymentMethodConnection
 
   <span class="token comment"># Arguments</span>
   <span class="token comment">#   id</span>
-  <span class="token comment">#   template:   template</span>
-  <span class="token comment">#   state:   state</span>
-  <span class="token comment">#   groups:   groups</span>
-  <span class="token comment">#   jurisdiction:   jurisdiction</span>
-  promoSpace<span class="token punctuation">(</span>
-    <span class="token attr-name">id</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span>
-    <span class="token attr-name">template</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span>
-    <span class="token attr-name">state</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span>
-    <span class="token attr-name">groups</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span>
-    <span class="token attr-name">jurisdiction</span><span class="token punctuation">:</span> String
-  <span class="token punctuation">)</span><span class="token punctuation">:</span> PromoSpace <span class="token directive function">@deprecated</span><span class="token punctuation">(</span> <span class="token attr-name">reason</span><span class="token punctuation">:</span> <span class="token string">"Use `promotion(s)` query instead."</span> <span class="token punctuation">)</span>
-
-  <span class="token comment"># Arguments</span>
-  <span class="token comment">#   after</span>
-  <span class="token comment">#   first</span>
-  <span class="token comment">#   before</span>
-  <span class="token comment">#   last</span>
-  promoSpaces<span class="token punctuation">(</span>
-    <span class="token attr-name">after</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span>
-    <span class="token attr-name">first</span><span class="token punctuation">:</span> Int<span class="token punctuation">,</span>
-    <span class="token attr-name">before</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span>
-    <span class="token attr-name">last</span><span class="token punctuation">:</span> Int
-  <span class="token punctuation">)</span><span class="token punctuation">:</span> PromoSpaceConnection <span class="token directive function">@deprecated</span><span class="token punctuation">(</span> <span class="token attr-name">reason</span><span class="token punctuation">:</span> <span class="token string">"Use `promotion(s)` query instead."</span> <span class="token punctuation">)</span>
-
-  <span class="token comment"># Arguments</span>
-  <span class="token comment">#   id</span>
-  <span class="token comment">#   slug:   slug</span>
-  <span class="token comment">#   template:   template</span>
-  <span class="token comment">#   playerState:   playerState</span>
-  <span class="token comment">#   jurisdiction:   jurisdiction</span>
+  <span class="token comment">#   slug: The URL slug. Example: welcome-bonus</span>
+  <span class="token comment">#   template: The template to use for metadata. Example: cd1</span>
+  <span class="token comment">#   playerState: The player state for cache busting purposes. Example:</span>
+  <span class="token comment"># li</span>
+  <span class="token comment">#   jurisdiction: The player jurisdiction for cache busting purposes.</span>
+  <span class="token comment"># Example: mga</span>
   promotion<span class="token punctuation">(</span>
     <span class="token attr-name">id</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span>
     <span class="token attr-name">slug</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span>
     <span class="token attr-name">template</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span>
     <span class="token attr-name">playerState</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span>
     <span class="token attr-name">jurisdiction</span><span class="token punctuation">:</span> String
-  <span class="token punctuation">)</span><span class="token punctuation">:</span> Promotion 
+  <span class="token punctuation">)</span><span class="token punctuation">:</span> Promotion
 
   <span class="token comment"># Arguments</span>
   <span class="token comment">#   after</span>
   <span class="token comment">#   first</span>
   <span class="token comment">#   before</span>
   <span class="token comment">#   last</span>
-  <span class="token comment">#   template:   template</span>
-  <span class="token comment">#   slug:   slug</span>
-  <span class="token comment">#   groups:   groups</span>
-  <span class="token comment">#   playerState:   playerState</span>
-  <span class="token comment">#   jurisdiction:   jurisdiction</span>
+  <span class="token comment">#   template: The template to use for metadata. Example: cd1</span>
+  <span class="token comment">#   slug: The URL slug. Example: welcome-bonus</span>
+  <span class="token comment">#   groups: Comma separated list of player groups. Example: -1</span>
+  <span class="token comment">#   playerState: The player state for cache busting purposes. Example:</span>
+  <span class="token comment"># li</span>
+  <span class="token comment">#   jurisdiction: The player jurisdiction for cache busting purposes.</span>
+  <span class="token comment"># Example: mga</span>
   promotions<span class="token punctuation">(</span>
     <span class="token attr-name">after</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span>
     <span class="token attr-name">first</span><span class="token punctuation">:</span> Int<span class="token punctuation">,</span>
@@ -348,11 +333,11 @@
     <span class="token attr-name">groups</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span>
     <span class="token attr-name">playerState</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span>
     <span class="token attr-name">jurisdiction</span><span class="token punctuation">:</span> String
-  <span class="token punctuation">)</span><span class="token punctuation">:</span> PromotionConnection 
+  <span class="token punctuation">)</span><span class="token punctuation">:</span> PromotionConnection
 
   <span class="token comment"># Arguments</span>
-  <span class="token comment">#   slug:   slug</span>
-  qnaCategory<span class="token punctuation">(</span><span class="token attr-name">slug</span><span class="token punctuation">:</span> String<span class="token punctuation">)</span><span class="token punctuation">:</span> QnaCategory 
+  <span class="token comment">#   slug: Example: casino</span>
+  qnaCategory<span class="token punctuation">(</span><span class="token attr-name">slug</span><span class="token punctuation">:</span> String<span class="token punctuation">)</span><span class="token punctuation">:</span> QnaCategory
 
   <span class="token comment"># Arguments</span>
   <span class="token comment">#   after</span>
@@ -366,23 +351,23 @@
     <span class="token attr-name">before</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span>
     <span class="token attr-name">last</span><span class="token punctuation">:</span> Int<span class="token punctuation">,</span>
     <span class="token attr-name">section</span><span class="token punctuation">:</span> String<span class="token operator">!</span>
-  <span class="token punctuation">)</span><span class="token punctuation">:</span> QnaCategoryConnection 
+  <span class="token punctuation">)</span><span class="token punctuation">:</span> QnaCategoryConnection
 
   <span class="token comment"># Arguments</span>
   <span class="token comment">#   id</span>
   <span class="token comment">#   url</span>
-  seo<span class="token punctuation">(</span><span class="token attr-name">id</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span> <span class="token attr-name">url</span><span class="token punctuation">:</span> String<span class="token punctuation">)</span><span class="token punctuation">:</span> Seo 
+  seo<span class="token punctuation">(</span><span class="token attr-name">id</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span> <span class="token attr-name">url</span><span class="token punctuation">:</span> String<span class="token punctuation">)</span><span class="token punctuation">:</span> Seo
 
   <span class="token comment"># Arguments</span>
   <span class="token comment">#   after</span>
   <span class="token comment">#   first</span>
   <span class="token comment">#   before</span>
   <span class="token comment">#   last</span>
-  seos<span class="token punctuation">(</span><span class="token attr-name">after</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span> <span class="token attr-name">first</span><span class="token punctuation">:</span> Int<span class="token punctuation">,</span> <span class="token attr-name">before</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span> <span class="token attr-name">last</span><span class="token punctuation">:</span> Int<span class="token punctuation">)</span><span class="token punctuation">:</span> SeoConnection 
+  seos<span class="token punctuation">(</span><span class="token attr-name">after</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span> <span class="token attr-name">first</span><span class="token punctuation">:</span> Int<span class="token punctuation">,</span> <span class="token attr-name">before</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span> <span class="token attr-name">last</span><span class="token punctuation">:</span> Int<span class="token punctuation">)</span><span class="token punctuation">:</span> SeoConnection
 
   <span class="token comment"># Arguments</span>
   <span class="token comment">#   id</span>
-  sportEvent<span class="token punctuation">(</span><span class="token attr-name">id</span><span class="token punctuation">:</span> ID<span class="token operator">!</span><span class="token punctuation">)</span><span class="token punctuation">:</span> SportEvent 
+  sportEvent<span class="token punctuation">(</span><span class="token attr-name">id</span><span class="token punctuation">:</span> ID<span class="token operator">!</span><span class="token punctuation">)</span><span class="token punctuation">:</span> SportEvent
 
   <span class="token comment"># Arguments</span>
   <span class="token comment">#   after</span>
@@ -396,19 +381,19 @@
     <span class="token attr-name">before</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span>
     <span class="token attr-name">last</span><span class="token punctuation">:</span> Int<span class="token punctuation">,</span>
     <span class="token attr-name">live</span><span class="token punctuation">:</span> Boolean
-  <span class="token punctuation">)</span><span class="token punctuation">:</span> SportEventConnection 
+  <span class="token punctuation">)</span><span class="token punctuation">:</span> SportEventConnection
 
   <span class="token comment"># Arguments</span>
   <span class="token comment">#   id</span>
-  transaction<span class="token punctuation">(</span><span class="token attr-name">id</span><span class="token punctuation">:</span> ID<span class="token operator">!</span><span class="token punctuation">)</span><span class="token punctuation">:</span> Transaction 
+  transaction<span class="token punctuation">(</span><span class="token attr-name">id</span><span class="token punctuation">:</span> ID<span class="token operator">!</span><span class="token punctuation">)</span><span class="token punctuation">:</span> Transaction
 
   <span class="token comment"># Arguments</span>
   <span class="token comment">#   after</span>
   <span class="token comment">#   first</span>
   <span class="token comment">#   before</span>
   <span class="token comment">#   last</span>
-  <span class="token comment">#   from:   from</span>
-  <span class="token comment">#   to:   to</span>
+  <span class="token comment">#   from: yyyy-mm-dd formatted date: 2014-10-13</span>
+  <span class="token comment">#   to: yyyy-mm-dd formatted date: 2016-10-13</span>
   transactions<span class="token punctuation">(</span>
     <span class="token attr-name">after</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span>
     <span class="token attr-name">first</span><span class="token punctuation">:</span> Int<span class="token punctuation">,</span>
@@ -416,22 +401,22 @@
     <span class="token attr-name">last</span><span class="token punctuation">:</span> Int<span class="token punctuation">,</span>
     <span class="token attr-name">from</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span>
     <span class="token attr-name">to</span><span class="token punctuation">:</span> String
-  <span class="token punctuation">)</span><span class="token punctuation">:</span> TransactionConnection 
+  <span class="token punctuation">)</span><span class="token punctuation">:</span> TransactionConnection
 
   <span class="token comment"># Arguments</span>
   <span class="token comment">#   id</span>
-  viewer<span class="token punctuation">(</span><span class="token attr-name">id</span><span class="token punctuation">:</span> ID<span class="token operator">!</span><span class="token punctuation">)</span><span class="token punctuation">:</span> User 
+  viewer<span class="token punctuation">(</span><span class="token attr-name">id</span><span class="token punctuation">:</span> ID<span class="token operator">!</span><span class="token punctuation">)</span><span class="token punctuation">:</span> User
 
   <span class="token comment"># Arguments</span>
   <span class="token comment">#   id</span>
-  win<span class="token punctuation">(</span><span class="token attr-name">id</span><span class="token punctuation">:</span> ID<span class="token operator">!</span><span class="token punctuation">)</span><span class="token punctuation">:</span> Win 
+  win<span class="token punctuation">(</span><span class="token attr-name">id</span><span class="token punctuation">:</span> ID<span class="token operator">!</span><span class="token punctuation">)</span><span class="token punctuation">:</span> Win
 
   <span class="token comment"># Arguments</span>
   <span class="token comment">#   after</span>
   <span class="token comment">#   first</span>
   <span class="token comment">#   before</span>
   <span class="token comment">#   last</span>
-  wins<span class="token punctuation">(</span><span class="token attr-name">after</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span> <span class="token attr-name">first</span><span class="token punctuation">:</span> Int<span class="token punctuation">,</span> <span class="token attr-name">before</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span> <span class="token attr-name">last</span><span class="token punctuation">:</span> Int<span class="token punctuation">)</span><span class="token punctuation">:</span> WinConnection 
+  wins<span class="token punctuation">(</span><span class="token attr-name">after</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span> <span class="token attr-name">first</span><span class="token punctuation">:</span> Int<span class="token punctuation">,</span> <span class="token attr-name">before</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span> <span class="token attr-name">last</span><span class="token punctuation">:</span> Int<span class="token punctuation">)</span><span class="token punctuation">:</span> WinConnection
 
 <span class="token punctuation">}</span>
 </code></pre>

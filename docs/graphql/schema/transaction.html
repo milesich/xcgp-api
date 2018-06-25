@@ -3,35 +3,35 @@
 <pre><code class="hljs css languages- graphql">type Transaction implements Node <span class="token punctuation">{</span>
 
   <span class="token comment"># The ID of an object</span>
-  <span class="token attr-name">id</span><span class="token punctuation">:</span> ID<span class="token operator">!</span> 
+  <span class="token attr-name">id</span><span class="token punctuation">:</span> ID<span class="token operator">!</span>
 
-  <span class="token attr-name">action</span><span class="token punctuation">:</span> TransactionAction 
+  <span class="token attr-name">action</span><span class="token punctuation">:</span> TransactionAction
 
-  <span class="token attr-name">amount</span><span class="token punctuation">:</span> Float 
+  <span class="token attr-name">amount</span><span class="token punctuation">:</span> Float
 
-  <span class="token attr-name">cards</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>Card<span class="token punctuation">]</span> 
+  <span class="token attr-name">cards</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>Card<span class="token punctuation">]</span>
 
-  <span class="token attr-name">credentials</span><span class="token punctuation">:</span> TransactionCredentials 
+  <span class="token attr-name">credentials</span><span class="token punctuation">:</span> TransactionCredentials
 
-  <span class="token attr-name">currency</span><span class="token punctuation">:</span> String 
+  <span class="token attr-name">currency</span><span class="token punctuation">:</span> String
 
-  <span class="token attr-name">html</span><span class="token punctuation">:</span> String 
+  <span class="token attr-name">html</span><span class="token punctuation">:</span> String
 
-  <span class="token attr-name">methodId</span><span class="token punctuation">:</span> Int 
+  <span class="token attr-name">methodId</span><span class="token punctuation">:</span> Int
 
-  <span class="token attr-name">methodName</span><span class="token punctuation">:</span> String 
+  <span class="token attr-name">methodName</span><span class="token punctuation">:</span> String
 
-  <span class="token attr-name">providerId</span><span class="token punctuation">:</span> Int 
+  <span class="token attr-name">providerId</span><span class="token punctuation">:</span> Int
 
-  <span class="token attr-name">providerName</span><span class="token punctuation">:</span> String 
+  <span class="token attr-name">providerName</span><span class="token punctuation">:</span> String
 
-  <span class="token attr-name">redirectUrl</span><span class="token punctuation">:</span> String 
+  <span class="token attr-name">redirectUrl</span><span class="token punctuation">:</span> String
 
-  <span class="token attr-name">startDate</span><span class="token punctuation">:</span> String 
+  <span class="token attr-name">startDate</span><span class="token punctuation">:</span> String
 
-  <span class="token attr-name">status</span><span class="token punctuation">:</span> TransactionStatus 
+  <span class="token attr-name">status</span><span class="token punctuation">:</span> TransactionStatus
 
-  <span class="token attr-name">type</span><span class="token punctuation">:</span> String 
+  <span class="token attr-name">type</span><span class="token punctuation">:</span> TransactionType
 
 <span class="token punctuation">}</span>
 </code></pre>

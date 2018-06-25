@@ -3,37 +3,37 @@
 <pre><code class="hljs css languages- graphql">type LobbyCategoryLayoutBlock <span class="token punctuation">{</span>
 
   <span class="token comment"># The calculated left value of this block using col, margin and width.</span>
-  <span class="token attr-name">left</span><span class="token punctuation">:</span> Int<span class="token operator">!</span> 
+  <span class="token attr-name">left</span><span class="token punctuation">:</span> Int<span class="token operator">!</span>
 
   <span class="token comment"># The calculated top value of this block using row, margin and height.</span>
-  <span class="token attr-name">top</span><span class="token punctuation">:</span> Int<span class="token operator">!</span> 
+  <span class="token attr-name">top</span><span class="token punctuation">:</span> Int<span class="token operator">!</span>
 
   <span class="token comment"># The calculated width value of this block using width and sizeX.</span>
-  <span class="token attr-name">width</span><span class="token punctuation">:</span> Int<span class="token operator">!</span> 
+  <span class="token attr-name">width</span><span class="token punctuation">:</span> Int<span class="token operator">!</span>
 
   <span class="token comment"># The calculated height value of this block using height and sizeY.</span>
-  <span class="token attr-name">height</span><span class="token punctuation">:</span> Int<span class="token operator">!</span> 
+  <span class="token attr-name">height</span><span class="token punctuation">:</span> Int<span class="token operator">!</span>
 
   <span class="token comment"># Which column this block is on.</span>
-  <span class="token attr-name">col</span><span class="token punctuation">:</span> Int<span class="token operator">!</span> 
+  <span class="token attr-name">col</span><span class="token punctuation">:</span> Int<span class="token operator">!</span>
 
   <span class="token comment"># Which row this block is on.</span>
-  <span class="token attr-name">row</span><span class="token punctuation">:</span> Int<span class="token operator">!</span> 
+  <span class="token attr-name">row</span><span class="token punctuation">:</span> Int<span class="token operator">!</span>
 
   <span class="token comment"># How many columns this block takes up.</span>
-  <span class="token attr-name">sizeX</span><span class="token punctuation">:</span> Int<span class="token operator">!</span> 
+  <span class="token attr-name">sizeX</span><span class="token punctuation">:</span> Int<span class="token operator">!</span>
 
   <span class="token comment"># How many rows this block takes up.</span>
-  <span class="token attr-name">sizeY</span><span class="token punctuation">:</span> Int<span class="token operator">!</span> 
+  <span class="token attr-name">sizeY</span><span class="token punctuation">:</span> Int<span class="token operator">!</span>
 
   <span class="token comment"># Block type.</span>
-  <span class="token attr-name">type</span><span class="token punctuation">:</span> String<span class="token operator">!</span> 
+  <span class="token attr-name">type</span><span class="token punctuation">:</span> String<span class="token operator">!</span>
 
   <span class="token comment"># Game object. Always null if type != game.</span>
-  <span class="token attr-name">game</span><span class="token punctuation">:</span> Game 
+  <span class="token attr-name">game</span><span class="token punctuation">:</span> Game
 
   <span class="token comment"># List of promotions. Always null if type != promotions.</span>
-  <span class="token attr-name">promotions</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>Promotion<span class="token punctuation">]</span> 
+  <span class="token attr-name">promotions</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>Promotion<span class="token punctuation">]</span>
 
 <span class="token punctuation">}</span>
 </code></pre>

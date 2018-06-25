@@ -3,10 +3,10 @@
 <pre><code class="hljs css languages- graphql">type BonusConnection <span class="token punctuation">{</span>
 
   <span class="token comment"># Information to aid in pagination.</span>
-  <span class="token attr-name">pageInfo</span><span class="token punctuation">:</span> PageInfo<span class="token operator">!</span> 
+  <span class="token attr-name">pageInfo</span><span class="token punctuation">:</span> PageInfo<span class="token operator">!</span>
 
   <span class="token comment"># Information to aid in pagination</span>
-  <span class="token attr-name">edges</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>BonusEdge<span class="token punctuation">]</span> 
+  <span class="token attr-name">edges</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>BonusEdge<span class="token punctuation">]</span>
 
   <span class="token attr-name">count</span><span class="token punctuation">:</span> Int <span class="token directive function">@deprecated</span><span class="token punctuation">(</span> <span class="token attr-name">reason</span><span class="token punctuation">:</span> <span class="token string">"Use `totalCount` instead."</span> <span class="token punctuation">)</span>
 
@@ -14,7 +14,7 @@
   <span class="token comment"># pagination. This allows a client to fetch the first five objects by</span>
   <span class="token comment"># passing "5" as the argument to "first", then fetch the total count so</span>
   <span class="token comment"># it could display "5 of 83", for example.</span>
-  <span class="token attr-name">totalCount</span><span class="token punctuation">:</span> Int 
+  <span class="token attr-name">totalCount</span><span class="token punctuation">:</span> Int
 
   <span class="token comment"># A list of all of the objects returned in the connection. This is a</span>
   <span class="token comment"># convenience field provided for quickly exploring the API; rather than</span>
@@ -23,7 +23,7 @@
   <span class="token comment"># to fetch the "cursor" field on the edge to enable efficient</span>
   <span class="token comment"># pagination, this shortcut cannot be used, and the full "{ edges { node</span>
   <span class="token comment"># } }" version should be used instead.</span>
-  <span class="token attr-name">bonuses</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>Bonus<span class="token punctuation">]</span> 
+  <span class="token attr-name">bonuses</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>Bonus<span class="token punctuation">]</span>
 
 <span class="token punctuation">}</span>
 </code></pre>

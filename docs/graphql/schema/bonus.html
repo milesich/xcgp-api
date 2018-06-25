@@ -3,48 +3,48 @@
 <pre><code class="hljs css languages- graphql">type Bonus implements Node <span class="token punctuation">{</span>
 
   <span class="token comment"># The ID of an object</span>
-  <span class="token attr-name">id</span><span class="token punctuation">:</span> ID<span class="token operator">!</span> 
+  <span class="token attr-name">id</span><span class="token punctuation">:</span> ID<span class="token operator">!</span>
 
-  <span class="token attr-name">activatedDate</span><span class="token punctuation">:</span> String 
+  <span class="token attr-name">activatedDate</span><span class="token punctuation">:</span> String
 
-  <span class="token attr-name">activationType</span><span class="token punctuation">:</span> String 
+  <span class="token attr-name">activationType</span><span class="token punctuation">:</span> String
 
-  <span class="token attr-name">amount</span><span class="token punctuation">:</span> Float 
+  <span class="token attr-name">amount</span><span class="token punctuation">:</span> Float
 
-  <span class="token attr-name">balance</span><span class="token punctuation">:</span> Float 
+  <span class="token attr-name">balance</span><span class="token punctuation">:</span> Float
 
   <span class="token comment"># Whether this bonus can be awarded</span>
-  <span class="token attr-name">canAward</span><span class="token punctuation">:</span> Boolean 
+  <span class="token attr-name">canAward</span><span class="token punctuation">:</span> Boolean
 
   <span class="token comment"># Content provided through the backoffice</span>
-  <span class="token attr-name">description</span><span class="token punctuation">:</span> String 
+  <span class="token attr-name">description</span><span class="token punctuation">:</span> String
 
   <span class="token comment"># The date in which this bonus will expire</span>
-  <span class="token attr-name">expiryDate</span><span class="token punctuation">:</span> String 
+  <span class="token attr-name">expiryDate</span><span class="token punctuation">:</span> String
 
   <span class="token comment"># Game that is associated with this bonus</span>
-  <span class="token attr-name">game</span><span class="token punctuation">:</span> Game 
+  <span class="token attr-name">game</span><span class="token punctuation">:</span> Game
 
   <span class="token comment"># Link to an image uploaded through the backoffice</span>
-  <span class="token attr-name">image</span><span class="token punctuation">:</span> String 
+  <span class="token attr-name">image</span><span class="token punctuation">:</span> String
 
   <span class="token comment"># Example: Welcome Bonus 100%</span>
-  <span class="token attr-name">name</span><span class="token punctuation">:</span> String 
+  <span class="token attr-name">name</span><span class="token punctuation">:</span> String
 
   <span class="token comment"># Example: bonus_money</span>
-  <span class="token attr-name">reward</span><span class="token punctuation">:</span> String 
+  <span class="token attr-name">reward</span><span class="token punctuation">:</span> String
 
   <span class="token comment"># Example: available, triggered, active or claimed</span>
-  <span class="token attr-name">status</span><span class="token punctuation">:</span> String 
+  <span class="token attr-name">status</span><span class="token punctuation">:</span> String
 
   <span class="token comment"># HTML content provided through the backoffice</span>
-  <span class="token attr-name">termsAndConditions</span><span class="token punctuation">:</span> String 
+  <span class="token attr-name">termsAndConditions</span><span class="token punctuation">:</span> String
 
   <span class="token comment"># The amount the user must wager towards this bonus to claim it</span>
-  <span class="token attr-name">wagerGoal</span><span class="token punctuation">:</span> Float 
+  <span class="token attr-name">wagerGoal</span><span class="token punctuation">:</span> Float
 
   <span class="token comment"># The amount that the user has currently wagered towards this bonus</span>
-  <span class="token attr-name">wagered</span><span class="token punctuation">:</span> Float 
+  <span class="token attr-name">wagered</span><span class="token punctuation">:</span> Float
 
 <span class="token punctuation">}</span>
 </code></pre>

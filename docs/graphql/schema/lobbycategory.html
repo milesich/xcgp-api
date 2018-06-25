@@ -3,16 +3,16 @@
 <pre><code class="hljs css languages- graphql">type LobbyCategory implements Node <span class="token punctuation">{</span>
 
   <span class="token comment"># The ID of an object</span>
-  <span class="token attr-name">id</span><span class="token punctuation">:</span> ID<span class="token operator">!</span> 
+  <span class="token attr-name">id</span><span class="token punctuation">:</span> ID<span class="token operator">!</span>
 
   <span class="token comment"># The slug of the game category.</span>
-  <span class="token attr-name">slug</span><span class="token punctuation">:</span> ID<span class="token operator">!</span> 
+  <span class="token attr-name">slug</span><span class="token punctuation">:</span> ID<span class="token operator">!</span>
 
   <span class="token comment"># The name of the game category.</span>
-  <span class="token attr-name">name</span><span class="token punctuation">:</span> String<span class="token operator">!</span> 
+  <span class="token attr-name">name</span><span class="token punctuation">:</span> String<span class="token operator">!</span>
 
   <span class="token comment"># The order of the game category.</span>
-  <span class="token attr-name">order</span><span class="token punctuation">:</span> Int<span class="token operator">!</span> 
+  <span class="token attr-name">order</span><span class="token punctuation">:</span> Int<span class="token operator">!</span>
 
   <span class="token attr-name">layouts</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>LobbyCategoryLayout<span class="token punctuation">]</span> <span class="token directive function">@deprecated</span><span class="token punctuation">(</span> <span class="token attr-name">reason</span><span class="token punctuation">:</span> <span class="token string">"Use layoutConnection instead for pagination possibilities"</span> <span class="token punctuation">)</span>
 
@@ -26,7 +26,7 @@
     <span class="token attr-name">first</span><span class="token punctuation">:</span> Int<span class="token punctuation">,</span>
     <span class="token attr-name">before</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span>
     <span class="token attr-name">last</span><span class="token punctuation">:</span> Int
-  <span class="token punctuation">)</span><span class="token punctuation">:</span> LobbyCategoryLayoutConnection 
+  <span class="token punctuation">)</span><span class="token punctuation">:</span> LobbyCategoryLayoutConnection
 
 <span class="token punctuation">}</span>
 </code></pre>

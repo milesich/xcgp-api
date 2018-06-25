@@ -3,24 +3,24 @@
 <pre><code class="hljs css languages- graphql">type Achievement <span class="token punctuation">{</span>
 
   <span class="token comment"># ID of the achievement</span>
-  <span class="token attr-name">id</span><span class="token punctuation">:</span> String<span class="token operator">!</span> 
+  <span class="token attr-name">id</span><span class="token punctuation">:</span> String<span class="token operator">!</span>
 
   <span class="token comment"># Name of the achievement</span>
-  <span class="token attr-name">name</span><span class="token punctuation">:</span> String<span class="token operator">!</span> 
+  <span class="token attr-name">name</span><span class="token punctuation">:</span> String<span class="token operator">!</span>
 
   <span class="token comment"># Rule to calculate points</span>
-  <span class="token attr-name">rule</span><span class="token punctuation">:</span> String<span class="token operator">!</span> 
+  <span class="token attr-name">rule</span><span class="token punctuation">:</span> String<span class="token operator">!</span>
 
   <span class="token comment"># Date when achieved otherwise empty</span>
-  <span class="token attr-name">achievedOn</span><span class="token punctuation">:</span> String 
+  <span class="token attr-name">achievedOn</span><span class="token punctuation">:</span> String
 
-  <span class="token attr-name">progress</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>AchievementProgress<span class="token punctuation">]</span> 
+  <span class="token attr-name">progress</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>AchievementProgress<span class="token punctuation">]</span>
 
   <span class="token comment"># Percentage progress of all progresses in this achievement</span>
-  <span class="token attr-name">progressPercentage</span><span class="token punctuation">:</span> Float<span class="token operator">!</span> 
+  <span class="token attr-name">progressPercentage</span><span class="token punctuation">:</span> Float<span class="token operator">!</span>
 
   <span class="token comment"># An achievement chain Id</span>
-  <span class="token attr-name">achievementChainId</span><span class="token punctuation">:</span> String 
+  <span class="token attr-name">achievementChainId</span><span class="token punctuation">:</span> String
 
 <span class="token punctuation">}</span>
 </code></pre>
