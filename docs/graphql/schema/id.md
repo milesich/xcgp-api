@@ -14,7 +14,6 @@ scalar ID
 ```
 
 ## Required by
-* [BannerSlot](graphql/schema/bannerslot.md): A banner slot containing banners
 * [Bonus](graphql/schema/bonus.md): A bonus
 * [Card](graphql/schema/card.md): A card
 * [Document](graphql/schema/document.md): A document

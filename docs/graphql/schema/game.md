@@ -143,7 +143,6 @@ type Game implements Node {
 ```
 
 ## Required by
-* [Banner](graphql/schema/banner.md): A banner
 * [Bonus](graphql/schema/bonus.md): A bonus
 * [GameConnection](graphql/schema/gameconnection.md): A connection to a list of items.
 * [GameEdge](graphql/schema/gameedge.md): An edge in a connection

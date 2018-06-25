@@ -7,13 +7,13 @@ title: BonusType
 ## Schema definition
 ```graphql
 enum BonusType {
-  
+
   AVAILABLE
-  
+
   ACTIVE
-  
+
   CLAIMED
-  
+
   DEPOSIT
 
 }

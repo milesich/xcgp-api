@@ -17,10 +17,6 @@ scalar String
 * [AchievementChainEdge](graphql/schema/achievementchainedge.md): An edge in a connection
 * [AchievementEdge](graphql/schema/achievementedge.md): An edge in a connection
 * [AchievementProgress](graphql/schema/achievementprogress.md)
-* [Banner](graphql/schema/banner.md): A banner
-* [BannerEdge](graphql/schema/banneredge.md): An edge in a connection
-* [BannerSlot](graphql/schema/bannerslot.md): A banner slot containing banners
-* [BannerSlotEdge](graphql/schema/bannerslotedge.md): An edge in a connection
 * [Bonus](graphql/schema/bonus.md): A bonus
 * [BonusEdge](graphql/schema/bonusedge.md): An edge in a connection
 * [Card](graphql/schema/card.md): A card

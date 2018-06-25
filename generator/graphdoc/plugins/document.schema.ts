@@ -182,13 +182,16 @@ export default class SchemaPlugin extends Plugin implements PluginInterface {
 
   enum(type: SchemaType): string {
     var reduceEnumValues = (lines, enumValue) => {
-      return lines
-        .concat([''], this.description(enumValue.description), [enumValue.name + this.deprecated(enumValue)]);
+      return lines.concat(
+        [``],
+        this.description(enumValue.description),
+        [`${enumValue.name} ${this.deprecated(enumValue)}`],
+      );
     };
     return `enum ${type.name} {\n` +
       type.enumValues
         .reduce(reduceEnumValues, [])
-        .map(line => `  ${line}`)
+        .map(line => `  ${line}`.trimRight())
         .join(`\n`) +
       `\n\n}`;
   }

@@ -26,8 +26,6 @@ type PageInfo {
 ## Required by
 * [AchievementChainConnection](graphql/schema/achievementchainconnection.md): A connection to a list of items.
 * [AchievementConnection](graphql/schema/achievementconnection.md): A connection to a list of items.
-* [BannerConnection](graphql/schema/bannerconnection.md): A connection to a list of items.
-* [BannerSlotConnection](graphql/schema/bannerslotconnection.md): A connection to a list of items.
 * [BonusConnection](graphql/schema/bonusconnection.md): A connection to a list of items.
 * [CountryConnection](graphql/schema/countryconnection.md): A connection to a list of items.
 * [CurrencyConnection](graphql/schema/currencyconnection.md): A connection to a list of items.

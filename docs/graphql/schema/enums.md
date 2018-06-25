@@ -12,8 +12,8 @@ For more information, see "[Introduction to GraphQL](guides/graphql/introduction
 
 * [BonusType](graphql/schema/bonustype.md)
 * [Gender](graphql/schema/gender.md)
-* [PaymentMethodType](graphql/schema/paymentmethodtype.md)
 * [TransactionAction](graphql/schema/transactionaction.md)
 * [TransactionStatus](graphql/schema/transactionstatus.md)
+* [TransactionType](graphql/schema/transactiontype.md)
 * [__DirectiveLocation](graphql/schema/__directivelocation.md)
 * [__TypeKind](graphql/schema/__typekind.md)

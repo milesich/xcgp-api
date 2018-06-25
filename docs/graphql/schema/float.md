@@ -14,7 +14,6 @@ scalar Float
 ## Required by
 * [Achievement](graphql/schema/achievement.md): An achievement
 * [AchievementProgress](graphql/schema/achievementprogress.md)
-* [Banner](graphql/schema/banner.md): A banner
 * [Bonus](graphql/schema/bonus.md): A bonus
 * [Coordinates](graphql/schema/coordinates.md): A set of coordinates
 * [Game](graphql/schema/game.md): A game.

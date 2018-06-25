@@ -14,8 +14,6 @@ scalar Int
 * [AchievementChain](graphql/schema/achievementchain.md): An achievement chain is a group of achievements
 * [AchievementChainConnection](graphql/schema/achievementchainconnection.md): A connection to a list of items.
 * [AchievementConnection](graphql/schema/achievementconnection.md): A connection to a list of items.
-* [BannerConnection](graphql/schema/bannerconnection.md): A connection to a list of items.
-* [BannerSlotConnection](graphql/schema/bannerslotconnection.md): A connection to a list of items.
 * [BonusConnection](graphql/schema/bonusconnection.md): A connection to a list of items.
 * [Card](graphql/schema/card.md): A card
 * [Country](graphql/schema/country.md): A country

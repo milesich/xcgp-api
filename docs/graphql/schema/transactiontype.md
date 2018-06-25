@@ -1,15 +1,15 @@
 ---
-title: PaymentMethodType
+title: TransactionType
 ---
 
 
 
 ## Schema definition
 ```graphql
-enum PaymentMethodType {
-  
+enum TransactionType {
+
   DEPOSIT
-  
+
   WITHDRAW
 
 }

@@ -63,28 +63,6 @@ type Query {
 
   # Arguments
   #   id
-  banner(id: ID!): Banner 
-
-  # Arguments
-  #   after
-  #   first
-  #   before
-  #   last
-  banners(after: String, first: Int, before: String, last: Int): BannerConnection 
-
-  # Arguments
-  #   id
-  bannerSlot(id: ID!): BannerSlot 
-
-  # Arguments
-  #   after
-  #   first
-  #   before
-  #   last
-  bannerSlots(after: String, first: Int, before: String, last: Int): BannerSlotConnection 
-
-  # Arguments
-  #   id
   bonus(id: ID!): Bonus 
 
   # Arguments
@@ -292,7 +270,7 @@ type Query {
     first: Int,
     before: String,
     last: Int,
-    type: PaymentMethodType!
+    type: TransactionType!
   ): PaymentMethodConnection 
 
   # Arguments
