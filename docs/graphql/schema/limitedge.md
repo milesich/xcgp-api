@@ -9,10 +9,10 @@ An edge in a connection
 type LimitEdge {
 
   # The item at the end of the edge
-  node: Limit 
+  node: Limit
 
   # A cursor for use in pagination
-  cursor: String! 
+  cursor: String!
 
 }
 ```

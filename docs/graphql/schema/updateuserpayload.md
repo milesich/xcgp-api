@@ -8,9 +8,9 @@ title: UpdateUserPayload
 ```graphql
 type UpdateUserPayload {
 
-  validation_messages: JSON 
+  validation_messages: JSON
 
-  user: User 
+  user: User
 
 }
 ```

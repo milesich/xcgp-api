@@ -9,31 +9,31 @@ A limit
 type Limit implements Node {
 
   # The ID of an object
-  id: ID! 
+  id: ID!
 
   # The amount that this limit is set to
-  amount: String 
+  amount: String
 
   # The type of this limit. Example: deposit, session, bet, loss
-  type: String 
+  type: String
 
   # The period of this limit. Example: daily, weekly, monthly
-  period: String 
+  period: String
 
   # The minimum amount that this limit can be set to
-  min: Int 
+  min: Int
 
   # The maximum amount that this limit can be set to
-  max: Int 
+  max: Int
 
   # The intervals this limit can be updated
-  step: Int 
+  step: Int
 
   # The datetime this limit starts at
-  start: String 
+  start: String
 
   # The datetime this limit ends at
-  end: String 
+  end: String
 
 }
 ```

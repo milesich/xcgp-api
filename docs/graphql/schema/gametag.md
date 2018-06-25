@@ -9,10 +9,10 @@ A game tag that can be used to filter games
 type GameTag {
 
   # Kebab-cased tag, example: free-spins
-  tag: String 
+  tag: String
 
   # Prettified name of tag, example: Free spins
-  name: String 
+  name: String
 
 }
 ```

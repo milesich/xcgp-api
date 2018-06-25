@@ -9,10 +9,10 @@ An edge in a connection
 type CurrencyEdge {
 
   # The item at the end of the edge
-  node: Currency 
+  node: Currency
 
   # A cursor for use in pagination
-  cursor: String! 
+  cursor: String!
 
 }
 ```

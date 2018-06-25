@@ -9,135 +9,137 @@ A game.
 type Game implements Node {
 
   # The ID of an object
-  id: ID! 
+  id: ID!
 
   # The name of the game.
-  name: String! 
+  name: String!
 
   # The vendor of the game.
-  vendor: String! 
+  vendor: String!
 
   # The background of the game.
-  background: String 
+  background: String
 
   # A short description of the game.
-  description: String! 
+  description: String!
 
   # A long description of the game.
-  descriptionLong: String! 
+  descriptionLong: String!
 
   # The stakes of the game.
-  gameStakes: [String] 
+  gameStakes: [String]
 
   # If the game has a bonus or not.
-  bonus: Boolean! 
+  bonus: Boolean!
 
   # If the game has free spins or not.
-  freeSpins: Boolean! 
+  freeSpins: Boolean!
 
   # The amount of lines for this game.
-  lines: Int 
+  lines: Int
 
   # The minimum bet amount for this game.
   #
   # Arguments
-  #   currency:   currency
-  minBet(currency: String): Float 
+  #   currency: ISO 4217 Currency Code. Value changes based on currency.
+  minBet(currency: String): Float
 
   # The maximum bet amount for this game.
   #
   # Arguments
-  #   currency:   currency
-  maxBet(currency: String): Float 
+  #   currency: ISO 4217 Currency Code. Value changes based on currency.
+  maxBet(currency: String): Float
 
   # The price of a ticket to play if this is a lottery game
   #
   # Arguments
-  #   currency:   currency
-  ticketPrice(currency: String): Float 
+  #   currency: ISO 4217 Currency Code. Value changes based on currency.
+  ticketPrice(currency: String): Float
 
   # The total jackpot amount to be won if this game has one
   #
   # Arguments
-  #   currency:   currency
-  jackpot(currency: String): Float 
+  #   currency: ISO 4217 Currency Code. Value changes based on currency.
+  jackpot(currency: String): Float
 
-  nextDraw: GameNextDraw 
+  nextDraw: GameNextDraw
 
-  lastDraw: GameLastDraw 
+  lastDraw: GameLastDraw
 
   # ISO 4217 Currency Code of this game as a particular currency may be
   # enforced
-  currency: String! 
+  currency: String!
 
   # The height of the game.
-  height: Int! 
+  height: Int!
 
   # The label of the game.
-  label: String 
+  label: String
 
   # The slug of the game.
-  slug: String! 
+  slug: String!
 
   # The thumbnail of the game.
-  thumbnail: String 
+  thumbnail: String
 
   # The vendor launch properties or `null` if the game can't be launched.
   #
   # Arguments
-  #   return_url:   return_url
-  #   deposit_url:   deposit_url
-  #   history_url:   history_url
+  #   return_url: The URL where you would like the user to return to upon
+  # exiting the game
+  #   deposit_url: The URL where you would like the user to go to deposit
+  #   history_url: The URL where you would like the user to go to check
+  # the account history
   vendorProperties(
     return_url: String,
     deposit_url: String,
     history_url: String
-  ): JSON 
+  ): JSON
 
   # The width of the game.
-  width: Int! 
+  width: Int!
 
   # The creation date of the game.
-  createdAt: String! 
+  createdAt: String!
 
   # The date the game was last updated.
-  updatedAt: String! 
+  updatedAt: String!
 
   # The screenshot of the game.
-  screenshot: String 
+  screenshot: String
 
   # The homepage image of the game.
-  homepageImage: String 
+  homepageImage: String
 
   # Whether the game is enabled.
-  enabled: Boolean! 
+  enabled: Boolean!
 
   # The volatility of the game.
-  volatility: Int! 
+  volatility: Int!
 
   # The rating of the game.
-  rating: Int! 
+  rating: Int!
 
   # The backgrounds of the game.
-  backgrounds: [String] 
+  backgrounds: [String]
 
   # The screenshots of the game.
-  screenshots: [Screenshot] 
+  screenshots: [Screenshot]
 
   # The thumbnails of the game.
-  thumbnails: JSON 
+  thumbnails: JSON
 
   # The jurisdiction of the game.
-  jurisdiction: String! 
+  jurisdiction: String!
 
   # Whether the player needs to login to open the game.
-  loginRequired: Boolean! 
+  loginRequired: Boolean!
 
   # Whether the game is a mobile version or not
-  mobile: Boolean! 
+  mobile: Boolean!
 
   # A list of tags for filtering like "jackpot" or "netent"
-  tags: [String] 
+  tags: [String]
 
 }
 ```
@@ -153,5 +155,4 @@ type Game implements Node {
 * [Page](graphql/schema/page.md): A page
 * [Promotion](graphql/schema/promotion.md): A promotion
 * [Query](graphql/schema/query.md)
-* [Space](graphql/schema/space.md): A promotion
 * [Win](graphql/schema/win.md): A win

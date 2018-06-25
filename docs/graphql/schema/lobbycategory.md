@@ -9,16 +9,16 @@ A lobby category.
 type LobbyCategory implements Node {
 
   # The ID of an object
-  id: ID! 
+  id: ID!
 
   # The slug of the game category.
-  slug: ID! 
+  slug: ID!
 
   # The name of the game category.
-  name: String! 
+  name: String!
 
   # The order of the game category.
-  order: Int! 
+  order: Int!
 
   layouts: [LobbyCategoryLayout] @deprecated( reason: "Use layoutConnection instead for pagination possibilities" )
 
@@ -32,7 +32,7 @@ type LobbyCategory implements Node {
     first: Int,
     before: String,
     last: Int
-  ): LobbyCategoryLayoutConnection 
+  ): LobbyCategoryLayoutConnection
 
 }
 ```

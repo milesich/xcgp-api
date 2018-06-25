@@ -8,11 +8,11 @@ A set of sport odds for an event
 ```graphql
 type SportEventOdds {
 
-  away: Float 
+  away: Float
 
-  home: Float 
+  home: Float
 
-  draw: Float 
+  draw: Float
 
 }
 ```

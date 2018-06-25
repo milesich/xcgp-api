@@ -9,22 +9,22 @@ An achievement chain is a group of achievements
 type AchievementChain {
 
   # ID of the chain
-  id: String! 
+  id: String!
 
   # Name of the chain
-  name: String! 
+  name: String!
 
   # If chain is enabled
-  enabled: Boolean! 
+  enabled: Boolean!
 
   # Date when chain will become active
-  activationDate: String 
+  activationDate: String
 
   # Date when chain will expire
-  expiryDate: String 
+  expiryDate: String
 
   # Status of the chain
-  status: String! 
+  status: String!
 
   # Arguments
   #   after
@@ -40,7 +40,7 @@ type AchievementChain {
     last: Int,
     id: String,
     achievementChainId: String
-  ): AchievementConnection 
+  ): AchievementConnection
 
   # Arguments
   #   after
@@ -56,7 +56,7 @@ type AchievementChain {
     last: Int,
     id: String,
     achievementChainId: String
-  ): AchievementConnection 
+  ): AchievementConnection
 
 }
 ```

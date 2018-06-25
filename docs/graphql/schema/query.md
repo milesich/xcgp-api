@@ -14,12 +14,12 @@ type Query {
   # Fetches an object given its ID
   #
   # Arguments
-  #   id:   id
-  node(id: ID!): Node 
+  #   id: The ID of an object
+  node(id: ID!): Node
 
   # Arguments
   #   id
-  achievement(id: String): Achievement 
+  achievement(id: String): Achievement
 
   # Arguments
   #   after
@@ -35,21 +35,21 @@ type Query {
     last: Int,
     id: String,
     achievementChainId: String
-  ): AchievementConnection 
+  ): AchievementConnection
 
   # Arguments
   #   id
-  achievementChain(id: String): AchievementChain 
+  achievementChain(id: String): AchievementChain
 
   # Arguments
   #   after
   #   first
   #   before
   #   last
-  #   name:   name
-  #   enabled:   enabled
-  #   activationDate:   activationDate
-  #   expiryDate:   expiryDate
+  #   name: Filter by name
+  #   enabled: Filter chains by if enabled or not
+  #   activationDate: Filter by activation date
+  #   expiryDate: Filter by expiration date
   achievementChains(
     after: String,
     first: Int,
@@ -59,92 +59,96 @@ type Query {
     enabled: Boolean,
     activationDate: String,
     expiryDate: String
-  ): AchievementChainConnection 
+  ): AchievementChainConnection
 
   # Arguments
   #   id
-  bonus(id: ID!): Bonus 
+  bonus(id: ID!): Bonus
 
   # Arguments
   #   after
   #   first
   #   before
   #   last
-  #   type:   type
+  #   type: The bonus type
   bonuses(
     after: String,
     first: Int,
     before: String,
     last: Int,
     type: BonusType!
-  ): BonusConnection 
+  ): BonusConnection
 
   # Arguments
   #   after
   #   first
   #   before
   #   last
-  #   enabled:   enabled
+  #   enabled: Filter countries by if enabled or not
   countries(
     after: String,
     first: Int,
     before: String,
     last: Int,
     enabled: Boolean
-  ): CountryConnection 
+  ): CountryConnection
 
   # Arguments
   #   after
   #   first
   #   before
   #   last
-  #   enabled:   enabled
+  #   enabled: Filter currencies by if enabled or not
   currencies(
     after: String,
     first: Int,
     before: String,
     last: Int,
     enabled: Boolean
-  ): CurrencyConnection 
+  ): CurrencyConnection
 
   # Arguments
   #   id
-  document(id: ID!): Document 
+  document(id: ID!): Document
 
   # Arguments
   #   after
   #   first
   #   before
   #   last
-  documents(after: String, first: Int, before: String, last: Int): DocumentConnection 
+  documents(after: String, first: Int, before: String, last: Int): DocumentConnection
 
   # Arguments
   #   id
-  feed(id: ID!): Feed 
+  feed(id: ID!): Feed
+
+  # Look up feed entries.
+  #
+  # Arguments
+  #   after
+  #   first
+  #   before
+  #   last
+  feeds(after: String, first: Int, before: String, last: Int): FeedConnection
+
+  # Arguments
+  #   id
+  #   vendor_slug: Example: netent-starburst
+  game(id: String, vendor_slug: String): Game
 
   # Arguments
   #   after
   #   first
   #   before
   #   last
-  feeds(after: String, first: Int, before: String, last: Int): FeedConnection 
-
-  # Arguments
-  #   id
-  #   vendor_slug:   vendor_slug
-  game(id: String, vendor_slug: String): Game 
-
-  # Arguments
-  #   after
-  #   first
-  #   before
-  #   last
-  #   vendor:   vendor
-  #   enabled:   enabled
-  #   bonus:   bonus
-  #   jackpot:   jackpot
-  #   playerState:   playerState
-  #   country:   country
+  #   vendor: Example: netent
+  #   enabled: Filter games by if enabled or not
+  #   bonus: Filter games by if they have a bonus or not
+  #   jackpot: Filter games by if they have a jackpot or not
+  #   playerState: The player state as some games are only visible for
+  # logged-in players. Example: li
+  #   country: ISO 3166-1 alpha-2 country code. Some countries block
+  # games.
   games(
     after: String,
     first: Int,
@@ -156,26 +160,26 @@ type Query {
     jackpot: Boolean,
     playerState: String,
     country: String
-  ): GameConnection 
+  ): GameConnection
 
   # Arguments
   #   after
   #   first
   #   before
   #   last
-  gameTags(after: String, first: Int, before: String, last: Int): GameTagConnection 
+  gameTags(after: String, first: Int, before: String, last: Int): GameTagConnection
 
   # Arguments
   #   id
-  gameSession(id: ID!): GameSession 
+  gameSession(id: ID!): GameSession
 
   # Arguments
   #   after
   #   first
   #   before
   #   last
-  #   from:   from
-  #   to:   to
+  #   from: yyyy-mm-dd formatted date: 2014-10-13
+  #   to: yyyy-mm-dd formatted date: 2016-10-13
   gameSessions(
     after: String,
     first: Int,
@@ -183,63 +187,65 @@ type Query {
     last: Int,
     from: String,
     to: String
-  ): GameSessionConnection 
+  ): GameSessionConnection
 
   # Arguments
   #   id
-  jackpot(id: ID!): Jackpot 
+  jackpot(id: ID!): Jackpot
 
   # Arguments
   #   after
   #   first
   #   before
   #   last
-  jackpots(after: String, first: Int, before: String, last: Int): JackpotConnection 
+  jackpots(after: String, first: Int, before: String, last: Int): JackpotConnection
 
   # Arguments
   #   after
   #   first
   #   before
   #   last
-  languages(after: String, first: Int, before: String, last: Int): LanguageConnection 
+  languages(after: String, first: Int, before: String, last: Int): LanguageConnection
 
   # Arguments
   #   id
-  limit(id: ID!): Limit 
+  limit(id: ID!): Limit
 
   # Arguments
   #   after
   #   first
   #   before
   #   last
-  limits(after: String, first: Int, before: String, last: Int): LimitConnection 
+  limits(after: String, first: Int, before: String, last: Int): LimitConnection
 
   # Arguments
   #   id
-  #   slug:   slug
-  #   playerState:   playerState
-  #   groups:   groups
-  #   country:   country
+  #   slug: Example: casinov2
+  #   playerState: The player state as some games are only visible for
+  # logged-in players. Example: li
+  #   groups: Comma separated list of player groups. Example: -1
+  #   country: ISO 3166-1 alpha-2 country code. Some countries block
+  # games.
   lobby(
     id: String,
     slug: String,
     playerState: String,
     groups: String,
     country: String
-  ): Lobby 
+  ): Lobby
 
   # Arguments
   #   after
   #   first
   #   before
   #   last
-  lobbies(after: String, first: Int, before: String, last: Int): LobbyConnection 
+  lobbies(after: String, first: Int, before: String, last: Int): LobbyConnection
 
-  location: Location 
+  location: Location
 
   # Arguments
   #   id
-  page(id: ID!): Page 
+  page(id: ID!): Page
 
   # Arguments
   #   after
@@ -253,76 +259,55 @@ type Query {
     before: String,
     last: Int,
     category: String!
-  ): PageConnection 
+  ): PageConnection
 
   # Arguments
   #   id
-  paymentMethod(id: ID!): PaymentMethod 
+  paymentMethod(id: ID!): PaymentMethod
 
   # Arguments
   #   after
   #   first
   #   before
   #   last
-  #   type:   type
+  #   type: The transaction type filter. Used to filter available payment
+  # methods during the deposit or withdraw process.
   paymentMethods(
     after: String,
     first: Int,
     before: String,
     last: Int,
     type: TransactionType!
-  ): PaymentMethodConnection 
+  ): PaymentMethodConnection
 
   # Arguments
   #   id
-  #   template:   template
-  #   state:   state
-  #   groups:   groups
-  #   jurisdiction:   jurisdiction
-  promoSpace(
-    id: String,
-    template: String,
-    state: String,
-    groups: String,
-    jurisdiction: String
-  ): PromoSpace @deprecated( reason: "Use `promotion(s)` query instead." )
-
-  # Arguments
-  #   after
-  #   first
-  #   before
-  #   last
-  promoSpaces(
-    after: String,
-    first: Int,
-    before: String,
-    last: Int
-  ): PromoSpaceConnection @deprecated( reason: "Use `promotion(s)` query instead." )
-
-  # Arguments
-  #   id
-  #   slug:   slug
-  #   template:   template
-  #   playerState:   playerState
-  #   jurisdiction:   jurisdiction
+  #   slug: The URL slug. Example: welcome-bonus
+  #   template: The template to use for metadata. Example: cd1
+  #   playerState: The player state for cache busting purposes. Example:
+  # li
+  #   jurisdiction: The player jurisdiction for cache busting purposes.
+  # Example: mga
   promotion(
     id: String,
     slug: String,
     template: String,
     playerState: String,
     jurisdiction: String
-  ): Promotion 
+  ): Promotion
 
   # Arguments
   #   after
   #   first
   #   before
   #   last
-  #   template:   template
-  #   slug:   slug
-  #   groups:   groups
-  #   playerState:   playerState
-  #   jurisdiction:   jurisdiction
+  #   template: The template to use for metadata. Example: cd1
+  #   slug: The URL slug. Example: welcome-bonus
+  #   groups: Comma separated list of player groups. Example: -1
+  #   playerState: The player state for cache busting purposes. Example:
+  # li
+  #   jurisdiction: The player jurisdiction for cache busting purposes.
+  # Example: mga
   promotions(
     after: String,
     first: Int,
@@ -333,11 +318,11 @@ type Query {
     groups: String,
     playerState: String,
     jurisdiction: String
-  ): PromotionConnection 
+  ): PromotionConnection
 
   # Arguments
-  #   slug:   slug
-  qnaCategory(slug: String): QnaCategory 
+  #   slug: Example: casino
+  qnaCategory(slug: String): QnaCategory
 
   # Arguments
   #   after
@@ -351,23 +336,23 @@ type Query {
     before: String,
     last: Int,
     section: String!
-  ): QnaCategoryConnection 
+  ): QnaCategoryConnection
 
   # Arguments
   #   id
   #   url
-  seo(id: String, url: String): Seo 
+  seo(id: String, url: String): Seo
 
   # Arguments
   #   after
   #   first
   #   before
   #   last
-  seos(after: String, first: Int, before: String, last: Int): SeoConnection 
+  seos(after: String, first: Int, before: String, last: Int): SeoConnection
 
   # Arguments
   #   id
-  sportEvent(id: ID!): SportEvent 
+  sportEvent(id: ID!): SportEvent
 
   # Arguments
   #   after
@@ -381,19 +366,19 @@ type Query {
     before: String,
     last: Int,
     live: Boolean
-  ): SportEventConnection 
+  ): SportEventConnection
 
   # Arguments
   #   id
-  transaction(id: ID!): Transaction 
+  transaction(id: ID!): Transaction
 
   # Arguments
   #   after
   #   first
   #   before
   #   last
-  #   from:   from
-  #   to:   to
+  #   from: yyyy-mm-dd formatted date: 2014-10-13
+  #   to: yyyy-mm-dd formatted date: 2016-10-13
   transactions(
     after: String,
     first: Int,
@@ -401,22 +386,22 @@ type Query {
     last: Int,
     from: String,
     to: String
-  ): TransactionConnection 
+  ): TransactionConnection
 
   # Arguments
   #   id
-  viewer(id: ID!): User 
+  viewer(id: ID!): User
 
   # Arguments
   #   id
-  win(id: ID!): Win 
+  win(id: ID!): Win
 
   # Arguments
   #   after
   #   first
   #   before
   #   last
-  wins(after: String, first: Int, before: String, last: Int): WinConnection 
+  wins(after: String, first: Int, before: String, last: Int): WinConnection
 
 }
 ```

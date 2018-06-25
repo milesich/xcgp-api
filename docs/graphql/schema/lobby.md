@@ -9,16 +9,16 @@ A lobby containing game categories.
 type Lobby implements Node {
 
   # The ID of an object
-  id: ID! 
+  id: ID!
 
   # The name of the lobby.
-  name: String! 
+  name: String!
 
   # The slug of the lobby.
-  slug: ID! 
+  slug: ID!
 
   # Games
-  games: [Game] 
+  games: [Game]
 
   # Arguments
   #   after
@@ -32,7 +32,7 @@ type Lobby implements Node {
     before: String,
     last: Int,
     slug: String
-  ): LobbyCategoryConnection 
+  ): LobbyCategoryConnection
 
 }
 ```

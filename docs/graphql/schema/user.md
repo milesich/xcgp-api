@@ -9,62 +9,62 @@ A user
 type User implements Node {
 
   # The ID of an object
-  id: ID! 
+  id: ID!
 
-  acceptedTerms: Boolean 
+  acceptedTerms: Boolean
 
-  address: String 
+  address: String
 
-  affiliateCode: String 
+  affiliateCode: String
 
-  backendSession: String 
+  backendSession: String
 
-  birthday: String 
+  birthday: String
 
-  city: String 
+  city: String
 
   # ISO 3166-1 alpha-2 country code. Example: GB
-  country: String 
+  country: String
 
   # ISO 4217 Currency Code. Example: GBP or EUR
-  currency: String 
+  currency: String
 
   # Whether or not the user has deposited before
-  deposited: Boolean 
+  deposited: Boolean
 
-  email: String 
+  email: String
 
-  externalTrackingTag: String 
+  externalTrackingTag: String
 
-  firstName: String 
+  firstName: String
 
-  gender: Gender! 
+  gender: Gender!
 
   # Example: mga
-  jurisdiction: String 
+  jurisdiction: String
 
   # ISO 639-1 Language code. Example: en
-  language: String 
+  language: String
 
-  lastName: String 
+  lastName: String
 
-  mobileCode: Int 
+  mobileCode: Int
 
-  mobileNumber: String 
+  mobileNumber: String
 
-  nickname: String 
+  nickname: String
 
-  password: String 
+  password: String
 
-  phone: String 
+  phone: String
 
-  postcode: String 
+  postcode: String
 
-  receiveNews: Boolean 
+  receiveNews: Boolean
 
-  receiveSms: Boolean 
+  receiveSms: Boolean
 
-  receiveSnail: Boolean 
+  receiveSnail: Boolean
 
 }
 ```

@@ -8,11 +8,11 @@ Meta tag for a search engine optimisation definition
 ```graphql
 type SeoMetaTag {
 
-  type: String 
+  type: String
 
-  name: String 
+  name: String
 
-  content: String 
+  content: String
 
 }
 ```

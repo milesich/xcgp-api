@@ -10,13 +10,13 @@ In some cases, you need to provide options to alter GraphQL's execution behavior
 ```graphql
 type __Directive {
 
-  name: String! 
+  name: String!
 
-  description: String 
+  description: String
 
-  locations: [__DirectiveLocation!]! 
+  locations: [__DirectiveLocation!]!
 
-  args: [__InputValue!]! 
+  args: [__InputValue!]!
 
   onOperation: Boolean! @deprecated( reason: "Use `locations`." )
 

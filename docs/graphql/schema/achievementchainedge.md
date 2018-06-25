@@ -9,10 +9,10 @@ An edge in a connection
 type AchievementChainEdge {
 
   # The item at the end of the edge
-  node: AchievementChain 
+  node: AchievementChain
 
   # A cursor for use in pagination
-  cursor: String! 
+  cursor: String!
 
 }
 ```

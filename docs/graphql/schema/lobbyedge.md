@@ -9,10 +9,10 @@ An edge in a connection
 type LobbyEdge {
 
   # The item at the end of the edge
-  node: Lobby 
+  node: Lobby
 
   # A cursor for use in pagination
-  cursor: String! 
+  cursor: String!
 
 }
 ```

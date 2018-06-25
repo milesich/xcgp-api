@@ -21,7 +21,6 @@ scalar Boolean
 * [PageInfo](graphql/schema/pageinfo.md): Information about pagination in a connection.
 * [Promotion](graphql/schema/promotion.md): A promotion
 * [Query](graphql/schema/query.md)
-* [Space](graphql/schema/space.md): A promotion
 * [UpdateUserInput](graphql/schema/updateuserinput.md): Input for updating a user
 * [User](graphql/schema/user.md): A user
 * [__Directive](graphql/schema/__directive.md): A Directive provides a way to describe alternate runtime execution and type validation behavior in a GraphQL document.

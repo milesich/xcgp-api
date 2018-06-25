@@ -2,26 +2,32 @@
 title: Feed
 ---
 
-A feed item
+An entry from an external RSS or Atom feed.
 
 ## Schema definition
 ```graphql
 type Feed implements Node {
 
   # The ID of an object
-  id: ID! 
+  id: ID!
 
-  title: String 
+  # The title.
+  title: String
 
-  feed: String 
+  # The original URL for the source feed.
+  feed: String
 
-  link: String 
+  # The link to the external feed entry.
+  link: String
 
-  content: String 
+  # The original HTML content.
+  content: String
 
-  dateModified: String 
+  # The timestamp of the last modification.
+  dateModified: String
 
-  authors: [FeedAuthor] 
+  # The list of authors.
+  authors: [FeedAuthor]
 
 }
 ```

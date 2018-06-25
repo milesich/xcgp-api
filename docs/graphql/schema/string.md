@@ -27,8 +27,8 @@ scalar String
 * [CurrencyEdge](graphql/schema/currencyedge.md): An edge in a connection
 * [Document](graphql/schema/document.md): A document
 * [DocumentEdge](graphql/schema/documentedge.md): An edge in a connection
-* [Feed](graphql/schema/feed.md): A feed item
-* [FeedAuthor](graphql/schema/feedauthor.md): The author of a feed
+* [Feed](graphql/schema/feed.md): An entry from an external RSS or Atom feed.
+* [FeedAuthor](graphql/schema/feedauthor.md): The author of a feed entry.
 * [FeedEdge](graphql/schema/feededge.md): An edge in a connection
 * [Game](graphql/schema/game.md): A game.
 * [GameEdge](graphql/schema/gameedge.md): An edge in a connection
@@ -58,9 +58,7 @@ scalar String
 * [PageInfo](graphql/schema/pageinfo.md): Information about pagination in a connection.
 * [PaymentMethod](graphql/schema/paymentmethod.md): A payment method
 * [PaymentMethodEdge](graphql/schema/paymentmethodedge.md): An edge in a connection
-* [PromoSpace](graphql/schema/promospace.md): A promo space
 * [PromoSpaceButton](graphql/schema/promospacebutton.md): A promo space button
-* [PromoSpaceEdge](graphql/schema/promospaceedge.md): An edge in a connection
 * [Promotion](graphql/schema/promotion.md): A promotion
 * [PromotionEdge](graphql/schema/promotionedge.md): An edge in a connection
 * [QnaCategory](graphql/schema/qnacategory.md): A category of question and answers
@@ -72,8 +70,6 @@ scalar String
 * [SeoEdge](graphql/schema/seoedge.md): An edge in a connection
 * [SeoLink](graphql/schema/seolink.md): Link for a search engine optimisation definition
 * [SeoMetaTag](graphql/schema/seometatag.md): Meta tag for a search engine optimisation definition
-* [Space](graphql/schema/space.md): A promotion
-* [SpaceEdge](graphql/schema/spaceedge.md): An edge in a connection
 * [SportEvent](graphql/schema/sportevent.md): A sport event
 * [SportEventEdge](graphql/schema/sporteventedge.md): An edge in a connection
 * [SportEventParticipant](graphql/schema/sporteventparticipant.md): A sport event participant

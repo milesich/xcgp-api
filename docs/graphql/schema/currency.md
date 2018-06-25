@@ -9,17 +9,17 @@ A currency
 type Currency {
 
   # ISO 4217 Currency Code. Example: GBP or EUR
-  code: String 
+  code: String
 
   # Symbol to represent this currency. Example £ for British Pounds
-  symbol: String 
+  symbol: String
 
   # If this currency is enabled
-  enabled: Boolean 
+  enabled: Boolean
 
   # An example of a phone number from this country. Example: 9696 1234 for
   # Malta
-  defaultDepositAmounts: [Int] 
+  defaultDepositAmounts: [Int]
 
 }
 ```

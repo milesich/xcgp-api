@@ -9,10 +9,10 @@ An edge in a connection
 type LanguageEdge {
 
   # The item at the end of the edge
-  node: Language 
+  node: Language
 
   # A cursor for use in pagination
-  cursor: String! 
+  cursor: String!
 
 }
 ```

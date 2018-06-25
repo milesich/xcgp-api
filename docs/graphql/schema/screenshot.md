@@ -9,10 +9,10 @@ A game screenshot.
 type Screenshot {
 
   # The game large screenshot.
-  lg: String! 
+  lg: String!
 
   # The game small screenshot.
-  sm: String! 
+  sm: String!
 
 }
 ```

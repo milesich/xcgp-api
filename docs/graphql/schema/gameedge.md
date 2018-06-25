@@ -9,10 +9,10 @@ An edge in a connection
 type GameEdge {
 
   # The item at the end of the edge
-  node: Game 
+  node: Game
 
   # A cursor for use in pagination
-  cursor: String! 
+  cursor: String!
 
 }
 ```

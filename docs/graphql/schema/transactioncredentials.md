@@ -8,9 +8,9 @@ The credentials for a transaction
 ```graphql
 type TransactionCredentials {
 
-  username: String 
+  username: String
 
-  password: String 
+  password: String
 
 }
 ```

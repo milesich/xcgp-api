@@ -9,21 +9,21 @@ A game session
 type GameSession implements Node {
 
   # The ID of an object
-  id: ID! 
+  id: ID!
 
-  amount: Float 
+  amount: Float
 
-  amountAfter: Float 
+  amountAfter: Float
 
-  bet: Float 
+  bet: Float
 
-  endDate: String 
+  endDate: String
 
-  startDate: String 
+  startDate: String
 
-  win: Float 
+  win: Float
 
-  game: Game 
+  game: Game
 
 }
 ```

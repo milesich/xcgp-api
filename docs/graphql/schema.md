@@ -2,22 +2,10 @@
 title: Schema
 ---
 
-The API exposes a number of resources that can be queried and/or manipulated. These resources can be categorized as content like banners or SEO metadata and transactional like bonuses or payment transactions.
+The API exposes a number of resources that can be queried and/or manipulated. These resources can be categorized as content like pages or SEO metadata and transactional like bonuses or payment transactions.
 
 ## CMS Schema
 All the CMS resources can be managed in the back-office under the Content menu.
-
-### Banners
-Banners are simple resources that only really have an image and can be set with different user states. So for the same banner space there could be images for a logged out user or logged in user for instance.
-
-* banner
-* banners
-
-### Feeds
-Feeds are basically a mirror from external RSS/Atom feeds. A use case would be if you already manage some content in an external blog and want to replicate it in some way in the casino.
-
-* feed
-* feeds
 
 ### Pages
 Pages are arbitrary content resembling blog articles where a hero image, short description and long description can be provided. Some use cases for it would be a news section, articles/blog section, or user success stories, or any other general content.
@@ -42,67 +30,3 @@ SEO is just simple metadata that can be configured per URL and currently support
 
 * seo
 * seos
-
-## Platform Schema
-All the platform resources can be managed under the other menus in the back-office such as Players, Payments or Casino.
-
-### Achievements
-* achievement
-* achievements
-* achievementChain
-* achievementChains
-
-### Bonuses
-* bonus
-* bonuses
-
-### Settings
-* countries
-* currencies
-* languages
-* location
-
-### Documents
-* document
-* documents
-
-### Games
-* game
-* games
-
-### Game Sessions
-* gameSession
-* gameSessions
-
-### Jackpots
-* jackpot
-* jackpots
-
-### Limits
-* limit
-* limits
-
-### Lobbies
-* lobby
-* lobbies
-
-### Payment Methods
-* paymentMethod
-* paymentMethods
-
-### Sport Events
-* sportEvent
-* sportEvents
-
-### Transactions
-* transaction
-* transactions
-
-### Wins
-* win
-* wins
-
-### Users
-* viewer
-* createUser
-* updateUser

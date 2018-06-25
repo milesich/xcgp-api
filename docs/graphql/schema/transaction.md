@@ -9,35 +9,35 @@ A transaction
 type Transaction implements Node {
 
   # The ID of an object
-  id: ID! 
+  id: ID!
 
-  action: TransactionAction 
+  action: TransactionAction
 
-  amount: Float 
+  amount: Float
 
-  cards: [Card] 
+  cards: [Card]
 
-  credentials: TransactionCredentials 
+  credentials: TransactionCredentials
 
-  currency: String 
+  currency: String
 
-  html: String 
+  html: String
 
-  methodId: Int 
+  methodId: Int
 
-  methodName: String 
+  methodName: String
 
-  providerId: Int 
+  providerId: Int
 
-  providerName: String 
+  providerName: String
 
-  redirectUrl: String 
+  redirectUrl: String
 
-  startDate: String 
+  startDate: String
 
-  status: TransactionStatus 
+  status: TransactionStatus
 
-  type: String 
+  type: TransactionType
 
 }
 ```

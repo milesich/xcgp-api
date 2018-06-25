@@ -8,9 +8,9 @@ title: LocationCountry
 ```graphql
 type LocationCountry {
 
-  code: String 
+  code: String
 
-  name: String 
+  name: String
 
 }
 ```

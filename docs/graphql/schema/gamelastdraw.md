@@ -8,11 +8,11 @@ title: GameLastDraw
 ```graphql
 type GameLastDraw {
 
-  date: String 
+  date: String
 
-  jackpot: Float 
+  jackpot: Float
 
-  numbers: [Float] 
+  numbers: [Float]
 
 }
 ```

@@ -9,20 +9,20 @@ A language
 type Language {
 
   # Dial code for this country. Example: 44 for United Kingdom
-  code: String 
+  code: String
 
   # Country code. Example: gb for United Kingdom
-  text: String 
+  text: String
 
   # Country name
-  currency: String 
+  currency: String
 
   # An example of a phone number from this country. Example: 9696 1234 for
   # Malta
-  supportSkill: String 
+  supportSkill: String
 
   # Code for country flag.
-  supportSurveyName: String 
+  supportSurveyName: String
 
 }
 ```

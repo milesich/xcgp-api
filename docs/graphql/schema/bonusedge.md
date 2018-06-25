@@ -9,10 +9,10 @@ An edge in a connection
 type BonusEdge {
 
   # The item at the end of the edge
-  node: Bonus 
+  node: Bonus
 
   # A cursor for use in pagination
-  cursor: String! 
+  cursor: String!
 
 }
 ```

@@ -9,10 +9,10 @@ A connection to a list of items.
 type WinConnection {
 
   # Information to aid in pagination.
-  pageInfo: PageInfo! 
+  pageInfo: PageInfo!
 
   # Information to aid in pagination
-  edges: [WinEdge] 
+  edges: [WinEdge]
 
   count: Int @deprecated( reason: "Use `totalCount` instead." )
 
@@ -20,7 +20,7 @@ type WinConnection {
   # pagination. This allows a client to fetch the first five objects by
   # passing "5" as the argument to "first", then fetch the total count so
   # it could display "5 of 83", for example.
-  totalCount: Int 
+  totalCount: Int
 
   # A list of all of the objects returned in the connection. This is a
   # convenience field provided for quickly exploring the API; rather than
@@ -29,7 +29,7 @@ type WinConnection {
   # to fetch the "cursor" field on the edge to enable efficient
   # pagination, this shortcut cannot be used, and the full "{ edges { node
   # } }" version should be used instead.
-  wins: [Win] 
+  wins: [Win]
 
 }
 ```

@@ -8,17 +8,17 @@ Object and Interface types are described by a list of Fields, each of which has 
 ```graphql
 type __Field {
 
-  name: String! 
+  name: String!
 
-  description: String 
+  description: String
 
-  args: [__InputValue!]! 
+  args: [__InputValue!]!
 
-  type: __Type! 
+  type: __Type!
 
-  isDeprecated: Boolean! 
+  isDeprecated: Boolean!
 
-  deprecationReason: String 
+  deprecationReason: String
 
 }
 ```

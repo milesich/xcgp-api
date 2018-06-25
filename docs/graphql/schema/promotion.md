@@ -9,55 +9,55 @@ A promotion
 type Promotion implements Node {
 
   # The ID of an object
-  id: ID! 
+  id: ID!
 
   # The template used for hydration. Useful for debugging.
-  template: String 
+  template: String
 
   # The internal name. Useful for debugging.
-  name: String 
+  name: String
 
   # The URL slug. Unique per locale.
-  slug: String 
+  slug: String
 
-  activeFrom: String 
+  activeFrom: String
 
-  expiresAt: String 
+  expiresAt: String
 
   # Example: casino
-  category: String 
+  category: String
 
   # Image URL of the category if category is custom.
-  categoryImage: String 
+  categoryImage: String
 
   # Banner URL for static image
-  bannerStatic: String 
+  bannerStatic: String
 
   # Banner URL for HTML5 banner page
-  bannerHtml5: String 
+  bannerHtml5: String
 
   # Small bar on top left corner; ribbon
-  badge: String 
+  badge: String
 
   # Background color
-  backgroundColor: String 
+  backgroundColor: String
 
   # Game
-  game: Game 
+  game: Game
 
   # Display jackpot
-  showJackpot: Boolean 
+  showJackpot: Boolean
 
   # Display countdown
-  showCountdown: Boolean 
+  showCountdown: Boolean
 
-  titles: [String] 
+  titles: [String]
 
-  descriptions: [String] 
+  descriptions: [String]
 
-  buttons: [PromoSpaceButton] 
+  buttons: [PromoSpaceButton]
 
-  links: [PromoSpaceButton] 
+  links: [PromoSpaceButton]
 
 }
 ```

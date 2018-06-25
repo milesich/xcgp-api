@@ -10,27 +10,27 @@ Depending on the kind of a type, certain fields describe information about that 
 ```graphql
 type __Type {
 
-  kind: __TypeKind! 
+  kind: __TypeKind!
 
-  name: String 
+  name: String
 
-  description: String 
-
-  # Arguments
-  #   includeDeprecated
-  fields(includeDeprecated: Boolean): [__Field!] 
-
-  interfaces: [__Type!] 
-
-  possibleTypes: [__Type!] 
+  description: String
 
   # Arguments
   #   includeDeprecated
-  enumValues(includeDeprecated: Boolean): [__EnumValue!] 
+  fields(includeDeprecated: Boolean): [__Field!]
 
-  inputFields: [__InputValue!] 
+  interfaces: [__Type!]
 
-  ofType: __Type 
+  possibleTypes: [__Type!]
+
+  # Arguments
+  #   includeDeprecated
+  enumValues(includeDeprecated: Boolean): [__EnumValue!]
+
+  inputFields: [__InputValue!]
+
+  ofType: __Type
 
 }
 ```

@@ -9,54 +9,54 @@ A payment method
 type PaymentMethod implements Node {
 
   # The ID of an object
-  id: ID! 
+  id: ID!
 
   # The maximum fee for a deposit
-  depositCap: Float 
+  depositCap: Float
 
   # A fixed fee for this deopsit
-  depositFixed: Float 
+  depositFixed: Float
 
   # A percentage fee for this deposit
-  depositPercent: Float 
+  depositPercent: Float
 
   # The foreign exchange rate for this payment method
-  fxRate: Float 
+  fxRate: Float
 
   # The last amount deposited with this method
-  lastAmount: Float 
+  lastAmount: Float
 
   # The maximum amount for a transaction with this method
-  maxAmount: Float 
+  maxAmount: Float
 
   # The minimum amount for a transaction with this method
-  minAmount: Float 
+  minAmount: Float
 
   # Name of this payment method
-  name: String 
+  name: String
 
-  previousCards: String 
+  previousCards: String
 
   # ID of the payment provider for this method
-  providerId: String 
+  providerId: String
 
   # Name of the payment provider for this method
-  providerName: String 
+  providerName: String
 
   # The maximum fee for a withdrawal
-  withdrawCap: Float 
+  withdrawCap: Float
 
   # A fixed fee for this withdrawal
-  withdrawFixed: Float 
+  withdrawFixed: Float
 
   # A percentage fee for this withdrawal
-  withdrawPercent: Float 
+  withdrawPercent: Float
 
   # The default amount for deposit
-  defaultDepositAmount: Int 
+  defaultDepositAmount: Int
 
   # List of predefined deposit amounts
-  quickDepositOptions: [Int] 
+  quickDepositOptions: [Int]
 
 }
 ```

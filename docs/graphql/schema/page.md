@@ -9,31 +9,31 @@ A page
 type Page implements Node {
 
   # The ID of an object
-  id: ID! 
+  id: ID!
 
-  category: String 
+  category: String
 
-  content: String 
+  content: String
 
-  date: String 
+  date: String
 
-  description: String 
+  description: String
 
-  game: Game 
+  game: Game
 
-  image: String 
+  image: String
 
-  imagePosition: String 
+  imagePosition: String
 
-  slug: String 
+  slug: String
 
-  subCategory: String 
+  subCategory: String
 
-  title: String 
+  title: String
 
-  popup: Boolean 
+  popup: Boolean
 
-  popouts: Boolean 
+  popouts: Boolean
 
 }
 ```

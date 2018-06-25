@@ -8,9 +8,9 @@ Link for a search engine optimisation definition
 ```graphql
 type SeoLink {
 
-  rel: String 
+  rel: String
 
-  href: String 
+  href: String
 
 }
 ```

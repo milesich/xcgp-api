@@ -9,29 +9,29 @@ A card
 type Card implements Node {
 
   # The ID of an object
-  id: ID! 
+  id: ID!
 
-  name: String 
+  name: String
 
-  number: String 
+  number: String
 
-  expiryDate: String 
+  expiryDate: String
 
-  ccv: String 
+  ccv: String
 
-  active: Boolean 
+  active: Boolean
 
-  createdAt: String 
+  createdAt: String
 
-  deposits: Int 
+  deposits: Int
 
-  firstSixDigits: String 
+  firstSixDigits: String
 
-  lastFourDigits: String 
+  lastFourDigits: String
 
-  type: String 
+  type: String
 
-  verified: Boolean 
+  verified: Boolean
 
 }
 ```

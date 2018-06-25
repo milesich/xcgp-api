@@ -9,10 +9,10 @@ An edge in a connection
 type PageEdge {
 
   # The item at the end of the edge
-  node: Page 
+  node: Page
 
   # A cursor for use in pagination
-  cursor: String! 
+  cursor: String!
 
 }
 ```

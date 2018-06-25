@@ -9,48 +9,48 @@ A bonus
 type Bonus implements Node {
 
   # The ID of an object
-  id: ID! 
+  id: ID!
 
-  activatedDate: String 
+  activatedDate: String
 
-  activationType: String 
+  activationType: String
 
-  amount: Float 
+  amount: Float
 
-  balance: Float 
+  balance: Float
 
   # Whether this bonus can be awarded
-  canAward: Boolean 
+  canAward: Boolean
 
   # Content provided through the backoffice
-  description: String 
+  description: String
 
   # The date in which this bonus will expire
-  expiryDate: String 
+  expiryDate: String
 
   # Game that is associated with this bonus
-  game: Game 
+  game: Game
 
   # Link to an image uploaded through the backoffice
-  image: String 
+  image: String
 
   # Example: Welcome Bonus 100%
-  name: String 
+  name: String
 
   # Example: bonus_money
-  reward: String 
+  reward: String
 
   # Example: available, triggered, active or claimed
-  status: String 
+  status: String
 
   # HTML content provided through the backoffice
-  termsAndConditions: String 
+  termsAndConditions: String
 
   # The amount the user must wager towards this bonus to claim it
-  wagerGoal: Float 
+  wagerGoal: Float
 
   # The amount that the user has currently wagered towards this bonus
-  wagered: Float 
+  wagered: Float
 
 }
 ```

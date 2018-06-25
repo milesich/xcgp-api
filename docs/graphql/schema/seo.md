@@ -9,19 +9,19 @@ A search engine optimisation definition
 type Seo implements Node {
 
   # The ID of an object
-  id: ID! 
+  id: ID!
 
-  url: String 
+  url: String
 
-  title: String 
+  title: String
 
-  device: String 
+  device: String
 
-  updatedAt: String 
+  updatedAt: String
 
-  metaTags: [SeoMetaTag] 
+  metaTags: [SeoMetaTag]
 
-  links: [SeoLink] 
+  links: [SeoLink]
 
 }
 ```

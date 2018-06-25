@@ -13,11 +13,11 @@ type Mutation {
 
   # Arguments
   #   input
-  createUser(input: CreateUserInput): CreateUserPayload 
+  createUser(input: CreateUserInput): CreateUserPayload
 
   # Arguments
   #   input
-  updateUser(input: UpdateUserInput): UpdateUserPayload 
+  updateUser(input: UpdateUserInput): UpdateUserPayload
 
 }
 ```

@@ -9,10 +9,10 @@ An edge in a connection
 type GameSessionEdge {
 
   # The item at the end of the edge
-  node: GameSession 
+  node: GameSession
 
   # A cursor for use in pagination
-  cursor: String! 
+  cursor: String!
 
 }
 ```

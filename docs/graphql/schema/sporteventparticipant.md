@@ -8,9 +8,9 @@ A sport event participant
 ```graphql
 type SportEventParticipant {
 
-  name: String 
+  name: String
 
-  score: Float 
+  score: Float
 
 }
 ```

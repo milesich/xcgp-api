@@ -8,13 +8,13 @@ One possible value for a given Enum. Enum values are unique values, not a placeh
 ```graphql
 type __EnumValue {
 
-  name: String! 
+  name: String!
 
-  description: String 
+  description: String
 
-  isDeprecated: Boolean! 
+  isDeprecated: Boolean!
 
-  deprecationReason: String 
+  deprecationReason: String
 
 }
 ```

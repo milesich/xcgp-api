@@ -9,10 +9,10 @@ An edge in a connection
 type PromotionEdge {
 
   # The item at the end of the edge
-  node: Promotion 
+  node: Promotion
 
   # A cursor for use in pagination
-  cursor: String! 
+  cursor: String!
 
 }
 ```

@@ -8,15 +8,15 @@ Arguments provided to Fields or Directives and the input fields of an InputObjec
 ```graphql
 type __InputValue {
 
-  name: String! 
+  name: String!
 
-  description: String 
+  description: String
 
-  type: __Type! 
+  type: __Type!
 
   # A GraphQL-formatted string representing the default value for this
   # input value.
-  defaultValue: String 
+  defaultValue: String
 
 }
 ```

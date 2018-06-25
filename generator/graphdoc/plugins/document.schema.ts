@@ -124,7 +124,7 @@ export default class SchemaPlugin extends Plugin implements PluginInterface {
   argumentDescription(arg: InputValue): string[] {
     let desc = `  ${arg.name}`;
     if (arg.description) {
-      desc += `: ${desc}`;
+      desc += `: ${arg.description}`;
     }
     return this.description(desc);
   }
@@ -222,7 +222,7 @@ export default class SchemaPlugin extends Plugin implements PluginInterface {
       .concat(fieldDescription)
       .concat(argumentsDescription)
       .concat(fieldDefinition)
-      .map(line => `  ${line}`)
+      .map(line => `  ${line}`.trimRight())
       .join(`\n`);
   }
 

@@ -8,9 +8,9 @@ A set of coordinates
 ```graphql
 type Coordinates {
 
-  latitude: Float 
+  latitude: Float
 
-  longitude: Float 
+  longitude: Float
 
 }
 ```

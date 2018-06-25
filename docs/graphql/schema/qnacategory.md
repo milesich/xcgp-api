@@ -9,13 +9,13 @@ A category of question and answers
 type QnaCategory implements Node {
 
   # The ID of an object
-  id: ID! 
+  id: ID!
 
-  name: String 
+  name: String
 
-  slug: String 
+  slug: String
 
-  content: [QnaContent] 
+  content: [QnaContent]
 
 }
 ```

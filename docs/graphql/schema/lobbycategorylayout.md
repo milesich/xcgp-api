@@ -8,30 +8,30 @@ Layout for a lobby category.
 ```graphql
 type LobbyCategoryLayout {
 
-  id: ID! 
+  id: ID!
 
   # The name of this layout.
-  name: String! 
+  name: String!
 
   # The height of each block within this layout.
-  blockHeight: Int! 
+  blockHeight: Int!
 
   # The margin of each block within this layout.
-  blockMargin: Int! 
+  blockMargin: Int!
 
   # The width of each block within this layout.
-  blockWidth: Int! 
+  blockWidth: Int!
 
   # The calculated width of the layout.
-  width: Int! 
+  width: Int!
 
   # The calculated height of the layout.
-  height: Int! 
+  height: Int!
 
   # If the layout is inline or not (used for floating)
-  inline: Boolean! 
+  inline: Boolean!
 
-  blocks: [LobbyCategoryLayoutBlock] 
+  blocks: [LobbyCategoryLayoutBlock]
 
 }
 ```

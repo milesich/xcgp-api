@@ -9,24 +9,24 @@ An achievement
 type Achievement {
 
   # ID of the achievement
-  id: String! 
+  id: String!
 
   # Name of the achievement
-  name: String! 
+  name: String!
 
   # Rule to calculate points
-  rule: String! 
+  rule: String!
 
   # Date when achieved otherwise empty
-  achievedOn: String 
+  achievedOn: String
 
-  progress: [AchievementProgress] 
+  progress: [AchievementProgress]
 
   # Percentage progress of all progresses in this achievement
-  progressPercentage: Float! 
+  progressPercentage: Float!
 
   # An achievement chain Id
-  achievementChainId: String 
+  achievementChainId: String
 
 }
 ```

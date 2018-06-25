@@ -9,10 +9,10 @@ An edge in a connection
 type JackpotEdge {
 
   # The item at the end of the edge
-  node: Jackpot 
+  node: Jackpot
 
   # A cursor for use in pagination
-  cursor: String! 
+  cursor: String!
 
 }
 ```

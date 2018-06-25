@@ -9,10 +9,10 @@ An edge in a connection
 type CountryEdge {
 
   # The item at the end of the edge
-  node: Country 
+  node: Country
 
   # A cursor for use in pagination
-  cursor: String! 
+  cursor: String!
 
 }
 ```

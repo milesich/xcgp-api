@@ -9,10 +9,10 @@ An edge in a connection
 type WinEdge {
 
   # The item at the end of the edge
-  node: Win 
+  node: Win
 
   # A cursor for use in pagination
-  cursor: String! 
+  cursor: String!
 
 }
 ```

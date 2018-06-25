@@ -9,10 +9,10 @@ An edge in a connection
 type FeedEdge {
 
   # The item at the end of the edge
-  node: Feed 
+  node: Feed
 
   # A cursor for use in pagination
-  cursor: String! 
+  cursor: String!
 
 }
 ```

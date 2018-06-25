@@ -9,10 +9,10 @@ An edge in a connection
 type SportEventEdge {
 
   # The item at the end of the edge
-  node: SportEvent 
+  node: SportEvent
 
   # A cursor for use in pagination
-  cursor: String! 
+  cursor: String!
 
 }
 ```

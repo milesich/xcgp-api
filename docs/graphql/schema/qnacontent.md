@@ -8,11 +8,11 @@ The content for a question and answer
 ```graphql
 type QnaContent {
 
-  question: String 
+  question: String
 
-  answer: String 
+  answer: String
 
-  image: String 
+  image: String
 
 }
 ```

@@ -9,29 +9,29 @@ A country
 type Country {
 
   # Dial code for this country. Example: 44 for United Kingdom
-  dialCode: String 
+  dialCode: String
 
   # Country code. Example: gb for United Kingdom
-  code: String 
+  code: String
 
   # Country name
-  name: String 
+  name: String
 
   # An example of a phone number from this country. Example: 9696 1234 for
   # Malta
-  examplePhone: String 
+  examplePhone: String
 
   # Code for country flag.
-  flag: String 
+  flag: String
 
   # Default currency for this country.
-  currency: String 
+  currency: String
 
   # Minimum age for a player to register from this country.
-  minimumAge: Int 
+  minimumAge: Int
 
   # If this country is allowed to make a registration
-  enabled: Boolean 
+  enabled: Boolean
 
 }
 ```

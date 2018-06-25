@@ -8,9 +8,9 @@ title: GameNextDraw
 ```graphql
 type GameNextDraw {
 
-  date: String 
+  date: String
 
-  jackpot: Float 
+  jackpot: Float
 
 }
 ```

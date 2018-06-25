@@ -41,13 +41,10 @@ scalar Int
 * [PageConnection](graphql/schema/pageconnection.md): A connection to a list of items.
 * [PaymentMethod](graphql/schema/paymentmethod.md): A payment method
 * [PaymentMethodConnection](graphql/schema/paymentmethodconnection.md): A connection to a list of items.
-* [PromoSpace](graphql/schema/promospace.md): A promo space
-* [PromoSpaceConnection](graphql/schema/promospaceconnection.md): A connection to a list of items.
 * [PromotionConnection](graphql/schema/promotionconnection.md): A connection to a list of items.
 * [QnaCategoryConnection](graphql/schema/qnacategoryconnection.md): A connection to a list of items.
 * [Query](graphql/schema/query.md)
 * [SeoConnection](graphql/schema/seoconnection.md): A connection to a list of items.
-* [SpaceConnection](graphql/schema/spaceconnection.md): A connection to a list of items.
 * [SportEventConnection](graphql/schema/sporteventconnection.md): A connection to a list of items.
 * [Transaction](graphql/schema/transaction.md): A transaction
 * [TransactionConnection](graphql/schema/transactionconnection.md): A connection to a list of items.

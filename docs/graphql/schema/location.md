@@ -8,12 +8,12 @@ A location
 ```graphql
 type Location {
 
-  coords: Coordinates 
+  coords: Coordinates
 
-  country: LocationCountry 
+  country: LocationCountry
 
   # The detected jurisdiction based on origin
-  jurisdiction: String 
+  jurisdiction: String
 
 }
 ```

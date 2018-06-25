@@ -9,10 +9,10 @@ An edge in a connection
 type TransactionEdge {
 
   # The item at the end of the edge
-  node: Transaction 
+  node: Transaction
 
   # A cursor for use in pagination
-  cursor: String! 
+  cursor: String!
 
 }
 ```

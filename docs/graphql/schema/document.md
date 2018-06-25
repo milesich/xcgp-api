@@ -9,19 +9,19 @@ A document
 type Document implements Node {
 
   # The ID of an object
-  id: ID! 
+  id: ID!
 
-  extension: String 
+  extension: String
 
-  name: String 
+  name: String
 
-  status: String 
+  status: String
 
-  type: String 
+  type: String
 
-  dateAdded: String 
+  dateAdded: String
 
-  dateUpdated: String 
+  dateUpdated: String
 
 }
 ```

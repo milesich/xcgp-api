@@ -8,9 +8,9 @@ title: CreateUserPayload
 ```graphql
 type CreateUserPayload {
 
-  validation_messages: JSON 
+  validation_messages: JSON
 
-  user: User 
+  user: User
 
 }
 ```

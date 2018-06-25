@@ -9,37 +9,37 @@ Block of games for a category layout
 type LobbyCategoryLayoutBlock {
 
   # The calculated left value of this block using col, margin and width.
-  left: Int! 
+  left: Int!
 
   # The calculated top value of this block using row, margin and height.
-  top: Int! 
+  top: Int!
 
   # The calculated width value of this block using width and sizeX.
-  width: Int! 
+  width: Int!
 
   # The calculated height value of this block using height and sizeY.
-  height: Int! 
+  height: Int!
 
   # Which column this block is on.
-  col: Int! 
+  col: Int!
 
   # Which row this block is on.
-  row: Int! 
+  row: Int!
 
   # How many columns this block takes up.
-  sizeX: Int! 
+  sizeX: Int!
 
   # How many rows this block takes up.
-  sizeY: Int! 
+  sizeY: Int!
 
   # Block type.
-  type: String! 
+  type: String!
 
   # Game object. Always null if type != game.
-  game: Game 
+  game: Game
 
   # List of promotions. Always null if type != promotions.
-  promotions: [Promotion] 
+  promotions: [Promotion]
 
 }
 ```

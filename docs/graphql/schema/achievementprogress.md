@@ -9,16 +9,16 @@ title: AchievementProgress
 type AchievementProgress {
 
   # Name of the point type
-  name: String! 
+  name: String!
 
   # Code of the point type
-  code: String! 
+  code: String!
 
   # Maximum points to achieve this achievement
-  limit: Float! 
+  limit: Float!
 
   # Current achieved points
-  current: Float! 
+  current: Float!
 
 }
 ```

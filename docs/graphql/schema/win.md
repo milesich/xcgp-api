@@ -8,13 +8,13 @@ A win
 ```graphql
 type Win {
 
-  amount: Float 
+  amount: Float
 
-  currency: String 
+  currency: String
 
-  game: Game 
+  game: Game
 
-  user: User 
+  user: User
 
 }
 ```

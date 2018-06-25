@@ -9,19 +9,19 @@ A sport event
 type SportEvent implements Node {
 
   # The ID of an object
-  id: ID! 
+  id: ID!
 
-  branch: String 
+  branch: String
 
-  league: String 
+  league: String
 
-  odds: SportEventOdds 
+  odds: SportEventOdds
 
-  participants: [SportEventParticipant] 
+  participants: [SportEventParticipant]
 
-  startsAt: String 
+  startsAt: String
 
-  timeInGame: String 
+  timeInGame: String
 
 }
 ```

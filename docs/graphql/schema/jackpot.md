@@ -8,11 +8,11 @@ A jackpot
 ```graphql
 type Jackpot {
 
-  amount: Float 
+  amount: Float
 
-  currency: String 
+  currency: String
 
-  game: Game 
+  game: Game
 
 }
 ```

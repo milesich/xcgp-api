@@ -9,16 +9,16 @@ Information about pagination in a connection.
 type PageInfo {
 
   # When paginating forwards, are there more items?
-  hasNextPage: Boolean! 
+  hasNextPage: Boolean!
 
   # When paginating backwards, are there more items?
-  hasPreviousPage: Boolean! 
+  hasPreviousPage: Boolean!
 
   # When paginating backwards, the cursor to continue.
-  startCursor: String 
+  startCursor: String
 
   # When paginating forwards, the cursor to continue.
-  endCursor: String 
+  endCursor: String
 
 }
 ```
@@ -42,11 +42,9 @@ type PageInfo {
 * [LobbyConnection](graphql/schema/lobbyconnection.md): A connection to a list of items.
 * [PageConnection](graphql/schema/pageconnection.md): A connection to a list of items.
 * [PaymentMethodConnection](graphql/schema/paymentmethodconnection.md): A connection to a list of items.
-* [PromoSpaceConnection](graphql/schema/promospaceconnection.md): A connection to a list of items.
 * [PromotionConnection](graphql/schema/promotionconnection.md): A connection to a list of items.
 * [QnaCategoryConnection](graphql/schema/qnacategoryconnection.md): A connection to a list of items.
 * [SeoConnection](graphql/schema/seoconnection.md): A connection to a list of items.
-* [SpaceConnection](graphql/schema/spaceconnection.md): A connection to a list of items.
 * [SportEventConnection](graphql/schema/sporteventconnection.md): A connection to a list of items.
 * [TransactionConnection](graphql/schema/transactionconnection.md): A connection to a list of items.
 * [WinConnection](graphql/schema/winconnection.md): A connection to a list of items.
