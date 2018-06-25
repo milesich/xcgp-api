@@ -29,7 +29,7 @@ XCaliber chose GraphQL because it offers significantly more flexibility for our 
 The docs in the menu are generated from the XCaliber Gaming Platform GraphQL [schema](guides/graphql/introduction.md#discovering-the-graphql-api). All calls are validated and executed against the schema. Use these docs to find out what data you can call:
 
 * Allowed operators: [queries](graphql/schema/query.md) and [mutations](graphql/schema/mutation.md).
-* Schema-defined types: [scalars](graphql/scalars.md), [objects](graphql/schema/objects.md), [enums](TODO), [interfaces](graphql/schema/interfaces.md), [unions](TODO), and [input objects](TODO).
+* Schema-defined types: [scalars](graphql/scalars.md), [objects](graphql/schema/objects.md), [enums](graphql/schema/enums.md), [interfaces](graphql/schema/interfaces.md), [unions](TODO), and [input objects](TODO).
 
 You can access this same content via the [Explorer](guides/graphql/explorer.md). Note that you may need to rely on both the docs and the schema validation to successfully call the GraphQL API.
 

@@ -131,7 +131,7 @@ export class GraphQLDocumentor extends Command<Flags, Params> {
         projectPackageJSON.graphdoc.template
       );
       // Render extra pages
-      const extraPages = ['schema', 'objects', 'interfaces'];
+      const extraPages = ['schema', 'objects', 'interfaces', 'enums'];
       for (const page of extraPages) {
         output.info('render', page);
         await this.renderFile(

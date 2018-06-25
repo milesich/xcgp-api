@@ -17,6 +17,7 @@
       "graphql/schema/mutation",
       "graphql/schema/objects",
       "graphql/schema/interfaces",
+      "graphql/schema/enums",
       "graphql/scalars"
     ]
   },
