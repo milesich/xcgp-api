@@ -420,9 +420,302 @@
 
 <span class="token punctuation">}</span>
 </code></pre>
+<h2><a class="anchor" aria-hidden="true" id="connections"></a><a href="#connections" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Connections</h2>
+<p><strong>achievements (<a href="/xcgp-api/docs/graphql/schema/achievementconnection.html"><code>AchievementConnection</code></a>)</strong></p>
+<table>
+<thead>
+<tr><th>Argument</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code>after</code></td><td><a href="/xcgp-api/docs/graphql/schema/string.html"><code>String</code></a></td><td>-</td></tr>
+<tr><td><code>first</code></td><td><a href="/xcgp-api/docs/graphql/schema/int.html"><code>Int</code></a></td><td>-</td></tr>
+<tr><td><code>before</code></td><td><a href="/xcgp-api/docs/graphql/schema/string.html"><code>String</code></a></td><td>-</td></tr>
+<tr><td><code>last</code></td><td><a href="/xcgp-api/docs/graphql/schema/int.html"><code>Int</code></a></td><td>-</td></tr>
+<tr><td><code>id</code></td><td><a href="/xcgp-api/docs/graphql/schema/string.html"><code>String</code></a></td><td>-</td></tr>
+<tr><td><code>achievementChainId</code></td><td><a href="/xcgp-api/docs/graphql/schema/string.html"><code>String</code></a></td><td>-</td></tr>
+</tbody>
+</table>
+<p><strong>achievementChains (<a href="/xcgp-api/docs/graphql/schema/achievementchainconnection.html"><code>AchievementChainConnection</code></a>)</strong></p>
+<table>
+<thead>
+<tr><th>Argument</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code>after</code></td><td><a href="/xcgp-api/docs/graphql/schema/string.html"><code>String</code></a></td><td>-</td></tr>
+<tr><td><code>first</code></td><td><a href="/xcgp-api/docs/graphql/schema/int.html"><code>Int</code></a></td><td>-</td></tr>
+<tr><td><code>before</code></td><td><a href="/xcgp-api/docs/graphql/schema/string.html"><code>String</code></a></td><td>-</td></tr>
+<tr><td><code>last</code></td><td><a href="/xcgp-api/docs/graphql/schema/int.html"><code>Int</code></a></td><td>-</td></tr>
+<tr><td><code>name</code></td><td><a href="/xcgp-api/docs/graphql/schema/string.html"><code>String</code></a></td><td>Filter by name</td></tr>
+<tr><td><code>enabled</code></td><td><a href="/xcgp-api/docs/graphql/schema/boolean.html"><code>Boolean</code></a></td><td>Filter chains by if enabled or not</td></tr>
+<tr><td><code>activationDate</code></td><td><a href="/xcgp-api/docs/graphql/schema/string.html"><code>String</code></a></td><td>Filter by activation date</td></tr>
+<tr><td><code>expiryDate</code></td><td><a href="/xcgp-api/docs/graphql/schema/string.html"><code>String</code></a></td><td>Filter by expiration date</td></tr>
+</tbody>
+</table>
+<p><strong>bonuses (<a href="/xcgp-api/docs/graphql/schema/bonusconnection.html"><code>BonusConnection</code></a>)</strong></p>
+<table>
+<thead>
+<tr><th>Argument</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code>after</code></td><td><a href="/xcgp-api/docs/graphql/schema/string.html"><code>String</code></a></td><td>-</td></tr>
+<tr><td><code>first</code></td><td><a href="/xcgp-api/docs/graphql/schema/int.html"><code>Int</code></a></td><td>-</td></tr>
+<tr><td><code>before</code></td><td><a href="/xcgp-api/docs/graphql/schema/string.html"><code>String</code></a></td><td>-</td></tr>
+<tr><td><code>last</code></td><td><a href="/xcgp-api/docs/graphql/schema/int.html"><code>Int</code></a></td><td>-</td></tr>
+<tr><td><code>type</code></td><td><a href="/xcgp-api/docs/graphql/schema/bonustype.html"><code>BonusType</code></a>!</td><td>The bonus type</td></tr>
+</tbody>
+</table>
+<p><strong>countries (<a href="/xcgp-api/docs/graphql/schema/countryconnection.html"><code>CountryConnection</code></a>)</strong></p>
+<table>
+<thead>
+<tr><th>Argument</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code>after</code></td><td><a href="/xcgp-api/docs/graphql/schema/string.html"><code>String</code></a></td><td>-</td></tr>
+<tr><td><code>first</code></td><td><a href="/xcgp-api/docs/graphql/schema/int.html"><code>Int</code></a></td><td>-</td></tr>
+<tr><td><code>before</code></td><td><a href="/xcgp-api/docs/graphql/schema/string.html"><code>String</code></a></td><td>-</td></tr>
+<tr><td><code>last</code></td><td><a href="/xcgp-api/docs/graphql/schema/int.html"><code>Int</code></a></td><td>-</td></tr>
+<tr><td><code>enabled</code></td><td><a href="/xcgp-api/docs/graphql/schema/boolean.html"><code>Boolean</code></a></td><td>Filter countries by if enabled or not</td></tr>
+</tbody>
+</table>
+<p><strong>currencies (<a href="/xcgp-api/docs/graphql/schema/currencyconnection.html"><code>CurrencyConnection</code></a>)</strong></p>
+<table>
+<thead>
+<tr><th>Argument</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code>after</code></td><td><a href="/xcgp-api/docs/graphql/schema/string.html"><code>String</code></a></td><td>-</td></tr>
+<tr><td><code>first</code></td><td><a href="/xcgp-api/docs/graphql/schema/int.html"><code>Int</code></a></td><td>-</td></tr>
+<tr><td><code>before</code></td><td><a href="/xcgp-api/docs/graphql/schema/string.html"><code>String</code></a></td><td>-</td></tr>
+<tr><td><code>last</code></td><td><a href="/xcgp-api/docs/graphql/schema/int.html"><code>Int</code></a></td><td>-</td></tr>
+<tr><td><code>enabled</code></td><td><a href="/xcgp-api/docs/graphql/schema/boolean.html"><code>Boolean</code></a></td><td>Filter currencies by if enabled or not</td></tr>
+</tbody>
+</table>
+<p><strong>documents (<a href="/xcgp-api/docs/graphql/schema/documentconnection.html"><code>DocumentConnection</code></a>)</strong></p>
+<table>
+<thead>
+<tr><th>Argument</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code>after</code></td><td><a href="/xcgp-api/docs/graphql/schema/string.html"><code>String</code></a></td><td>-</td></tr>
+<tr><td><code>first</code></td><td><a href="/xcgp-api/docs/graphql/schema/int.html"><code>Int</code></a></td><td>-</td></tr>
+<tr><td><code>before</code></td><td><a href="/xcgp-api/docs/graphql/schema/string.html"><code>String</code></a></td><td>-</td></tr>
+<tr><td><code>last</code></td><td><a href="/xcgp-api/docs/graphql/schema/int.html"><code>Int</code></a></td><td>-</td></tr>
+</tbody>
+</table>
+<p><strong>feeds (<a href="/xcgp-api/docs/graphql/schema/feedconnection.html"><code>FeedConnection</code></a>)</strong></p>
+<table>
+<thead>
+<tr><th>Look up feed entries.Argument</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code>after</code></td><td><a href="/xcgp-api/docs/graphql/schema/string.html"><code>String</code></a></td><td>-</td></tr>
+<tr><td><code>first</code></td><td><a href="/xcgp-api/docs/graphql/schema/int.html"><code>Int</code></a></td><td>-</td></tr>
+<tr><td><code>before</code></td><td><a href="/xcgp-api/docs/graphql/schema/string.html"><code>String</code></a></td><td>-</td></tr>
+<tr><td><code>last</code></td><td><a href="/xcgp-api/docs/graphql/schema/int.html"><code>Int</code></a></td><td>-</td></tr>
+</tbody>
+</table>
+<p><strong>games (<a href="/xcgp-api/docs/graphql/schema/gameconnection.html"><code>GameConnection</code></a>)</strong></p>
+<table>
+<thead>
+<tr><th>Argument</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code>after</code></td><td><a href="/xcgp-api/docs/graphql/schema/string.html"><code>String</code></a></td><td>-</td></tr>
+<tr><td><code>first</code></td><td><a href="/xcgp-api/docs/graphql/schema/int.html"><code>Int</code></a></td><td>-</td></tr>
+<tr><td><code>before</code></td><td><a href="/xcgp-api/docs/graphql/schema/string.html"><code>String</code></a></td><td>-</td></tr>
+<tr><td><code>last</code></td><td><a href="/xcgp-api/docs/graphql/schema/int.html"><code>Int</code></a></td><td>-</td></tr>
+<tr><td><code>vendor</code></td><td><a href="/xcgp-api/docs/graphql/schema/string.html"><code>String</code></a></td><td>Example: netent</td></tr>
+<tr><td><code>enabled</code></td><td><a href="/xcgp-api/docs/graphql/schema/boolean.html"><code>Boolean</code></a></td><td>Filter games by if enabled or not</td></tr>
+<tr><td><code>bonus</code></td><td><a href="/xcgp-api/docs/graphql/schema/boolean.html"><code>Boolean</code></a></td><td>Filter games by if they have a bonus or not</td></tr>
+<tr><td><code>jackpot</code></td><td><a href="/xcgp-api/docs/graphql/schema/boolean.html"><code>Boolean</code></a></td><td>Filter games by if they have a jackpot or not</td></tr>
+<tr><td><code>playerState</code></td><td><a href="/xcgp-api/docs/graphql/schema/string.html"><code>String</code></a></td><td>The player state as some games are only visible for logged-in players. Example: li</td></tr>
+<tr><td><code>country</code></td><td><a href="/xcgp-api/docs/graphql/schema/string.html"><code>String</code></a></td><td>ISO 3166-1 alpha-2 country code. Some countries block games.</td></tr>
+</tbody>
+</table>
+<p><strong>gameTags (<a href="/xcgp-api/docs/graphql/schema/gametagconnection.html"><code>GameTagConnection</code></a>)</strong></p>
+<table>
+<thead>
+<tr><th>Argument</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code>after</code></td><td><a href="/xcgp-api/docs/graphql/schema/string.html"><code>String</code></a></td><td>-</td></tr>
+<tr><td><code>first</code></td><td><a href="/xcgp-api/docs/graphql/schema/int.html"><code>Int</code></a></td><td>-</td></tr>
+<tr><td><code>before</code></td><td><a href="/xcgp-api/docs/graphql/schema/string.html"><code>String</code></a></td><td>-</td></tr>
+<tr><td><code>last</code></td><td><a href="/xcgp-api/docs/graphql/schema/int.html"><code>Int</code></a></td><td>-</td></tr>
+</tbody>
+</table>
+<p><strong>gameSessions (<a href="/xcgp-api/docs/graphql/schema/gamesessionconnection.html"><code>GameSessionConnection</code></a>)</strong></p>
+<table>
+<thead>
+<tr><th>Argument</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code>after</code></td><td><a href="/xcgp-api/docs/graphql/schema/string.html"><code>String</code></a></td><td>-</td></tr>
+<tr><td><code>first</code></td><td><a href="/xcgp-api/docs/graphql/schema/int.html"><code>Int</code></a></td><td>-</td></tr>
+<tr><td><code>before</code></td><td><a href="/xcgp-api/docs/graphql/schema/string.html"><code>String</code></a></td><td>-</td></tr>
+<tr><td><code>last</code></td><td><a href="/xcgp-api/docs/graphql/schema/int.html"><code>Int</code></a></td><td>-</td></tr>
+<tr><td><code>from</code></td><td><a href="/xcgp-api/docs/graphql/schema/string.html"><code>String</code></a></td><td>yyyy-mm-dd formatted date: 2014-10-13</td></tr>
+<tr><td><code>to</code></td><td><a href="/xcgp-api/docs/graphql/schema/string.html"><code>String</code></a></td><td>yyyy-mm-dd formatted date: 2016-10-13</td></tr>
+</tbody>
+</table>
+<p><strong>jackpots (<a href="/xcgp-api/docs/graphql/schema/jackpotconnection.html"><code>JackpotConnection</code></a>)</strong></p>
+<table>
+<thead>
+<tr><th>Argument</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code>after</code></td><td><a href="/xcgp-api/docs/graphql/schema/string.html"><code>String</code></a></td><td>-</td></tr>
+<tr><td><code>first</code></td><td><a href="/xcgp-api/docs/graphql/schema/int.html"><code>Int</code></a></td><td>-</td></tr>
+<tr><td><code>before</code></td><td><a href="/xcgp-api/docs/graphql/schema/string.html"><code>String</code></a></td><td>-</td></tr>
+<tr><td><code>last</code></td><td><a href="/xcgp-api/docs/graphql/schema/int.html"><code>Int</code></a></td><td>-</td></tr>
+</tbody>
+</table>
+<p><strong>languages (<a href="/xcgp-api/docs/graphql/schema/languageconnection.html"><code>LanguageConnection</code></a>)</strong></p>
+<table>
+<thead>
+<tr><th>Argument</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code>after</code></td><td><a href="/xcgp-api/docs/graphql/schema/string.html"><code>String</code></a></td><td>-</td></tr>
+<tr><td><code>first</code></td><td><a href="/xcgp-api/docs/graphql/schema/int.html"><code>Int</code></a></td><td>-</td></tr>
+<tr><td><code>before</code></td><td><a href="/xcgp-api/docs/graphql/schema/string.html"><code>String</code></a></td><td>-</td></tr>
+<tr><td><code>last</code></td><td><a href="/xcgp-api/docs/graphql/schema/int.html"><code>Int</code></a></td><td>-</td></tr>
+</tbody>
+</table>
+<p><strong>limits (<a href="/xcgp-api/docs/graphql/schema/limitconnection.html"><code>LimitConnection</code></a>)</strong></p>
+<table>
+<thead>
+<tr><th>Argument</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code>after</code></td><td><a href="/xcgp-api/docs/graphql/schema/string.html"><code>String</code></a></td><td>-</td></tr>
+<tr><td><code>first</code></td><td><a href="/xcgp-api/docs/graphql/schema/int.html"><code>Int</code></a></td><td>-</td></tr>
+<tr><td><code>before</code></td><td><a href="/xcgp-api/docs/graphql/schema/string.html"><code>String</code></a></td><td>-</td></tr>
+<tr><td><code>last</code></td><td><a href="/xcgp-api/docs/graphql/schema/int.html"><code>Int</code></a></td><td>-</td></tr>
+</tbody>
+</table>
+<p><strong>lobbies (<a href="/xcgp-api/docs/graphql/schema/lobbyconnection.html"><code>LobbyConnection</code></a>)</strong></p>
+<table>
+<thead>
+<tr><th>Argument</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code>after</code></td><td><a href="/xcgp-api/docs/graphql/schema/string.html"><code>String</code></a></td><td>-</td></tr>
+<tr><td><code>first</code></td><td><a href="/xcgp-api/docs/graphql/schema/int.html"><code>Int</code></a></td><td>-</td></tr>
+<tr><td><code>before</code></td><td><a href="/xcgp-api/docs/graphql/schema/string.html"><code>String</code></a></td><td>-</td></tr>
+<tr><td><code>last</code></td><td><a href="/xcgp-api/docs/graphql/schema/int.html"><code>Int</code></a></td><td>-</td></tr>
+</tbody>
+</table>
+<p><strong>pages (<a href="/xcgp-api/docs/graphql/schema/pageconnection.html"><code>PageConnection</code></a>)</strong></p>
+<table>
+<thead>
+<tr><th>Argument</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code>after</code></td><td><a href="/xcgp-api/docs/graphql/schema/string.html"><code>String</code></a></td><td>-</td></tr>
+<tr><td><code>first</code></td><td><a href="/xcgp-api/docs/graphql/schema/int.html"><code>Int</code></a></td><td>-</td></tr>
+<tr><td><code>before</code></td><td><a href="/xcgp-api/docs/graphql/schema/string.html"><code>String</code></a></td><td>-</td></tr>
+<tr><td><code>last</code></td><td><a href="/xcgp-api/docs/graphql/schema/int.html"><code>Int</code></a></td><td>-</td></tr>
+<tr><td><code>category</code></td><td><a href="/xcgp-api/docs/graphql/schema/string.html"><code>String</code></a>!</td><td>-</td></tr>
+</tbody>
+</table>
+<p><strong>paymentMethods (<a href="/xcgp-api/docs/graphql/schema/paymentmethodconnection.html"><code>PaymentMethodConnection</code></a>)</strong></p>
+<table>
+<thead>
+<tr><th>Argument</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code>after</code></td><td><a href="/xcgp-api/docs/graphql/schema/string.html"><code>String</code></a></td><td>-</td></tr>
+<tr><td><code>first</code></td><td><a href="/xcgp-api/docs/graphql/schema/int.html"><code>Int</code></a></td><td>-</td></tr>
+<tr><td><code>before</code></td><td><a href="/xcgp-api/docs/graphql/schema/string.html"><code>String</code></a></td><td>-</td></tr>
+<tr><td><code>last</code></td><td><a href="/xcgp-api/docs/graphql/schema/int.html"><code>Int</code></a></td><td>-</td></tr>
+<tr><td><code>type</code></td><td><a href="/xcgp-api/docs/graphql/schema/transactiontype.html"><code>TransactionType</code></a>!</td><td>The transaction type filter. Used to filter available payment methods during the deposit or withdraw process.</td></tr>
+</tbody>
+</table>
+<p><strong>promotions (<a href="/xcgp-api/docs/graphql/schema/promotionconnection.html"><code>PromotionConnection</code></a>)</strong></p>
+<table>
+<thead>
+<tr><th>Argument</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code>after</code></td><td><a href="/xcgp-api/docs/graphql/schema/string.html"><code>String</code></a></td><td>-</td></tr>
+<tr><td><code>first</code></td><td><a href="/xcgp-api/docs/graphql/schema/int.html"><code>Int</code></a></td><td>-</td></tr>
+<tr><td><code>before</code></td><td><a href="/xcgp-api/docs/graphql/schema/string.html"><code>String</code></a></td><td>-</td></tr>
+<tr><td><code>last</code></td><td><a href="/xcgp-api/docs/graphql/schema/int.html"><code>Int</code></a></td><td>-</td></tr>
+<tr><td><code>template</code></td><td><a href="/xcgp-api/docs/graphql/schema/string.html"><code>String</code></a></td><td>The template to use for metadata. Example: cd1</td></tr>
+<tr><td><code>slug</code></td><td><a href="/xcgp-api/docs/graphql/schema/string.html"><code>String</code></a></td><td>The URL slug. Example: welcome-bonus</td></tr>
+<tr><td><code>groups</code></td><td><a href="/xcgp-api/docs/graphql/schema/string.html"><code>String</code></a></td><td>Comma separated list of player groups. Example: -1</td></tr>
+<tr><td><code>playerState</code></td><td><a href="/xcgp-api/docs/graphql/schema/string.html"><code>String</code></a></td><td>The player state for cache busting purposes. Example: li</td></tr>
+<tr><td><code>jurisdiction</code></td><td><a href="/xcgp-api/docs/graphql/schema/string.html"><code>String</code></a></td><td>The player jurisdiction for cache busting purposes. Example: mga</td></tr>
+</tbody>
+</table>
+<p><strong>qnaCategories (<a href="/xcgp-api/docs/graphql/schema/qnacategoryconnection.html"><code>QnaCategoryConnection</code></a>)</strong></p>
+<table>
+<thead>
+<tr><th>Argument</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code>after</code></td><td><a href="/xcgp-api/docs/graphql/schema/string.html"><code>String</code></a></td><td>-</td></tr>
+<tr><td><code>first</code></td><td><a href="/xcgp-api/docs/graphql/schema/int.html"><code>Int</code></a></td><td>-</td></tr>
+<tr><td><code>before</code></td><td><a href="/xcgp-api/docs/graphql/schema/string.html"><code>String</code></a></td><td>-</td></tr>
+<tr><td><code>last</code></td><td><a href="/xcgp-api/docs/graphql/schema/int.html"><code>Int</code></a></td><td>-</td></tr>
+<tr><td><code>section</code></td><td><a href="/xcgp-api/docs/graphql/schema/string.html"><code>String</code></a>!</td><td>-</td></tr>
+</tbody>
+</table>
+<p><strong>seos (<a href="/xcgp-api/docs/graphql/schema/seoconnection.html"><code>SeoConnection</code></a>)</strong></p>
+<table>
+<thead>
+<tr><th>Argument</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code>after</code></td><td><a href="/xcgp-api/docs/graphql/schema/string.html"><code>String</code></a></td><td>-</td></tr>
+<tr><td><code>first</code></td><td><a href="/xcgp-api/docs/graphql/schema/int.html"><code>Int</code></a></td><td>-</td></tr>
+<tr><td><code>before</code></td><td><a href="/xcgp-api/docs/graphql/schema/string.html"><code>String</code></a></td><td>-</td></tr>
+<tr><td><code>last</code></td><td><a href="/xcgp-api/docs/graphql/schema/int.html"><code>Int</code></a></td><td>-</td></tr>
+</tbody>
+</table>
+<p><strong>sportEvents (<a href="/xcgp-api/docs/graphql/schema/sporteventconnection.html"><code>SportEventConnection</code></a>)</strong></p>
+<table>
+<thead>
+<tr><th>Argument</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code>after</code></td><td><a href="/xcgp-api/docs/graphql/schema/string.html"><code>String</code></a></td><td>-</td></tr>
+<tr><td><code>first</code></td><td><a href="/xcgp-api/docs/graphql/schema/int.html"><code>Int</code></a></td><td>-</td></tr>
+<tr><td><code>before</code></td><td><a href="/xcgp-api/docs/graphql/schema/string.html"><code>String</code></a></td><td>-</td></tr>
+<tr><td><code>last</code></td><td><a href="/xcgp-api/docs/graphql/schema/int.html"><code>Int</code></a></td><td>-</td></tr>
+<tr><td><code>live</code></td><td><a href="/xcgp-api/docs/graphql/schema/boolean.html"><code>Boolean</code></a></td><td>-</td></tr>
+</tbody>
+</table>
+<p><strong>transactions (<a href="/xcgp-api/docs/graphql/schema/transactionconnection.html"><code>TransactionConnection</code></a>)</strong></p>
+<table>
+<thead>
+<tr><th>Argument</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code>after</code></td><td><a href="/xcgp-api/docs/graphql/schema/string.html"><code>String</code></a></td><td>-</td></tr>
+<tr><td><code>first</code></td><td><a href="/xcgp-api/docs/graphql/schema/int.html"><code>Int</code></a></td><td>-</td></tr>
+<tr><td><code>before</code></td><td><a href="/xcgp-api/docs/graphql/schema/string.html"><code>String</code></a></td><td>-</td></tr>
+<tr><td><code>last</code></td><td><a href="/xcgp-api/docs/graphql/schema/int.html"><code>Int</code></a></td><td>-</td></tr>
+<tr><td><code>from</code></td><td><a href="/xcgp-api/docs/graphql/schema/string.html"><code>String</code></a></td><td>yyyy-mm-dd formatted date: 2014-10-13</td></tr>
+<tr><td><code>to</code></td><td><a href="/xcgp-api/docs/graphql/schema/string.html"><code>String</code></a></td><td>yyyy-mm-dd formatted date: 2016-10-13</td></tr>
+</tbody>
+</table>
+<p><strong>wins (<a href="/xcgp-api/docs/graphql/schema/winconnection.html"><code>WinConnection</code></a>)</strong></p>
+<table>
+<thead>
+<tr><th>Argument</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code>after</code></td><td><a href="/xcgp-api/docs/graphql/schema/string.html"><code>String</code></a></td><td>-</td></tr>
+<tr><td><code>first</code></td><td><a href="/xcgp-api/docs/graphql/schema/int.html"><code>Int</code></a></td><td>-</td></tr>
+<tr><td><code>before</code></td><td><a href="/xcgp-api/docs/graphql/schema/string.html"><code>String</code></a></td><td>-</td></tr>
+<tr><td><code>last</code></td><td><a href="/xcgp-api/docs/graphql/schema/int.html"><code>Int</code></a></td><td>-</td></tr>
+</tbody>
+</table>
 <h2><a class="anchor" aria-hidden="true" id="required-by"></a><a href="#required-by" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Required by</h2>
 <p>This element is not required by anyone.</p>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="...html">← Schema</a><a class="docs-next button" href="mutation.html">Mutation →</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#schema-definition">Schema definition</a></li><li><a href="#required-by">Required by</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2014 - 2018 XCaliber</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="...html">← Schema</a><a class="docs-next button" href="mutation.html">Mutation →</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#schema-definition">Schema definition</a></li><li><a href="#connections">Connections</a></li><li><a href="#required-by">Required by</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2014 - 2018 XCaliber</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
               var search = docsearch({
                 
                 apiKey: '0cabd5ca720a8dd4c597cb16b8fd909e',
