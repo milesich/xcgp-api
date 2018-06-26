@@ -27,5 +27,29 @@ type __Directive {
 }
 ```
 
+## Fields
+
+* **name ([`String!`](graphql/schema/string.md))**
+
+
+* **description ([`String`](graphql/schema/string.md))**
+
+
+* **locations ([`[__DirectiveLocation!]!`](graphql/schema/__directivelocation.md))**
+
+
+* **args ([`[__InputValue!]!`](graphql/schema/__inputvalue.md))**
+
+
+* **onOperation ([`Boolean!`](graphql/schema/boolean.md))**
+
+
+* **onFragment ([`Boolean!`](graphql/schema/boolean.md))**
+
+
+* **onField ([`Boolean!`](graphql/schema/boolean.md))**
+
+
+
 ## Required by
 * [__Schema](graphql/schema/__schema.md): A GraphQL Schema defines the capabilities of a GraphQL server. It exposes all available types and directives on the server, as well as the entry points for query, mutation, and subscription operations.

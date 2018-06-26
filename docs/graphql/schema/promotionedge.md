@@ -17,5 +17,16 @@ type PromotionEdge {
 }
 ```
 
+## Fields
+
+* **node ([`Promotion`](graphql/schema/promotion.md))**
+
+  The item at the end of the edge
+
+* **cursor ([`String!`](graphql/schema/string.md))**
+
+  A cursor for use in pagination
+
+
 ## Required by
 * [PromotionConnection](graphql/schema/promotionconnection.md): A connection to a list of items.

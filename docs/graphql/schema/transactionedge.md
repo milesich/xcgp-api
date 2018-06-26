@@ -17,5 +17,16 @@ type TransactionEdge {
 }
 ```
 
+## Fields
+
+* **node ([`Transaction`](graphql/schema/transaction.md))**
+
+  The item at the end of the edge
+
+* **cursor ([`String!`](graphql/schema/string.md))**
+
+  A cursor for use in pagination
+
+
 ## Required by
 * [TransactionConnection](graphql/schema/transactionconnection.md): A connection to a list of items.

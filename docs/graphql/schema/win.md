@@ -19,6 +19,21 @@ type Win {
 }
 ```
 
+## Fields
+
+* **amount ([`Float`](graphql/schema/float.md))**
+
+
+* **currency ([`String`](graphql/schema/string.md))**
+
+
+* **game ([`Game`](graphql/schema/game.md))**
+
+
+* **user ([`User`](graphql/schema/user.md))**
+
+
+
 ## Required by
 * [Query](graphql/schema/query.md)
 * [WinConnection](graphql/schema/winconnection.md): A connection to a list of items.

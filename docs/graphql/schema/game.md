@@ -144,6 +144,172 @@ type Game implements Node {
 }
 ```
 
+## Fields
+
+* **id ([`ID!`](graphql/schema/id.md))**
+
+  The ID of an object
+
+* **name ([`String!`](graphql/schema/string.md))**
+
+  The name of the game.
+
+* **vendor ([`String!`](graphql/schema/string.md))**
+
+  The vendor of the game.
+
+* **background ([`String`](graphql/schema/string.md))**
+
+  The background of the game.
+
+* **description ([`String!`](graphql/schema/string.md))**
+
+  A short description of the game.
+
+* **descriptionLong ([`String!`](graphql/schema/string.md))**
+
+  A long description of the game.
+
+* **gameStakes ([`[String]`](graphql/schema/string.md))**
+
+  The stakes of the game.
+
+* **bonus ([`Boolean!`](graphql/schema/boolean.md))**
+
+  If the game has a bonus or not.
+
+* **freeSpins ([`Boolean!`](graphql/schema/boolean.md))**
+
+  If the game has free spins or not.
+
+* **lines ([`Int`](graphql/schema/int.md))**
+
+  The amount of lines for this game.
+
+* **minBet ([`Float`](graphql/schema/float.md))**
+
+  The minimum bet amount for this game.
+  Argument | Type | Description
+  -------- | ---- | -----------
+  `currency` | [`String`](graphql/schema/string.md) | ISO 4217 Currency Code. Value changes based on currency.
+
+* **maxBet ([`Float`](graphql/schema/float.md))**
+
+  The maximum bet amount for this game.
+  Argument | Type | Description
+  -------- | ---- | -----------
+  `currency` | [`String`](graphql/schema/string.md) | ISO 4217 Currency Code. Value changes based on currency.
+
+* **ticketPrice ([`Float`](graphql/schema/float.md))**
+
+  The price of a ticket to play if this is a lottery game
+  Argument | Type | Description
+  -------- | ---- | -----------
+  `currency` | [`String`](graphql/schema/string.md) | ISO 4217 Currency Code. Value changes based on currency.
+
+* **jackpot ([`Float`](graphql/schema/float.md))**
+
+  The total jackpot amount to be won if this game has one
+  Argument | Type | Description
+  -------- | ---- | -----------
+  `currency` | [`String`](graphql/schema/string.md) | ISO 4217 Currency Code. Value changes based on currency.
+
+* **nextDraw ([`GameNextDraw`](graphql/schema/gamenextdraw.md))**
+
+
+* **lastDraw ([`GameLastDraw`](graphql/schema/gamelastdraw.md))**
+
+
+* **currency ([`String!`](graphql/schema/string.md))**
+
+  ISO 4217 Currency Code of this game as a particular currency may be enforced
+
+* **height ([`Int!`](graphql/schema/int.md))**
+
+  The height of the game.
+
+* **label ([`String`](graphql/schema/string.md))**
+
+  The label of the game.
+
+* **slug ([`String!`](graphql/schema/string.md))**
+
+  The slug of the game.
+
+* **thumbnail ([`String`](graphql/schema/string.md))**
+
+  The thumbnail of the game.
+
+* **vendorProperties ([`JSON`](graphql/schema/json.md))**
+
+  The vendor launch properties or `null` if the game can't be launched.
+  Argument | Type | Description
+  -------- | ---- | -----------
+  `return_url` | [`String`](graphql/schema/string.md) | The URL where you would like the user to return to upon exiting the game
+  `deposit_url` | [`String`](graphql/schema/string.md) | The URL where you would like the user to go to deposit
+  `history_url` | [`String`](graphql/schema/string.md) | The URL where you would like the user to go to check the account history
+
+* **width ([`Int!`](graphql/schema/int.md))**
+
+  The width of the game.
+
+* **createdAt ([`String!`](graphql/schema/string.md))**
+
+  The creation date of the game.
+
+* **updatedAt ([`String!`](graphql/schema/string.md))**
+
+  The date the game was last updated.
+
+* **screenshot ([`String`](graphql/schema/string.md))**
+
+  The screenshot of the game.
+
+* **homepageImage ([`String`](graphql/schema/string.md))**
+
+  The homepage image of the game.
+
+* **enabled ([`Boolean!`](graphql/schema/boolean.md))**
+
+  Whether the game is enabled.
+
+* **volatility ([`Int!`](graphql/schema/int.md))**
+
+  The volatility of the game.
+
+* **rating ([`Int!`](graphql/schema/int.md))**
+
+  The rating of the game.
+
+* **backgrounds ([`[String]`](graphql/schema/string.md))**
+
+  The backgrounds of the game.
+
+* **screenshots ([`[Screenshot]`](graphql/schema/screenshot.md))**
+
+  The screenshots of the game.
+
+* **thumbnails ([`JSON`](graphql/schema/json.md))**
+
+  The thumbnails of the game.
+
+* **jurisdiction ([`String!`](graphql/schema/string.md))**
+
+  The jurisdiction of the game.
+
+* **loginRequired ([`Boolean!`](graphql/schema/boolean.md))**
+
+  Whether the player needs to login to open the game.
+
+* **mobile ([`Boolean!`](graphql/schema/boolean.md))**
+
+  Whether the game is a mobile version or not
+
+* **tags ([`[String]`](graphql/schema/string.md))**
+
+  A list of tags for filtering like "jackpot" or "netent"
+
+
 ## Required by
 * [Bonus](graphql/schema/bonus.md): A bonus
 * [GameConnection](graphql/schema/gameconnection.md): A connection to a list of items.

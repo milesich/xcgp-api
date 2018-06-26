@@ -21,6 +21,22 @@ type __InputValue {
 }
 ```
 
+## Fields
+
+* **name ([`String!`](graphql/schema/string.md))**
+
+
+* **description ([`String`](graphql/schema/string.md))**
+
+
+* **type ([`__Type!`](graphql/schema/__type.md))**
+
+
+* **defaultValue ([`String`](graphql/schema/string.md))**
+
+  A GraphQL-formatted string representing the default value for this input value.
+
+
 ## Required by
 * [__Directive](graphql/schema/__directive.md): A Directive provides a way to describe alternate runtime execution and type validation behavior in a GraphQL document.
 

@@ -23,6 +23,25 @@ type PageInfo {
 }
 ```
 
+## Fields
+
+* **hasNextPage ([`Boolean!`](graphql/schema/boolean.md))**
+
+  When paginating forwards, are there more items?
+
+* **hasPreviousPage ([`Boolean!`](graphql/schema/boolean.md))**
+
+  When paginating backwards, are there more items?
+
+* **startCursor ([`String`](graphql/schema/string.md))**
+
+  When paginating backwards, the cursor to continue.
+
+* **endCursor ([`String`](graphql/schema/string.md))**
+
+  When paginating forwards, the cursor to continue.
+
+
 ## Required by
 * [AchievementChainConnection](graphql/schema/achievementchainconnection.md): A connection to a list of items.
 * [AchievementConnection](graphql/schema/achievementconnection.md): A connection to a list of items.

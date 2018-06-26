@@ -15,5 +15,14 @@ type SportEventParticipant {
 }
 ```
 
+## Fields
+
+* **name ([`String`](graphql/schema/string.md))**
+
+
+* **score ([`Float`](graphql/schema/float.md))**
+
+
+
 ## Required by
 * [SportEvent](graphql/schema/sportevent.md): A sport event

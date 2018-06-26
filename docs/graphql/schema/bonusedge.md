@@ -17,5 +17,16 @@ type BonusEdge {
 }
 ```
 
+## Fields
+
+* **node ([`Bonus`](graphql/schema/bonus.md))**
+
+  The item at the end of the edge
+
+* **cursor ([`String!`](graphql/schema/string.md))**
+
+  A cursor for use in pagination
+
+
 ## Required by
 * [BonusConnection](graphql/schema/bonusconnection.md): A connection to a list of items.

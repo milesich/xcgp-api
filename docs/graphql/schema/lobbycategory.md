@@ -39,14 +39,36 @@ type LobbyCategory implements Node {
 
 ## Connections
 
-**layoutConnection ([`LobbyCategoryLayoutConnection`](graphql/schema/lobbycategorylayoutconnection.md))**
+* **layoutConnection ([`LobbyCategoryLayoutConnection`](graphql/schema/lobbycategorylayoutconnection.md))**
 
-Argument | Type | Description
--------- | ---- | -----------
-`after` | [`String`](graphql/schema/string.md) | -
-`first` | [`Int`](graphql/schema/int.md) | -
-`before` | [`String`](graphql/schema/string.md) | -
-`last` | [`Int`](graphql/schema/int.md) | -
+  Argument | Type | Description
+  -------- | ---- | -----------
+  `after` | [`String`](graphql/schema/string.md) | -
+  `first` | [`Int`](graphql/schema/int.md) | -
+  `before` | [`String`](graphql/schema/string.md) | -
+  `last` | [`Int`](graphql/schema/int.md) | -
+
+
+## Fields
+
+* **id ([`ID!`](graphql/schema/id.md))**
+
+  The ID of an object
+
+* **slug ([`ID!`](graphql/schema/id.md))**
+
+  The slug of the game category.
+
+* **name ([`String!`](graphql/schema/string.md))**
+
+  The name of the game category.
+
+* **order ([`Int!`](graphql/schema/int.md))**
+
+  The order of the game category.
+
+* **layouts ([`[LobbyCategoryLayout]`](graphql/schema/lobbycategorylayout.md))**
+
 
 
 ## Required by

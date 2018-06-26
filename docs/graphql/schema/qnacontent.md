@@ -17,5 +17,17 @@ type QnaContent {
 }
 ```
 
+## Fields
+
+* **question ([`String`](graphql/schema/string.md))**
+
+
+* **answer ([`String`](graphql/schema/string.md))**
+
+
+* **image ([`String`](graphql/schema/string.md))**
+
+
+
 ## Required by
 * [QnaCategory](graphql/schema/qnacategory.md): A category of question and answers

@@ -63,27 +63,54 @@ type AchievementChain {
 
 ## Connections
 
-**achievementConnection ([`AchievementConnection`](graphql/schema/achievementconnection.md))**
+* **achievementConnection ([`AchievementConnection`](graphql/schema/achievementconnection.md))**
 
-Argument | Type | Description
--------- | ---- | -----------
-`after` | [`String`](graphql/schema/string.md) | -
-`first` | [`Int`](graphql/schema/int.md) | -
-`before` | [`String`](graphql/schema/string.md) | -
-`last` | [`Int`](graphql/schema/int.md) | -
-`id` | [`String`](graphql/schema/string.md) | -
-`achievementChainId` | [`String`](graphql/schema/string.md) | -
+  Argument | Type | Description
+  -------- | ---- | -----------
+  `after` | [`String`](graphql/schema/string.md) | -
+  `first` | [`Int`](graphql/schema/int.md) | -
+  `before` | [`String`](graphql/schema/string.md) | -
+  `last` | [`Int`](graphql/schema/int.md) | -
+  `id` | [`String`](graphql/schema/string.md) | -
+  `achievementChainId` | [`String`](graphql/schema/string.md) | -
 
-**userAchievementConnection ([`AchievementConnection`](graphql/schema/achievementconnection.md))**
+* **userAchievementConnection ([`AchievementConnection`](graphql/schema/achievementconnection.md))**
 
-Argument | Type | Description
--------- | ---- | -----------
-`after` | [`String`](graphql/schema/string.md) | -
-`first` | [`Int`](graphql/schema/int.md) | -
-`before` | [`String`](graphql/schema/string.md) | -
-`last` | [`Int`](graphql/schema/int.md) | -
-`id` | [`String`](graphql/schema/string.md) | -
-`achievementChainId` | [`String`](graphql/schema/string.md) | -
+  Argument | Type | Description
+  -------- | ---- | -----------
+  `after` | [`String`](graphql/schema/string.md) | -
+  `first` | [`Int`](graphql/schema/int.md) | -
+  `before` | [`String`](graphql/schema/string.md) | -
+  `last` | [`Int`](graphql/schema/int.md) | -
+  `id` | [`String`](graphql/schema/string.md) | -
+  `achievementChainId` | [`String`](graphql/schema/string.md) | -
+
+
+## Fields
+
+* **id ([`String!`](graphql/schema/string.md))**
+
+  ID of the chain
+
+* **name ([`String!`](graphql/schema/string.md))**
+
+  Name of the chain
+
+* **enabled ([`Boolean!`](graphql/schema/boolean.md))**
+
+  If chain is enabled
+
+* **activationDate ([`String`](graphql/schema/string.md))**
+
+  Date when chain will become active
+
+* **expiryDate ([`String`](graphql/schema/string.md))**
+
+  Date when chain will expire
+
+* **status ([`String!`](graphql/schema/string.md))**
+
+  Status of the chain
 
 
 ## Required by

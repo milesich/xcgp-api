@@ -17,5 +17,16 @@ type PaymentMethodEdge {
 }
 ```
 
+## Fields
+
+* **node ([`PaymentMethod`](graphql/schema/paymentmethod.md))**
+
+  The item at the end of the edge
+
+* **cursor ([`String!`](graphql/schema/string.md))**
+
+  A cursor for use in pagination
+
+
 ## Required by
 * [PaymentMethodConnection](graphql/schema/paymentmethodconnection.md): A connection to a list of items.

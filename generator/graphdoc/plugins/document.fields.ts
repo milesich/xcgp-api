@@ -8,16 +8,16 @@ import {
   DocumentSectionInterface,
   SchemaType,
 } from '../lib/interface';
-import { useIdentifier, deepType } from './util';
+import { deepType, useIdentifier } from './util';
 
-export default class ConnectionsPlugin extends Plugin implements PluginInterface {
+export default class FieldsPlugin extends Plugin implements PluginInterface {
   getDocuments(buildForType?: string): DocumentSectionInterface[] {
     const type = this.document.types.find(type => type.name === buildForType);
     if (type && type.kind === OBJECT) {
       const content = this.render(type);
       if (content.length) {
         return [
-          new DocumentSection('Connections', content)
+          new DocumentSection('Fields', content)
         ];
       }
     }
@@ -29,7 +29,7 @@ export default class ConnectionsPlugin extends Plugin implements PluginInterface
     let result = ``;
     for (const field of type.fields) {
       const fieldType = deepType(field.type);
-      if (fieldType.name.endsWith('Connection')) {
+      if (!fieldType.name.endsWith('Connection')) {
         result += `\n* **${field.name} (${useIdentifier(field.type, this.url(field.type))})**\n\n`;
         if (field.description) {
           result += `  ${field.description}\n`;

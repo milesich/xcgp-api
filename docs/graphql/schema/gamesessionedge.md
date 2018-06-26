@@ -17,5 +17,16 @@ type GameSessionEdge {
 }
 ```
 
+## Fields
+
+* **node ([`GameSession`](graphql/schema/gamesession.md))**
+
+  The item at the end of the edge
+
+* **cursor ([`String!`](graphql/schema/string.md))**
+
+  A cursor for use in pagination
+
+
 ## Required by
 * [GameSessionConnection](graphql/schema/gamesessionconnection.md): A connection to a list of items.

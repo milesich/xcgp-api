@@ -20,5 +20,21 @@ type PromoSpaceButton {
 }
 ```
 
+## Fields
+
+* **name ([`String`](graphql/schema/string.md))**
+
+
+* **color ([`String`](graphql/schema/string.md))**
+
+
+* **action ([`String`](graphql/schema/string.md))**
+
+
+* **actionParams ([`JSON`](graphql/schema/json.md))**
+
+  JSON object containing parameters like "id" and "url"
+
+
 ## Required by
 * [Promotion](graphql/schema/promotion.md): A promotion

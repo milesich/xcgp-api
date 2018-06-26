@@ -17,5 +17,16 @@ type GameTagEdge {
 }
 ```
 
+## Fields
+
+* **node ([`GameTag`](graphql/schema/gametag.md))**
+
+  The item at the end of the edge
+
+* **cursor ([`String!`](graphql/schema/string.md))**
+
+  A cursor for use in pagination
+
+
 ## Required by
 * [GameTagConnection](graphql/schema/gametagconnection.md): A connection to a list of items.

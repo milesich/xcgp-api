@@ -17,6 +17,18 @@ type Jackpot {
 }
 ```
 
+## Fields
+
+* **amount ([`Float`](graphql/schema/float.md))**
+
+
+* **currency ([`String`](graphql/schema/string.md))**
+
+
+* **game ([`Game`](graphql/schema/game.md))**
+
+
+
 ## Required by
 * [JackpotConnection](graphql/schema/jackpotconnection.md): A connection to a list of items.
 * [JackpotEdge](graphql/schema/jackpotedge.md): An edge in a connection

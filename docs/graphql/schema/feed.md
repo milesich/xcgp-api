@@ -32,6 +32,37 @@ type Feed implements Node {
 }
 ```
 
+## Fields
+
+* **id ([`ID!`](graphql/schema/id.md))**
+
+  The ID of an object
+
+* **title ([`String`](graphql/schema/string.md))**
+
+  The title.
+
+* **feed ([`String`](graphql/schema/string.md))**
+
+  The original URL for the source feed.
+
+* **link ([`String`](graphql/schema/string.md))**
+
+  The link to the external feed entry.
+
+* **content ([`String`](graphql/schema/string.md))**
+
+  The original HTML content.
+
+* **dateModified ([`String`](graphql/schema/string.md))**
+
+  The timestamp of the last modification.
+
+* **authors ([`[FeedAuthor]`](graphql/schema/feedauthor.md))**
+
+  The list of authors.
+
+
 ## Required by
 * [FeedConnection](graphql/schema/feedconnection.md): A connection to a list of items.
 * [FeedEdge](graphql/schema/feededge.md): An edge in a connection

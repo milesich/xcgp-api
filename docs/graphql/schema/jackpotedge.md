@@ -17,5 +17,16 @@ type JackpotEdge {
 }
 ```
 
+## Fields
+
+* **node ([`Jackpot`](graphql/schema/jackpot.md))**
+
+  The item at the end of the edge
+
+* **cursor ([`String!`](graphql/schema/string.md))**
+
+  A cursor for use in pagination
+
+
 ## Required by
 * [JackpotConnection](graphql/schema/jackpotconnection.md): A connection to a list of items.

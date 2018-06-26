@@ -55,6 +55,69 @@ type Bonus implements Node {
 }
 ```
 
+## Fields
+
+* **id ([`ID!`](graphql/schema/id.md))**
+
+  The ID of an object
+
+* **activatedDate ([`String`](graphql/schema/string.md))**
+
+
+* **activationType ([`String`](graphql/schema/string.md))**
+
+
+* **amount ([`Float`](graphql/schema/float.md))**
+
+
+* **balance ([`Float`](graphql/schema/float.md))**
+
+
+* **canAward ([`Boolean`](graphql/schema/boolean.md))**
+
+  Whether this bonus can be awarded
+
+* **description ([`String`](graphql/schema/string.md))**
+
+  Content provided through the backoffice
+
+* **expiryDate ([`String`](graphql/schema/string.md))**
+
+  The date in which this bonus will expire
+
+* **game ([`Game`](graphql/schema/game.md))**
+
+  Game that is associated with this bonus
+
+* **image ([`String`](graphql/schema/string.md))**
+
+  Link to an image uploaded through the backoffice
+
+* **name ([`String`](graphql/schema/string.md))**
+
+  Example: Welcome Bonus 100%
+
+* **reward ([`String`](graphql/schema/string.md))**
+
+  Example: bonus_money
+
+* **status ([`String`](graphql/schema/string.md))**
+
+  Example: available, triggered, active or claimed
+
+* **termsAndConditions ([`String`](graphql/schema/string.md))**
+
+  HTML content provided through the backoffice
+
+* **wagerGoal ([`Float`](graphql/schema/float.md))**
+
+  The amount the user must wager towards this bonus to claim it
+
+* **wagered ([`Float`](graphql/schema/float.md))**
+
+  The amount that the user has currently wagered towards this bonus
+
+
 ## Required by
 * [BonusConnection](graphql/schema/bonusconnection.md): A connection to a list of items.
 * [BonusEdge](graphql/schema/bonusedge.md): An edge in a connection

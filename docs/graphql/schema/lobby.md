@@ -39,15 +39,34 @@ type Lobby implements Node {
 
 ## Connections
 
-**categoryConnection ([`LobbyCategoryConnection`](graphql/schema/lobbycategoryconnection.md))**
+* **categoryConnection ([`LobbyCategoryConnection`](graphql/schema/lobbycategoryconnection.md))**
 
-Argument | Type | Description
--------- | ---- | -----------
-`after` | [`String`](graphql/schema/string.md) | -
-`first` | [`Int`](graphql/schema/int.md) | -
-`before` | [`String`](graphql/schema/string.md) | -
-`last` | [`Int`](graphql/schema/int.md) | -
-`slug` | [`String`](graphql/schema/string.md) | -
+  Argument | Type | Description
+  -------- | ---- | -----------
+  `after` | [`String`](graphql/schema/string.md) | -
+  `first` | [`Int`](graphql/schema/int.md) | -
+  `before` | [`String`](graphql/schema/string.md) | -
+  `last` | [`Int`](graphql/schema/int.md) | -
+  `slug` | [`String`](graphql/schema/string.md) | -
+
+
+## Fields
+
+* **id ([`ID!`](graphql/schema/id.md))**
+
+  The ID of an object
+
+* **name ([`String!`](graphql/schema/string.md))**
+
+  The name of the lobby.
+
+* **slug ([`ID!`](graphql/schema/id.md))**
+
+  The slug of the lobby.
+
+* **games ([`[Game]`](graphql/schema/game.md))**
+
+  Games
 
 
 ## Required by

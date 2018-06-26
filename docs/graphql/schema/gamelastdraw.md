@@ -17,5 +17,17 @@ type GameLastDraw {
 }
 ```
 
+## Fields
+
+* **date ([`String`](graphql/schema/string.md))**
+
+
+* **jackpot ([`Float`](graphql/schema/float.md))**
+
+
+* **numbers ([`[Float]`](graphql/schema/float.md))**
+
+
+
 ## Required by
 * [Game](graphql/schema/game.md): A game.

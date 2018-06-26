@@ -18,5 +18,18 @@ type Location {
 }
 ```
 
+## Fields
+
+* **coords ([`Coordinates`](graphql/schema/coordinates.md))**
+
+
+* **country ([`LocationCountry`](graphql/schema/locationcountry.md))**
+
+
+* **jurisdiction ([`String`](graphql/schema/string.md))**
+
+  The detected jurisdiction based on origin
+
+
 ## Required by
 * [Query](graphql/schema/query.md)

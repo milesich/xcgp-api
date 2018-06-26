@@ -17,5 +17,16 @@ type PageEdge {
 }
 ```
 
+## Fields
+
+* **node ([`Page`](graphql/schema/page.md))**
+
+  The item at the end of the edge
+
+* **cursor ([`String!`](graphql/schema/string.md))**
+
+  A cursor for use in pagination
+
+
 ## Required by
 * [PageConnection](graphql/schema/pageconnection.md): A connection to a list of items.

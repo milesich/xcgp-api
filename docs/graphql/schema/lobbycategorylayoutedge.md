@@ -17,5 +17,16 @@ type LobbyCategoryLayoutEdge {
 }
 ```
 
+## Fields
+
+* **node ([`LobbyCategoryLayout`](graphql/schema/lobbycategorylayout.md))**
+
+  The item at the end of the edge
+
+* **cursor ([`String!`](graphql/schema/string.md))**
+
+  A cursor for use in pagination
+
+
 ## Required by
 * [LobbyCategoryLayoutConnection](graphql/schema/lobbycategorylayoutconnection.md): A connection to a list of items.

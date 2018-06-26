@@ -15,5 +15,14 @@ type LocationCountry {
 }
 ```
 
+## Fields
+
+* **code ([`String`](graphql/schema/string.md))**
+
+
+* **name ([`String`](graphql/schema/string.md))**
+
+
+
 ## Required by
 * [Location](graphql/schema/location.md): A location

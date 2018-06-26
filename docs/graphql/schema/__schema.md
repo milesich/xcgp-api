@@ -28,5 +28,28 @@ type __Schema {
 }
 ```
 
+## Fields
+
+* **types ([`[__Type!]!`](graphql/schema/__type.md))**
+
+  A list of all types supported by this server.
+
+* **queryType ([`__Type!`](graphql/schema/__type.md))**
+
+  The type that query operations will be rooted at.
+
+* **mutationType ([`__Type`](graphql/schema/__type.md))**
+
+  If this server supports mutation, the type that mutation operations will be rooted at.
+
+* **subscriptionType ([`__Type`](graphql/schema/__type.md))**
+
+  If this server support subscription, the type that subscription operations will be rooted at.
+
+* **directives ([`[__Directive!]!`](graphql/schema/__directive.md))**
+
+  A list of all directives supported by this server.
+
+
 ## Required by
 This element is not required by anyone.

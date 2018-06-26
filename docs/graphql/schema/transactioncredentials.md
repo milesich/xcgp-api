@@ -15,5 +15,14 @@ type TransactionCredentials {
 }
 ```
 
+## Fields
+
+* **username ([`String`](graphql/schema/string.md))**
+
+
+* **password ([`String`](graphql/schema/string.md))**
+
+
+
 ## Required by
 * [Transaction](graphql/schema/transaction.md): A transaction

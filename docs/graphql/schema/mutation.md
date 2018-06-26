@@ -22,5 +22,20 @@ type Mutation {
 }
 ```
 
+## Fields
+
+* **createUser ([`CreateUserPayload`](graphql/schema/createuserpayload.md))**
+
+  Argument | Type | Description
+  -------- | ---- | -----------
+  `input` | [`CreateUserInput`](graphql/schema/createuserinput.md) | -
+
+* **updateUser ([`UpdateUserPayload`](graphql/schema/updateuserpayload.md))**
+
+  Argument | Type | Description
+  -------- | ---- | -----------
+  `input` | [`UpdateUserInput`](graphql/schema/updateuserinput.md) | -
+
+
 ## Required by
 This element is not required by anyone.

@@ -35,6 +35,42 @@ type __Type {
 }
 ```
 
+## Fields
+
+* **kind ([`__TypeKind!`](graphql/schema/__typekind.md))**
+
+
+* **name ([`String`](graphql/schema/string.md))**
+
+
+* **description ([`String`](graphql/schema/string.md))**
+
+
+* **fields ([`[__Field!]`](graphql/schema/__field.md))**
+
+  Argument | Type | Description
+  -------- | ---- | -----------
+  `includeDeprecated` | [`Boolean`](graphql/schema/boolean.md) | -
+
+* **interfaces ([`[__Type!]`](graphql/schema/__type.md))**
+
+
+* **possibleTypes ([`[__Type!]`](graphql/schema/__type.md))**
+
+
+* **enumValues ([`[__EnumValue!]`](graphql/schema/__enumvalue.md))**
+
+  Argument | Type | Description
+  -------- | ---- | -----------
+  `includeDeprecated` | [`Boolean`](graphql/schema/boolean.md) | -
+
+* **inputFields ([`[__InputValue!]`](graphql/schema/__inputvalue.md))**
+
+
+* **ofType ([`__Type`](graphql/schema/__type.md))**
+
+
+
 ## Required by
 * [__Field](graphql/schema/__field.md): Object and Interface types are described by a list of Fields, each of which has a name, potentially a list of arguments, and a return type.
 * [__InputValue](graphql/schema/__inputvalue.md): Arguments provided to Fields or Directives and the input fields of an InputObject are represented as Input Values which describe their type and optionally a default value.

@@ -44,5 +44,52 @@ type LobbyCategoryLayoutBlock {
 }
 ```
 
+## Fields
+
+* **left ([`Int!`](graphql/schema/int.md))**
+
+  The calculated left value of this block using col, margin and width.
+
+* **top ([`Int!`](graphql/schema/int.md))**
+
+  The calculated top value of this block using row, margin and height.
+
+* **width ([`Int!`](graphql/schema/int.md))**
+
+  The calculated width value of this block using width and sizeX.
+
+* **height ([`Int!`](graphql/schema/int.md))**
+
+  The calculated height value of this block using height and sizeY.
+
+* **col ([`Int!`](graphql/schema/int.md))**
+
+  Which column this block is on.
+
+* **row ([`Int!`](graphql/schema/int.md))**
+
+  Which row this block is on.
+
+* **sizeX ([`Int!`](graphql/schema/int.md))**
+
+  How many columns this block takes up.
+
+* **sizeY ([`Int!`](graphql/schema/int.md))**
+
+  How many rows this block takes up.
+
+* **type ([`String!`](graphql/schema/string.md))**
+
+  Block type.
+
+* **game ([`Game`](graphql/schema/game.md))**
+
+  Game object. Always null if type != game.
+
+* **promotions ([`[Promotion]`](graphql/schema/promotion.md))**
+
+  List of promotions. Always null if type != promotions.
+
+
 ## Required by
 * [LobbyCategoryLayout](graphql/schema/lobbycategorylayout.md): Layout for a lobby category.

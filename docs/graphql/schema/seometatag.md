@@ -17,5 +17,17 @@ type SeoMetaTag {
 }
 ```
 
+## Fields
+
+* **type ([`String`](graphql/schema/string.md))**
+
+
+* **name ([`String`](graphql/schema/string.md))**
+
+
+* **content ([`String`](graphql/schema/string.md))**
+
+
+
 ## Required by
 * [Seo](graphql/schema/seo.md): A search engine optimisation definition

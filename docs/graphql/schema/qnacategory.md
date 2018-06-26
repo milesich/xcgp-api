@@ -20,6 +20,22 @@ type QnaCategory implements Node {
 }
 ```
 
+## Fields
+
+* **id ([`ID!`](graphql/schema/id.md))**
+
+  The ID of an object
+
+* **name ([`String`](graphql/schema/string.md))**
+
+
+* **slug ([`String`](graphql/schema/string.md))**
+
+
+* **content ([`[QnaContent]`](graphql/schema/qnacontent.md))**
+
+
+
 ## Required by
 * [QnaCategoryConnection](graphql/schema/qnacategoryconnection.md): A connection to a list of items.
 * [QnaCategoryEdge](graphql/schema/qnacategoryedge.md): An edge in a connection

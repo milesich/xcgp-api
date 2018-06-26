@@ -15,5 +15,14 @@ type Coordinates {
 }
 ```
 
+## Fields
+
+* **latitude ([`Float`](graphql/schema/float.md))**
+
+
+* **longitude ([`Float`](graphql/schema/float.md))**
+
+
+
 ## Required by
 * [Location](graphql/schema/location.md): A location

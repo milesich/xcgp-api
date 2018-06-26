@@ -23,5 +23,24 @@ type AchievementProgress {
 }
 ```
 
+## Fields
+
+* **name ([`String!`](graphql/schema/string.md))**
+
+  Name of the point type
+
+* **code ([`String!`](graphql/schema/string.md))**
+
+  Code of the point type
+
+* **limit ([`Float!`](graphql/schema/float.md))**
+
+  Maximum points to achieve this achievement
+
+* **current ([`Float!`](graphql/schema/float.md))**
+
+  Current achieved points
+
+
 ## Required by
 * [Achievement](graphql/schema/achievement.md): An achievement

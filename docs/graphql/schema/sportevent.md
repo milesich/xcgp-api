@@ -26,6 +26,31 @@ type SportEvent implements Node {
 }
 ```
 
+## Fields
+
+* **id ([`ID!`](graphql/schema/id.md))**
+
+  The ID of an object
+
+* **branch ([`String`](graphql/schema/string.md))**
+
+
+* **league ([`String`](graphql/schema/string.md))**
+
+
+* **odds ([`SportEventOdds`](graphql/schema/sporteventodds.md))**
+
+
+* **participants ([`[SportEventParticipant]`](graphql/schema/sporteventparticipant.md))**
+
+
+* **startsAt ([`String`](graphql/schema/string.md))**
+
+
+* **timeInGame ([`String`](graphql/schema/string.md))**
+
+
+
 ## Required by
 * [Query](graphql/schema/query.md)
 * [SportEventConnection](graphql/schema/sporteventconnection.md): A connection to a list of items.
