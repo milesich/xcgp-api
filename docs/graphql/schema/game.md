@@ -66,8 +66,7 @@ type Game implements Node {
 
   lastDraw: GameLastDraw
 
-  # ISO 4217 Currency Code of this game as a particular currency may be
-  # enforced
+  # ISO 4217 Currency Code of this game as a particular currency may be enforced
   currency: String!
 
   # The height of the game.
@@ -85,11 +84,11 @@ type Game implements Node {
   # The vendor launch properties or `null` if the game can't be launched.
   #
   # Arguments
-  #   return_url: The URL where you would like the user to return to upon
-  # exiting the game
+  #   return_url: The URL where you would like the user to return to upon exiting
+  # the game
   #   deposit_url: The URL where you would like the user to go to deposit
-  #   history_url: The URL where you would like the user to go to check
-  # the account history
+  #   history_url: The URL where you would like the user to go to check the account
+  # history
   vendorProperties(
     return_url: String,
     deposit_url: String,

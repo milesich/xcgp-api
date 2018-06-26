@@ -17,8 +17,7 @@ type Currency {
   # If this currency is enabled
   enabled: Boolean
 
-  # An example of a phone number from this country. Example: 9696 1234 for
-  # Malta
+  # An example of a phone number from this country. Example: 9696 1234 for Malta
   defaultDepositAmounts: [Int]
 
 }

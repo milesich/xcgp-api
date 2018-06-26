@@ -11,28 +11,26 @@ For more information, see "[About mutations](guides/graphql/using.md#about-mutat
 ```graphql
 type Mutation {
 
-  # Arguments
-  #   input
   createUser(input: CreateUserInput): CreateUserPayload
 
-  # Arguments
-  #   input
   updateUser(input: UpdateUserInput): UpdateUserPayload
 
 }
 ```
 
-## Fields
+## Mutations
 
-* **createUser ([`CreateUserPayload`](graphql/schema/createuserpayload.md))**
+* **createUser(input: [`CreateUserInput`](graphql/schema/createuserinput.md)): [`CreateUserPayload`](graphql/schema/createuserpayload.md)**
 
-  Argument | Type | Description
-  -------- | ---- | -----------
-  `input` | [`CreateUserInput`](graphql/schema/createuserinput.md) | -
+  Output | Type | Description
+  ------ | ---- | -----------
+  `validation_messages` | [`JSON`](graphql/schema/json.md) | -
+  `user` | [`User`](graphql/schema/user.md) | -
 
-* **updateUser ([`UpdateUserPayload`](graphql/schema/updateuserpayload.md))**
+* **updateUser(input: [`UpdateUserInput`](graphql/schema/updateuserinput.md)): [`UpdateUserPayload`](graphql/schema/updateuserpayload.md)**
 
-  Argument | Type | Description
-  -------- | ---- | -----------
-  `input` | [`UpdateUserInput`](graphql/schema/updateuserinput.md) | -
+  Output | Type | Description
+  ------ | ---- | -----------
+  `validation_messages` | [`JSON`](graphql/schema/json.md) | -
+  `user` | [`User`](graphql/schema/user.md) | -
 

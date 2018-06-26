@@ -14,12 +14,12 @@ type __Schema {
   # The type that query operations will be rooted at.
   queryType: __Type!
 
-  # If this server supports mutation, the type that mutation operations
-  # will be rooted at.
+  # If this server supports mutation, the type that mutation operations will be
+  # rooted at.
   mutationType: __Type
 
-  # If this server support subscription, the type that subscription
-  # operations will be rooted at.
+  # If this server support subscription, the type that subscription operations will
+  # be rooted at.
   subscriptionType: __Type
 
   # A list of all directives supported by this server.

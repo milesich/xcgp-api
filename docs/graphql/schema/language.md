@@ -17,8 +17,7 @@ type Language {
   # Country name
   currency: String
 
-  # An example of a phone number from this country. Example: 9696 1234 for
-  # Malta
+  # An example of a phone number from this country. Example: 9696 1234 for Malta
   supportSkill: String
 
   # Code for country flag.

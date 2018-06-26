@@ -22,7 +22,7 @@ import {
   Directive
 } from '../lib/interface';
 
-const MAX_CODE_LEN = 70;
+const MAX_CODE_LEN = 80;
 
 export default class SchemaPlugin extends Plugin implements PluginInterface {
   getDocuments(buildForType?: string): DocumentSectionInterface[] {
@@ -78,32 +78,12 @@ export default class SchemaPlugin extends Plugin implements PluginInterface {
   }
 
   argument(arg: InputValue): string {
-    return arg.name + ': ' +
-      useIdentifier(arg.type, this.url(arg.type)); // + ' ' + this.deprecated(arg);
+    return `${arg.name}: ${useIdentifier(arg.type, this.url(arg.type))}`;
   }
 
-  argumentLength(arg: InputValue): number {
-    return arg.name.length + 1 + useIdentifier(arg.type, this.url(arg.type)).length;
-  }
-
-  arguments(fieldOrDirectives: Field | Directive): string {
-    if (fieldOrDirectives.args.length === 0) {
-      return '';
-    }
-
-    return '(' +
-      fieldOrDirectives.args
-        .map((arg) => this.argument(arg))
-        .join(', ') +
-      ')';
-  }
-
-  argumentsLength(fieldOrDirectives: Field | Directive): number {
-    if (fieldOrDirectives.args.length === 0) {
-      return 0;
-    }
-
-    return fieldOrDirectives.args.reduce((sum, arg) => sum + this.argumentLength(arg), 2);
+  arguments(fieldOrDirective: Field | Directive): string {
+    const args = fieldOrDirective.args;
+    return args.length ? `(${args.map(arg => this.argument(arg)).join(', ')})` : ``;
   }
 
   argumentsMultiline(fieldOrDirectives: Field | Directive): string[] {
@@ -129,15 +109,15 @@ export default class SchemaPlugin extends Plugin implements PluginInterface {
     return this.description(desc);
   }
 
-  argumentsDescription(fieldOrDirectives: Field | Directive): string[] {
-    if (!fieldOrDirectives.args.length) {
+  argumentsDescription(fieldOrDirective: Field | Directive): string[] {
+    const args = fieldOrDirective.args.filter(arg => arg.name !== 'input');
+    if (!args.length) {
       return [];
     }
 
-    return fieldOrDirectives.args
-      .reduce(
-        (descriptions, arg) => descriptions.concat(this.argumentDescription(arg)),
-        [`# Arguments`],
+    return args.reduce(
+      (descriptions, arg) => descriptions.concat(this.argumentDescription(arg)),
+      [`# Arguments`],
     );
   }
 
@@ -216,7 +196,7 @@ export default class SchemaPlugin extends Plugin implements PluginInterface {
   }
 
   fieldLength(field: Field): number {
-    return field.name.length + this.argumentsLength(field) +
+    return field.name.length + this.arguments(field).length +
       ': '.length + useIdentifier(field, this.url(field)).length + ' '.length +
       this.deprecated(field).length;
   }

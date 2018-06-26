@@ -145,10 +145,9 @@ type Query {
   #   enabled: Filter games by if enabled or not
   #   bonus: Filter games by if they have a bonus or not
   #   jackpot: Filter games by if they have a jackpot or not
-  #   playerState: The player state as some games are only visible for
-  # logged-in players. Example: li
-  #   country: ISO 3166-1 alpha-2 country code. Some countries block
-  # games.
+  #   playerState: The player state as some games are only visible for logged-in
+  # players. Example: li
+  #   country: ISO 3166-1 alpha-2 country code. Some countries block games.
   games(
     after: String,
     first: Int,
@@ -221,11 +220,10 @@ type Query {
   # Arguments
   #   id
   #   slug: Example: casinov2
-  #   playerState: The player state as some games are only visible for
-  # logged-in players. Example: li
+  #   playerState: The player state as some games are only visible for logged-in
+  # players. Example: li
   #   groups: Comma separated list of player groups. Example: -1
-  #   country: ISO 3166-1 alpha-2 country code. Some countries block
-  # games.
+  #   country: ISO 3166-1 alpha-2 country code. Some countries block games.
   lobby(
     id: String,
     slug: String,
@@ -270,8 +268,8 @@ type Query {
   #   first
   #   before
   #   last
-  #   type: The transaction type filter. Used to filter available payment
-  # methods during the deposit or withdraw process.
+  #   type: The transaction type filter. Used to filter available payment methods
+  # during the deposit or withdraw process.
   paymentMethods(
     after: String,
     first: Int,
@@ -284,10 +282,8 @@ type Query {
   #   id
   #   slug: The URL slug. Example: welcome-bonus
   #   template: The template to use for metadata. Example: cd1
-  #   playerState: The player state for cache busting purposes. Example:
-  # li
-  #   jurisdiction: The player jurisdiction for cache busting purposes.
-  # Example: mga
+  #   playerState: The player state for cache busting purposes. Example: li
+  #   jurisdiction: The player jurisdiction for cache busting purposes. Example: mga
   promotion(
     id: String,
     slug: String,
@@ -304,10 +300,8 @@ type Query {
   #   template: The template to use for metadata. Example: cd1
   #   slug: The URL slug. Example: welcome-bonus
   #   groups: Comma separated list of player groups. Example: -1
-  #   playerState: The player state for cache busting purposes. Example:
-  # li
-  #   jurisdiction: The player jurisdiction for cache busting purposes.
-  # Example: mga
+  #   playerState: The player state for cache busting purposes. Example: li
+  #   jurisdiction: The player jurisdiction for cache busting purposes. Example: mga
   promotions(
     after: String,
     first: Int,

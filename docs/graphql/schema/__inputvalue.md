@@ -14,8 +14,7 @@ type __InputValue {
 
   type: __Type!
 
-  # A GraphQL-formatted string representing the default value for this
-  # input value.
+  # A GraphQL-formatted string representing the default value for this input value.
   defaultValue: String
 
 }
