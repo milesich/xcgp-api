@@ -189,10 +189,6 @@ type Query {
   ): GameSessionConnection
 
   # Arguments
-  #   id
-  jackpot(id: ID!): Jackpot
-
-  # Arguments
   #   after
   #   first
   #   before
@@ -345,10 +341,6 @@ type Query {
   seos(after: String, first: Int, before: String, last: Int): SeoConnection
 
   # Arguments
-  #   id
-  sportEvent(id: ID!): SportEvent
-
-  # Arguments
   #   after
   #   first
   #   before
@@ -361,10 +353,6 @@ type Query {
     last: Int,
     live: Boolean
   ): SportEventConnection
-
-  # Arguments
-  #   id
-  transaction(id: ID!): Transaction
 
   # Arguments
   #   after
@@ -385,10 +373,6 @@ type Query {
   # Arguments
   #   id
   viewer(id: ID!): User
-
-  # Arguments
-  #   id
-  win(id: ID!): Win
 
   # Arguments
   #   after
@@ -682,12 +666,6 @@ type Query {
   -------- | ---- | -----------
   `id` | [`ID!`](graphql/schema/id.md) | -
 
-* **jackpot ([`Jackpot`](graphql/schema/jackpot.md))**
-
-  Argument | Type | Description
-  -------- | ---- | -----------
-  `id` | [`ID!`](graphql/schema/id.md) | -
-
 * **limit ([`Limit`](graphql/schema/limit.md))**
 
   Argument | Type | Description
@@ -742,25 +720,7 @@ type Query {
   `id` | [`String`](graphql/schema/string.md) | -
   `url` | [`String`](graphql/schema/string.md) | -
 
-* **sportEvent ([`SportEvent`](graphql/schema/sportevent.md))**
-
-  Argument | Type | Description
-  -------- | ---- | -----------
-  `id` | [`ID!`](graphql/schema/id.md) | -
-
-* **transaction ([`Transaction`](graphql/schema/transaction.md))**
-
-  Argument | Type | Description
-  -------- | ---- | -----------
-  `id` | [`ID!`](graphql/schema/id.md) | -
-
 * **viewer ([`User`](graphql/schema/user.md))**
-
-  Argument | Type | Description
-  -------- | ---- | -----------
-  `id` | [`ID!`](graphql/schema/id.md) | -
-
-* **win ([`Win`](graphql/schema/win.md))**
 
   Argument | Type | Description
   -------- | ---- | -----------
