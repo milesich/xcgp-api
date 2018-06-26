@@ -2,7 +2,7 @@
 title: Promotion
 ---
 
-A promotion
+A promotion for a particular template (space). Each template needs to be requested and it can have multiple titles, descriptions, images, CTAs, etc depending on where the promotions will be shown.
 
 ## Schema definition
 ```graphql

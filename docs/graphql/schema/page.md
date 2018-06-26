@@ -2,7 +2,7 @@
 title: Page
 ---
 
-A page
+An arbitrary piece of content with a blog-like structure. It can be used for things like blog posts, news articles, simple landing pages, user success stories, etc.
 
 ## Schema definition
 ```graphql

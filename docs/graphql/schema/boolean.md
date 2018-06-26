@@ -17,9 +17,9 @@ scalar Boolean
 * [Currency](graphql/schema/currency.md): A currency
 * [Game](graphql/schema/game.md): A game.
 * [LobbyCategoryLayout](graphql/schema/lobbycategorylayout.md): Layout for a lobby category.
-* [Page](graphql/schema/page.md): A page
+* [Page](graphql/schema/page.md): An arbitrary piece of content with a blog-like structure. It can be used for things like blog posts, news articles, simple landing pages, user success stories, etc.
 * [PageInfo](graphql/schema/pageinfo.md): Information about pagination in a connection.
-* [Promotion](graphql/schema/promotion.md): A promotion
+* [Promotion](graphql/schema/promotion.md): A promotion for a particular template (space). Each template needs to be requested and it can have multiple titles, descriptions, images, CTAs, etc depending on where the promotions will be shown.
 * [Query](graphql/schema/query.md)
 * [UpdateUserInput](graphql/schema/updateuserinput.md): Input for updating a user
 * [User](graphql/schema/user.md): A user

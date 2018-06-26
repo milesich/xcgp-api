@@ -30,4 +30,4 @@ type QnaContent {
 
 
 ## Required by
-* [QnaCategory](graphql/schema/qnacategory.md): A category of question and answers
+* [QnaCategory](graphql/schema/qnacategory.md): A category of questions and answers. It can be used for any kind of content that displays as a list of titles and descriptions like questions and answers, glossaries, terms and conditions, etc.

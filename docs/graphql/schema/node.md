@@ -24,12 +24,12 @@ interface Node {
 * [Limit](graphql/schema/limit.md): A limit
 * [Lobby](graphql/schema/lobby.md): A lobby containing game categories.
 * [LobbyCategory](graphql/schema/lobbycategory.md): A lobby category.
-* [Page](graphql/schema/page.md): A page
+* [Page](graphql/schema/page.md): An arbitrary piece of content with a blog-like structure. It can be used for things like blog posts, news articles, simple landing pages, user success stories, etc.
 * [PaymentMethod](graphql/schema/paymentmethod.md): A payment method
-* [Promotion](graphql/schema/promotion.md): A promotion
-* [QnaCategory](graphql/schema/qnacategory.md): A category of question and answers
+* [Promotion](graphql/schema/promotion.md): A promotion for a particular template (space). Each template needs to be requested and it can have multiple titles, descriptions, images, CTAs, etc depending on where the promotions will be shown.
+* [QnaCategory](graphql/schema/qnacategory.md): A category of questions and answers. It can be used for any kind of content that displays as a list of titles and descriptions like questions and answers, glossaries, terms and conditions, etc.
 * [Query](graphql/schema/query.md)
-* [Seo](graphql/schema/seo.md): A search engine optimisation definition
+* [Seo](graphql/schema/seo.md): An SEO entry for a document.
 * [SportEvent](graphql/schema/sportevent.md): A sport event
 * [Transaction](graphql/schema/transaction.md): A transaction
 * [User](graphql/schema/user.md): A user

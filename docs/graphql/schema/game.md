@@ -317,7 +317,7 @@ type Game implements Node {
 * [Jackpot](graphql/schema/jackpot.md): A jackpot
 * [Lobby](graphql/schema/lobby.md): A lobby containing game categories.
 * [LobbyCategoryLayoutBlock](graphql/schema/lobbycategorylayoutblock.md): Block of games for a category layout
-* [Page](graphql/schema/page.md): A page
-* [Promotion](graphql/schema/promotion.md): A promotion
+* [Page](graphql/schema/page.md): An arbitrary piece of content with a blog-like structure. It can be used for things like blog posts, news articles, simple landing pages, user success stories, etc.
+* [Promotion](graphql/schema/promotion.md): A promotion for a particular template (space). Each template needs to be requested and it can have multiple titles, descriptions, images, CTAs, etc depending on where the promotions will be shown.
 * [Query](graphql/schema/query.md)
 * [Win](graphql/schema/win.md): A win

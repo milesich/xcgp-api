@@ -2,7 +2,7 @@
 title: QnaCategory
 ---
 
-A category of question and answers
+A category of questions and answers. It can be used for any kind of content that displays as a list of titles and descriptions like questions and answers, glossaries, terms and conditions, etc.
 
 ## Schema definition
 ```graphql

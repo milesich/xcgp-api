@@ -241,6 +241,8 @@ type Query {
   #   id
   page(id: ID!): Page
 
+  # Look up pages.
+  #
   # Arguments
   #   after
   #   first
@@ -288,6 +290,8 @@ type Query {
     jurisdiction: String
   ): Promotion
 
+  # Lookup promotions (for a given space).
+  #
   # Arguments
   #   after
   #   first
@@ -314,6 +318,8 @@ type Query {
   #   slug: Example: casino
   qnaCategory(slug: String): QnaCategory
 
+  # Lookup Q&A categories.
+  #
   # Arguments
   #   after
   #   first
@@ -333,6 +339,8 @@ type Query {
   #   url
   seo(id: String, url: String): Seo
 
+  # Lookup SEO entries.
+  #
   # Arguments
   #   after
   #   first
@@ -532,6 +540,7 @@ type Query {
 
 * **pages ([`PageConnection`](graphql/schema/pageconnection.md))**
 
+  Look up pages.
   Argument | Type | Description
   -------- | ---- | -----------
   `after` | [`String`](graphql/schema/string.md) | -
@@ -552,6 +561,7 @@ type Query {
 
 * **promotions ([`PromotionConnection`](graphql/schema/promotionconnection.md))**
 
+  Lookup promotions (for a given space).
   Argument | Type | Description
   -------- | ---- | -----------
   `after` | [`String`](graphql/schema/string.md) | -
@@ -566,6 +576,7 @@ type Query {
 
 * **qnaCategories ([`QnaCategoryConnection`](graphql/schema/qnacategoryconnection.md))**
 
+  Lookup Q&A categories.
   Argument | Type | Description
   -------- | ---- | -----------
   `after` | [`String`](graphql/schema/string.md) | -
@@ -576,6 +587,7 @@ type Query {
 
 * **seos ([`SeoConnection`](graphql/schema/seoconnection.md))**
 
+  Lookup SEO entries.
   Argument | Type | Description
   -------- | ---- | -----------
   `after` | [`String`](graphql/schema/string.md) | -

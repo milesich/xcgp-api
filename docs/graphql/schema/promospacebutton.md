@@ -37,4 +37,4 @@ type PromoSpaceButton {
 
 
 ## Required by
-* [Promotion](graphql/schema/promotion.md): A promotion
+* [Promotion](graphql/schema/promotion.md): A promotion for a particular template (space). Each template needs to be requested and it can have multiple titles, descriptions, images, CTAs, etc depending on where the promotions will be shown.

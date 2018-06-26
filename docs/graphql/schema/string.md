@@ -53,23 +53,23 @@ scalar String
 * [LobbyEdge](graphql/schema/lobbyedge.md): An edge in a connection
 * [Location](graphql/schema/location.md): A location
 * [LocationCountry](graphql/schema/locationcountry.md)
-* [Page](graphql/schema/page.md): A page
+* [Page](graphql/schema/page.md): An arbitrary piece of content with a blog-like structure. It can be used for things like blog posts, news articles, simple landing pages, user success stories, etc.
 * [PageEdge](graphql/schema/pageedge.md): An edge in a connection
 * [PageInfo](graphql/schema/pageinfo.md): Information about pagination in a connection.
 * [PaymentMethod](graphql/schema/paymentmethod.md): A payment method
 * [PaymentMethodEdge](graphql/schema/paymentmethodedge.md): An edge in a connection
 * [PromoSpaceButton](graphql/schema/promospacebutton.md): A promo space button
-* [Promotion](graphql/schema/promotion.md): A promotion
+* [Promotion](graphql/schema/promotion.md): A promotion for a particular template (space). Each template needs to be requested and it can have multiple titles, descriptions, images, CTAs, etc depending on where the promotions will be shown.
 * [PromotionEdge](graphql/schema/promotionedge.md): An edge in a connection
-* [QnaCategory](graphql/schema/qnacategory.md): A category of question and answers
+* [QnaCategory](graphql/schema/qnacategory.md): A category of questions and answers. It can be used for any kind of content that displays as a list of titles and descriptions like questions and answers, glossaries, terms and conditions, etc.
 * [QnaCategoryEdge](graphql/schema/qnacategoryedge.md): An edge in a connection
 * [QnaContent](graphql/schema/qnacontent.md): The content for a question and answer
 * [Query](graphql/schema/query.md)
 * [Screenshot](graphql/schema/screenshot.md): A game screenshot.
-* [Seo](graphql/schema/seo.md): A search engine optimisation definition
+* [Seo](graphql/schema/seo.md): An SEO entry for a document.
 * [SeoEdge](graphql/schema/seoedge.md): An edge in a connection
-* [SeoLink](graphql/schema/seolink.md): Link for a search engine optimisation definition
-* [SeoMetaTag](graphql/schema/seometatag.md): Meta tag for a search engine optimisation definition
+* [SeoLink](graphql/schema/seolink.md): A definition for an [external resource link](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link).
+* [SeoMetaTag](graphql/schema/seometatag.md): A definition for a [metadata element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta).
 * [SportEvent](graphql/schema/sportevent.md): A sport event
 * [SportEventEdge](graphql/schema/sporteventedge.md): An edge in a connection
 * [SportEventParticipant](graphql/schema/sporteventparticipant.md): A sport event participant

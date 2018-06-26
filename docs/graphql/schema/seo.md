@@ -2,7 +2,7 @@
 title: Seo
 ---
 
-A search engine optimisation definition
+An SEO entry for a document.
 
 ## Schema definition
 ```graphql
@@ -11,16 +11,19 @@ type Seo implements Node {
   # The ID of an object
   id: ID!
 
+  # The relative URL of the document.
   url: String
 
+  # The title of the document.
   title: String
 
-  device: String
-
+  # Last updated timestamp.
   updatedAt: String
 
+  # The meta tags of the document.
   metaTags: [SeoMetaTag]
 
+  # The links of the document.
   links: [SeoLink]
 
 }
@@ -34,21 +37,23 @@ type Seo implements Node {
 
 * **url ([`String`](graphql/schema/string.md))**
 
+  The relative URL of the document.
 
 * **title ([`String`](graphql/schema/string.md))**
 
-
-* **device ([`String`](graphql/schema/string.md))**
-
+  The title of the document.
 
 * **updatedAt ([`String`](graphql/schema/string.md))**
 
+  Last updated timestamp.
 
 * **metaTags ([`[SeoMetaTag]`](graphql/schema/seometatag.md))**
 
+  The meta tags of the document.
 
 * **links ([`[SeoLink]`](graphql/schema/seolink.md))**
 
+  The links of the document.
 
 
 ## Required by

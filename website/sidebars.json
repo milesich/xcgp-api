@@ -13,7 +13,6 @@
     ],
     "GraphQL": [
       "graphql/overview",
-      "graphql/schema",
       "graphql/schema/query",
       "graphql/schema/mutation",
       "graphql/schema/objects",
