@@ -10,19 +10,18 @@
 
   <span class="token attr-name">count</span><span class="token punctuation">:</span> Int <span class="token directive function">@deprecated</span><span class="token punctuation">(</span> <span class="token attr-name">reason</span><span class="token punctuation">:</span> <span class="token string">"Use `totalCount` instead."</span> <span class="token punctuation">)</span>
 
-  <span class="token comment"># A count of the total number of objects in this connection, ignoring</span>
-  <span class="token comment"># pagination. This allows a client to fetch the first five objects by</span>
-  <span class="token comment"># passing "5" as the argument to "first", then fetch the total count so</span>
-  <span class="token comment"># it could display "5 of 83", for example.</span>
+  <span class="token comment"># A count of the total number of objects in this connection, ignoring pagination.</span>
+  <span class="token comment"># This allows a client to fetch the first five objects by passing "5" as the</span>
+  <span class="token comment"># argument to "first", then fetch the total count so it could display "5 of 83",</span>
+  <span class="token comment"># for example.</span>
   <span class="token attr-name">totalCount</span><span class="token punctuation">:</span> Int
 
-  <span class="token comment"># A list of all of the objects returned in the connection. This is a</span>
-  <span class="token comment"># convenience field provided for quickly exploring the API; rather than</span>
-  <span class="token comment"># querying for "{ edges { node } }" when no edge data is needed, this</span>
-  <span class="token comment"># field can be be used instead. Note that when clients like Relay need</span>
-  <span class="token comment"># to fetch the "cursor" field on the edge to enable efficient</span>
-  <span class="token comment"># pagination, this shortcut cannot be used, and the full "{ edges { node</span>
-  <span class="token comment"># } }" version should be used instead.</span>
+  <span class="token comment"># A list of all of the objects returned in the connection. This is a convenience</span>
+  <span class="token comment"># field provided for quickly exploring the API; rather than querying for "{ edges</span>
+  <span class="token comment"># { node } }" when no edge data is needed, this field can be be used instead. Note</span>
+  <span class="token comment"># that when clients like Relay need to fetch the "cursor" field on the edge to</span>
+  <span class="token comment"># enable efficient pagination, this shortcut cannot be used, and the full "{ edges</span>
+  <span class="token comment"># { node } }" version should be used instead.</span>
   <span class="token attr-name">gameSessions</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>GameSession<span class="token punctuation">]</span>
 
 <span class="token punctuation">}</span>

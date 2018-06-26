@@ -160,10 +160,9 @@
   <span class="token comment">#   enabled: Filter games by if enabled or not</span>
   <span class="token comment">#   bonus: Filter games by if they have a bonus or not</span>
   <span class="token comment">#   jackpot: Filter games by if they have a jackpot or not</span>
-  <span class="token comment">#   playerState: The player state as some games are only visible for</span>
-  <span class="token comment"># logged-in players. Example: li</span>
-  <span class="token comment">#   country: ISO 3166-1 alpha-2 country code. Some countries block</span>
-  <span class="token comment"># games.</span>
+  <span class="token comment">#   playerState: The player state as some games are only visible for logged-in</span>
+  <span class="token comment"># players. Example: li</span>
+  <span class="token comment">#   country: ISO 3166-1 alpha-2 country code. Some countries block games.</span>
   games<span class="token punctuation">(</span>
     <span class="token attr-name">after</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span>
     <span class="token attr-name">first</span><span class="token punctuation">:</span> Int<span class="token punctuation">,</span>
@@ -236,11 +235,10 @@
   <span class="token comment"># Arguments</span>
   <span class="token comment">#   id</span>
   <span class="token comment">#   slug: Example: casinov2</span>
-  <span class="token comment">#   playerState: The player state as some games are only visible for</span>
-  <span class="token comment"># logged-in players. Example: li</span>
+  <span class="token comment">#   playerState: The player state as some games are only visible for logged-in</span>
+  <span class="token comment"># players. Example: li</span>
   <span class="token comment">#   groups: Comma separated list of player groups. Example: -1</span>
-  <span class="token comment">#   country: ISO 3166-1 alpha-2 country code. Some countries block</span>
-  <span class="token comment"># games.</span>
+  <span class="token comment">#   country: ISO 3166-1 alpha-2 country code. Some countries block games.</span>
   lobby<span class="token punctuation">(</span>
     <span class="token attr-name">id</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span>
     <span class="token attr-name">slug</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span>
@@ -285,8 +283,8 @@
   <span class="token comment">#   first</span>
   <span class="token comment">#   before</span>
   <span class="token comment">#   last</span>
-  <span class="token comment">#   type: The transaction type filter. Used to filter available payment</span>
-  <span class="token comment"># methods during the deposit or withdraw process.</span>
+  <span class="token comment">#   type: The transaction type filter. Used to filter available payment methods</span>
+  <span class="token comment"># during the deposit or withdraw process.</span>
   paymentMethods<span class="token punctuation">(</span>
     <span class="token attr-name">after</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span>
     <span class="token attr-name">first</span><span class="token punctuation">:</span> Int<span class="token punctuation">,</span>
@@ -299,10 +297,8 @@
   <span class="token comment">#   id</span>
   <span class="token comment">#   slug: The URL slug. Example: welcome-bonus</span>
   <span class="token comment">#   template: The template to use for metadata. Example: cd1</span>
-  <span class="token comment">#   playerState: The player state for cache busting purposes. Example:</span>
-  <span class="token comment"># li</span>
-  <span class="token comment">#   jurisdiction: The player jurisdiction for cache busting purposes.</span>
-  <span class="token comment"># Example: mga</span>
+  <span class="token comment">#   playerState: The player state for cache busting purposes. Example: li</span>
+  <span class="token comment">#   jurisdiction: The player jurisdiction for cache busting purposes. Example: mga</span>
   promotion<span class="token punctuation">(</span>
     <span class="token attr-name">id</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span>
     <span class="token attr-name">slug</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span>
@@ -319,10 +315,8 @@
   <span class="token comment">#   template: The template to use for metadata. Example: cd1</span>
   <span class="token comment">#   slug: The URL slug. Example: welcome-bonus</span>
   <span class="token comment">#   groups: Comma separated list of player groups. Example: -1</span>
-  <span class="token comment">#   playerState: The player state for cache busting purposes. Example:</span>
-  <span class="token comment"># li</span>
-  <span class="token comment">#   jurisdiction: The player jurisdiction for cache busting purposes.</span>
-  <span class="token comment"># Example: mga</span>
+  <span class="token comment">#   playerState: The player state for cache busting purposes. Example: li</span>
+  <span class="token comment">#   jurisdiction: The player jurisdiction for cache busting purposes. Example: mga</span>
   promotions<span class="token punctuation">(</span>
     <span class="token attr-name">after</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span>
     <span class="token attr-name">first</span><span class="token punctuation">:</span> Int<span class="token punctuation">,</span>
