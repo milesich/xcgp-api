@@ -772,6 +772,3 @@ type Query {
   -------- | ---- | -----------
   `id` | [`ID!`](graphql/schema/id.md) | -
 
-
-## Required by
-This element is not required by anyone.

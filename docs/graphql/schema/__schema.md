@@ -50,6 +50,3 @@ type __Schema {
 
   A list of all directives supported by this server.
 
-
-## Required by
-This element is not required by anyone.

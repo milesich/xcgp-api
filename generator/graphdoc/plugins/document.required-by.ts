@@ -99,16 +99,14 @@ export default class RequiredByPlugin extends Plugin implements PluginInterface 
   }
 
   getDocuments(buildForType?: string): DocumentSectionInterface[] {
-    if (!buildForType)
+    if (!buildForType) {
       return [];
+    }
 
     const requireBy = this.requireBy.get(buildForType);
-
-    if (!Array.isArray(requireBy) || requireBy.length === 0)
-      return [{
-        title: 'Required by',
-        description: 'This element is not required by anyone.',
-      }];
+    if (!Array.isArray(requireBy) || requireBy.length === 0) {
+      return [];
+    }
 
     let used = new Set();
 

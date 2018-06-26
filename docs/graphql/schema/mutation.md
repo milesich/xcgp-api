@@ -36,6 +36,3 @@ type Mutation {
   -------- | ---- | -----------
   `input` | [`UpdateUserInput`](graphql/schema/updateuserinput.md) | -
 
-
-## Required by
-This element is not required by anyone.
