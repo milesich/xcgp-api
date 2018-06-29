@@ -34,27 +34,27 @@
 
   <span class="token comment"># Arguments</span>
   <span class="token comment">#   id</span>
-  achievement<span class="token punctuation">(</span><span class="token attr-name">id</span><span class="token punctuation">:</span> String<span class="token punctuation">)</span><span class="token punctuation">:</span> Achievement
+  achievement<span class="token punctuation">(</span><span class="token attr-name">id</span><span class="token punctuation">:</span> ID<span class="token operator">!</span><span class="token punctuation">)</span><span class="token punctuation">:</span> Achievement
 
   <span class="token comment"># Arguments</span>
   <span class="token comment">#   after</span>
   <span class="token comment">#   first</span>
   <span class="token comment">#   before</span>
   <span class="token comment">#   last</span>
-  <span class="token comment">#   id</span>
   <span class="token comment">#   achievementChainId</span>
+  <span class="token comment">#   parentAchievementId</span>
   achievements<span class="token punctuation">(</span>
     <span class="token attr-name">after</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span>
     <span class="token attr-name">first</span><span class="token punctuation">:</span> Int<span class="token punctuation">,</span>
     <span class="token attr-name">before</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span>
     <span class="token attr-name">last</span><span class="token punctuation">:</span> Int<span class="token punctuation">,</span>
-    <span class="token attr-name">id</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span>
-    <span class="token attr-name">achievementChainId</span><span class="token punctuation">:</span> String
+    <span class="token attr-name">achievementChainId</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span>
+    <span class="token attr-name">parentAchievementId</span><span class="token punctuation">:</span> String
   <span class="token punctuation">)</span><span class="token punctuation">:</span> AchievementConnection
 
   <span class="token comment"># Arguments</span>
   <span class="token comment">#   id</span>
-  achievementChain<span class="token punctuation">(</span><span class="token attr-name">id</span><span class="token punctuation">:</span> String<span class="token punctuation">)</span><span class="token punctuation">:</span> AchievementChain
+  achievementChain<span class="token punctuation">(</span><span class="token attr-name">id</span><span class="token punctuation">:</span> ID<span class="token operator">!</span><span class="token punctuation">)</span><span class="token punctuation">:</span> AchievementChain
 
   <span class="token comment"># Arguments</span>
   <span class="token comment">#   after</span>
@@ -75,6 +75,26 @@
     <span class="token attr-name">activationDate</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span>
     <span class="token attr-name">expiryDate</span><span class="token punctuation">:</span> String
   <span class="token punctuation">)</span><span class="token punctuation">:</span> AchievementChainConnection
+
+  <span class="token comment"># Arguments</span>
+  <span class="token comment">#   id</span>
+  userAchievement<span class="token punctuation">(</span><span class="token attr-name">id</span><span class="token punctuation">:</span> ID<span class="token operator">!</span><span class="token punctuation">)</span><span class="token punctuation">:</span> UserAchievement
+
+  <span class="token comment"># Arguments</span>
+  <span class="token comment">#   after</span>
+  <span class="token comment">#   first</span>
+  <span class="token comment">#   before</span>
+  <span class="token comment">#   last</span>
+  <span class="token comment">#   achievementId: Filter by achievement ID</span>
+  <span class="token comment">#   achievementChainId: Filter by achievement chain ID</span>
+  userAchievements<span class="token punctuation">(</span>
+    <span class="token attr-name">after</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span>
+    <span class="token attr-name">first</span><span class="token punctuation">:</span> Int<span class="token punctuation">,</span>
+    <span class="token attr-name">before</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span>
+    <span class="token attr-name">last</span><span class="token punctuation">:</span> Int<span class="token punctuation">,</span>
+    <span class="token attr-name">achievementId</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span>
+    <span class="token attr-name">achievementChainId</span><span class="token punctuation">:</span> String
+  <span class="token punctuation">)</span><span class="token punctuation">:</span> UserAchievementConnection
 
   <span class="token comment"># Arguments</span>
   <span class="token comment">#   id</span>
@@ -418,8 +438,8 @@
 <tr><td><code>first</code></td><td><a href="/xcgp-api/docs/graphql/schema/int.html"><code>Int</code></a></td><td>-</td></tr>
 <tr><td><code>before</code></td><td><a href="/xcgp-api/docs/graphql/schema/string.html"><code>String</code></a></td><td>-</td></tr>
 <tr><td><code>last</code></td><td><a href="/xcgp-api/docs/graphql/schema/int.html"><code>Int</code></a></td><td>-</td></tr>
-<tr><td><code>id</code></td><td><a href="/xcgp-api/docs/graphql/schema/string.html"><code>String</code></a></td><td>-</td></tr>
 <tr><td><code>achievementChainId</code></td><td><a href="/xcgp-api/docs/graphql/schema/string.html"><code>String</code></a></td><td>-</td></tr>
+<tr><td><code>parentAchievementId</code></td><td><a href="/xcgp-api/docs/graphql/schema/string.html"><code>String</code></a></td><td>-</td></tr>
 </tbody>
 </table>
 </li>
@@ -437,6 +457,21 @@
 <tr><td><code>enabled</code></td><td><a href="/xcgp-api/docs/graphql/schema/boolean.html"><code>Boolean</code></a></td><td>Filter chains by if enabled or not</td></tr>
 <tr><td><code>activationDate</code></td><td><a href="/xcgp-api/docs/graphql/schema/string.html"><code>String</code></a></td><td>Filter by activation date</td></tr>
 <tr><td><code>expiryDate</code></td><td><a href="/xcgp-api/docs/graphql/schema/string.html"><code>String</code></a></td><td>Filter by expiration date</td></tr>
+</tbody>
+</table>
+</li>
+<li><p><strong>userAchievements (<a href="/xcgp-api/docs/graphql/schema/userachievementconnection.html"><code>UserAchievementConnection</code></a>)</strong></p>
+<table>
+<thead>
+<tr><th>Argument</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code>after</code></td><td><a href="/xcgp-api/docs/graphql/schema/string.html"><code>String</code></a></td><td>-</td></tr>
+<tr><td><code>first</code></td><td><a href="/xcgp-api/docs/graphql/schema/int.html"><code>Int</code></a></td><td>-</td></tr>
+<tr><td><code>before</code></td><td><a href="/xcgp-api/docs/graphql/schema/string.html"><code>String</code></a></td><td>-</td></tr>
+<tr><td><code>last</code></td><td><a href="/xcgp-api/docs/graphql/schema/int.html"><code>Int</code></a></td><td>-</td></tr>
+<tr><td><code>achievementId</code></td><td><a href="/xcgp-api/docs/graphql/schema/string.html"><code>String</code></a></td><td>Filter by achievement ID</td></tr>
+<tr><td><code>achievementChainId</code></td><td><a href="/xcgp-api/docs/graphql/schema/string.html"><code>String</code></a></td><td>Filter by achievement chain ID</td></tr>
 </tbody>
 </table>
 </li>
@@ -747,7 +782,7 @@
 <tr><th>Argument</th><th>Type</th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td><code>id</code></td><td><a href="/xcgp-api/docs/graphql/schema/string.html"><code>String</code></a></td><td>-</td></tr>
+<tr><td><code>id</code></td><td><a href="/xcgp-api/docs/graphql/schema/id.html"><code>ID!</code></a></td><td>-</td></tr>
 </tbody>
 </table>
 </li>
@@ -757,7 +792,17 @@
 <tr><th>Argument</th><th>Type</th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td><code>id</code></td><td><a href="/xcgp-api/docs/graphql/schema/string.html"><code>String</code></a></td><td>-</td></tr>
+<tr><td><code>id</code></td><td><a href="/xcgp-api/docs/graphql/schema/id.html"><code>ID!</code></a></td><td>-</td></tr>
+</tbody>
+</table>
+</li>
+<li><p><strong>userAchievement (<a href="/xcgp-api/docs/graphql/schema/userachievement.html"><code>UserAchievement</code></a>)</strong></p>
+<table>
+<thead>
+<tr><th>Argument</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code>id</code></td><td><a href="/xcgp-api/docs/graphql/schema/id.html"><code>ID!</code></a></td><td>-</td></tr>
 </tbody>
 </table>
 </li>

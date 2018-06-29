@@ -6,7 +6,7 @@
   <span class="token attr-name">id</span><span class="token punctuation">:</span> ID<span class="token operator">!</span>
 
   <span class="token comment"># The slug of the game category.</span>
-  <span class="token attr-name">slug</span><span class="token punctuation">:</span> ID<span class="token operator">!</span>
+  <span class="token attr-name">slug</span><span class="token punctuation">:</span> String<span class="token operator">!</span>
 
   <span class="token comment"># The name of the game category.</span>
   <span class="token attr-name">name</span><span class="token punctuation">:</span> String<span class="token operator">!</span>
@@ -14,7 +14,7 @@
   <span class="token comment"># The order of the game category.</span>
   <span class="token attr-name">order</span><span class="token punctuation">:</span> Int<span class="token operator">!</span>
 
-  <span class="token attr-name">layouts</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>LobbyCategoryLayout<span class="token punctuation">]</span> <span class="token directive function">@deprecated</span><span class="token punctuation">(</span> <span class="token attr-name">reason</span><span class="token punctuation">:</span> <span class="token string">"Use layoutConnection instead for pagination possibilities"</span> <span class="token punctuation">)</span>
+  <span class="token attr-name">layouts</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>LobbyCategoryLayout<span class="token punctuation">]</span> <span class="token directive function">@deprecated</span><span class="token punctuation">(</span><span class="token attr-name">reason</span><span class="token punctuation">:</span> <span class="token string">"Use layoutConnection instead for pagination possibilities"</span><span class="token punctuation">)</span>
 
   <span class="token comment"># Arguments</span>
   <span class="token comment">#   after</span>
@@ -50,7 +50,7 @@
 <ul>
 <li><p><strong>id (<a href="/xcgp-api/docs/graphql/schema/id.html"><code>ID!</code></a>)</strong></p>
 <p>The ID of an object</p></li>
-<li><p><strong>slug (<a href="/xcgp-api/docs/graphql/schema/id.html"><code>ID!</code></a>)</strong></p>
+<li><p><strong>slug (<a href="/xcgp-api/docs/graphql/schema/string.html"><code>String!</code></a>)</strong></p>
 <p>The slug of the game category.</p></li>
 <li><p><strong>name (<a href="/xcgp-api/docs/graphql/schema/string.html"><code>String!</code></a>)</strong></p>
 <p>The name of the game category.</p></li>

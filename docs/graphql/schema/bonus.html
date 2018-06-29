@@ -5,7 +5,7 @@
   <span class="token comment"># The ID of an object</span>
   <span class="token attr-name">id</span><span class="token punctuation">:</span> ID<span class="token operator">!</span>
 
-  <span class="token attr-name">activatedDate</span><span class="token punctuation">:</span> String
+  <span class="token attr-name">activatedDate</span><span class="token punctuation">:</span> DateTime
 
   <span class="token attr-name">activationType</span><span class="token punctuation">:</span> String
 
@@ -20,7 +20,7 @@
   <span class="token attr-name">description</span><span class="token punctuation">:</span> String
 
   <span class="token comment"># The date in which this bonus will expire</span>
-  <span class="token attr-name">expiryDate</span><span class="token punctuation">:</span> String
+  <span class="token attr-name">expiryDate</span><span class="token punctuation">:</span> DateTime
 
   <span class="token comment"># Game that is associated with this bonus</span>
   <span class="token attr-name">game</span><span class="token punctuation">:</span> Game
@@ -52,7 +52,7 @@
 <ul>
 <li><p><strong>id (<a href="/xcgp-api/docs/graphql/schema/id.html"><code>ID!</code></a>)</strong></p>
 <p>The ID of an object</p></li>
-<li><p><strong>activatedDate (<a href="/xcgp-api/docs/graphql/schema/string.html"><code>String</code></a>)</strong></p></li>
+<li><p><strong>activatedDate (<a href="/xcgp-api/docs/graphql/schema/datetime.html"><code>DateTime</code></a>)</strong></p></li>
 </ul>
 <ul>
 <li><strong>activationType (<a href="/xcgp-api/docs/graphql/schema/string.html"><code>String</code></a>)</strong></li>
@@ -68,7 +68,7 @@
 <p>Whether this bonus can be awarded</p></li>
 <li><p><strong>description (<a href="/xcgp-api/docs/graphql/schema/string.html"><code>String</code></a>)</strong></p>
 <p>Content provided through the backoffice</p></li>
-<li><p><strong>expiryDate (<a href="/xcgp-api/docs/graphql/schema/string.html"><code>String</code></a>)</strong></p>
+<li><p><strong>expiryDate (<a href="/xcgp-api/docs/graphql/schema/datetime.html"><code>DateTime</code></a>)</strong></p>
 <p>The date in which this bonus will expire</p></li>
 <li><p><strong>game (<a href="/xcgp-api/docs/graphql/schema/game.html"><code>Game</code></a>)</strong></p>
 <p>Game that is associated with this bonus</p></li>
