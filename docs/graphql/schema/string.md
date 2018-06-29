@@ -16,9 +16,9 @@ scalar String
 * [AchievementChain](graphql/schema/achievementchain.md): An achievement chain is a group of achievements
 * [AchievementChainEdge](graphql/schema/achievementchainedge.md): An edge in a connection
 * [AchievementEdge](graphql/schema/achievementedge.md): An edge in a connection
-* [AchievementProgress](graphql/schema/achievementprogress.md)
 * [Bonus](graphql/schema/bonus.md): A bonus
 * [BonusEdge](graphql/schema/bonusedge.md): An edge in a connection
+* [Bucket](graphql/schema/bucket.md): An bucket containing achievement progress
 * [Card](graphql/schema/card.md): A card
 * [Country](graphql/schema/country.md): A country
 * [CountryEdge](graphql/schema/countryedge.md): An edge in a connection
@@ -32,15 +32,12 @@ scalar String
 * [FeedEdge](graphql/schema/feededge.md): An edge in a connection
 * [Game](graphql/schema/game.md): A game.
 * [GameEdge](graphql/schema/gameedge.md): An edge in a connection
-* [GameLastDraw](graphql/schema/gamelastdraw.md)
-* [GameNextDraw](graphql/schema/gamenextdraw.md)
-* [GameSession](graphql/schema/gamesession.md): A game session
 * [GameSessionEdge](graphql/schema/gamesessionedge.md): An edge in a connection
 * [GameTag](graphql/schema/gametag.md): A game tag that can be used to filter games
 * [GameTagEdge](graphql/schema/gametagedge.md): An edge in a connection
 * [Jackpot](graphql/schema/jackpot.md): A jackpot
 * [JackpotEdge](graphql/schema/jackpotedge.md): An edge in a connection
-* [Language](graphql/schema/language.md): A language
+* [Language](graphql/schema/language.md): A locale.
 * [LanguageEdge](graphql/schema/languageedge.md): An edge in a connection
 * [Limit](graphql/schema/limit.md): A limit
 * [LimitEdge](graphql/schema/limitedge.md): An edge in a connection
@@ -78,6 +75,8 @@ scalar String
 * [TransactionEdge](graphql/schema/transactionedge.md): An edge in a connection
 * [UpdateUserInput](graphql/schema/updateuserinput.md): Input for updating a user
 * [User](graphql/schema/user.md): A user
+* [UserAchievement](graphql/schema/userachievement.md): An achievement belonging to a user
+* [UserAchievementEdge](graphql/schema/userachievementedge.md): An edge in a connection
 * [Win](graphql/schema/win.md): A win
 * [WinEdge](graphql/schema/winedge.md): An edge in a connection
 * [__Directive](graphql/schema/__directive.md): A Directive provides a way to describe alternate runtime execution and type validation behavior in a GraphQL document.

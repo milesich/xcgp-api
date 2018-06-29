@@ -10,6 +10,7 @@ scalar Boolean
 ```
 
 ## Required by
+* [Achievement](graphql/schema/achievement.md): An achievement
 * [AchievementChain](graphql/schema/achievementchain.md): An achievement chain is a group of achievements
 * [Bonus](graphql/schema/bonus.md): A bonus
 * [Card](graphql/schema/card.md): A card

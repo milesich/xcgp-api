@@ -11,6 +11,7 @@ For more information, see "[Introduction to GraphQL](guides/graphql/introduction
 ## List of scalars
 
 * [Boolean](graphql/schema/boolean.md)
+* [DateTime](graphql/schema/datetime.md)
 * [Float](graphql/schema/float.md)
 * [ID](graphql/schema/id.md)
 * [Int](graphql/schema/int.md)

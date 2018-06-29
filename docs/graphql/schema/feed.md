@@ -24,7 +24,7 @@ type Feed implements Node {
   content: String
 
   # The timestamp of the last modification.
-  dateModified: String
+  dateModified: DateTime
 
   # The list of authors.
   authors: [FeedAuthor]
@@ -54,7 +54,7 @@ type Feed implements Node {
 
   The original HTML content.
 
-* **dateModified ([`String`](graphql/schema/string.md))**
+* **dateModified ([`DateTime`](graphql/schema/datetime.md))**
 
   The timestamp of the last modification.
 

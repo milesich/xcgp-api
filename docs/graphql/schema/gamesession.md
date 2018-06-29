@@ -17,9 +17,9 @@ type GameSession implements Node {
 
   bet: Float
 
-  endDate: String
+  endDate: DateTime
 
-  startDate: String
+  startDate: DateTime
 
   win: Float
 
@@ -43,10 +43,10 @@ type GameSession implements Node {
 * **bet ([`Float`](graphql/schema/float.md))**
 
 
-* **endDate ([`String`](graphql/schema/string.md))**
+* **endDate ([`DateTime`](graphql/schema/datetime.md))**
 
 
-* **startDate ([`String`](graphql/schema/string.md))**
+* **startDate ([`DateTime`](graphql/schema/datetime.md))**
 
 
 * **win ([`Float`](graphql/schema/float.md))**

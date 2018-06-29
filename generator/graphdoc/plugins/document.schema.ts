@@ -128,7 +128,7 @@ export default class SchemaPlugin extends Plugin implements PluginInterface {
     if (!fieldOrEnumVal.deprecationReason) {
       return '@deprecated';
     }
-    return `@deprecated( reason: "${fieldOrEnumVal.deprecationReason}" )`;
+    return `@deprecated(reason: "${fieldOrEnumVal.deprecationReason}")`;
   }
 
   description(description: string): string[] {

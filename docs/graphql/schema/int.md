@@ -15,6 +15,7 @@ scalar Int
 * [AchievementChainConnection](graphql/schema/achievementchainconnection.md): A connection to a list of items.
 * [AchievementConnection](graphql/schema/achievementconnection.md): A connection to a list of items.
 * [BonusConnection](graphql/schema/bonusconnection.md): A connection to a list of items.
+* [Bucket](graphql/schema/bucket.md): An bucket containing achievement progress
 * [Card](graphql/schema/card.md): A card
 * [Country](graphql/schema/country.md): A country
 * [CountryConnection](graphql/schema/countryconnection.md): A connection to a list of items.
@@ -50,4 +51,6 @@ scalar Int
 * [TransactionConnection](graphql/schema/transactionconnection.md): A connection to a list of items.
 * [UpdateUserInput](graphql/schema/updateuserinput.md): Input for updating a user
 * [User](graphql/schema/user.md): A user
+* [UserAchievement](graphql/schema/userachievement.md): An achievement belonging to a user
+* [UserAchievementConnection](graphql/schema/userachievementconnection.md): A connection to a list of items.
 * [WinConnection](graphql/schema/winconnection.md): A connection to a list of items.

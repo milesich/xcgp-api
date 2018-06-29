@@ -66,4 +66,5 @@ type PageInfo {
 * [SeoConnection](graphql/schema/seoconnection.md): A connection to a list of items.
 * [SportEventConnection](graphql/schema/sporteventconnection.md): A connection to a list of items.
 * [TransactionConnection](graphql/schema/transactionconnection.md): A connection to a list of items.
+* [UserAchievementConnection](graphql/schema/userachievementconnection.md): A connection to a list of items.
 * [WinConnection](graphql/schema/winconnection.md): A connection to a list of items.

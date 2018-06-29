@@ -20,9 +20,9 @@ type Promotion implements Node {
   # The URL slug. Unique per locale.
   slug: String
 
-  activeFrom: String
+  activeFrom: DateTime
 
-  expiresAt: String
+  expiresAt: DateTime
 
   # Example: casino
   category: String
@@ -80,10 +80,10 @@ type Promotion implements Node {
 
   The URL slug. Unique per locale.
 
-* **activeFrom ([`String`](graphql/schema/string.md))**
+* **activeFrom ([`DateTime`](graphql/schema/datetime.md))**
 
 
-* **expiresAt ([`String`](graphql/schema/string.md))**
+* **expiresAt ([`DateTime`](graphql/schema/datetime.md))**
 
 
 * **category ([`String`](graphql/schema/string.md))**

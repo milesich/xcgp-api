@@ -6,10 +6,10 @@ An achievement chain is a group of achievements
 
 ## Schema definition
 ```graphql
-type AchievementChain {
+type AchievementChain implements Node {
 
-  # ID of the chain
-  id: String!
+  # The ID of an object
+  id: ID!
 
   # Name of the chain
   name: String!
@@ -23,6 +23,9 @@ type AchievementChain {
   # Date when chain will expire
   expiryDate: String
 
+  # If the achievement is deleted
+  deleted: Boolean!
+
   # Status of the chain
   status: String!
 
@@ -31,15 +34,11 @@ type AchievementChain {
   #   first
   #   before
   #   last
-  #   id
-  #   achievementChainId
   achievementConnection(
     after: String,
     first: Int,
     before: String,
-    last: Int,
-    id: String,
-    achievementChainId: String
+    last: Int
   ): AchievementConnection
 
   # Arguments
@@ -47,16 +46,12 @@ type AchievementChain {
   #   first
   #   before
   #   last
-  #   id
-  #   achievementChainId
   userAchievementConnection(
     after: String,
     first: Int,
     before: String,
-    last: Int,
-    id: String,
-    achievementChainId: String
-  ): AchievementConnection
+    last: Int
+  ): UserAchievementConnection
 
 }
 ```
@@ -71,10 +66,8 @@ type AchievementChain {
   `first` | [`Int`](graphql/schema/int.md) | -
   `before` | [`String`](graphql/schema/string.md) | -
   `last` | [`Int`](graphql/schema/int.md) | -
-  `id` | [`String`](graphql/schema/string.md) | -
-  `achievementChainId` | [`String`](graphql/schema/string.md) | -
 
-* **userAchievementConnection ([`AchievementConnection`](graphql/schema/achievementconnection.md))**
+* **userAchievementConnection ([`UserAchievementConnection`](graphql/schema/userachievementconnection.md))**
 
   Argument | Type | Description
   -------- | ---- | -----------
@@ -82,15 +75,13 @@ type AchievementChain {
   `first` | [`Int`](graphql/schema/int.md) | -
   `before` | [`String`](graphql/schema/string.md) | -
   `last` | [`Int`](graphql/schema/int.md) | -
-  `id` | [`String`](graphql/schema/string.md) | -
-  `achievementChainId` | [`String`](graphql/schema/string.md) | -
 
 
 ## Fields
 
-* **id ([`String!`](graphql/schema/string.md))**
+* **id ([`ID!`](graphql/schema/id.md))**
 
-  ID of the chain
+  The ID of an object
 
 * **name ([`String!`](graphql/schema/string.md))**
 
@@ -108,12 +99,17 @@ type AchievementChain {
 
   Date when chain will expire
 
+* **deleted ([`Boolean!`](graphql/schema/boolean.md))**
+
+  If the achievement is deleted
+
 * **status ([`String!`](graphql/schema/string.md))**
 
   Status of the chain
 
 
 ## Required by
+* [Achievement](graphql/schema/achievement.md): An achievement
 * [AchievementChainConnection](graphql/schema/achievementchainconnection.md): A connection to a list of items.
 * [AchievementChainEdge](graphql/schema/achievementchainedge.md): An edge in a connection
 * [Query](graphql/schema/query.md)

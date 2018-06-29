@@ -18,11 +18,11 @@ type __Directive {
 
   args: [__InputValue!]!
 
-  onOperation: Boolean! @deprecated( reason: "Use `locations`." )
+  onOperation: Boolean! @deprecated(reason: "Use `locations`.")
 
-  onFragment: Boolean! @deprecated( reason: "Use `locations`." )
+  onFragment: Boolean! @deprecated(reason: "Use `locations`.")
 
-  onField: Boolean! @deprecated( reason: "Use `locations`." )
+  onField: Boolean! @deprecated(reason: "Use `locations`.")
 
 }
 ```

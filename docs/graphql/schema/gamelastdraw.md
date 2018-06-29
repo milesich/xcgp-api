@@ -8,7 +8,7 @@ title: GameLastDraw
 ```graphql
 type GameLastDraw {
 
-  date: String
+  date: DateTime
 
   jackpot: Float
 
@@ -19,7 +19,7 @@ type GameLastDraw {
 
 ## Fields
 
-* **date ([`String`](graphql/schema/string.md))**
+* **date ([`DateTime`](graphql/schema/datetime.md))**
 
 
 * **jackpot ([`Float`](graphql/schema/float.md))**

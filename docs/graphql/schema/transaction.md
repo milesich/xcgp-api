@@ -33,7 +33,7 @@ type Transaction implements Node {
 
   redirectUrl: String
 
-  startDate: String
+  startDate: DateTime
 
   status: TransactionStatus
 
@@ -81,7 +81,7 @@ type Transaction implements Node {
 * **redirectUrl ([`String`](graphql/schema/string.md))**
 
 
-* **startDate ([`String`](graphql/schema/string.md))**
+* **startDate ([`DateTime`](graphql/schema/datetime.md))**
 
 
 * **status ([`TransactionStatus`](graphql/schema/transactionstatus.md))**

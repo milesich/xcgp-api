@@ -15,13 +15,13 @@ type Card implements Node {
 
   number: String
 
-  expiryDate: String
+  expiryDate: DateTime
 
   ccv: String
 
   active: Boolean
 
-  createdAt: String
+  createdAt: DateTime
 
   deposits: Int
 
@@ -48,7 +48,7 @@ type Card implements Node {
 * **number ([`String`](graphql/schema/string.md))**
 
 
-* **expiryDate ([`String`](graphql/schema/string.md))**
+* **expiryDate ([`DateTime`](graphql/schema/datetime.md))**
 
 
 * **ccv ([`String`](graphql/schema/string.md))**
@@ -57,7 +57,7 @@ type Card implements Node {
 * **active ([`Boolean`](graphql/schema/boolean.md))**
 
 
-* **createdAt ([`String`](graphql/schema/string.md))**
+* **createdAt ([`DateTime`](graphql/schema/datetime.md))**
 
 
 * **deposits ([`Int`](graphql/schema/int.md))**

@@ -19,9 +19,9 @@ type Document implements Node {
 
   type: String
 
-  dateAdded: String
+  dateAdded: DateTime
 
-  dateUpdated: String
+  dateUpdated: DateTime
 
 }
 ```
@@ -44,10 +44,10 @@ type Document implements Node {
 * **type ([`String`](graphql/schema/string.md))**
 
 
-* **dateAdded ([`String`](graphql/schema/string.md))**
+* **dateAdded ([`DateTime`](graphql/schema/datetime.md))**
 
 
-* **dateUpdated ([`String`](graphql/schema/string.md))**
+* **dateUpdated ([`DateTime`](graphql/schema/datetime.md))**
 
 
 

@@ -2,26 +2,21 @@
 title: Language
 ---
 
-A language
+A locale.
 
 ## Schema definition
 ```graphql
 type Language {
 
-  # Dial code for this country. Example: 44 for United Kingdom
+  # The locale code in [BCP 47](https://tools.ietf.org/html/bcp47) format.
   code: String
 
-  # Country code. Example: gb for United Kingdom
+  # The name of the locale to present to the user.
   text: String
 
-  # Country name
+  # The suggested currency code in [ISO
+  # 4217](https://en.wikipedia.org/wiki/ISO_4217) format.
   currency: String
-
-  # An example of a phone number from this country. Example: 9696 1234 for Malta
-  supportSkill: String
-
-  # Code for country flag.
-  supportSurveyName: String
 
 }
 ```
@@ -30,23 +25,15 @@ type Language {
 
 * **code ([`String`](graphql/schema/string.md))**
 
-  Dial code for this country. Example: 44 for United Kingdom
+  The locale code in [BCP 47](https://tools.ietf.org/html/bcp47) format.
 
 * **text ([`String`](graphql/schema/string.md))**
 
-  Country code. Example: gb for United Kingdom
+  The name of the locale to present to the user.
 
 * **currency ([`String`](graphql/schema/string.md))**
 
-  Country name
-
-* **supportSkill ([`String`](graphql/schema/string.md))**
-
-  An example of a phone number from this country. Example: 9696 1234 for Malta
-
-* **supportSurveyName ([`String`](graphql/schema/string.md))**
-
-  Code for country flag.
+  The suggested currency code in [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) format.
 
 
 ## Required by

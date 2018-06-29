@@ -6,62 +6,65 @@ An achievement
 
 ## Schema definition
 ```graphql
-type Achievement {
+type Achievement implements Node {
 
-  # ID of the achievement
-  id: String!
+  # The ID of an object
+  id: ID!
 
-  # Name of the achievement
-  name: String!
+  # An achievement chain ID
+  achievementChainId: ID
+
+  # Parent ID
+  parentAchievementId: ID
 
   # Rule to calculate points
-  rule: String!
+  rule: String
 
-  # Date when achieved otherwise empty
-  achievedOn: String
+  # Name of the achievement
+  name: String
 
-  progress: [AchievementProgress]
+  # Name of the achievement
+  deleted: Boolean
 
-  # Percentage progress of all progresses in this achievement
-  progressPercentage: Float!
-
-  # An achievement chain Id
-  achievementChainId: String
+  # AchievementChain containing this Achievement
+  achievementChain: AchievementChain
 
 }
 ```
 
 ## Fields
 
-* **id ([`String!`](graphql/schema/string.md))**
+* **id ([`ID!`](graphql/schema/id.md))**
 
-  ID of the achievement
+  The ID of an object
 
-* **name ([`String!`](graphql/schema/string.md))**
+* **achievementChainId ([`ID`](graphql/schema/id.md))**
 
-  Name of the achievement
+  An achievement chain ID
 
-* **rule ([`String!`](graphql/schema/string.md))**
+* **parentAchievementId ([`ID`](graphql/schema/id.md))**
+
+  Parent ID
+
+* **rule ([`String`](graphql/schema/string.md))**
 
   Rule to calculate points
 
-* **achievedOn ([`String`](graphql/schema/string.md))**
+* **name ([`String`](graphql/schema/string.md))**
 
-  Date when achieved otherwise empty
+  Name of the achievement
 
-* **progress ([`[AchievementProgress]`](graphql/schema/achievementprogress.md))**
+* **deleted ([`Boolean`](graphql/schema/boolean.md))**
 
+  Name of the achievement
 
-* **progressPercentage ([`Float!`](graphql/schema/float.md))**
+* **achievementChain ([`AchievementChain`](graphql/schema/achievementchain.md))**
 
-  Percentage progress of all progresses in this achievement
-
-* **achievementChainId ([`String`](graphql/schema/string.md))**
-
-  An achievement chain Id
+  AchievementChain containing this Achievement
 
 
 ## Required by
 * [AchievementConnection](graphql/schema/achievementconnection.md): A connection to a list of items.
 * [AchievementEdge](graphql/schema/achievementedge.md): An edge in a connection
 * [Query](graphql/schema/query.md)
+* [UserAchievement](graphql/schema/userachievement.md): An achievement belonging to a user

@@ -19,27 +19,27 @@ type Query {
 
   # Arguments
   #   id
-  achievement(id: String): Achievement
+  achievement(id: ID!): Achievement
 
   # Arguments
   #   after
   #   first
   #   before
   #   last
-  #   id
   #   achievementChainId
+  #   parentAchievementId
   achievements(
     after: String,
     first: Int,
     before: String,
     last: Int,
-    id: String,
-    achievementChainId: String
+    achievementChainId: String,
+    parentAchievementId: String
   ): AchievementConnection
 
   # Arguments
   #   id
-  achievementChain(id: String): AchievementChain
+  achievementChain(id: ID!): AchievementChain
 
   # Arguments
   #   after
@@ -60,6 +60,26 @@ type Query {
     activationDate: String,
     expiryDate: String
   ): AchievementChainConnection
+
+  # Arguments
+  #   id
+  userAchievement(id: ID!): UserAchievement
+
+  # Arguments
+  #   after
+  #   first
+  #   before
+  #   last
+  #   achievementId: Filter by achievement ID
+  #   achievementChainId: Filter by achievement chain ID
+  userAchievements(
+    after: String,
+    first: Int,
+    before: String,
+    last: Int,
+    achievementId: String,
+    achievementChainId: String
+  ): UserAchievementConnection
 
   # Arguments
   #   id
@@ -402,8 +422,8 @@ type Query {
   `first` | [`Int`](graphql/schema/int.md) | -
   `before` | [`String`](graphql/schema/string.md) | -
   `last` | [`Int`](graphql/schema/int.md) | -
-  `id` | [`String`](graphql/schema/string.md) | -
   `achievementChainId` | [`String`](graphql/schema/string.md) | -
+  `parentAchievementId` | [`String`](graphql/schema/string.md) | -
 
 * **achievementChains ([`AchievementChainConnection`](graphql/schema/achievementchainconnection.md))**
 
@@ -417,6 +437,17 @@ type Query {
   `enabled` | [`Boolean`](graphql/schema/boolean.md) | Filter chains by if enabled or not
   `activationDate` | [`String`](graphql/schema/string.md) | Filter by activation date
   `expiryDate` | [`String`](graphql/schema/string.md) | Filter by expiration date
+
+* **userAchievements ([`UserAchievementConnection`](graphql/schema/userachievementconnection.md))**
+
+  Argument | Type | Description
+  -------- | ---- | -----------
+  `after` | [`String`](graphql/schema/string.md) | -
+  `first` | [`Int`](graphql/schema/int.md) | -
+  `before` | [`String`](graphql/schema/string.md) | -
+  `last` | [`Int`](graphql/schema/int.md) | -
+  `achievementId` | [`String`](graphql/schema/string.md) | Filter by achievement ID
+  `achievementChainId` | [`String`](graphql/schema/string.md) | Filter by achievement chain ID
 
 * **bonuses ([`BonusConnection`](graphql/schema/bonusconnection.md))**
 
@@ -639,13 +670,19 @@ type Query {
 
   Argument | Type | Description
   -------- | ---- | -----------
-  `id` | [`String`](graphql/schema/string.md) | -
+  `id` | [`ID!`](graphql/schema/id.md) | -
 
 * **achievementChain ([`AchievementChain`](graphql/schema/achievementchain.md))**
 
   Argument | Type | Description
   -------- | ---- | -----------
-  `id` | [`String`](graphql/schema/string.md) | -
+  `id` | [`ID!`](graphql/schema/id.md) | -
+
+* **userAchievement ([`UserAchievement`](graphql/schema/userachievement.md))**
+
+  Argument | Type | Description
+  -------- | ---- | -----------
+  `id` | [`ID!`](graphql/schema/id.md) | -
 
 * **bonus ([`Bonus`](graphql/schema/bonus.md))**
 

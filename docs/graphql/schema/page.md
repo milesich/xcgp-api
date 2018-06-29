@@ -15,7 +15,7 @@ type Page implements Node {
 
   content: String
 
-  date: String
+  date: DateTime
 
   description: String
 
@@ -50,7 +50,7 @@ type Page implements Node {
 * **content ([`String`](graphql/schema/string.md))**
 
 
-* **date ([`String`](graphql/schema/string.md))**
+* **date ([`DateTime`](graphql/schema/datetime.md))**
 
 
 * **description ([`String`](graphql/schema/string.md))**

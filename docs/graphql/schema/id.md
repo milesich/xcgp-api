@@ -14,7 +14,10 @@ scalar ID
 ```
 
 ## Required by
+* [Achievement](graphql/schema/achievement.md): An achievement
+* [AchievementChain](graphql/schema/achievementchain.md): An achievement chain is a group of achievements
 * [Bonus](graphql/schema/bonus.md): A bonus
+* [Bucket](graphql/schema/bucket.md): An bucket containing achievement progress
 * [Card](graphql/schema/card.md): A card
 * [Document](graphql/schema/document.md): A document
 * [Feed](graphql/schema/feed.md): An entry from an external RSS or Atom feed.
@@ -34,3 +37,4 @@ scalar ID
 * [SportEvent](graphql/schema/sportevent.md): A sport event
 * [Transaction](graphql/schema/transaction.md): A transaction
 * [User](graphql/schema/user.md): A user
+* [UserAchievement](graphql/schema/userachievement.md): An achievement belonging to a user

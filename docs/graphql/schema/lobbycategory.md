@@ -12,7 +12,7 @@ type LobbyCategory implements Node {
   id: ID!
 
   # The slug of the game category.
-  slug: ID!
+  slug: String!
 
   # The name of the game category.
   name: String!
@@ -20,7 +20,7 @@ type LobbyCategory implements Node {
   # The order of the game category.
   order: Int!
 
-  layouts: [LobbyCategoryLayout] @deprecated( reason: "Use layoutConnection instead for pagination possibilities" )
+  layouts: [LobbyCategoryLayout] @deprecated(reason: "Use layoutConnection instead for pagination possibilities")
 
   # Arguments
   #   after
@@ -55,7 +55,7 @@ type LobbyCategory implements Node {
 
   The ID of an object
 
-* **slug ([`ID!`](graphql/schema/id.md))**
+* **slug ([`String!`](graphql/schema/string.md))**
 
   The slug of the game category.
 

@@ -99,10 +99,10 @@ type Game implements Node {
   width: Int!
 
   # The creation date of the game.
-  createdAt: String!
+  createdAt: DateTime!
 
   # The date the game was last updated.
-  updatedAt: String!
+  updatedAt: DateTime!
 
   # The screenshot of the game.
   screenshot: String
@@ -252,11 +252,11 @@ type Game implements Node {
 
   The width of the game.
 
-* **createdAt ([`String!`](graphql/schema/string.md))**
+* **createdAt ([`DateTime!`](graphql/schema/datetime.md))**
 
   The creation date of the game.
 
-* **updatedAt ([`String!`](graphql/schema/string.md))**
+* **updatedAt ([`DateTime!`](graphql/schema/datetime.md))**
 
   The date the game was last updated.
 

@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "generate": "node -r ./node_modules/ts-node/register graphdoc/bin/graphdoc.ts -e https://frontapi.cherrytech.com/graphql -f -b graphql/schema/ -t ./template -o ../docs/graphql/schema",
+    "generate:local": "node -r ./node_modules/ts-node/register graphdoc/bin/graphdoc.ts -e http://localhost:8888/graphql -f -b graphql/schema/ -t ./template -o ../docs/graphql/schema",
     "generate:box01": "node -r ./node_modules/ts-node/register graphdoc/bin/graphdoc.ts -e https://box01-vm-qa-frontapi.cherrytech.com/graphql -f -b graphql/schema/ -t ./template -o ../docs/graphql/schema",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

@@ -14,7 +14,7 @@ type BonusConnection {
   # Information to aid in pagination
   edges: [BonusEdge]
 
-  count: Int @deprecated( reason: "Use `totalCount` instead." )
+  count: Int @deprecated(reason: "Use `totalCount` instead.")
 
   # A count of the total number of objects in this connection, ignoring pagination.
   # This allows a client to fetch the first five objects by passing `5` as the

@@ -11,7 +11,7 @@ type Bonus implements Node {
   # The ID of an object
   id: ID!
 
-  activatedDate: String
+  activatedDate: DateTime
 
   activationType: String
 
@@ -26,7 +26,7 @@ type Bonus implements Node {
   description: String
 
   # The date in which this bonus will expire
-  expiryDate: String
+  expiryDate: DateTime
 
   # Game that is associated with this bonus
   game: Game
@@ -61,7 +61,7 @@ type Bonus implements Node {
 
   The ID of an object
 
-* **activatedDate ([`String`](graphql/schema/string.md))**
+* **activatedDate ([`DateTime`](graphql/schema/datetime.md))**
 
 
 * **activationType ([`String`](graphql/schema/string.md))**
@@ -81,7 +81,7 @@ type Bonus implements Node {
 
   Content provided through the backoffice
 
-* **expiryDate ([`String`](graphql/schema/string.md))**
+* **expiryDate ([`DateTime`](graphql/schema/datetime.md))**
 
   The date in which this bonus will expire
 
