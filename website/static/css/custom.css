@@ -27,17 +27,15 @@ sub {
   font-size: 80%;
 }
 
-.docsNavContainer {
-  overflow-y: auto;
-}
-
-.toc, .mainContainer {
-  padding: 0;
-}
-
 /* Hack to make #graphiql 100% height. (Selector is too broad.) */
+.navPusher {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+}
 .navPusher > div {
   display: flex;
+  flex-grow: 1;
 }
 
 #graphiql {
