@@ -21,7 +21,7 @@
   <span class="token attr-name">descriptionLong</span><span class="token punctuation">:</span> String<span class="token operator">!</span>
 
   <span class="token comment"># The stakes of the game.</span>
-  <span class="token attr-name">gameStakes</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>String<span class="token punctuation">]</span>
+  <span class="token attr-name">gameStakes</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>String<span class="token punctuation">]</span><span class="token operator">!</span>
 
   <span class="token comment"># If the game has a bonus or not.</span>
   <span class="token attr-name">bonus</span><span class="token punctuation">:</span> Boolean<span class="token operator">!</span>
@@ -102,7 +102,7 @@
   <span class="token attr-name">screenshot</span><span class="token punctuation">:</span> String
 
   <span class="token comment"># The homepage image of the game.</span>
-  <span class="token attr-name">homepageImage</span><span class="token punctuation">:</span> String
+  <span class="token attr-name">homepageImage</span><span class="token punctuation">:</span> String<span class="token operator">!</span>
 
   <span class="token comment"># Whether the game is enabled.</span>
   <span class="token attr-name">enabled</span><span class="token punctuation">:</span> Boolean<span class="token operator">!</span>
@@ -131,7 +131,7 @@
   <span class="token comment"># Whether the game is a mobile version or not</span>
   <span class="token attr-name">mobile</span><span class="token punctuation">:</span> Boolean<span class="token operator">!</span>
 
-  <span class="token comment"># A list of tags for filtering like "jackpot" or "netent"</span>
+  <span class="token comment"># A list of tags for filtering like "jackpot" or "netent".</span>
   <span class="token attr-name">tags</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>String<span class="token punctuation">]</span>
 
 <span class="token punctuation">}</span>
@@ -150,7 +150,7 @@
 <p>A short description of the game.</p></li>
 <li><p><strong>descriptionLong (<a href="/xcgp-api/docs/graphql/schema/string.html"><code>String!</code></a>)</strong></p>
 <p>A long description of the game.</p></li>
-<li><p><strong>gameStakes (<a href="/xcgp-api/docs/graphql/schema/string.html"><code>[String]</code></a>)</strong></p>
+<li><p><strong>gameStakes (<a href="/xcgp-api/docs/graphql/schema/string.html"><code>[String]!</code></a>)</strong></p>
 <p>The stakes of the game.</p></li>
 <li><p><strong>bonus (<a href="/xcgp-api/docs/graphql/schema/boolean.html"><code>Boolean!</code></a>)</strong></p>
 <p>If the game has a bonus or not.</p></li>
@@ -239,7 +239,7 @@
 <p>The date the game was last updated.</p></li>
 <li><p><strong>screenshot (<a href="/xcgp-api/docs/graphql/schema/string.html"><code>String</code></a>)</strong></p>
 <p>The screenshot of the game.</p></li>
-<li><p><strong>homepageImage (<a href="/xcgp-api/docs/graphql/schema/string.html"><code>String</code></a>)</strong></p>
+<li><p><strong>homepageImage (<a href="/xcgp-api/docs/graphql/schema/string.html"><code>String!</code></a>)</strong></p>
 <p>The homepage image of the game.</p></li>
 <li><p><strong>enabled (<a href="/xcgp-api/docs/graphql/schema/boolean.html"><code>Boolean!</code></a>)</strong></p>
 <p>Whether the game is enabled.</p></li>
@@ -260,7 +260,7 @@
 <li><p><strong>mobile (<a href="/xcgp-api/docs/graphql/schema/boolean.html"><code>Boolean!</code></a>)</strong></p>
 <p>Whether the game is a mobile version or not</p></li>
 <li><p><strong>tags (<a href="/xcgp-api/docs/graphql/schema/string.html"><code>[String]</code></a>)</strong></p>
-<p>A list of tags for filtering like &quot;jackpot&quot; or &quot;netent&quot;</p></li>
+<p>A list of tags for filtering like &quot;jackpot&quot; or &quot;netent&quot;.</p></li>
 </ul>
 <h2><a class="anchor" aria-hidden="true" id="required-by"></a><a href="#required-by" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Required by</h2>
 <ul>
