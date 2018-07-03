@@ -8,24 +8,24 @@ title: GameLastDraw
 ```graphql
 type GameLastDraw {
 
-  date: DateTime
+  date: DateTime!
 
-  jackpot: Float
+  jackpot: Float!
 
-  numbers: [Float]
+  numbers: [Float!]!
 
 }
 ```
 
 ## Fields
 
-* **date ([`DateTime`](graphql/schema/datetime.md))**
+* **date ([`DateTime!`](graphql/schema/datetime.md))**
 
 
-* **jackpot ([`Float`](graphql/schema/float.md))**
+* **jackpot ([`Float!`](graphql/schema/float.md))**
 
 
-* **numbers ([`[Float]`](graphql/schema/float.md))**
+* **numbers ([`[Float!]!`](graphql/schema/float.md))**
 
 
 

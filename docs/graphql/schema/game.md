@@ -27,7 +27,7 @@ type Game implements Node {
   descriptionLong: String!
 
   # The stakes of the game.
-  gameStakes: [String]
+  gameStakes: [String]!
 
   # If the game has a bonus or not.
   bonus: Boolean!
@@ -108,7 +108,7 @@ type Game implements Node {
   screenshot: String
 
   # The homepage image of the game.
-  homepageImage: String
+  homepageImage: String!
 
   # Whether the game is enabled.
   enabled: Boolean!
@@ -137,7 +137,7 @@ type Game implements Node {
   # Whether the game is a mobile version or not
   mobile: Boolean!
 
-  # A list of tags for filtering like "jackpot" or "netent"
+  # A list of tags for filtering like "jackpot" or "netent".
   tags: [String]
 
 }
@@ -169,7 +169,7 @@ type Game implements Node {
 
   A long description of the game.
 
-* **gameStakes ([`[String]`](graphql/schema/string.md))**
+* **gameStakes ([`[String]!`](graphql/schema/string.md))**
 
   The stakes of the game.
 
@@ -264,7 +264,7 @@ type Game implements Node {
 
   The screenshot of the game.
 
-* **homepageImage ([`String`](graphql/schema/string.md))**
+* **homepageImage ([`String!`](graphql/schema/string.md))**
 
   The homepage image of the game.
 
@@ -306,7 +306,7 @@ type Game implements Node {
 
 * **tags ([`[String]`](graphql/schema/string.md))**
 
-  A list of tags for filtering like "jackpot" or "netent"
+  A list of tags for filtering like "jackpot" or "netent".
 
 
 ## Required by

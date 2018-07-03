@@ -8,19 +8,19 @@ title: GameNextDraw
 ```graphql
 type GameNextDraw {
 
-  date: DateTime
+  date: DateTime!
 
-  jackpot: Float
+  jackpot: Float!
 
 }
 ```
 
 ## Fields
 
-* **date ([`DateTime`](graphql/schema/datetime.md))**
+* **date ([`DateTime!`](graphql/schema/datetime.md))**
 
 
-* **jackpot ([`Float`](graphql/schema/float.md))**
+* **jackpot ([`Float!`](graphql/schema/float.md))**
 
 
 
