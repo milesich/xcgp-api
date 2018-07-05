@@ -33,7 +33,7 @@
   node<span class="token punctuation">(</span><span class="token attr-name">id</span><span class="token punctuation">:</span> ID<span class="token operator">!</span><span class="token punctuation">)</span><span class="token punctuation">:</span> Node
 
   <span class="token comment"># Arguments</span>
-  <span class="token comment">#   id: The item `id`.</span>
+  <span class="token comment">#   id: The global object identifier.</span>
   achievement<span class="token punctuation">(</span><span class="token attr-name">id</span><span class="token punctuation">:</span> ID<span class="token operator">!</span><span class="token punctuation">)</span><span class="token punctuation">:</span> Achievement
 
   <span class="token comment"># Arguments</span>
@@ -53,7 +53,7 @@
   <span class="token punctuation">)</span><span class="token punctuation">:</span> AchievementConnection
 
   <span class="token comment"># Arguments</span>
-  <span class="token comment">#   id: The item `id`.</span>
+  <span class="token comment">#   id: The global object identifier.</span>
   achievementChain<span class="token punctuation">(</span><span class="token attr-name">id</span><span class="token punctuation">:</span> ID<span class="token operator">!</span><span class="token punctuation">)</span><span class="token punctuation">:</span> AchievementChain
 
   <span class="token comment"># Arguments</span>
@@ -77,7 +77,7 @@
   <span class="token punctuation">)</span><span class="token punctuation">:</span> AchievementChainConnection
 
   <span class="token comment"># Arguments</span>
-  <span class="token comment">#   id: The item `id`.</span>
+  <span class="token comment">#   id: The global object identifier.</span>
   userAchievement<span class="token punctuation">(</span><span class="token attr-name">id</span><span class="token punctuation">:</span> ID<span class="token operator">!</span><span class="token punctuation">)</span><span class="token punctuation">:</span> UserAchievement
 
   <span class="token comment"># Arguments</span>
@@ -97,7 +97,7 @@
   <span class="token punctuation">)</span><span class="token punctuation">:</span> UserAchievementConnection
 
   <span class="token comment"># Arguments</span>
-  <span class="token comment">#   id: The item `id`.</span>
+  <span class="token comment">#   id: The global object identifier.</span>
   bonus<span class="token punctuation">(</span><span class="token attr-name">id</span><span class="token punctuation">:</span> ID<span class="token operator">!</span><span class="token punctuation">)</span><span class="token punctuation">:</span> Bonus
 
   <span class="token comment"># Arguments</span>
@@ -143,7 +143,7 @@
   <span class="token punctuation">)</span><span class="token punctuation">:</span> CurrencyConnection
 
   <span class="token comment"># Arguments</span>
-  <span class="token comment">#   id: The item `id`.</span>
+  <span class="token comment">#   id: The global object identifier.</span>
   document<span class="token punctuation">(</span><span class="token attr-name">id</span><span class="token punctuation">:</span> ID<span class="token operator">!</span><span class="token punctuation">)</span><span class="token punctuation">:</span> Document
 
   <span class="token comment"># Arguments</span>
@@ -154,7 +154,7 @@
   documents<span class="token punctuation">(</span><span class="token attr-name">after</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span> <span class="token attr-name">first</span><span class="token punctuation">:</span> Int<span class="token punctuation">,</span> <span class="token attr-name">before</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span> <span class="token attr-name">last</span><span class="token punctuation">:</span> Int<span class="token punctuation">)</span><span class="token punctuation">:</span> DocumentConnection
 
   <span class="token comment"># Arguments</span>
-  <span class="token comment">#   id: The item `id`.</span>
+  <span class="token comment">#   id: The global object identifier.</span>
   feed<span class="token punctuation">(</span><span class="token attr-name">id</span><span class="token punctuation">:</span> ID<span class="token operator">!</span><span class="token punctuation">)</span><span class="token punctuation">:</span> Feed
 
   <span class="token comment"># Look up feed entries.</span>
@@ -167,9 +167,9 @@
   feeds<span class="token punctuation">(</span><span class="token attr-name">after</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span> <span class="token attr-name">first</span><span class="token punctuation">:</span> Int<span class="token punctuation">,</span> <span class="token attr-name">before</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span> <span class="token attr-name">last</span><span class="token punctuation">:</span> Int<span class="token punctuation">)</span><span class="token punctuation">:</span> FeedConnection
 
   <span class="token comment"># Arguments</span>
-  <span class="token comment">#   id: The item `id`.</span>
+  <span class="token comment">#   id: The global object identifier.</span>
   <span class="token comment">#   vendor_slug: Example: netent-starburst</span>
-  game<span class="token punctuation">(</span><span class="token attr-name">id</span><span class="token punctuation">:</span> ID<span class="token operator">!</span><span class="token punctuation">,</span> <span class="token attr-name">vendor_slug</span><span class="token punctuation">:</span> String<span class="token punctuation">)</span><span class="token punctuation">:</span> Game
+  game<span class="token punctuation">(</span><span class="token attr-name">id</span><span class="token punctuation">:</span> ID<span class="token punctuation">,</span> <span class="token attr-name">vendor_slug</span><span class="token punctuation">:</span> String<span class="token punctuation">)</span><span class="token punctuation">:</span> Game
 
   <span class="token comment"># Arguments</span>
   <span class="token comment">#   after</span>
@@ -204,7 +204,7 @@
   gameTags<span class="token punctuation">(</span><span class="token attr-name">after</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span> <span class="token attr-name">first</span><span class="token punctuation">:</span> Int<span class="token punctuation">,</span> <span class="token attr-name">before</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span> <span class="token attr-name">last</span><span class="token punctuation">:</span> Int<span class="token punctuation">)</span><span class="token punctuation">:</span> GameTagConnection
 
   <span class="token comment"># Arguments</span>
-  <span class="token comment">#   id: The item `id`.</span>
+  <span class="token comment">#   id: The global object identifier.</span>
   gameSession<span class="token punctuation">(</span><span class="token attr-name">id</span><span class="token punctuation">:</span> ID<span class="token operator">!</span><span class="token punctuation">)</span><span class="token punctuation">:</span> GameSession
 
   <span class="token comment"># Arguments</span>
@@ -238,7 +238,7 @@
   languages<span class="token punctuation">(</span><span class="token attr-name">after</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span> <span class="token attr-name">first</span><span class="token punctuation">:</span> Int<span class="token punctuation">,</span> <span class="token attr-name">before</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span> <span class="token attr-name">last</span><span class="token punctuation">:</span> Int<span class="token punctuation">)</span><span class="token punctuation">:</span> LanguageConnection
 
   <span class="token comment"># Arguments</span>
-  <span class="token comment">#   id: The item `id`.</span>
+  <span class="token comment">#   id: The global object identifier.</span>
   limit<span class="token punctuation">(</span><span class="token attr-name">id</span><span class="token punctuation">:</span> ID<span class="token operator">!</span><span class="token punctuation">)</span><span class="token punctuation">:</span> Limit
 
   <span class="token comment"># Arguments</span>
@@ -249,14 +249,14 @@
   limits<span class="token punctuation">(</span><span class="token attr-name">after</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span> <span class="token attr-name">first</span><span class="token punctuation">:</span> Int<span class="token punctuation">,</span> <span class="token attr-name">before</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span> <span class="token attr-name">last</span><span class="token punctuation">:</span> Int<span class="token punctuation">)</span><span class="token punctuation">:</span> LimitConnection
 
   <span class="token comment"># Arguments</span>
-  <span class="token comment">#   id: The item `id`.</span>
+  <span class="token comment">#   id: The global object identifier.</span>
   <span class="token comment">#   slug: Example: casinov2</span>
   <span class="token comment">#   playerState: The player state as some games are only visible for logged-in</span>
   <span class="token comment"># players. Example: li</span>
   <span class="token comment">#   groups: Comma separated list of player groups. Example: -1</span>
   <span class="token comment">#   country: ISO 3166-1 alpha-2 country code. Some countries block games.</span>
   lobby<span class="token punctuation">(</span>
-    <span class="token attr-name">id</span><span class="token punctuation">:</span> ID<span class="token operator">!</span><span class="token punctuation">,</span>
+    <span class="token attr-name">id</span><span class="token punctuation">:</span> ID<span class="token punctuation">,</span>
     <span class="token attr-name">slug</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span>
     <span class="token attr-name">playerState</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span>
     <span class="token attr-name">groups</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span>
@@ -273,7 +273,7 @@
   <span class="token attr-name">location</span><span class="token punctuation">:</span> Location
 
   <span class="token comment"># Arguments</span>
-  <span class="token comment">#   id: The item `id`.</span>
+  <span class="token comment">#   id: The global object identifier.</span>
   page<span class="token punctuation">(</span><span class="token attr-name">id</span><span class="token punctuation">:</span> ID<span class="token operator">!</span><span class="token punctuation">)</span><span class="token punctuation">:</span> Page
 
   <span class="token comment"># Look up pages.</span>
@@ -293,7 +293,7 @@
   <span class="token punctuation">)</span><span class="token punctuation">:</span> PageConnection
 
   <span class="token comment"># Arguments</span>
-  <span class="token comment">#   id: The item `id`.</span>
+  <span class="token comment">#   id: The global object identifier.</span>
   paymentMethod<span class="token punctuation">(</span><span class="token attr-name">id</span><span class="token punctuation">:</span> ID<span class="token operator">!</span><span class="token punctuation">)</span><span class="token punctuation">:</span> PaymentMethod
 
   <span class="token comment"># Arguments</span>
@@ -312,13 +312,13 @@
   <span class="token punctuation">)</span><span class="token punctuation">:</span> PaymentMethodConnection
 
   <span class="token comment"># Arguments</span>
-  <span class="token comment">#   id: The item `id`.</span>
+  <span class="token comment">#   id: The global object identifier.</span>
   <span class="token comment">#   slug: The URL slug. Example: welcome-bonus</span>
   <span class="token comment">#   template: The template to use for metadata. Example: cd1</span>
   <span class="token comment">#   playerState: The player state for cache busting purposes. Example: li</span>
   <span class="token comment">#   jurisdiction: The player jurisdiction for cache busting purposes. Example: mga</span>
   promotion<span class="token punctuation">(</span>
-    <span class="token attr-name">id</span><span class="token punctuation">:</span> ID<span class="token operator">!</span><span class="token punctuation">,</span>
+    <span class="token attr-name">id</span><span class="token punctuation">:</span> ID<span class="token punctuation">,</span>
     <span class="token attr-name">slug</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span>
     <span class="token attr-name">template</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span>
     <span class="token attr-name">playerState</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span>
@@ -350,9 +350,9 @@
   <span class="token punctuation">)</span><span class="token punctuation">:</span> PromotionConnection
 
   <span class="token comment"># Arguments</span>
-  <span class="token comment">#   id: The item `id`.</span>
+  <span class="token comment">#   id: The global object identifier.</span>
   <span class="token comment">#   slug: Example: casino</span>
-  qnaCategory<span class="token punctuation">(</span><span class="token attr-name">id</span><span class="token punctuation">:</span> ID<span class="token operator">!</span><span class="token punctuation">,</span> <span class="token attr-name">slug</span><span class="token punctuation">:</span> String<span class="token punctuation">)</span><span class="token punctuation">:</span> QnaCategory
+  qnaCategory<span class="token punctuation">(</span><span class="token attr-name">id</span><span class="token punctuation">:</span> ID<span class="token punctuation">,</span> <span class="token attr-name">slug</span><span class="token punctuation">:</span> String<span class="token punctuation">)</span><span class="token punctuation">:</span> QnaCategory
 
   <span class="token comment"># Lookup Q&amp;A categories.</span>
   <span class="token comment">#</span>
@@ -371,9 +371,9 @@
   <span class="token punctuation">)</span><span class="token punctuation">:</span> QnaCategoryConnection
 
   <span class="token comment"># Arguments</span>
-  <span class="token comment">#   id: The item `id`.</span>
-  <span class="token comment">#   url</span>
-  seo<span class="token punctuation">(</span><span class="token attr-name">id</span><span class="token punctuation">:</span> ID<span class="token operator">!</span><span class="token punctuation">,</span> <span class="token attr-name">url</span><span class="token punctuation">:</span> String<span class="token punctuation">)</span><span class="token punctuation">:</span> Seo
+  <span class="token comment">#   id: The global object identifier.</span>
+  <span class="token comment">#   url: The relative URL.</span>
+  seo<span class="token punctuation">(</span><span class="token attr-name">id</span><span class="token punctuation">:</span> ID<span class="token punctuation">,</span> <span class="token attr-name">url</span><span class="token punctuation">:</span> String<span class="token punctuation">)</span><span class="token punctuation">:</span> Seo
 
   <span class="token comment"># Lookup SEO entries.</span>
   <span class="token comment">#</span>
@@ -415,7 +415,7 @@
   <span class="token punctuation">)</span><span class="token punctuation">:</span> TransactionConnection
 
   <span class="token comment"># Arguments</span>
-  <span class="token comment">#   id: The item `id`.</span>
+  <span class="token comment">#   id: The global object identifier.</span>
   viewer<span class="token punctuation">(</span><span class="token attr-name">id</span><span class="token punctuation">:</span> ID<span class="token operator">!</span><span class="token punctuation">)</span><span class="token punctuation">:</span> User
 
   <span class="token comment"># Arguments</span>
@@ -783,7 +783,7 @@
 <tr><th>Argument</th><th>Type</th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td><code>id</code></td><td><a href="/xcgp-api/docs/graphql/schema/id.html"><code>ID!</code></a></td><td>The item <code>id</code>.</td></tr>
+<tr><td><code>id</code></td><td><a href="/xcgp-api/docs/graphql/schema/id.html"><code>ID!</code></a></td><td>The <a href="https://facebook.github.io/relay/docs/en/graphql-server-specification.html#object-identification">global object identifier</a>.</td></tr>
 </tbody>
 </table>
 </li>
@@ -793,7 +793,7 @@
 <tr><th>Argument</th><th>Type</th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td><code>id</code></td><td><a href="/xcgp-api/docs/graphql/schema/id.html"><code>ID!</code></a></td><td>The item <code>id</code>.</td></tr>
+<tr><td><code>id</code></td><td><a href="/xcgp-api/docs/graphql/schema/id.html"><code>ID!</code></a></td><td>The <a href="https://facebook.github.io/relay/docs/en/graphql-server-specification.html#object-identification">global object identifier</a>.</td></tr>
 </tbody>
 </table>
 </li>
@@ -803,7 +803,7 @@
 <tr><th>Argument</th><th>Type</th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td><code>id</code></td><td><a href="/xcgp-api/docs/graphql/schema/id.html"><code>ID!</code></a></td><td>The item <code>id</code>.</td></tr>
+<tr><td><code>id</code></td><td><a href="/xcgp-api/docs/graphql/schema/id.html"><code>ID!</code></a></td><td>The <a href="https://facebook.github.io/relay/docs/en/graphql-server-specification.html#object-identification">global object identifier</a>.</td></tr>
 </tbody>
 </table>
 </li>
@@ -813,7 +813,7 @@
 <tr><th>Argument</th><th>Type</th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td><code>id</code></td><td><a href="/xcgp-api/docs/graphql/schema/id.html"><code>ID!</code></a></td><td>The item <code>id</code>.</td></tr>
+<tr><td><code>id</code></td><td><a href="/xcgp-api/docs/graphql/schema/id.html"><code>ID!</code></a></td><td>The <a href="https://facebook.github.io/relay/docs/en/graphql-server-specification.html#object-identification">global object identifier</a>.</td></tr>
 </tbody>
 </table>
 </li>
@@ -823,7 +823,7 @@
 <tr><th>Argument</th><th>Type</th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td><code>id</code></td><td><a href="/xcgp-api/docs/graphql/schema/id.html"><code>ID!</code></a></td><td>The item <code>id</code>.</td></tr>
+<tr><td><code>id</code></td><td><a href="/xcgp-api/docs/graphql/schema/id.html"><code>ID!</code></a></td><td>The <a href="https://facebook.github.io/relay/docs/en/graphql-server-specification.html#object-identification">global object identifier</a>.</td></tr>
 </tbody>
 </table>
 </li>
@@ -833,7 +833,7 @@
 <tr><th>Argument</th><th>Type</th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td><code>id</code></td><td><a href="/xcgp-api/docs/graphql/schema/id.html"><code>ID!</code></a></td><td>The item <code>id</code>.</td></tr>
+<tr><td><code>id</code></td><td><a href="/xcgp-api/docs/graphql/schema/id.html"><code>ID!</code></a></td><td>The <a href="https://facebook.github.io/relay/docs/en/graphql-server-specification.html#object-identification">global object identifier</a>.</td></tr>
 </tbody>
 </table>
 </li>
@@ -843,7 +843,7 @@
 <tr><th>Argument</th><th>Type</th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td><code>id</code></td><td><a href="/xcgp-api/docs/graphql/schema/id.html"><code>ID!</code></a></td><td>The item <code>id</code>.</td></tr>
+<tr><td><code>id</code></td><td><a href="/xcgp-api/docs/graphql/schema/id.html"><code>ID</code></a></td><td>The <a href="https://facebook.github.io/relay/docs/en/graphql-server-specification.html#object-identification">global object identifier</a>.</td></tr>
 <tr><td><code>vendor_slug</code></td><td><a href="/xcgp-api/docs/graphql/schema/string.html"><code>String</code></a></td><td>Example: netent-starburst</td></tr>
 </tbody>
 </table>
@@ -854,7 +854,7 @@
 <tr><th>Argument</th><th>Type</th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td><code>id</code></td><td><a href="/xcgp-api/docs/graphql/schema/id.html"><code>ID!</code></a></td><td>The item <code>id</code>.</td></tr>
+<tr><td><code>id</code></td><td><a href="/xcgp-api/docs/graphql/schema/id.html"><code>ID!</code></a></td><td>The <a href="https://facebook.github.io/relay/docs/en/graphql-server-specification.html#object-identification">global object identifier</a>.</td></tr>
 </tbody>
 </table>
 </li>
@@ -864,7 +864,7 @@
 <tr><th>Argument</th><th>Type</th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td><code>id</code></td><td><a href="/xcgp-api/docs/graphql/schema/id.html"><code>ID!</code></a></td><td>The item <code>id</code>.</td></tr>
+<tr><td><code>id</code></td><td><a href="/xcgp-api/docs/graphql/schema/id.html"><code>ID!</code></a></td><td>The <a href="https://facebook.github.io/relay/docs/en/graphql-server-specification.html#object-identification">global object identifier</a>.</td></tr>
 </tbody>
 </table>
 </li>
@@ -874,7 +874,7 @@
 <tr><th>Argument</th><th>Type</th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td><code>id</code></td><td><a href="/xcgp-api/docs/graphql/schema/id.html"><code>ID!</code></a></td><td>The item <code>id</code>.</td></tr>
+<tr><td><code>id</code></td><td><a href="/xcgp-api/docs/graphql/schema/id.html"><code>ID</code></a></td><td>The <a href="https://facebook.github.io/relay/docs/en/graphql-server-specification.html#object-identification">global object identifier</a>.</td></tr>
 <tr><td><code>slug</code></td><td><a href="/xcgp-api/docs/graphql/schema/string.html"><code>String</code></a></td><td>Example: casinov2</td></tr>
 <tr><td><code>playerState</code></td><td><a href="/xcgp-api/docs/graphql/schema/string.html"><code>String</code></a></td><td>The player state as some games are only visible for logged-in players. Example: li</td></tr>
 <tr><td><code>groups</code></td><td><a href="/xcgp-api/docs/graphql/schema/string.html"><code>String</code></a></td><td>Comma separated list of player groups. Example: -1</td></tr>
@@ -891,7 +891,7 @@
 <tr><th>Argument</th><th>Type</th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td><code>id</code></td><td><a href="/xcgp-api/docs/graphql/schema/id.html"><code>ID!</code></a></td><td>The item <code>id</code>.</td></tr>
+<tr><td><code>id</code></td><td><a href="/xcgp-api/docs/graphql/schema/id.html"><code>ID!</code></a></td><td>The <a href="https://facebook.github.io/relay/docs/en/graphql-server-specification.html#object-identification">global object identifier</a>.</td></tr>
 </tbody>
 </table>
 </li>
@@ -901,7 +901,7 @@
 <tr><th>Argument</th><th>Type</th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td><code>id</code></td><td><a href="/xcgp-api/docs/graphql/schema/id.html"><code>ID!</code></a></td><td>The item <code>id</code>.</td></tr>
+<tr><td><code>id</code></td><td><a href="/xcgp-api/docs/graphql/schema/id.html"><code>ID!</code></a></td><td>The <a href="https://facebook.github.io/relay/docs/en/graphql-server-specification.html#object-identification">global object identifier</a>.</td></tr>
 </tbody>
 </table>
 </li>
@@ -911,7 +911,7 @@
 <tr><th>Argument</th><th>Type</th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td><code>id</code></td><td><a href="/xcgp-api/docs/graphql/schema/id.html"><code>ID!</code></a></td><td>The item <code>id</code>.</td></tr>
+<tr><td><code>id</code></td><td><a href="/xcgp-api/docs/graphql/schema/id.html"><code>ID</code></a></td><td>The <a href="https://facebook.github.io/relay/docs/en/graphql-server-specification.html#object-identification">global object identifier</a>.</td></tr>
 <tr><td><code>slug</code></td><td><a href="/xcgp-api/docs/graphql/schema/string.html"><code>String</code></a></td><td>The URL slug. Example: welcome-bonus</td></tr>
 <tr><td><code>template</code></td><td><a href="/xcgp-api/docs/graphql/schema/string.html"><code>String</code></a></td><td>The template to use for metadata. Example: cd1</td></tr>
 <tr><td><code>playerState</code></td><td><a href="/xcgp-api/docs/graphql/schema/string.html"><code>String</code></a></td><td>The player state for cache busting purposes. Example: li</td></tr>
@@ -925,7 +925,7 @@
 <tr><th>Argument</th><th>Type</th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td><code>id</code></td><td><a href="/xcgp-api/docs/graphql/schema/id.html"><code>ID!</code></a></td><td>The item <code>id</code>.</td></tr>
+<tr><td><code>id</code></td><td><a href="/xcgp-api/docs/graphql/schema/id.html"><code>ID</code></a></td><td>The <a href="https://facebook.github.io/relay/docs/en/graphql-server-specification.html#object-identification">global object identifier</a>.</td></tr>
 <tr><td><code>slug</code></td><td><a href="/xcgp-api/docs/graphql/schema/string.html"><code>String</code></a></td><td>Example: casino</td></tr>
 </tbody>
 </table>
@@ -936,8 +936,8 @@
 <tr><th>Argument</th><th>Type</th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td><code>id</code></td><td><a href="/xcgp-api/docs/graphql/schema/id.html"><code>ID!</code></a></td><td>The item <code>id</code>.</td></tr>
-<tr><td><code>url</code></td><td><a href="/xcgp-api/docs/graphql/schema/string.html"><code>String</code></a></td><td>-</td></tr>
+<tr><td><code>id</code></td><td><a href="/xcgp-api/docs/graphql/schema/id.html"><code>ID</code></a></td><td>The <a href="https://facebook.github.io/relay/docs/en/graphql-server-specification.html#object-identification">global object identifier</a>.</td></tr>
+<tr><td><code>url</code></td><td><a href="/xcgp-api/docs/graphql/schema/string.html"><code>String</code></a></td><td>The relative URL.</td></tr>
 </tbody>
 </table>
 </li>
@@ -947,7 +947,7 @@
 <tr><th>Argument</th><th>Type</th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td><code>id</code></td><td><a href="/xcgp-api/docs/graphql/schema/id.html"><code>ID!</code></a></td><td>The item <code>id</code>.</td></tr>
+<tr><td><code>id</code></td><td><a href="/xcgp-api/docs/graphql/schema/id.html"><code>ID!</code></a></td><td>The <a href="https://facebook.github.io/relay/docs/en/graphql-server-specification.html#object-identification">global object identifier</a>.</td></tr>
 </tbody>
 </table>
 </li>
