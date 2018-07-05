@@ -22,3 +22,4 @@ scalar DateTime
 * [Page](graphql/schema/page.md): An arbitrary piece of content with a blog-like structure. It can be used for things like blog posts, news articles, simple landing pages, user success stories, etc.
 * [Promotion](graphql/schema/promotion.md): A promotion for a particular template (space). Each template needs to be requested and it can have multiple titles, descriptions, images, CTAs, etc depending on where the promotions will be shown.
 * [Transaction](graphql/schema/transaction.md): A transaction
+* [User](graphql/schema/user.md): A user

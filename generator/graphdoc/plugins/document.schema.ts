@@ -136,6 +136,9 @@ export default class SchemaPlugin extends Plugin implements PluginInterface {
       return [];
     }
 
+    // Strip markdown links
+    description = description.replace(/\[([^\]]+)\]\([^\)]+\)/, `$1`);
+
     return wrap(description, {
         indent: `# `,
         trim: true,

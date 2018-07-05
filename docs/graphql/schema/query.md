@@ -18,7 +18,7 @@ type Query {
   node(id: ID!): Node
 
   # Arguments
-  #   id: The item `id`.
+  #   id: The global object identifier.
   achievement(id: ID!): Achievement
 
   # Arguments
@@ -38,7 +38,7 @@ type Query {
   ): AchievementConnection
 
   # Arguments
-  #   id: The item `id`.
+  #   id: The global object identifier.
   achievementChain(id: ID!): AchievementChain
 
   # Arguments
@@ -62,7 +62,7 @@ type Query {
   ): AchievementChainConnection
 
   # Arguments
-  #   id: The item `id`.
+  #   id: The global object identifier.
   userAchievement(id: ID!): UserAchievement
 
   # Arguments
@@ -82,7 +82,7 @@ type Query {
   ): UserAchievementConnection
 
   # Arguments
-  #   id: The item `id`.
+  #   id: The global object identifier.
   bonus(id: ID!): Bonus
 
   # Arguments
@@ -128,7 +128,7 @@ type Query {
   ): CurrencyConnection
 
   # Arguments
-  #   id: The item `id`.
+  #   id: The global object identifier.
   document(id: ID!): Document
 
   # Arguments
@@ -139,7 +139,7 @@ type Query {
   documents(after: String, first: Int, before: String, last: Int): DocumentConnection
 
   # Arguments
-  #   id: The item `id`.
+  #   id: The global object identifier.
   feed(id: ID!): Feed
 
   # Look up feed entries.
@@ -152,9 +152,9 @@ type Query {
   feeds(after: String, first: Int, before: String, last: Int): FeedConnection
 
   # Arguments
-  #   id: The item `id`.
+  #   id: The global object identifier.
   #   vendor_slug: Example: netent-starburst
-  game(id: ID!, vendor_slug: String): Game
+  game(id: ID, vendor_slug: String): Game
 
   # Arguments
   #   after
@@ -189,7 +189,7 @@ type Query {
   gameTags(after: String, first: Int, before: String, last: Int): GameTagConnection
 
   # Arguments
-  #   id: The item `id`.
+  #   id: The global object identifier.
   gameSession(id: ID!): GameSession
 
   # Arguments
@@ -223,7 +223,7 @@ type Query {
   languages(after: String, first: Int, before: String, last: Int): LanguageConnection
 
   # Arguments
-  #   id: The item `id`.
+  #   id: The global object identifier.
   limit(id: ID!): Limit
 
   # Arguments
@@ -234,14 +234,14 @@ type Query {
   limits(after: String, first: Int, before: String, last: Int): LimitConnection
 
   # Arguments
-  #   id: The item `id`.
+  #   id: The global object identifier.
   #   slug: Example: casinov2
   #   playerState: The player state as some games are only visible for logged-in
   # players. Example: li
   #   groups: Comma separated list of player groups. Example: -1
   #   country: ISO 3166-1 alpha-2 country code. Some countries block games.
   lobby(
-    id: ID!,
+    id: ID,
     slug: String,
     playerState: String,
     groups: String,
@@ -258,7 +258,7 @@ type Query {
   location: Location
 
   # Arguments
-  #   id: The item `id`.
+  #   id: The global object identifier.
   page(id: ID!): Page
 
   # Look up pages.
@@ -278,7 +278,7 @@ type Query {
   ): PageConnection
 
   # Arguments
-  #   id: The item `id`.
+  #   id: The global object identifier.
   paymentMethod(id: ID!): PaymentMethod
 
   # Arguments
@@ -297,13 +297,13 @@ type Query {
   ): PaymentMethodConnection
 
   # Arguments
-  #   id: The item `id`.
+  #   id: The global object identifier.
   #   slug: The URL slug. Example: welcome-bonus
   #   template: The template to use for metadata. Example: cd1
   #   playerState: The player state for cache busting purposes. Example: li
   #   jurisdiction: The player jurisdiction for cache busting purposes. Example: mga
   promotion(
-    id: ID!,
+    id: ID,
     slug: String,
     template: String,
     playerState: String,
@@ -335,9 +335,9 @@ type Query {
   ): PromotionConnection
 
   # Arguments
-  #   id: The item `id`.
+  #   id: The global object identifier.
   #   slug: Example: casino
-  qnaCategory(id: ID!, slug: String): QnaCategory
+  qnaCategory(id: ID, slug: String): QnaCategory
 
   # Lookup Q&A categories.
   #
@@ -356,9 +356,9 @@ type Query {
   ): QnaCategoryConnection
 
   # Arguments
-  #   id: The item `id`.
-  #   url
-  seo(id: ID!, url: String): Seo
+  #   id: The global object identifier.
+  #   url: The relative URL.
+  seo(id: ID, url: String): Seo
 
   # Lookup SEO entries.
   #
@@ -400,7 +400,7 @@ type Query {
   ): TransactionConnection
 
   # Arguments
-  #   id: The item `id`.
+  #   id: The global object identifier.
   viewer(id: ID!): User
 
   # Arguments
@@ -671,62 +671,62 @@ type Query {
 
   Argument | Type | Description
   -------- | ---- | -----------
-  `id` | [`ID!`](graphql/schema/id.md) | The item `id`.
+  `id` | [`ID!`](graphql/schema/id.md) | The [global object identifier](https://facebook.github.io/relay/docs/en/graphql-server-specification.html#object-identification).
 
 * **achievementChain ([`AchievementChain`](graphql/schema/achievementchain.md))**
 
   Argument | Type | Description
   -------- | ---- | -----------
-  `id` | [`ID!`](graphql/schema/id.md) | The item `id`.
+  `id` | [`ID!`](graphql/schema/id.md) | The [global object identifier](https://facebook.github.io/relay/docs/en/graphql-server-specification.html#object-identification).
 
 * **userAchievement ([`UserAchievement`](graphql/schema/userachievement.md))**
 
   Argument | Type | Description
   -------- | ---- | -----------
-  `id` | [`ID!`](graphql/schema/id.md) | The item `id`.
+  `id` | [`ID!`](graphql/schema/id.md) | The [global object identifier](https://facebook.github.io/relay/docs/en/graphql-server-specification.html#object-identification).
 
 * **bonus ([`Bonus`](graphql/schema/bonus.md))**
 
   Argument | Type | Description
   -------- | ---- | -----------
-  `id` | [`ID!`](graphql/schema/id.md) | The item `id`.
+  `id` | [`ID!`](graphql/schema/id.md) | The [global object identifier](https://facebook.github.io/relay/docs/en/graphql-server-specification.html#object-identification).
 
 * **document ([`Document`](graphql/schema/document.md))**
 
   Argument | Type | Description
   -------- | ---- | -----------
-  `id` | [`ID!`](graphql/schema/id.md) | The item `id`.
+  `id` | [`ID!`](graphql/schema/id.md) | The [global object identifier](https://facebook.github.io/relay/docs/en/graphql-server-specification.html#object-identification).
 
 * **feed ([`Feed`](graphql/schema/feed.md))**
 
   Argument | Type | Description
   -------- | ---- | -----------
-  `id` | [`ID!`](graphql/schema/id.md) | The item `id`.
+  `id` | [`ID!`](graphql/schema/id.md) | The [global object identifier](https://facebook.github.io/relay/docs/en/graphql-server-specification.html#object-identification).
 
 * **game ([`Game`](graphql/schema/game.md))**
 
   Argument | Type | Description
   -------- | ---- | -----------
-  `id` | [`ID!`](graphql/schema/id.md) | The item `id`.
+  `id` | [`ID`](graphql/schema/id.md) | The [global object identifier](https://facebook.github.io/relay/docs/en/graphql-server-specification.html#object-identification).
   `vendor_slug` | [`String`](graphql/schema/string.md) | Example: netent-starburst
 
 * **gameSession ([`GameSession`](graphql/schema/gamesession.md))**
 
   Argument | Type | Description
   -------- | ---- | -----------
-  `id` | [`ID!`](graphql/schema/id.md) | The item `id`.
+  `id` | [`ID!`](graphql/schema/id.md) | The [global object identifier](https://facebook.github.io/relay/docs/en/graphql-server-specification.html#object-identification).
 
 * **limit ([`Limit`](graphql/schema/limit.md))**
 
   Argument | Type | Description
   -------- | ---- | -----------
-  `id` | [`ID!`](graphql/schema/id.md) | The item `id`.
+  `id` | [`ID!`](graphql/schema/id.md) | The [global object identifier](https://facebook.github.io/relay/docs/en/graphql-server-specification.html#object-identification).
 
 * **lobby ([`Lobby`](graphql/schema/lobby.md))**
 
   Argument | Type | Description
   -------- | ---- | -----------
-  `id` | [`ID!`](graphql/schema/id.md) | The item `id`.
+  `id` | [`ID`](graphql/schema/id.md) | The [global object identifier](https://facebook.github.io/relay/docs/en/graphql-server-specification.html#object-identification).
   `slug` | [`String`](graphql/schema/string.md) | Example: casinov2
   `playerState` | [`String`](graphql/schema/string.md) | The player state as some games are only visible for logged-in players. Example: li
   `groups` | [`String`](graphql/schema/string.md) | Comma separated list of player groups. Example: -1
@@ -739,19 +739,19 @@ type Query {
 
   Argument | Type | Description
   -------- | ---- | -----------
-  `id` | [`ID!`](graphql/schema/id.md) | The item `id`.
+  `id` | [`ID!`](graphql/schema/id.md) | The [global object identifier](https://facebook.github.io/relay/docs/en/graphql-server-specification.html#object-identification).
 
 * **paymentMethod ([`PaymentMethod`](graphql/schema/paymentmethod.md))**
 
   Argument | Type | Description
   -------- | ---- | -----------
-  `id` | [`ID!`](graphql/schema/id.md) | The item `id`.
+  `id` | [`ID!`](graphql/schema/id.md) | The [global object identifier](https://facebook.github.io/relay/docs/en/graphql-server-specification.html#object-identification).
 
 * **promotion ([`Promotion`](graphql/schema/promotion.md))**
 
   Argument | Type | Description
   -------- | ---- | -----------
-  `id` | [`ID!`](graphql/schema/id.md) | The item `id`.
+  `id` | [`ID`](graphql/schema/id.md) | The [global object identifier](https://facebook.github.io/relay/docs/en/graphql-server-specification.html#object-identification).
   `slug` | [`String`](graphql/schema/string.md) | The URL slug. Example: welcome-bonus
   `template` | [`String`](graphql/schema/string.md) | The template to use for metadata. Example: cd1
   `playerState` | [`String`](graphql/schema/string.md) | The player state for cache busting purposes. Example: li
@@ -761,19 +761,19 @@ type Query {
 
   Argument | Type | Description
   -------- | ---- | -----------
-  `id` | [`ID!`](graphql/schema/id.md) | The item `id`.
+  `id` | [`ID`](graphql/schema/id.md) | The [global object identifier](https://facebook.github.io/relay/docs/en/graphql-server-specification.html#object-identification).
   `slug` | [`String`](graphql/schema/string.md) | Example: casino
 
 * **seo ([`Seo`](graphql/schema/seo.md))**
 
   Argument | Type | Description
   -------- | ---- | -----------
-  `id` | [`ID!`](graphql/schema/id.md) | The item `id`.
-  `url` | [`String`](graphql/schema/string.md) | -
+  `id` | [`ID`](graphql/schema/id.md) | The [global object identifier](https://facebook.github.io/relay/docs/en/graphql-server-specification.html#object-identification).
+  `url` | [`String`](graphql/schema/string.md) | The relative URL.
 
 * **viewer ([`User`](graphql/schema/user.md))**
 
   Argument | Type | Description
   -------- | ---- | -----------
-  `id` | [`ID!`](graphql/schema/id.md) | The item `id`.
+  `id` | [`ID!`](graphql/schema/id.md) | The [global object identifier](https://facebook.github.io/relay/docs/en/graphql-server-specification.html#object-identification).
 

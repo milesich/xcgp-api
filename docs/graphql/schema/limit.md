@@ -30,10 +30,10 @@ type Limit implements Node {
   step: Int
 
   # The datetime this limit starts at
-  start: DateTime
+  startDate: DateTime
 
   # The datetime this limit ends at
-  end: DateTime
+  endDate: DateTime
 
 }
 ```
@@ -68,11 +68,11 @@ type Limit implements Node {
 
   The intervals this limit can be updated
 
-* **start ([`DateTime`](graphql/schema/datetime.md))**
+* **startDate ([`DateTime`](graphql/schema/datetime.md))**
 
   The datetime this limit starts at
 
-* **end ([`DateTime`](graphql/schema/datetime.md))**
+* **endDate ([`DateTime`](graphql/schema/datetime.md))**
 
   The datetime this limit ends at
 

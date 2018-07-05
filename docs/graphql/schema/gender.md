@@ -12,10 +12,6 @@ enum Gender {
 
   FEMALE
 
-  male @deprecated(reason: "Use `MALE` instead.")
-
-  female @deprecated(reason: "Use `FEMALE` instead.")
-
 }
 ```
 

@@ -8,14 +8,13 @@ A locale.
 ```graphql
 type Language {
 
-  # The locale code in [BCP 47](https://tools.ietf.org/html/bcp47) format.
+  # The locale code in BCP 47 format.
   code: String
 
   # The name of the locale to present to the user.
   text: String
 
-  # The suggested currency code in [ISO
-  # 4217](https://en.wikipedia.org/wiki/ISO_4217) format.
+  # The suggested currency code in ISO 4217 format.
   currency: String
 
 }

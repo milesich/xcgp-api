@@ -19,7 +19,8 @@ type User implements Node {
 
   backendSession: String
 
-  birthday: String
+  # The birth date.
+  birthday: DateTime
 
   city: String
 
@@ -87,8 +88,9 @@ type User implements Node {
 * **backendSession ([`String`](graphql/schema/string.md))**
 
 
-* **birthday ([`String`](graphql/schema/string.md))**
+* **birthday ([`DateTime`](graphql/schema/datetime.md))**
 
+  The birth date.
 
 * **city ([`String`](graphql/schema/string.md))**
 
