@@ -67,7 +67,7 @@
   <span class="token attr-name">height</span><span class="token punctuation">:</span> Int<span class="token operator">!</span>
 
   <span class="token comment"># The label of the game.</span>
-  <span class="token attr-name">label</span><span class="token punctuation">:</span> String
+  <span class="token attr-name">label</span><span class="token punctuation">:</span> String <span class="token directive function">@deprecated</span><span class="token punctuation">(</span><span class="token attr-name">reason</span><span class="token punctuation">:</span> <span class="token string">"Use the lobby block label instead."</span><span class="token punctuation">)</span>
 
   <span class="token comment"># The slug of the game.</span>
   <span class="token attr-name">slug</span><span class="token punctuation">:</span> String<span class="token operator">!</span>
@@ -87,7 +87,7 @@
     <span class="token attr-name">return_url</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span>
     <span class="token attr-name">deposit_url</span><span class="token punctuation">:</span> String<span class="token punctuation">,</span>
     <span class="token attr-name">history_url</span><span class="token punctuation">:</span> String
-  <span class="token punctuation">)</span><span class="token punctuation">:</span> JSON
+  <span class="token punctuation">)</span><span class="token punctuation">:</span> Object
 
   <span class="token comment"># The width of the game.</span>
   <span class="token attr-name">width</span><span class="token punctuation">:</span> Int<span class="token operator">!</span>
@@ -120,7 +120,7 @@
   <span class="token attr-name">screenshots</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>Screenshot<span class="token punctuation">]</span>
 
   <span class="token comment"># The thumbnails of the game.</span>
-  <span class="token attr-name">thumbnails</span><span class="token punctuation">:</span> JSON
+  <span class="token attr-name">thumbnails</span><span class="token punctuation">:</span> Object
 
   <span class="token comment"># The jurisdiction of the game.</span>
   <span class="token attr-name">jurisdiction</span><span class="token punctuation">:</span> String<span class="token operator">!</span>
@@ -218,7 +218,7 @@
 <p>The slug of the game.</p></li>
 <li><p><strong>thumbnail (<a href="/xcgp-api/docs/graphql/schema/string.html"><code>String</code></a>)</strong></p>
 <p>The thumbnail of the game.</p></li>
-<li><p><strong>vendorProperties (<a href="/xcgp-api/docs/graphql/schema/json.html"><code>JSON</code></a>)</strong></p>
+<li><p><strong>vendorProperties (<a href="/xcgp-api/docs/graphql/schema/object.html"><code>Object</code></a>)</strong></p>
 <p>The vendor launch properties or <code>null</code> if the game can't be launched.</p>
 <table>
 <thead>
@@ -251,7 +251,7 @@
 <p>The backgrounds of the game.</p></li>
 <li><p><strong>screenshots (<a href="/xcgp-api/docs/graphql/schema/screenshot.html"><code>[Screenshot]</code></a>)</strong></p>
 <p>The screenshots of the game.</p></li>
-<li><p><strong>thumbnails (<a href="/xcgp-api/docs/graphql/schema/json.html"><code>JSON</code></a>)</strong></p>
+<li><p><strong>thumbnails (<a href="/xcgp-api/docs/graphql/schema/object.html"><code>Object</code></a>)</strong></p>
 <p>The thumbnails of the game.</p></li>
 <li><p><strong>jurisdiction (<a href="/xcgp-api/docs/graphql/schema/string.html"><code>String!</code></a>)</strong></p>
 <p>The jurisdiction of the game.</p></li>
@@ -271,6 +271,7 @@
 <li><a href="/xcgp-api/docs/graphql/schema/jackpot.html">Jackpot</a>: A jackpot</li>
 <li><a href="/xcgp-api/docs/graphql/schema/lobby.html">Lobby</a>: A lobby containing game categories.</li>
 <li><a href="/xcgp-api/docs/graphql/schema/lobbycategorylayoutblock.html">LobbyCategoryLayoutBlock</a>: Block of games for a category layout</li>
+<li><a href="/xcgp-api/docs/graphql/schema/lobbygame.html">LobbyGame</a>: A lobby game block.</li>
 <li><a href="/xcgp-api/docs/graphql/schema/page.html">Page</a>: An arbitrary piece of content with a blog-like structure. It can be used for things like blog posts, news articles, simple landing pages, user success stories, etc.</li>
 <li><a href="/xcgp-api/docs/graphql/schema/promotion.html">Promotion</a>: A promotion for a particular template (space). Each template needs to be requested and it can have multiple titles, descriptions, images, CTAs, etc depending on where the promotions will be shown.</li>
 <li><a href="/xcgp-api/docs/graphql/schema/query.html">Query</a></li>
