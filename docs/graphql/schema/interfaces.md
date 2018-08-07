@@ -8,4 +8,5 @@ For more information, see "[Implementation](guides/graphql/introduction.md#imple
 
 ## List of interfaces
 
+* [LobbyBlockPosition](graphql/schema/lobbyblockposition.md)
 * [Node](graphql/schema/node.md)

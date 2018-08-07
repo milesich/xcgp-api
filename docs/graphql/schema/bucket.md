@@ -18,7 +18,7 @@ type Bucket implements Node {
   pointTypeId: String
 
   # Value of this bucket
-  value: Int
+  value: Int @deprecated(reason: "Use `current` instead.")
 
   # Code of the point type
   code: String

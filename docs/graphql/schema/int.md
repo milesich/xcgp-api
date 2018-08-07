@@ -33,12 +33,16 @@ scalar Int
 * [Limit](graphql/schema/limit.md): A limit
 * [LimitConnection](graphql/schema/limitconnection.md): A connection to a list of items.
 * [Lobby](graphql/schema/lobby.md): A lobby containing game categories.
+* [LobbyBlockConnection](graphql/schema/lobbyblockconnection.md): A connection to a list of items.
+* [LobbyBlockPosition](graphql/schema/lobbyblockposition.md): The position of a block within a layout.
 * [LobbyCategory](graphql/schema/lobbycategory.md): A lobby category.
 * [LobbyCategoryConnection](graphql/schema/lobbycategoryconnection.md): A connection to a list of items.
 * [LobbyCategoryLayout](graphql/schema/lobbycategorylayout.md): Layout for a lobby category.
 * [LobbyCategoryLayoutBlock](graphql/schema/lobbycategorylayoutblock.md): Block of games for a category layout
 * [LobbyCategoryLayoutConnection](graphql/schema/lobbycategorylayoutconnection.md): A connection to a list of items.
 * [LobbyConnection](graphql/schema/lobbyconnection.md): A connection to a list of items.
+* [LobbyGame](graphql/schema/lobbygame.md): A lobby game block.
+* [LobbyPromotionSpace](graphql/schema/lobbypromotionspace.md): A lobby promotion space.
 * [PageConnection](graphql/schema/pageconnection.md): A connection to a list of items.
 * [PaymentMethod](graphql/schema/paymentmethod.md): A payment method
 * [PaymentMethodConnection](graphql/schema/paymentmethodconnection.md): A connection to a list of items.

@@ -137,6 +137,7 @@ type Promotion implements Node {
 
 ## Required by
 * [LobbyCategoryLayoutBlock](graphql/schema/lobbycategorylayoutblock.md): Block of games for a category layout
+* [LobbyPromotionSpace](graphql/schema/lobbypromotionspace.md): A lobby promotion space.
 * [PromotionConnection](graphql/schema/promotionconnection.md): A connection to a list of items.
 * [PromotionEdge](graphql/schema/promotionedge.md): An edge in a connection
 * [Query](graphql/schema/query.md)

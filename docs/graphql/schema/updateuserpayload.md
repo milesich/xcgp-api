@@ -8,7 +8,7 @@ title: UpdateUserPayload
 ```graphql
 type UpdateUserPayload {
 
-  validation_messages: JSON
+  validation_messages: Object
 
   user: User
 
@@ -17,7 +17,7 @@ type UpdateUserPayload {
 
 ## Fields
 
-* **validation_messages ([`JSON`](graphql/schema/json.md))**
+* **validation_messages ([`Object`](graphql/schema/object.md))**
 
 
 * **user ([`User`](graphql/schema/user.md))**

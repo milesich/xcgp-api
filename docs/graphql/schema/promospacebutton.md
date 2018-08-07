@@ -15,7 +15,7 @@ type PromoSpaceButton {
   action: String
 
   # JSON object containing parameters like "id" and "url"
-  actionParams: JSON
+  actionParams: Object
 
 }
 ```
@@ -31,7 +31,7 @@ type PromoSpaceButton {
 * **action ([`String`](graphql/schema/string.md))**
 
 
-* **actionParams ([`JSON`](graphql/schema/json.md))**
+* **actionParams ([`Object`](graphql/schema/object.md))**
 
   JSON object containing parameters like "id" and "url"
 

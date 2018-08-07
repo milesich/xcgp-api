@@ -15,5 +15,5 @@ For more information, see "[Introduction to GraphQL](guides/graphql/introduction
 * [Float](graphql/schema/float.md)
 * [ID](graphql/schema/id.md)
 * [Int](graphql/schema/int.md)
-* [JSON](graphql/schema/json.md)
+* [Object](graphql/schema/object.md)
 * [String](graphql/schema/string.md)

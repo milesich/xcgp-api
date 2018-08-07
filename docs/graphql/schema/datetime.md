@@ -2,7 +2,7 @@
 title: DateTime
 ---
 
-
+An [RFC 3339](https://tools.ietf.org/html/rfc3339) encoded date and time string.
 
 ## Schema definition
 ```graphql

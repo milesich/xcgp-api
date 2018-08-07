@@ -27,6 +27,10 @@ interface Node {
 * [Limit](graphql/schema/limit.md): A limit
 * [Lobby](graphql/schema/lobby.md): A lobby containing game categories.
 * [LobbyCategory](graphql/schema/lobbycategory.md): A lobby category.
+* [LobbyCategoryLayout](graphql/schema/lobbycategorylayout.md): Layout for a lobby category.
+* [LobbyCategoryLayoutBlock](graphql/schema/lobbycategorylayoutblock.md): Block of games for a category layout
+* [LobbyGame](graphql/schema/lobbygame.md): A lobby game block.
+* [LobbyPromotionSpace](graphql/schema/lobbypromotionspace.md): A lobby promotion space.
 * [Page](graphql/schema/page.md): An arbitrary piece of content with a blog-like structure. It can be used for things like blog posts, news articles, simple landing pages, user success stories, etc.
 * [PaymentMethod](graphql/schema/paymentmethod.md): A payment method
 * [Promotion](graphql/schema/promotion.md): A promotion for a particular template (space). Each template needs to be requested and it can have multiple titles, descriptions, images, CTAs, etc depending on where the promotions will be shown.

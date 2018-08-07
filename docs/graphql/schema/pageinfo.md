@@ -56,6 +56,7 @@ type PageInfo {
 * [JackpotConnection](graphql/schema/jackpotconnection.md): A connection to a list of items.
 * [LanguageConnection](graphql/schema/languageconnection.md): A connection to a list of items.
 * [LimitConnection](graphql/schema/limitconnection.md): A connection to a list of items.
+* [LobbyBlockConnection](graphql/schema/lobbyblockconnection.md): A connection to a list of items.
 * [LobbyCategoryConnection](graphql/schema/lobbycategoryconnection.md): A connection to a list of items.
 * [LobbyCategoryLayoutConnection](graphql/schema/lobbycategorylayoutconnection.md): A connection to a list of items.
 * [LobbyConnection](graphql/schema/lobbyconnection.md): A connection to a list of items.

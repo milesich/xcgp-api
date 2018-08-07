@@ -29,6 +29,9 @@
       "guides/graphql/using",
       "guides/graphql/from-rest",
       "guides/graphql/explorer"
+    ],
+    "Resources": [
+      "guides/resources/lobbies"
     ]
   }
 }

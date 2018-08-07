@@ -32,6 +32,8 @@ For more information, see "[Introduction to GraphQL](guides/graphql/introduction
 * [LobbyCategory](graphql/schema/lobbycategory.md)
 * [LobbyCategoryLayout](graphql/schema/lobbycategorylayout.md)
 * [LobbyCategoryLayoutBlock](graphql/schema/lobbycategorylayoutblock.md)
+* [LobbyGame](graphql/schema/lobbygame.md)
+* [LobbyPromotionSpace](graphql/schema/lobbypromotionspace.md)
 * [Location](graphql/schema/location.md)
 * [LocationCountry](graphql/schema/locationcountry.md)
 * [Page](graphql/schema/page.md)

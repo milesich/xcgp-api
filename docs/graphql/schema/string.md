@@ -42,12 +42,15 @@ scalar String
 * [Limit](graphql/schema/limit.md): A limit
 * [LimitEdge](graphql/schema/limitedge.md): An edge in a connection
 * [Lobby](graphql/schema/lobby.md): A lobby containing game categories.
+* [LobbyBlockEdge](graphql/schema/lobbyblockedge.md): An edge in a connection
 * [LobbyCategory](graphql/schema/lobbycategory.md): A lobby category.
 * [LobbyCategoryEdge](graphql/schema/lobbycategoryedge.md): An edge in a connection
 * [LobbyCategoryLayout](graphql/schema/lobbycategorylayout.md): Layout for a lobby category.
 * [LobbyCategoryLayoutBlock](graphql/schema/lobbycategorylayoutblock.md): Block of games for a category layout
 * [LobbyCategoryLayoutEdge](graphql/schema/lobbycategorylayoutedge.md): An edge in a connection
 * [LobbyEdge](graphql/schema/lobbyedge.md): An edge in a connection
+* [LobbyGame](graphql/schema/lobbygame.md): A lobby game block.
+* [LobbyPromotionSpace](graphql/schema/lobbypromotionspace.md): A lobby promotion space.
 * [Location](graphql/schema/location.md): A location
 * [LocationCountry](graphql/schema/locationcountry.md)
 * [Page](graphql/schema/page.md): An arbitrary piece of content with a blog-like structure. It can be used for things like blog posts, news articles, simple landing pages, user success stories, etc.

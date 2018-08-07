@@ -6,8 +6,9 @@ Layout for a lobby category.
 
 ## Schema definition
 ```graphql
-type LobbyCategoryLayout {
+type LobbyCategoryLayout implements Node {
 
+  # The ID of an object
   id: ID!
 
   # The name of this layout.
@@ -31,15 +32,40 @@ type LobbyCategoryLayout {
   # If the layout is inline or not (used for floating)
   inline: Boolean!
 
-  blocks: [LobbyCategoryLayoutBlock]
+  blocks: [LobbyCategoryLayoutBlock] @deprecated(reason: "Use `blockConnection` instead.")
+
+  # Arguments
+  #   after
+  #   first
+  #   before
+  #   last
+  blockConnection(
+    after: String,
+    first: Int,
+    before: String,
+    last: Int
+  ): LobbyBlockConnection
 
 }
 ```
+
+## Connections
+
+* **blockConnection ([`LobbyBlockConnection`](graphql/schema/lobbyblockconnection.md))**
+
+  Argument | Type | Description
+  -------- | ---- | -----------
+  `after` | [`String`](graphql/schema/string.md) | -
+  `first` | [`Int`](graphql/schema/int.md) | -
+  `before` | [`String`](graphql/schema/string.md) | -
+  `last` | [`Int`](graphql/schema/int.md) | -
+
 
 ## Fields
 
 * **id ([`ID!`](graphql/schema/id.md))**
 
+  The ID of an object
 
 * **name ([`String!`](graphql/schema/string.md))**
 
@@ -74,6 +100,5 @@ type LobbyCategoryLayout {
 
 
 ## Required by
-* [LobbyCategory](graphql/schema/lobbycategory.md): A lobby category.
 * [LobbyCategoryLayoutConnection](graphql/schema/lobbycategorylayoutconnection.md): A connection to a list of items.
 * [LobbyCategoryLayoutEdge](graphql/schema/lobbycategorylayoutedge.md): An edge in a connection

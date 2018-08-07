@@ -24,13 +24,13 @@ type Mutation {
 
   Output | Type | Description
   ------ | ---- | -----------
-  `validation_messages` | [`JSON`](graphql/schema/json.md) | -
+  `validation_messages` | [`Object`](graphql/schema/object.md) | -
   `user` | [`User`](graphql/schema/user.md) | -
 
 * **updateUser(input: [`UpdateUserInput`](graphql/schema/updateuserinput.md)): [`UpdateUserPayload`](graphql/schema/updateuserpayload.md)**
 
   Output | Type | Description
   ------ | ---- | -----------
-  `validation_messages` | [`JSON`](graphql/schema/json.md) | -
+  `validation_messages` | [`Object`](graphql/schema/object.md) | -
   `user` | [`User`](graphql/schema/user.md) | -
 

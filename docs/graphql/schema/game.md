@@ -73,7 +73,7 @@ type Game implements Node {
   height: Int!
 
   # The label of the game.
-  label: String
+  label: String @deprecated(reason: "Use the lobby block label instead.")
 
   # The slug of the game.
   slug: String!
@@ -93,7 +93,7 @@ type Game implements Node {
     return_url: String,
     deposit_url: String,
     history_url: String
-  ): JSON
+  ): Object
 
   # The width of the game.
   width: Int!
@@ -126,7 +126,7 @@ type Game implements Node {
   screenshots: [Screenshot]
 
   # The thumbnails of the game.
-  thumbnails: JSON
+  thumbnails: Object
 
   # The jurisdiction of the game.
   jurisdiction: String!
@@ -239,7 +239,7 @@ type Game implements Node {
 
   The thumbnail of the game.
 
-* **vendorProperties ([`JSON`](graphql/schema/json.md))**
+* **vendorProperties ([`Object`](graphql/schema/object.md))**
 
   The vendor launch properties or `null` if the game can't be launched.
   Argument | Type | Description
@@ -288,7 +288,7 @@ type Game implements Node {
 
   The screenshots of the game.
 
-* **thumbnails ([`JSON`](graphql/schema/json.md))**
+* **thumbnails ([`Object`](graphql/schema/object.md))**
 
   The thumbnails of the game.
 
@@ -317,6 +317,7 @@ type Game implements Node {
 * [Jackpot](graphql/schema/jackpot.md): A jackpot
 * [Lobby](graphql/schema/lobby.md): A lobby containing game categories.
 * [LobbyCategoryLayoutBlock](graphql/schema/lobbycategorylayoutblock.md): Block of games for a category layout
+* [LobbyGame](graphql/schema/lobbygame.md): A lobby game block.
 * [Page](graphql/schema/page.md): An arbitrary piece of content with a blog-like structure. It can be used for things like blog posts, news articles, simple landing pages, user success stories, etc.
 * [Promotion](graphql/schema/promotion.md): A promotion for a particular template (space). Each template needs to be requested and it can have multiple titles, descriptions, images, CTAs, etc depending on where the promotions will be shown.
 * [Query](graphql/schema/query.md)

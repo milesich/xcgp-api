@@ -1,12 +1,12 @@
 ---
-title: LobbyCategoryLayoutBlock
+title: LobbyGame
 ---
 
-Block of games for a category layout
+A lobby game block.
 
 ## Schema definition
 ```graphql
-type LobbyCategoryLayoutBlock implements Node, LobbyBlockPosition {
+type LobbyGame implements Node, LobbyBlockPosition {
 
   # The calculated left value of this block using col, margin and width.
   left: Int!
@@ -35,14 +35,14 @@ type LobbyCategoryLayoutBlock implements Node, LobbyBlockPosition {
   # The ID of an object
   id: ID!
 
-  # Block type.
-  type: String!
+  # The label.
+  label: String
 
-  # Game object. Always null if type != game.
-  game: Game
+  # The right game thumbnail.
+  thumbnail: String!
 
-  # List of promotions. Always null if type != promotions.
-  promotions: [Promotion]
+  # The game.
+  game: Game!
 
 }
 ```
@@ -85,18 +85,18 @@ type LobbyCategoryLayoutBlock implements Node, LobbyBlockPosition {
 
   The ID of an object
 
-* **type ([`String!`](graphql/schema/string.md))**
+* **label ([`String`](graphql/schema/string.md))**
 
-  Block type.
+  The label.
 
-* **game ([`Game`](graphql/schema/game.md))**
+* **thumbnail ([`String!`](graphql/schema/string.md))**
 
-  Game object. Always null if type != game.
+  The right game thumbnail.
 
-* **promotions ([`[Promotion]`](graphql/schema/promotion.md))**
+* **game ([`Game!`](graphql/schema/game.md))**
 
-  List of promotions. Always null if type != promotions.
+  The game.
 
 
 ## Required by
-* [LobbyCategoryLayout](graphql/schema/lobbycategorylayout.md): Layout for a lobby category.
+* [LobbyBlock](graphql/schema/lobbyblock.md): A lobby block for a game or a promotion space.

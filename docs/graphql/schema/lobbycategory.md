@@ -17,11 +17,6 @@ type LobbyCategory implements Node {
   # The name of the game category.
   name: String!
 
-  # The order of the game category.
-  order: Int!
-
-  layouts: [LobbyCategoryLayout] @deprecated(reason: "Use layoutConnection instead for pagination possibilities")
-
   # Arguments
   #   after
   #   first
@@ -62,13 +57,6 @@ type LobbyCategory implements Node {
 * **name ([`String!`](graphql/schema/string.md))**
 
   The name of the game category.
-
-* **order ([`Int!`](graphql/schema/int.md))**
-
-  The order of the game category.
-
-* **layouts ([`[LobbyCategoryLayout]`](graphql/schema/lobbycategorylayout.md))**
-
 
 
 ## Required by
