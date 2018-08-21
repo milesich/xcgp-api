@@ -3,6 +3,7 @@ title: Payment methods
 ---
 
 1. [List payment methods](#list-payment-methods)
+2. [Get last deposit method](#get-last-deposit-method)
 
 ## List payment methods
 Get a list of payment methods that the user can make use of during the deposit or withdraw process.
@@ -195,6 +196,50 @@ HTTP/1.1 200 OK
 }
 ```
 
+
+## Get last deposit method
+Gets the last payment method that the user used to make a deposit. This can be used to provide quick deposit functionality or other deposit flows.
+
+```http
+GET /payment-methods/last HTTP/1.1
+```
+
+
+### Response
+```http
+HTTP/1.1 200 OK
+
+{
+  "id": 10,
+  "name": "payvision",
+  "max_amount": 100000,
+  "min_amount": 100,
+  "deposit_fixed": 0,
+  "deposit_percent": 0,
+  "deposit_cap": 0,
+  "withdraw_fixed": null,
+  "withdraw_percent": null,
+  "withdraw_cap": null,
+  "fx_rate": 0,
+  "previous_cards": [
+    {
+      "last_four_digits": "1111"
+    }
+  ],
+  "last_amount": 3000,
+  "provider_id": 30,
+  "provider_name": "devcode",
+  "enabled": null,
+  "default_deposit_amount": null,
+  "quick_deposit_options": null,
+  "_links": {
+    "self": {
+      "href": "https:\/\/staging-frontapi.cherrytech.com\/payment-methods\/10"
+    }
+  }
+}
+```
+
 ## Payment method object
 
 Name                     | Type        | Description
@@ -211,7 +256,7 @@ Name                     | Type        | Description
 `withdraw_cap`           | `integer`   | The maximum withdraw fee in cents.
 `fx_rate`                | `decimal`   | The exchange rate.
 `previous_cards`         | `object[]?` | Previously used cards for this method.
-`last_amount`            | `integer?`  | The last amount used for this method.
+`last_amount`            | `integer?`  | The last amount in cents used for this method.
 `provider_id`            | `integer?`  | The provider id.
 `provider_name`          | `string?`   | The provider name.
 `enabled`                | `boolean`   | Whether or not this method is enabled for the given request filters. The application can either hide or fade out the method if it's not enabled.
